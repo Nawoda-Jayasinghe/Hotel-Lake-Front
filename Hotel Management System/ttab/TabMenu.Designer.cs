@@ -53,9 +53,8 @@ namespace Hotel_Management_System
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(1800, 62);
+            this.panelMenu.Size = new System.Drawing.Size(1350, 50);
             this.panelMenu.TabIndex = 0;
             // 
             // btnTabContact
@@ -67,11 +66,10 @@ namespace Hotel_Management_System
             this.btnTabContact.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTabContact.IconSize = 150;
             this.btnTabContact.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnTabContact.Location = new System.Drawing.Point(1113, 447);
-            this.btnTabContact.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTabContact.Location = new System.Drawing.Point(835, 363);
             this.btnTabContact.Name = "btnTabContact";
-            this.btnTabContact.Padding = new System.Windows.Forms.Padding(13, 0, 27, 0);
-            this.btnTabContact.Size = new System.Drawing.Size(333, 308);
+            this.btnTabContact.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnTabContact.Size = new System.Drawing.Size(250, 250);
             this.btnTabContact.TabIndex = 8;
             this.btnTabContact.Text = "Contact";
             this.btnTabContact.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -87,11 +85,10 @@ namespace Hotel_Management_System
             this.btnTabPayment.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTabPayment.IconSize = 150;
             this.btnTabPayment.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnTabPayment.Location = new System.Drawing.Point(367, 447);
-            this.btnTabPayment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTabPayment.Location = new System.Drawing.Point(275, 363);
             this.btnTabPayment.Name = "btnTabPayment";
-            this.btnTabPayment.Padding = new System.Windows.Forms.Padding(13, 0, 27, 0);
-            this.btnTabPayment.Size = new System.Drawing.Size(333, 308);
+            this.btnTabPayment.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnTabPayment.Size = new System.Drawing.Size(250, 250);
             this.btnTabPayment.TabIndex = 7;
             this.btnTabPayment.Text = "Payment";
             this.btnTabPayment.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -107,11 +104,10 @@ namespace Hotel_Management_System
             this.btnTabServices.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTabServices.IconSize = 150;
             this.btnTabServices.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnTabServices.Location = new System.Drawing.Point(739, 447);
-            this.btnTabServices.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTabServices.Location = new System.Drawing.Point(554, 363);
             this.btnTabServices.Name = "btnTabServices";
-            this.btnTabServices.Padding = new System.Windows.Forms.Padding(13, 0, 27, 0);
-            this.btnTabServices.Size = new System.Drawing.Size(333, 308);
+            this.btnTabServices.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnTabServices.Size = new System.Drawing.Size(250, 250);
             this.btnTabServices.TabIndex = 6;
             this.btnTabServices.Text = "Services";
             this.btnTabServices.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -127,11 +123,10 @@ namespace Hotel_Management_System
             this.btnTabDetails.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTabDetails.IconSize = 150;
             this.btnTabDetails.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnTabDetails.Location = new System.Drawing.Point(1113, 111);
-            this.btnTabDetails.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTabDetails.Location = new System.Drawing.Point(835, 90);
             this.btnTabDetails.Name = "btnTabDetails";
-            this.btnTabDetails.Padding = new System.Windows.Forms.Padding(13, 0, 27, 0);
-            this.btnTabDetails.Size = new System.Drawing.Size(333, 308);
+            this.btnTabDetails.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnTabDetails.Size = new System.Drawing.Size(250, 250);
             this.btnTabDetails.TabIndex = 5;
             this.btnTabDetails.Text = "Details";
             this.btnTabDetails.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -147,11 +142,10 @@ namespace Hotel_Management_System
             this.btnTabCleaning.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTabCleaning.IconSize = 150;
             this.btnTabCleaning.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnTabCleaning.Location = new System.Drawing.Point(739, 111);
-            this.btnTabCleaning.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTabCleaning.Location = new System.Drawing.Point(554, 90);
             this.btnTabCleaning.Name = "btnTabCleaning";
-            this.btnTabCleaning.Padding = new System.Windows.Forms.Padding(13, 0, 27, 0);
-            this.btnTabCleaning.Size = new System.Drawing.Size(333, 308);
+            this.btnTabCleaning.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnTabCleaning.Size = new System.Drawing.Size(250, 250);
             this.btnTabCleaning.TabIndex = 4;
             this.btnTabCleaning.Text = "Cleaning";
             this.btnTabCleaning.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -167,11 +161,10 @@ namespace Hotel_Management_System
             this.btnTabFood.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTabFood.IconSize = 150;
             this.btnTabFood.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnTabFood.Location = new System.Drawing.Point(367, 111);
-            this.btnTabFood.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTabFood.Location = new System.Drawing.Point(275, 90);
             this.btnTabFood.Name = "btnTabFood";
-            this.btnTabFood.Padding = new System.Windows.Forms.Padding(13, 0, 27, 0);
-            this.btnTabFood.Size = new System.Drawing.Size(333, 308);
+            this.btnTabFood.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnTabFood.Size = new System.Drawing.Size(250, 250);
             this.btnTabFood.TabIndex = 3;
             this.btnTabFood.Text = "Food";
             this.btnTabFood.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -181,10 +174,9 @@ namespace Hotel_Management_System
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 62);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(0, 50);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1800, 6);
+            this.panel1.Size = new System.Drawing.Size(1350, 5);
             this.panel1.TabIndex = 1;
             // 
             // panelDesktop
@@ -197,21 +189,20 @@ namespace Hotel_Management_System
             this.panelDesktop.Controls.Add(this.btnTabServices);
             this.panelDesktop.Controls.Add(this.btnTabDetails);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(0, 68);
-            this.panelDesktop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelDesktop.Location = new System.Drawing.Point(0, 55);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(1800, 829);
+            this.panelDesktop.Size = new System.Drawing.Size(1350, 674);
             this.panelDesktop.TabIndex = 2;
             // 
             // TabMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1800, 897);
+            this.ClientSize = new System.Drawing.Size(1350, 729);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelMenu);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "TabMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TabMenu";

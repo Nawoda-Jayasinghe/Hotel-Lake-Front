@@ -13,21 +13,21 @@ using FontAwesome.Sharp;
 
 namespace Hotel_Management_System
 {
-    public partial class TabMenu : Form
+    public partial class TabFood : Form
     {
         //fields
         private IconButton currentBtn;
-        //private Panel leftBoarderBtn;
+        private Panel leftBoarderBtn;
         private Form currentForm;
 
 
         //constructor
-        public TabMenu()
+        public TabFood()
         {
             InitializeComponent();
-            //leftBoarderBtn = new Panel();
-            //leftBoarderBtn.Size = new Size(84, 7);
-            //panelMenu.Controls.Add(leftBoarderBtn);
+            leftBoarderBtn = new Panel();
+            leftBoarderBtn.Size = new Size(7, 84);
+            panelMenu.Controls.Add(leftBoarderBtn);
 
             //form
             this.Text = string.Empty;
@@ -48,7 +48,7 @@ namespace Hotel_Management_System
             public static Color color5 = Color.FromArgb(249,88,155);
             public static Color color6 = Color.FromArgb(24,161,251);
             public static Color color7 = Color.FromArgb(253, 138, 114);
-            
+            public static Color color8 = Color.FromArgb(95, 77, 221);
 
         }
 
@@ -64,18 +64,16 @@ namespace Hotel_Management_System
                 currentBtn = (IconButton)senderBtn;
                 currentBtn.BackColor = Color.FromArgb(37, 36, 81);
                 currentBtn.ForeColor = color;
-                //currentBtn.TextAlign = ContentAlignment.MiddleCenter;
+                currentBtn.TextAlign = ContentAlignment.MiddleCenter;
                 currentBtn.IconColor = color;
-                //currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
-                //currentBtn.ImageAlign = ContentAlignment.MiddleRight;
+                currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
+                currentBtn.ImageAlign = ContentAlignment.MiddleRight;
 
                 //left boarder button
-                //leftBoarderBtn.BackColor = color;
-                //leftBoarderBtn.Dock = DockStyle.Top;
-               // leftBoarderBtn.Location = new Point(currentBtn.Location.X, 0);
-                
-                //leftBoarderBtn.Visible = true;
-                //leftBoarderBtn.BringToFront();
+                leftBoarderBtn.BackColor = color;
+                leftBoarderBtn.Location = new Point(0, currentBtn.Location.Y);
+                leftBoarderBtn.Visible = true;
+                leftBoarderBtn.BringToFront();
                 //Icon current
                 //iconCurrent.IconChar = currentBtn.IconChar;
                 //iconCurrent.IconColor = color;
@@ -87,12 +85,12 @@ namespace Hotel_Management_System
         {
             if (currentBtn != null)
             {
-                //currentBtn.BackColor = Color.FromArgb(31,30,68);
+                currentBtn.BackColor = Color.FromArgb(31,30,68);
                 currentBtn.ForeColor = Color.White;
-                //currentBtn.TextAlign = ContentAlignment.MiddleLeft;
+                currentBtn.TextAlign = ContentAlignment.MiddleLeft;
                 currentBtn.IconColor = Color.White;
-                //currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
-                //currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
+                currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
+                currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
         }
 
@@ -113,8 +111,9 @@ namespace Hotel_Management_System
             panelDesktop.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-            //titleCurrent.Text = childForm.Text;
+           // titleCurrent.Text = childForm.Text;
 
+            
         }
 
        
@@ -123,6 +122,7 @@ namespace Hotel_Management_System
         {
             ActivateButton(sender, RGBColors.color1);
             OpenForm(new FormNewGuest());
+
         }
 
         private void btnGuestDetails_Click(object sender, EventArgs e)
@@ -155,7 +155,11 @@ namespace Hotel_Management_System
             OpenForm(new FormPayments());
 
         }
-        
+        private void btnNotifications_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color8);
+            OpenForm(new FormNotifications());
+        }
 
         private void panelLogo_Paint(object sender, PaintEventArgs e)
         {
@@ -171,7 +175,7 @@ namespace Hotel_Management_System
         private void Reset()
         {
             DisableButton();
-            //leftBoarderBtn.Visible = false;
+            leftBoarderBtn.Visible = false;
             //iconCurrent.IconChar = IconChar.Home;
             //iconCurrent.IconColor = Color.White;
             //titleCurrent.Text = "Home"; 
@@ -370,35 +374,6 @@ namespace Hotel_Management_System
             Application.Exit();
         }
 
-        private void btnTabFood_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color1);
-            OpenForm(new TabFood());
-        }
-
-        private void btnTabCleaning_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color2);
-        }
-
-        private void btnTabDetails_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color3);
-        }
-
-        private void btnTabServices_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color4);
-        }
-
-        private void btnTabPayment_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color5);
-        }
-
-        private void btnTabContact_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color6);
-        }
+        
     }
 }
