@@ -82,6 +82,24 @@
     <Compile Include="Admin\FormMainAdmin.Designer.cs">
       <DependentUpon>FormMainAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cashier\FormMainCashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cashier\FormMainCashier.Designer.cs">
+      <DependentUpon>FormMainCashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cashier\FormOrdersCashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cashier\FormOrdersCashier.Designer.cs">
+      <DependentUpon>FormOrdersCashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cashier\FormPaymentsCashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cashier\FormPaymentsCashier.Designer.cs">
+      <DependentUpon>FormPaymentsCashier.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseConnection.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -150,6 +168,15 @@
     <Compile Include="ttab\TabMenu.Designer.cs">
       <DependentUpon>TabMenu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Cashier\FormMainCashier.resx">
+      <DependentUpon>FormMainCashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cashier\FormOrdersCashier.resx">
+      <DependentUpon>FormOrdersCashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cashier\FormPaymentsCashier.resx">
+      <DependentUpon>FormPaymentsCashier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ttab\TabMenu.resx">
       <DependentUpon>TabMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -249,8 +276,6 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Cashier\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
