@@ -76,16 +76,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\Form1.cs">
+    <Compile Include="Admin\FormFoodDetailsAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Admin\FormFoodDetailsAdmin.Designer.cs">
+      <DependentUpon>FormFoodDetailsAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\FormMainAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\FormMainAdmin.Designer.cs">
+    <Compile Include="Admin\FormMainAdmin.designer.cs">
       <DependentUpon>FormMainAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Cashier\FormMainCashier.cs">
@@ -168,6 +168,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin\FormFoodDetailsAdmin.resx">
+      <DependentUpon>FormFoodDetailsAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FormMainAdmin.resx">
+      <DependentUpon>FormMainAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cashier\FormMainCashier.resx">
       <DependentUpon>FormMainCashier.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,9 +187,6 @@
     <None Include="Resources\Asset 1-8.jpg" />
     <None Include="Resources\Asset 1-8.png" />
     <None Include="Resources\logo-01.png" />
-    <EmbeddedResource Include="Admin\FormMainAdmin.resx">
-      <DependentUpon>FormMainAdmin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reciptionist\FormNewGuest.resx">
       <DependentUpon>FormNewGuest.cs</DependentUpon>
     </EmbeddedResource>
