@@ -1,7 +1,7 @@
 ﻿
 namespace Hotel_Management_System
 {
-    partial class FormMainAdmin
+    partial class FormMainCashier
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,8 @@ namespace Hotel_Management_System
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnNotifications = new FontAwesome.Sharp.IconButton();
+            this.btnOrders = new FontAwesome.Sharp.IconButton();
             this.btnPayments = new FontAwesome.Sharp.IconButton();
-            this.btnStaffDetails = new FontAwesome.Sharp.IconButton();
-            this.btnFoodDetails = new FontAwesome.Sharp.IconButton();
-            this.btnRoomDetails = new FontAwesome.Sharp.IconButton();
-            this.btnGuestDetails = new FontAwesome.Sharp.IconButton();
-            this.btnNewGuest = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.PictureBox();
@@ -58,13 +53,8 @@ namespace Hotel_Management_System
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.panelMenu.Controls.Add(this.btnNotifications);
+            this.panelMenu.Controls.Add(this.btnOrders);
             this.panelMenu.Controls.Add(this.btnPayments);
-            this.panelMenu.Controls.Add(this.btnStaffDetails);
-            this.panelMenu.Controls.Add(this.btnFoodDetails);
-            this.panelMenu.Controls.Add(this.btnRoomDetails);
-            this.panelMenu.Controls.Add(this.btnGuestDetails);
-            this.panelMenu.Controls.Add(this.btnNewGuest);
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
@@ -73,166 +63,51 @@ namespace Hotel_Management_System
             this.panelMenu.TabIndex = 0;
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             // 
-            // btnNotifications
+            // btnOrders
             // 
-            this.btnNotifications.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnNotifications.FlatAppearance.BorderSize = 0;
-            this.btnNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNotifications.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNotifications.ForeColor = System.Drawing.Color.White;
-            this.btnNotifications.IconChar = FontAwesome.Sharp.IconChar.Bell;
-            this.btnNotifications.IconColor = System.Drawing.Color.White;
-            this.btnNotifications.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnNotifications.IconSize = 32;
-            this.btnNotifications.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNotifications.Location = new System.Drawing.Point(0, 749);
-            this.btnNotifications.Name = "btnNotifications";
-            this.btnNotifications.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnNotifications.Size = new System.Drawing.Size(307, 84);
-            this.btnNotifications.TabIndex = 7;
-            this.btnNotifications.Text = "Notifications";
-            this.btnNotifications.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNotifications.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNotifications.UseVisualStyleBackColor = true;
-            this.btnNotifications.Click += new System.EventHandler(this.btnNotifications_Click);
+            this.btnOrders.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOrders.FlatAppearance.BorderSize = 0;
+            this.btnOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrders.Font = new System.Drawing.Font("Candara", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrders.ForeColor = System.Drawing.Color.White;
+            this.btnOrders.IconChar = FontAwesome.Sharp.IconChar.PeopleArrows;
+            this.btnOrders.IconColor = System.Drawing.Color.White;
+            this.btnOrders.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnOrders.IconSize = 60;
+            this.btnOrders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOrders.Location = new System.Drawing.Point(0, 489);
+            this.btnOrders.Name = "btnOrders";
+            this.btnOrders.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnOrders.Size = new System.Drawing.Size(307, 244);
+            this.btnOrders.TabIndex = 6;
+            this.btnOrders.Text = "Orders";
+            this.btnOrders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOrders.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnOrders.UseVisualStyleBackColor = true;
+            this.btnOrders.Click += new System.EventHandler(this.btnPayments_Click);
             // 
             // btnPayments
             // 
             this.btnPayments.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPayments.FlatAppearance.BorderSize = 0;
             this.btnPayments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPayments.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayments.Font = new System.Drawing.Font("Candara", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPayments.ForeColor = System.Drawing.Color.White;
-            this.btnPayments.IconChar = FontAwesome.Sharp.IconChar.Coins;
+            this.btnPayments.IconChar = FontAwesome.Sharp.IconChar.Calculator;
             this.btnPayments.IconColor = System.Drawing.Color.White;
             this.btnPayments.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnPayments.IconSize = 32;
+            this.btnPayments.IconSize = 60;
             this.btnPayments.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPayments.Location = new System.Drawing.Point(0, 665);
+            this.btnPayments.Location = new System.Drawing.Point(0, 245);
             this.btnPayments.Name = "btnPayments";
             this.btnPayments.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnPayments.Size = new System.Drawing.Size(307, 84);
-            this.btnPayments.TabIndex = 6;
+            this.btnPayments.Size = new System.Drawing.Size(307, 244);
+            this.btnPayments.TabIndex = 5;
             this.btnPayments.Text = "Payments";
             this.btnPayments.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPayments.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPayments.UseVisualStyleBackColor = true;
-            this.btnPayments.Click += new System.EventHandler(this.btnPayments_Click);
-            // 
-            // btnStaffDetails
-            // 
-            this.btnStaffDetails.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnStaffDetails.FlatAppearance.BorderSize = 0;
-            this.btnStaffDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStaffDetails.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStaffDetails.ForeColor = System.Drawing.Color.White;
-            this.btnStaffDetails.IconChar = FontAwesome.Sharp.IconChar.PeopleArrows;
-            this.btnStaffDetails.IconColor = System.Drawing.Color.White;
-            this.btnStaffDetails.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnStaffDetails.IconSize = 32;
-            this.btnStaffDetails.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStaffDetails.Location = new System.Drawing.Point(0, 581);
-            this.btnStaffDetails.Name = "btnStaffDetails";
-            this.btnStaffDetails.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnStaffDetails.Size = new System.Drawing.Size(307, 84);
-            this.btnStaffDetails.TabIndex = 5;
-            this.btnStaffDetails.Text = "Staff Details";
-            this.btnStaffDetails.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStaffDetails.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnStaffDetails.UseVisualStyleBackColor = true;
-            this.btnStaffDetails.Click += new System.EventHandler(this.btnStaffDetails_Click);
-            // 
-            // btnFoodDetails
-            // 
-            this.btnFoodDetails.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFoodDetails.FlatAppearance.BorderSize = 0;
-            this.btnFoodDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFoodDetails.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFoodDetails.ForeColor = System.Drawing.Color.White;
-            this.btnFoodDetails.IconChar = FontAwesome.Sharp.IconChar.Utensils;
-            this.btnFoodDetails.IconColor = System.Drawing.Color.White;
-            this.btnFoodDetails.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFoodDetails.IconSize = 32;
-            this.btnFoodDetails.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFoodDetails.Location = new System.Drawing.Point(0, 497);
-            this.btnFoodDetails.Name = "btnFoodDetails";
-            this.btnFoodDetails.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnFoodDetails.Size = new System.Drawing.Size(307, 84);
-            this.btnFoodDetails.TabIndex = 4;
-            this.btnFoodDetails.Text = "Food Details";
-            this.btnFoodDetails.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFoodDetails.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnFoodDetails.UseVisualStyleBackColor = true;
-            this.btnFoodDetails.Click += new System.EventHandler(this.btnFoodDetails_Click);
-            // 
-            // btnRoomDetails
-            // 
-            this.btnRoomDetails.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRoomDetails.FlatAppearance.BorderSize = 0;
-            this.btnRoomDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRoomDetails.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRoomDetails.ForeColor = System.Drawing.Color.White;
-            this.btnRoomDetails.IconChar = FontAwesome.Sharp.IconChar.HouseUser;
-            this.btnRoomDetails.IconColor = System.Drawing.Color.White;
-            this.btnRoomDetails.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnRoomDetails.IconSize = 32;
-            this.btnRoomDetails.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRoomDetails.Location = new System.Drawing.Point(0, 413);
-            this.btnRoomDetails.Name = "btnRoomDetails";
-            this.btnRoomDetails.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnRoomDetails.Size = new System.Drawing.Size(307, 84);
-            this.btnRoomDetails.TabIndex = 3;
-            this.btnRoomDetails.Text = "Room Details";
-            this.btnRoomDetails.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRoomDetails.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRoomDetails.UseVisualStyleBackColor = true;
-            this.btnRoomDetails.Click += new System.EventHandler(this.btnRoomDetails_Click);
-            // 
-            // btnGuestDetails
-            // 
-            this.btnGuestDetails.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnGuestDetails.FlatAppearance.BorderSize = 0;
-            this.btnGuestDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuestDetails.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuestDetails.ForeColor = System.Drawing.Color.White;
-            this.btnGuestDetails.IconChar = FontAwesome.Sharp.IconChar.UserTag;
-            this.btnGuestDetails.IconColor = System.Drawing.Color.White;
-            this.btnGuestDetails.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnGuestDetails.IconSize = 32;
-            this.btnGuestDetails.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuestDetails.Location = new System.Drawing.Point(0, 329);
-            this.btnGuestDetails.Name = "btnGuestDetails";
-            this.btnGuestDetails.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnGuestDetails.Size = new System.Drawing.Size(307, 84);
-            this.btnGuestDetails.TabIndex = 2;
-            this.btnGuestDetails.Text = "Guest Details";
-            this.btnGuestDetails.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuestDetails.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnGuestDetails.UseVisualStyleBackColor = true;
-            this.btnGuestDetails.Click += new System.EventHandler(this.btnGuestDetails_Click);
-            // 
-            // btnNewGuest
-            // 
-            this.btnNewGuest.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnNewGuest.FlatAppearance.BorderSize = 0;
-            this.btnNewGuest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNewGuest.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNewGuest.ForeColor = System.Drawing.Color.White;
-            this.btnNewGuest.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.btnNewGuest.IconColor = System.Drawing.Color.White;
-            this.btnNewGuest.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnNewGuest.IconSize = 32;
-            this.btnNewGuest.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNewGuest.Location = new System.Drawing.Point(0, 245);
-            this.btnNewGuest.Name = "btnNewGuest";
-            this.btnNewGuest.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnNewGuest.Size = new System.Drawing.Size(307, 84);
-            this.btnNewGuest.TabIndex = 1;
-            this.btnNewGuest.Text = "New Guest";
-            this.btnNewGuest.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNewGuest.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNewGuest.UseVisualStyleBackColor = true;
-            this.btnNewGuest.Click += new System.EventHandler(this.btnNewGuest_Click);
+            this.btnPayments.Click += new System.EventHandler(this.btnOrders_Click);
             // 
             // panelLogo
             // 
@@ -349,7 +224,7 @@ namespace Hotel_Management_System
             this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
             // 
-            // FormMain
+            // FormMainCashier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -358,7 +233,7 @@ namespace Hotel_Management_System
             this.Controls.Add(this.panelS);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelMenu);
-            this.Name = "FormMainAdmin";
+            this.Name = "FormMainCashier";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New";
             this.Load += new System.EventHandler(this.New_Load);
@@ -377,20 +252,15 @@ namespace Hotel_Management_System
         #endregion
 
         private System.Windows.Forms.Panel panelMenu;
-        private FontAwesome.Sharp.IconButton btnNewGuest;
         private System.Windows.Forms.Panel panelLogo;
-        private FontAwesome.Sharp.IconButton btnStaffDetails;
-        private FontAwesome.Sharp.IconButton btnFoodDetails;
-        private FontAwesome.Sharp.IconButton btnRoomDetails;
-        private FontAwesome.Sharp.IconButton btnGuestDetails;
+        private FontAwesome.Sharp.IconButton btnPayments;
         private System.Windows.Forms.PictureBox btnHome;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconPictureBox iconCurrent;
         private System.Windows.Forms.Panel panelS;
         private System.Windows.Forms.Panel panelDesktop;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private FontAwesome.Sharp.IconButton btnNotifications;
-        private FontAwesome.Sharp.IconButton btnPayments;
+        private FontAwesome.Sharp.IconButton btnOrders;
         private System.DirectoryServices.DirectorySearcher directorySearcher1;
         private System.Windows.Forms.Label titleCurrent;
         private System.Windows.Forms.Panel panel2;
