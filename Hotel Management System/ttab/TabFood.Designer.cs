@@ -51,6 +51,7 @@ namespace Hotel_Management_System
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelMenu.SuspendLayout();
             this.panelDesktop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -287,7 +288,7 @@ namespace Hotel_Management_System
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(307, 355);
+            this.label3.Location = new System.Drawing.Point(440, 204);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 24);
             this.label3.TabIndex = 4;
@@ -343,10 +344,11 @@ namespace Hotel_Management_System
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
-            this.Column2});
+            this.Column2,
+            this.Column6});
             this.dataGridView1.Location = new System.Drawing.Point(21, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 441);
+            this.dataGridView1.Size = new System.Drawing.Size(343, 441);
             this.dataGridView1.TabIndex = 0;
             // 
             // Column1
@@ -364,6 +366,11 @@ namespace Hotel_Management_System
             this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Quantity";
+            this.Column6.Name = "Column6";
             // 
             // TabFood
             // 
@@ -411,5 +418,6 @@ namespace Hotel_Management_System
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }
