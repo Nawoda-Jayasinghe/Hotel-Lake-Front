@@ -30,7 +30,6 @@ namespace Hotel_Management_System
         private void InitializeComponent()
         {
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton8 = new System.Windows.Forms.RadioButton();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
@@ -49,21 +48,10 @@ namespace Hotel_Management_System
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OrderIDCashier = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label16 = new System.Windows.Forms.Label();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OthersDetails)).BeginInit();
             this.SuspendLayout();
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(737, 465);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(119, 78);
-            this.iconButton1.TabIndex = 247;
-            this.iconButton1.Text = "iconButton1";
-            this.iconButton1.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -252,6 +240,20 @@ namespace Hotel_Management_System
             this.label16.Size = new System.Drawing.Size(208, 35);
             this.label16.TabIndex = 243;
             this.label16.Text = "Others Details";
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.iconButton1.ForeColor = System.Drawing.Color.Yellow;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ChalkboardTeacher;
+            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 90;
+            this.iconButton1.Location = new System.Drawing.Point(717, 436);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(119, 71);
+            this.iconButton1.TabIndex = 247;
+            this.iconButton1.UseVisualStyleBackColor = false;
             // 
             // FormNewGuestNext
             // 

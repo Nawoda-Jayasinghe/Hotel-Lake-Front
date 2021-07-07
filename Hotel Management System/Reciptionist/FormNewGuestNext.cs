@@ -52,6 +52,9 @@ namespace Hotel_Management_System
 
         }
 
-        
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
