@@ -140,7 +140,7 @@ namespace Hotel_Management_System
         private void btnFoodDetails_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
-            OpenForm(new FormFoodDetails());
+            OpenForm(new FormFoodDetailsAdmin());
         }
 
         private void btnStaffDetails_Click(object sender, EventArgs e)
@@ -373,7 +373,5 @@ namespace Hotel_Management_System
         {
             Application.Exit();
         }
-
-        
     }
 }
