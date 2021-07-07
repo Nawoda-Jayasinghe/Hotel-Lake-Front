@@ -13,7 +13,7 @@ using FontAwesome.Sharp;
 
 namespace Hotel_Management_System
 {
-    public partial class FormMainAdmin : Form
+    public partial class TabFood : Form
     {
         //fields
         private IconButton currentBtn;
@@ -22,7 +22,7 @@ namespace Hotel_Management_System
 
 
         //constructor
-        public FormMainAdmin()
+        public TabFood()
         {
             InitializeComponent();
             leftBoarderBtn = new Panel();
@@ -75,8 +75,8 @@ namespace Hotel_Management_System
                 leftBoarderBtn.Visible = true;
                 leftBoarderBtn.BringToFront();
                 //Icon current
-                iconCurrent.IconChar = currentBtn.IconChar;
-                iconCurrent.IconColor = color;
+                //iconCurrent.IconChar = currentBtn.IconChar;
+                //iconCurrent.IconColor = color;
 
             }
         }
@@ -111,7 +111,7 @@ namespace Hotel_Management_System
             panelDesktop.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-            titleCurrent.Text = childForm.Text;
+           // titleCurrent.Text = childForm.Text;
 
             
         }
@@ -140,7 +140,7 @@ namespace Hotel_Management_System
         private void btnFoodDetails_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
-            OpenForm(new FormFoodDetailsAdmin());
+            OpenForm(new FormFoodDetails());
         }
 
         private void btnStaffDetails_Click(object sender, EventArgs e)
@@ -176,9 +176,9 @@ namespace Hotel_Management_System
         {
             DisableButton();
             leftBoarderBtn.Visible = false;
-            iconCurrent.IconChar = IconChar.Home;
-            iconCurrent.IconColor = Color.White;
-            titleCurrent.Text = "Home"; 
+            //iconCurrent.IconChar = IconChar.Home;
+            //iconCurrent.IconColor = Color.White;
+            //titleCurrent.Text = "Home"; 
         }
 
         //Drag Form
@@ -373,5 +373,7 @@ namespace Hotel_Management_System
         {
             Application.Exit();
         }
+
+        
     }
 }
