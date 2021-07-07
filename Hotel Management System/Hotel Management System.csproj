@@ -76,11 +76,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\FormMainAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin\FormMainAdmin.Designer.cs">
       <DependentUpon>FormMainAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cashier\FormMainCashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cashier\FormMainCashier.Designer.cs">
+      <DependentUpon>FormMainCashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cashier\FormOrdersCashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cashier\FormOrdersCashier.Designer.cs">
+      <DependentUpon>FormOrdersCashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cashier\FormPaymentsCashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cashier\FormPaymentsCashier.Designer.cs">
+      <DependentUpon>FormPaymentsCashier.cs</DependentUpon>
     </Compile>
     <Compile Include="DatabaseConnection.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -144,14 +168,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ttab\TabMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ttab\TabMenu.Designer.cs">
-      <DependentUpon>TabMenu.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="ttab\TabMenu.resx">
-      <DependentUpon>TabMenu.cs</DependentUpon>
+    <EmbeddedResource Include="Cashier\FormMainCashier.resx">
+      <DependentUpon>FormMainCashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cashier\FormOrdersCashier.resx">
+      <DependentUpon>FormOrdersCashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cashier\FormPaymentsCashier.resx">
+      <DependentUpon>FormPaymentsCashier.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Resources\looog-01.png" />
     <None Include="Resources\Asset 1-8.jpg" />
@@ -212,6 +236,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\blue-hotel-neon-window-wallpaper-preview.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\wp7692446.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -249,8 +276,6 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Cashier\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
