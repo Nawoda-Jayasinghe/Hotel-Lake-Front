@@ -168,12 +168,12 @@ namespace Hotel_Management_System
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            // OpenForm(new FormMain());
+             OpenForm(new FormMain());
             if (currentForm != null)
             {
                 currentForm.Close();
-                DisableButton();
-                leftBoarderBtn.Visible = false;
+                Reset();
+                
             }
             
 
