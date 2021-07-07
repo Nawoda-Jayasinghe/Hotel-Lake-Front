@@ -12,6 +12,9 @@ namespace Hotel_Management_System
 {
     public partial class FormNewGuest : Form
     {
+
+        Form currentForm;
+
         public FormNewGuest()
         {
             InitializeComponent();
@@ -29,6 +32,57 @@ namespace Hotel_Management_System
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OpenForm(Form childForm)
+        {
+            //open only form
+            if (currentForm != null)
+            {
+                currentForm.Close();
+            }
+            currentForm = childForm;
+            //End
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            //panel1.Dock = DockStyle.Fill;
+            panelGuest.Controls.Add(childForm);
+            panelGuest.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            //titleCurrent.Text = childForm.Text;
+
+
+        }
+
+
+
+        private void btnGuestFurther_Click(object sender, EventArgs e)
+        {
+          
+            OpenForm(new FormNewGuestNext());
 
         }
     }
