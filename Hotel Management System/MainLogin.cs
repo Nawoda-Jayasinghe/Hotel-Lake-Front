@@ -10,32 +10,15 @@ using System.Windows.Forms;
 
 namespace Hotel_Management_System
 {
-    public partial class Login : Form
+    public partial class MainLogin : Form
     {
-        public Login()
+        public MainLogin()
         {
             InitializeComponent();
-
-            this.Text = string.Empty;
-            this.ControlBox = false;
-            this.DoubleBuffered = true;
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
-
-        private void pictureBox4_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnLogin_Click(object sender, EventArgs e)
+        
+        private void iconButton2_Click(object sender, EventArgs e)
         {
             if (txtUserNameLogin.Text.Length >= 3)
             {
@@ -45,20 +28,15 @@ namespace Hotel_Management_System
                 {
                     //FormMainAdmin newFormMainAdmin = new FormMainAdmin();
                     //newFormMainAdmin.Visible=true;
-                    
+
                     //this.Visible = false;
 
                     // Application.Run(new FormMainAdmin());
 
                     //this.Hide();
                     FormMainAdmin f2 = new FormMainAdmin();
-                    f2.Size = new Size(1582, 932);
+                    //f2.Size = new Size();
                     f2.Show();
-
-                    
-
-
-
 
                 }
 
@@ -78,6 +56,16 @@ namespace Hotel_Management_System
 
                 }
             }
+        }
+
+        private void txtUserNameLogin_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoginClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
