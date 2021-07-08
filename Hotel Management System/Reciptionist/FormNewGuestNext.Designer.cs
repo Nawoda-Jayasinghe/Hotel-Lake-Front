@@ -204,7 +204,7 @@ namespace Hotel_Management_System
             this.OthersDetails.AllowUserToResizeColumns = false;
             this.OthersDetails.AllowUserToResizeRows = false;
             this.OthersDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.OthersDetails.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.OthersDetails.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.OthersDetails.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.OthersDetails.ColumnHeadersHeight = 55;
             this.OthersDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;

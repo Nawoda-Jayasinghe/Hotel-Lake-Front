@@ -165,3 +165,4 @@ C:\Users\Nawoda Jayasinghe\Desktop\lasith\Hotel Management System\obj\Debug\Hote
 C:\Users\Nawoda Jayasinghe\Desktop\lasith\Hotel Management System\obj\Debug\Hotel Management System.exe
 C:\Users\Nawoda Jayasinghe\Desktop\lasith\Hotel Management System\obj\Debug\Hotel Management System.pdb
 C:\Users\Nawoda Jayasinghe\Desktop\lasith\Hotel Management System\obj\Debug\Hotel_Management_System.FormNewGuestNext.resources
+C:\Users\Nawoda Jayasinghe\Desktop\lasith\Hotel Management System\obj\Debug\Hotel_Management_System.MainLogin.resources

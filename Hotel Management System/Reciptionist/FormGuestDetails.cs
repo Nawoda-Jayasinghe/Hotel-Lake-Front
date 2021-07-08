@@ -31,5 +31,10 @@ namespace Hotel_Management_System
         {
 
         }
+
+        private void FormGuestDetails_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

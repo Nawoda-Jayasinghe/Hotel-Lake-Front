@@ -104,6 +104,12 @@
       <DependentUpon>FormPaymentsCashier.cs</DependentUpon>
     </Compile>
     <Compile Include="DatabaseConnection.cs" />
+    <Compile Include="MainLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainLogin.Designer.cs">
+      <DependentUpon>MainLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -228,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cashier\FormPaymentsCashier.resx">
       <DependentUpon>FormPaymentsCashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainLogin.resx">
+      <DependentUpon>MainLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reciptionist\FormNewGuestNext.resx">
       <DependentUpon>FormNewGuestNext.cs</DependentUpon>
