@@ -46,8 +46,8 @@ namespace Hotel_Management_System
             this.iconCurrent = new FontAwesome.Sharp.IconPictureBox();
             this.panelS = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -346,23 +346,23 @@ namespace Hotel_Management_System
             this.panelDesktop.TabIndex = 3;
             this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelD_Paint);
             // 
-            // directorySearcher1
-            // 
-            this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
-            this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
-            this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
-            // 
             // iconButton1
             // 
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton1.IconColor = System.Drawing.Color.Black;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(534, 254);
+            this.iconButton1.Location = new System.Drawing.Point(1475, 845);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(109, 56);
             this.iconButton1.TabIndex = 0;
             this.iconButton1.Text = "iconButton1";
             this.iconButton1.UseVisualStyleBackColor = true;
+            // 
+            // directorySearcher1
+            // 
+            this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
             // 
             // FormMainAdmin
             // 
