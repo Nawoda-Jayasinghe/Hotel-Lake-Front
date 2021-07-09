@@ -16,7 +16,7 @@ namespace Hotel_Management_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainLogin());
+            Application.Run(new FormNewGuest());
             //Application.Run(new New());
            
         }
