@@ -16,7 +16,11 @@ namespace Hotel_Management_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new TabMenu());
+=======
+            Application.Run(new MainLogin());
+>>>>>>> 03064b396af63d3bfb1eebf152189e445a338bd4
             //Application.Run(new New());
            
         }
