@@ -166,9 +166,19 @@ namespace Hotel_Management_System
 
         }
 
+
+
         private void btnHome_Click(object sender, EventArgs e)
         {
-            Reset();
+         
+
+            if (currentForm != null)
+            {
+                currentForm.Close();
+                Reset();
+            }
+
+
         }
 
 

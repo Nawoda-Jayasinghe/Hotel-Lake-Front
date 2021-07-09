@@ -168,7 +168,15 @@ namespace Hotel_Management_System
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            Reset();
+             OpenForm(new FormMain());
+            if (currentForm != null)
+            {
+                currentForm.Close();
+                Reset();
+                
+            }
+            
+
         }
 
 
@@ -374,6 +382,9 @@ namespace Hotel_Management_System
             Application.Exit();
         }
 
-        
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

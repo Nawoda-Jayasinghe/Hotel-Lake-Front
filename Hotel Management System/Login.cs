@@ -28,21 +28,56 @@ namespace Hotel_Management_System
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //FormMain mainmenu = new FormMain();
-            // mainmenu.ShowDialog();
-            // this.Close();
 
-          
-        
-
-
-        }
 
         private void Login_Load(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if (txtUserNameLogin.Text.Length >= 3)
+            {
+                string User = txtUserNameLogin.Text.Substring(0, 3);
+
+                if (User == "ADM")
+                {
+                    //FormMainAdmin newFormMainAdmin = new FormMainAdmin();
+                    //newFormMainAdmin.Visible=true;
+                    
+                    //this.Visible = false;
+
+                    // Application.Run(new FormMainAdmin());
+
+                    //this.Hide();
+                    FormMainAdmin f2 = new FormMainAdmin();
+                    f2.Size = new Size(1582, 932);
+                    f2.Show();
+
+                    
+
+
+
+
+                }
+
+                else if (User == "RCP")
+                {
+                    FormMain newFormMain = new FormMain();
+                    newFormMain.Show();
+                    this.Visible = false;
+
+                }
+
+                else if (User == "CSH")
+                {
+                    FormMainCashier newFormMainCashier = new FormMainCashier();
+                    newFormMainCashier.Show();
+                    this.Visible = false;
+
+                }
+            }
         }
     }
 }
