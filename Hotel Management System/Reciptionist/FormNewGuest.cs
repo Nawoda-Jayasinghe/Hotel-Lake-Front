@@ -45,16 +45,6 @@ namespace Hotel_Management_System
 
         }
 
-        private void label16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void OpenForm(Form childForm)
         {
             //open only form
@@ -84,6 +74,91 @@ namespace Hotel_Management_System
           
             OpenForm(new FormNewGuestNext());
 
+        }
+
+
+        private void cbForeign_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbForeign.Checked)
+            {
+                lblNIC.Text = "Passport No";
+
+                mtbTP1.Mask = "(+0) 000-000-0000";
+                mtbTP2.Mask = "(+0) 000-000-0000";
+            }
+
+            else
+            {
+                lblNIC.Text = "National ID";
+               mtbTP1.Mask = "(\\000) 000-0000";
+                mtbTP2.Mask = "(\\000) 000-0000";
+            }
+        }
+
+        private void mtbTP1_Click(object sender, EventArgs e)
+        {
+            mtbTP1.SelectionStart = 2;
+        }
+
+
+        private void mtbTP2_MouseClick(object sender, MouseEventArgs e)
+        {
+            mtbTP2.SelectionStart = 1;
+        }
+
+
+        private void txtAddressLine1_Enter(object sender, EventArgs e)
+        {
+            if(txtAddressLine1.Text == "Address Line 1")
+            {
+                txtAddressLine1.Text = "";
+                txtAddressLine1.ForeColor = Color.FromArgb(26, 25, 62);
+            }
+        }
+
+        private void txtAddressLine1_Leave(object sender, EventArgs e)
+        {
+            if (txtAddressLine1.Text == "")
+            {
+                txtAddressLine1.Text = "Address Line 1";
+                txtAddressLine1.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtAddressLine2_Enter(object sender, EventArgs e)
+        {
+            if (txtAddressLine2.Text == "Address Line 2")
+            {
+                txtAddressLine2.Text = "";
+                txtAddressLine2.ForeColor = Color.FromArgb(26, 25, 62);
+            }
+        }
+
+        private void txtAddressLine2_Leave(object sender, EventArgs e)
+        {
+            if (txtAddressLine2.Text == "")
+            {
+                txtAddressLine2.Text = "Address Line 2";
+                txtAddressLine2.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtAddressLine3_Enter(object sender, EventArgs e)
+        {
+            if (txtAddressLine3.Text == "Address Line 3")
+            {
+                txtAddressLine3.Text = "";
+                txtAddressLine3.ForeColor = Color.FromArgb(26, 25, 62);
+            }
+        }
+
+        private void txtAddressLine3_Leave(object sender, EventArgs e)
+        {
+            if (txtAddressLine3.Text == "")
+            {
+                txtAddressLine3.Text = "Address Line 3";
+                txtAddressLine3.ForeColor = Color.Gray;
+            }
         }
     }
 }
