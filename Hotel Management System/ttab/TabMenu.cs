@@ -379,26 +379,31 @@ namespace Hotel_Management_System
         private void btnTabCleaning_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
+            OpenForm(new TabCleaning());
         }
 
         private void btnTabDetails_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
+            OpenForm(new TabDetails());
         }
 
         private void btnTabServices_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
+            OpenForm(new TabServices());
         }
 
         private void btnTabPayment_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color5);
+            OpenForm(new TabBill());
         }
 
         private void btnTabContact_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color6);
+            OpenForm(new TabContact());
         }
     }
 }

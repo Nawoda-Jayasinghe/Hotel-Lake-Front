@@ -168,6 +168,84 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ttab\TabContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ttab\TabContact.Designer.cs">
+      <DependentUpon>TabContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ttab\TabBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ttab\TabBill.designer.cs">
+      <DependentUpon>TabBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ttab\TabBillRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ttab\TabBillRoom.designer.cs">
+      <DependentUpon>TabBillRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ttab\TabBillCleaning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ttab\TabBillCleaning.designer.cs">
+      <DependentUpon>TabBillCleaning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ttab\TabBillServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ttab\TabBillServices.designer.cs">
+      <DependentUpon>TabBillServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ttab\TabBillFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ttab\TabBillFood.designer.cs">
+      <DependentUpon>TabBillFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ttab\TabServicesRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ttab\TabServicesRequest.designer.cs">
+      <DependentUpon>TabServicesRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ttab\TabServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ttab\TabServices.designer.cs">
+      <DependentUpon>TabServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ttab\TabDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ttab\TabDetails.designer.cs">
+      <DependentUpon>TabDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ttab\TabCleaningCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ttab\TabCleaningCancel.designer.cs">
+      <DependentUpon>TabCleaningCancel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ttab\TabCleaningShedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ttab\TabCleaningShedule.designer.cs">
+      <DependentUpon>TabCleaningShedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ttab\TabCleaningRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ttab\TabCleaningRequest.designer.cs">
+      <DependentUpon>TabCleaningRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ttab\TabCleaning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ttab\TabCleaning.designer.cs">
+      <DependentUpon>TabCleaning.cs</DependentUpon>
+    </Compile>
     <Compile Include="ttab\TabFood.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +272,45 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cashier\FormPaymentsCashier.resx">
       <DependentUpon>FormPaymentsCashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ttab\TabContact.resx">
+      <DependentUpon>TabContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ttab\TabBill.resx">
+      <DependentUpon>TabBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ttab\TabBillRoom.resx">
+      <DependentUpon>TabBillRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ttab\TabBillCleaning.resx">
+      <DependentUpon>TabBillCleaning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ttab\TabBillServices.resx">
+      <DependentUpon>TabBillServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ttab\TabBillFood.resx">
+      <DependentUpon>TabBillFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ttab\TabServicesRequest.resx">
+      <DependentUpon>TabServicesRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ttab\TabServices.resx">
+      <DependentUpon>TabServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ttab\TabDetails.resx">
+      <DependentUpon>TabDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ttab\TabCleaningCancel.resx">
+      <DependentUpon>TabCleaningCancel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ttab\TabCleaningShedule.resx">
+      <DependentUpon>TabCleaningShedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ttab\TabCleaningRequest.resx">
+      <DependentUpon>TabCleaningRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ttab\TabCleaning.resx">
+      <DependentUpon>TabCleaning.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ttab\TabFood.resx">
       <DependentUpon>TabFood.cs</DependentUpon>

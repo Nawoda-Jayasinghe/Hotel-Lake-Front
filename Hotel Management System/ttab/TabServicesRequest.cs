@@ -13,7 +13,7 @@ using FontAwesome.Sharp;
 
 namespace Hotel_Management_System
 {
-    public partial class TabFood : Form
+    public partial class TabServicesRequest : Form
     {
         //fields
         private IconButton currentBtn;
@@ -22,12 +22,12 @@ namespace Hotel_Management_System
 
 
         //constructor
-        public TabFood()
+        public TabServicesRequest()
         {
             InitializeComponent();
             leftBoarderBtn = new Panel();
             leftBoarderBtn.Size = new Size(7, 84);
-            panelMenu.Controls.Add(leftBoarderBtn);
+            //panelMenu.Controls.Add(leftBoarderBtn);
 
             //form
             this.Text = string.Empty;
@@ -374,7 +374,7 @@ namespace Hotel_Management_System
             Application.Exit();
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }

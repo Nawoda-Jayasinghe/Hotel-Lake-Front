@@ -13,7 +13,7 @@ using FontAwesome.Sharp;
 
 namespace Hotel_Management_System
 {
-    public partial class TabFood : Form
+    public partial class TabDetails : Form
     {
         //fields
         private IconButton currentBtn;
@@ -22,12 +22,12 @@ namespace Hotel_Management_System
 
 
         //constructor
-        public TabFood()
+        public TabDetails()
         {
             InitializeComponent();
             leftBoarderBtn = new Panel();
             leftBoarderBtn.Size = new Size(7, 84);
-            panelMenu.Controls.Add(leftBoarderBtn);
+            //panelMenu.Controls.Add(leftBoarderBtn);
 
             //form
             this.Text = string.Empty;
@@ -121,20 +121,20 @@ namespace Hotel_Management_System
         private void btnNewGuest_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
-            OpenForm(new FormNewGuest());
+            OpenForm(new TabCleaningRequest());
 
         }
 
         private void btnGuestDetails_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
-            OpenForm(new FormGuestDetails());
+            OpenForm(new TabCleaningShedule());
         }
 
         private void btnRoomDetails_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
-            OpenForm(new FormRoomDetails());
+            OpenForm(new TabCleaningCancel());
         }
 
         private void btnFoodDetails_Click(object sender, EventArgs e)
@@ -375,6 +375,16 @@ namespace Hotel_Management_System
         }
 
         private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBack_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }

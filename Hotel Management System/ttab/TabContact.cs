@@ -10,32 +10,16 @@ using System.Windows.Forms;
 
 namespace Hotel_Management_System
 {
-    public partial class FormNewGuest : Form
+    public partial class TabContact : Form
     {
-        public FormNewGuest()
+        public TabContact()
         {
             InitializeComponent();
-          
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void panelDesktop_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

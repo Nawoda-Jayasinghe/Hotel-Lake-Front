@@ -50,8 +50,9 @@ namespace Hotel_Management_System
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
+            this.btnBack = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelDesktop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -61,6 +62,7 @@ namespace Hotel_Management_System
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panelMenu.Controls.Add(this.btnBack);
             this.panelMenu.Controls.Add(this.btnNotifications);
             this.panelMenu.Controls.Add(this.btnPayments);
             this.panelMenu.Controls.Add(this.btnStaffDetails);
@@ -361,16 +363,28 @@ namespace Hotel_Management_System
             this.Column2.HeaderText = "Price";
             this.Column2.Name = "Column2";
             // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Quantity";
+            this.Column6.Name = "Column6";
+            // 
             // directorySearcher1
             // 
             this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
             // 
-            // Column6
+            // btnBack
             // 
-            this.Column6.HeaderText = "Quantity";
-            this.Column6.Name = "Column6";
+            this.btnBack.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Location = new System.Drawing.Point(0, 567);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(230, 42);
+            this.btnBack.TabIndex = 8;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // TabFood
             // 
@@ -419,5 +433,6 @@ namespace Hotel_Management_System
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.Button btnBack;
     }
 }
