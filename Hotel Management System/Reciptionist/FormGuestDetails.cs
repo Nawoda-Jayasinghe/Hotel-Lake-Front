@@ -21,5 +21,20 @@ namespace Hotel_Management_System
         {
             this.Close();
         }
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormGuestDetails_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
