@@ -30,9 +30,10 @@ namespace Hotel_Management_System
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -58,7 +59,6 @@ namespace Hotel_Management_System
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.GuestID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoomID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -71,8 +71,7 @@ namespace Hotel_Management_System
             this.label4 = new System.Windows.Forms.Label();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -81,11 +80,11 @@ namespace Hotel_Management_System
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.iconButton3);
             this.panel1.Controls.Add(this.dateTimePicker2);
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.iconButton3);
             this.panel1.Controls.Add(this.iconButton4);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel5);
@@ -117,6 +116,20 @@ namespace Hotel_Management_System
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(598, 121);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(153, 22);
+            this.dateTimePicker2.TabIndex = 267;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(377, 119);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(153, 22);
+            this.dateTimePicker1.TabIndex = 266;
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -135,32 +148,24 @@ namespace Hotel_Management_System
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label13.Location = new System.Drawing.Point(91, 514);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(125, 38);
+            this.label13.Size = new System.Drawing.Size(107, 38);
             this.label13.TabIndex = 40;
-            this.label13.Text = "120000";
-            // 
-            // iconButton3
-            // 
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Paypal;
-            this.iconButton3.IconColor = System.Drawing.Color.Black;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 30;
-            this.iconButton3.Location = new System.Drawing.Point(891, 468);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(100, 95);
-            this.iconButton3.TabIndex = 39;
-            this.iconButton3.UseVisualStyleBackColor = true;
+            this.label13.Text = "12000";
             // 
             // iconButton4
             // 
+            this.iconButton4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.Coins;
             this.iconButton4.IconColor = System.Drawing.Color.Black;
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.IconSize = 30;
+            this.iconButton4.IconSize = 50;
+            this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.iconButton4.Location = new System.Drawing.Point(781, 468);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Size = new System.Drawing.Size(100, 95);
             this.iconButton4.TabIndex = 38;
+            this.iconButton4.Text = "Cash";
+            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.iconButton4.UseVisualStyleBackColor = true;
             // 
             // panel6
@@ -186,9 +191,9 @@ namespace Hotel_Management_System
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label12.Location = new System.Drawing.Point(839, 401);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(125, 38);
+            this.label12.Size = new System.Drawing.Size(107, 38);
             this.label12.TabIndex = 36;
-            this.label12.Text = "120000";
+            this.label12.Text = "10000";
             // 
             // label11
             // 
@@ -197,9 +202,9 @@ namespace Hotel_Management_System
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.label11.Location = new System.Drawing.Point(839, 263);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(125, 38);
+            this.label11.Size = new System.Drawing.Size(89, 38);
             this.label11.TabIndex = 35;
-            this.label11.Text = "120000";
+            this.label11.Text = "2000";
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label6
@@ -209,9 +214,9 @@ namespace Hotel_Management_System
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.label6.Location = new System.Drawing.Point(839, 137);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(125, 38);
+            this.label6.Size = new System.Drawing.Size(107, 38);
             this.label6.TabIndex = 34;
-            this.label6.Text = "120000";
+            this.label6.Text = "12000";
             // 
             // label10
             // 
@@ -397,7 +402,6 @@ namespace Hotel_Management_System
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.GuestID,
             this.RoomID,
             this.Column3,
             this.select});
@@ -408,18 +412,7 @@ namespace Hotel_Management_System
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(283, 357);
             this.dataGridView1.TabIndex = 23;
-            // 
-            // GuestID
-            // 
-            this.GuestID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.GuestID.FillWeight = 101.2478F;
-            this.GuestID.Frozen = true;
-            this.GuestID.HeaderText = "Guest ID";
-            this.GuestID.MinimumWidth = 6;
-            this.GuestID.Name = "GuestID";
-            this.GuestID.ReadOnly = true;
-            this.GuestID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.GuestID.Width = 71;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // RoomID
             // 
@@ -537,19 +530,21 @@ namespace Hotel_Management_System
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "Search";
             // 
-            // dateTimePicker1
+            // iconButton3
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(377, 119);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(153, 22);
-            this.dateTimePicker1.TabIndex = 266;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(598, 121);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(153, 22);
-            this.dateTimePicker2.TabIndex = 267;
+            this.iconButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Paypal;
+            this.iconButton3.IconColor = System.Drawing.Color.Black;
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.IconSize = 50;
+            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconButton3.Location = new System.Drawing.Point(887, 468);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Size = new System.Drawing.Size(100, 95);
+            this.iconButton3.TabIndex = 268;
+            this.iconButton3.Text = "Card";
+            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.iconButton3.UseVisualStyleBackColor = true;
             // 
             // FormPayments
             // 
@@ -595,7 +590,6 @@ namespace Hotel_Management_System
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
-        private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton4;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
@@ -609,11 +603,11 @@ namespace Hotel_Management_System
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GuestID;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DataGridViewTextBoxColumn RoomID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewCheckBoxColumn select;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private FontAwesome.Sharp.IconButton iconButton3;
     }
 }

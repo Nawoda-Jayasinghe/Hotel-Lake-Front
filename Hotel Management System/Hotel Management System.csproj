@@ -85,6 +85,12 @@
     <Compile Include="Admin\FormMainAdmin.designer.cs">
       <DependentUpon>FormMainAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="BillPrintout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BillPrintout.Designer.cs">
+      <DependentUpon>BillPrintout.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cashier\FormMainCashier.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\FormMainAdmin.resx">
       <DependentUpon>FormMainAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BillPrintout.resx">
+      <DependentUpon>BillPrintout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cashier\FormMainCashier.resx">
       <DependentUpon>FormMainCashier.cs</DependentUpon>
