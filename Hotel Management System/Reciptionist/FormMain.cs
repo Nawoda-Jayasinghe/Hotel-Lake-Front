@@ -53,10 +53,9 @@ namespace Hotel_Management_System
         }
 
 
-
-
+        
         //method to highlight
-        private void ActivateButton(object senderBtn, Color color)
+        public void ActivateButton(object senderBtn, Color color)
         {
             if(senderBtn != null)
             {
@@ -94,7 +93,7 @@ namespace Hotel_Management_System
             }
         }
 
-        private void OpenForm(Form childForm)
+        public void OpenForm(Form childForm)
         {
             //open only form
             if (currentForm != null)

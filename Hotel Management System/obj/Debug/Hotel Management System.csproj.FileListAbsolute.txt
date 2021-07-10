@@ -169,3 +169,4 @@ C:\Users\USER\source\repos\LakeFront\Hotel Management System\obj\Debug\Hotel_Man
 C:\Users\USER\source\repos\LakeFront\Hotel Management System\obj\Debug\Hotel_Management_System.FormNewGuestNext.resources
 C:\Users\USER\source\repos\LakeFront\Hotel Management System\obj\Debug\Hotel_Management_System.TabFood.resources
 C:\Users\USER\source\repos\LakeFront\Hotel Management System\obj\Debug\Hotel_Management_System.TabMenu.resources
+C:\Users\Nawoda Jayasinghe\Desktop\lasith\Hotel Management System\obj\Debug\Hotel_Management_System.BillPrintout.resources
