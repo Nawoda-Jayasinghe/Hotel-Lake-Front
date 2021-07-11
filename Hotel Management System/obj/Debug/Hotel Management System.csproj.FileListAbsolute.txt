@@ -275,3 +275,4 @@ C:\Users\USER\Desktop\lakefront3\Hotel Management System\obj\Debug\Hotel Managem
 C:\Users\USER\Desktop\lakefront3\Hotel Management System\obj\Debug\Hotel Management System.exe
 C:\Users\USER\Desktop\lakefront3\Hotel Management System\obj\Debug\Hotel Management System.pdb
 C:\Users\USER\Desktop\lakefront3\Hotel Management System\obj\Debug\Hotel_Management_System.FormNewGuestNext2.resources
+C:\Users\Nawoda Jayasinghe\Desktop\Nawo\Hotel Management System\obj\Debug\Hotel_Management_System.FormNewGuestNext2.resources

@@ -164,6 +164,16 @@ namespace Hotel_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap photography_81 {
+            get {
+                object obj = ResourceManager.GetObject("photography-81", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap wp7692446 {
             get {
                 object obj = ResourceManager.GetObject("wp7692446", resourceCulture);

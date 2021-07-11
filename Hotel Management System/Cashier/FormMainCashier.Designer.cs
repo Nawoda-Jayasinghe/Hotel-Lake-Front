@@ -42,12 +42,22 @@ namespace Hotel_Management_System
             this.panelS = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnLogoutCashier = new FontAwesome.Sharp.IconButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.ADM005 = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrent)).BeginInit();
+            this.panelDesktop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -208,6 +218,13 @@ namespace Hotel_Management_System
             // 
             this.panelDesktop.AutoSize = true;
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.panelDesktop.Controls.Add(this.label3);
+            this.panelDesktop.Controls.Add(this.ADM005);
+            this.panelDesktop.Controls.Add(this.pictureBox2);
+            this.panelDesktop.Controls.Add(this.btnLogoutCashier);
+            this.panelDesktop.Controls.Add(this.panel3);
+            this.panelDesktop.Controls.Add(this.label1);
+            this.panelDesktop.Controls.Add(this.pictureBox1);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelDesktop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -223,6 +240,76 @@ namespace Hotel_Management_System
             this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(63, 246);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(743, 504);
+            this.pictureBox2.TabIndex = 15;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnLogoutCashier
+            // 
+            this.btnLogoutCashier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnLogoutCashier.IconChar = FontAwesome.Sharp.IconChar.SignInAlt;
+            this.btnLogoutCashier.IconColor = System.Drawing.Color.Black;
+            this.btnLogoutCashier.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnLogoutCashier.IconSize = 30;
+            this.btnLogoutCashier.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLogoutCashier.Location = new System.Drawing.Point(929, 717);
+            this.btnLogoutCashier.Name = "btnLogoutCashier";
+            this.btnLogoutCashier.Size = new System.Drawing.Size(264, 44);
+            this.btnLogoutCashier.TabIndex = 14;
+            this.btnLogoutCashier.Text = "Log Out";
+            this.btnLogoutCashier.UseVisualStyleBackColor = true;
+            this.btnLogoutCashier.Click += new System.EventHandler(this.btnLogoutCashier_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.panel3.Location = new System.Drawing.Point(821, -2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1, 805);
+            this.panel3.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(155, 85);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(558, 135);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Welcome";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Hotel_Management_System.Properties.Resources.photography_8;
+            this.pictureBox1.Location = new System.Drawing.Point(918, 76);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(275, 254);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(904, 458);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(305, 29);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Mr. Dhananjaya Jayasekara";
+            // 
+            // ADM005
+            // 
+            this.ADM005.AutoSize = true;
+            this.ADM005.Location = new System.Drawing.Point(1023, 413);
+            this.ADM005.Name = "ADM005";
+            this.ADM005.Size = new System.Drawing.Size(78, 29);
+            this.ADM005.TabIndex = 16;
+            this.ADM005.Text = "89005";
             // 
             // FormMainCashier
             // 
@@ -244,6 +331,10 @@ namespace Hotel_Management_System
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrent)).EndInit();
+            this.panelDesktop.ResumeLayout(false);
+            this.panelDesktop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,5 +355,12 @@ namespace Hotel_Management_System
         private System.DirectoryServices.DirectorySearcher directorySearcher1;
         private System.Windows.Forms.Label titleCurrent;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private FontAwesome.Sharp.IconButton btnLogoutCashier;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label ADM005;
     }
 }
