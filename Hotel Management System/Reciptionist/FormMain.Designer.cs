@@ -101,7 +101,7 @@ namespace Hotel_Management_System
             this.btnNotifications.Name = "btnNotifications";
             this.btnNotifications.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnNotifications.Size = new System.Drawing.Size(307, 84);
-            this.btnNotifications.TabIndex = 7;
+            this.btnNotifications.TabIndex = 1006;
             this.btnNotifications.Text = "Notifications";
             this.btnNotifications.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNotifications.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -124,7 +124,7 @@ namespace Hotel_Management_System
             this.btnPayments.Name = "btnPayments";
             this.btnPayments.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnPayments.Size = new System.Drawing.Size(307, 84);
-            this.btnPayments.TabIndex = 6;
+            this.btnPayments.TabIndex = 1005;
             this.btnPayments.Text = "Payments";
             this.btnPayments.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPayments.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -147,7 +147,7 @@ namespace Hotel_Management_System
             this.btnStaffDetails.Name = "btnStaffDetails";
             this.btnStaffDetails.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnStaffDetails.Size = new System.Drawing.Size(307, 84);
-            this.btnStaffDetails.TabIndex = 5;
+            this.btnStaffDetails.TabIndex = 1004;
             this.btnStaffDetails.Text = "Staff Details";
             this.btnStaffDetails.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStaffDetails.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -170,7 +170,7 @@ namespace Hotel_Management_System
             this.btnFoodDetails.Name = "btnFoodDetails";
             this.btnFoodDetails.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnFoodDetails.Size = new System.Drawing.Size(307, 84);
-            this.btnFoodDetails.TabIndex = 4;
+            this.btnFoodDetails.TabIndex = 1003;
             this.btnFoodDetails.Text = "Food Details";
             this.btnFoodDetails.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFoodDetails.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -193,7 +193,7 @@ namespace Hotel_Management_System
             this.btnRoomDetails.Name = "btnRoomDetails";
             this.btnRoomDetails.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnRoomDetails.Size = new System.Drawing.Size(307, 84);
-            this.btnRoomDetails.TabIndex = 3;
+            this.btnRoomDetails.TabIndex = 1002;
             this.btnRoomDetails.Text = "Room Details";
             this.btnRoomDetails.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRoomDetails.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -216,7 +216,7 @@ namespace Hotel_Management_System
             this.btnGuestDetails.Name = "btnGuestDetails";
             this.btnGuestDetails.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnGuestDetails.Size = new System.Drawing.Size(307, 84);
-            this.btnGuestDetails.TabIndex = 2;
+            this.btnGuestDetails.TabIndex = 1001;
             this.btnGuestDetails.Text = "Guest Details";
             this.btnGuestDetails.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuestDetails.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -239,7 +239,7 @@ namespace Hotel_Management_System
             this.btnNewGuest.Name = "btnNewGuest";
             this.btnNewGuest.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnNewGuest.Size = new System.Drawing.Size(307, 84);
-            this.btnNewGuest.TabIndex = 1;
+            this.btnNewGuest.TabIndex = 1000;
             this.btnNewGuest.Text = "New Guest";
             this.btnNewGuest.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNewGuest.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -359,7 +359,7 @@ namespace Hotel_Management_System
             this.panelDesktop.Margin = new System.Windows.Forms.Padding(0);
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(1257, 801);
-            this.panelDesktop.TabIndex = 3;
+            this.panelDesktop.TabIndex = 1010;
             this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelD_Paint);
             // 
             // pictureBox2
@@ -406,7 +406,7 @@ namespace Hotel_Management_System
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.panel3.Location = new System.Drawing.Point(789, -4);
+            this.panel3.Location = new System.Drawing.Point(789, -3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1, 805);
             this.panel3.TabIndex = 2;

@@ -29,188 +29,95 @@ namespace Hotel_Management_System
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.OthersDetails = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrderIDCashier = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label16 = new System.Windows.Forms.Label();
-            this.btnPrevious = new FontAwesome.Sharp.IconButton();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.panelGuestNext = new System.Windows.Forms.Panel();
+            this.tblReservationDetails = new System.Windows.Forms.DataGridView();
             this.btnNext = new FontAwesome.Sharp.IconButton();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.OthersDetails)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.btnPrevious = new FontAwesome.Sharp.IconButton();
+            this.label16 = new System.Windows.Forms.Label();
+            this.clmnPets = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.clmnExtraBed = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.clmnHotWater = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.clmnSatelliteTV = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.clmnWifi = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.clmnDeparture = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmnArrival = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmnReservation = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.clmnRoomType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmnRoomID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelGuestNext.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblReservationDetails)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // panelGuestNext
             // 
-            this.groupBox1.Controls.Add(this.checkBox6);
-            this.groupBox1.Controls.Add(this.checkBox5);
-            this.groupBox1.Controls.Add(this.checkBox4);
-            this.groupBox1.Controls.Add(this.checkBox3);
-            this.groupBox1.Controls.Add(this.checkBox2);
-            this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.groupBox1.Location = new System.Drawing.Point(593, 83);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(361, 301);
-            this.groupBox1.TabIndex = 246;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Other Facilities";
+            this.panelGuestNext.Controls.Add(this.tblReservationDetails);
+            this.panelGuestNext.Controls.Add(this.btnNext);
+            this.panelGuestNext.Controls.Add(this.btnPrevious);
+            this.panelGuestNext.Controls.Add(this.label16);
+            this.panelGuestNext.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelGuestNext.Location = new System.Drawing.Point(0, 0);
+            this.panelGuestNext.Name = "panelGuestNext";
+            this.panelGuestNext.Size = new System.Drawing.Size(1003, 584);
+            this.panelGuestNext.TabIndex = 262;
             // 
-            // label9
+            // tblReservationDetails
             // 
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(63, 120);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(169, 35);
-            this.label9.TabIndex = 226;
-            this.label9.Text = "Hot Water";
-            // 
-            // label6
-            // 
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(63, 50);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(169, 35);
-            this.label6.TabIndex = 224;
-            this.label6.Text = "Satelite TV";
-            // 
-            // label8
-            // 
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(63, 85);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(189, 35);
-            this.label8.TabIndex = 225;
-            this.label8.Text = "Wifi";
-            // 
-            // label10
-            // 
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(63, 155);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(169, 35);
-            this.label10.TabIndex = 227;
-            this.label10.Text = "Extra Bed";
-            // 
-            // label11
-            // 
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(63, 190);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(169, 35);
-            this.label11.TabIndex = 228;
-            this.label11.Text = "BBQ";
-            // 
-            // label12
-            // 
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(63, 225);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(169, 35);
-            this.label12.TabIndex = 229;
-            this.label12.Text = "Pets Allowed";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.panel1.Location = new System.Drawing.Point(549, -6);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1, 597);
-            this.panel1.TabIndex = 245;
-            // 
-            // OthersDetails
-            // 
-            this.OthersDetails.AllowUserToOrderColumns = true;
-            this.OthersDetails.AllowUserToResizeColumns = false;
-            this.OthersDetails.AllowUserToResizeRows = false;
-            this.OthersDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.OthersDetails.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.OthersDetails.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.OthersDetails.ColumnHeadersHeight = 55;
-            this.OthersDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.OthersDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.OrderIDCashier});
-            this.OthersDetails.Location = new System.Drawing.Point(89, 93);
-            this.OthersDetails.Name = "OthersDetails";
-            this.OthersDetails.RowHeadersVisible = false;
-            this.OthersDetails.RowHeadersWidth = 51;
-            this.OthersDetails.RowTemplate.Height = 24;
-            this.OthersDetails.Size = new System.Drawing.Size(370, 414);
-            this.OthersDetails.TabIndex = 244;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Name";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            // 
-            // OrderIDCashier
-            // 
-            this.OrderIDCashier.HeaderText = "ID Number";
-            this.OrderIDCashier.MinimumWidth = 6;
-            this.OrderIDCashier.Name = "OrderIDCashier";
-            // 
-            // label16
-            // 
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label16.Location = new System.Drawing.Point(37, 19);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(208, 35);
-            this.label16.TabIndex = 243;
-            this.label16.Text = "Others Details";
-            // 
-            // btnPrevious
-            // 
-            this.btnPrevious.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.btnPrevious.FlatAppearance.BorderSize = 2;
-            this.btnPrevious.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrevious.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrevious.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnPrevious.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleLeft;
-            this.btnPrevious.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnPrevious.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnPrevious.IconSize = 40;
-            this.btnPrevious.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrevious.Location = new System.Drawing.Point(573, 501);
-            this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(190, 55);
-            this.btnPrevious.TabIndex = 247;
-            this.btnPrevious.Text = "Previous";
-            this.btnPrevious.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPrevious.UseVisualStyleBackColor = false;
-            this.btnPrevious.Click += new System.EventHandler(this.iconButton1_Click);
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(890, 19);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(64, 22);
-            this.numericUpDown1.TabIndex = 248;
+            this.tblReservationDetails.AllowUserToAddRows = false;
+            this.tblReservationDetails.AllowUserToDeleteRows = false;
+            this.tblReservationDetails.AllowUserToOrderColumns = true;
+            this.tblReservationDetails.AllowUserToResizeColumns = false;
+            this.tblReservationDetails.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.tblReservationDetails.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.tblReservationDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tblReservationDetails.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.tblReservationDetails.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblReservationDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.tblReservationDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tblReservationDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clmnRoomID,
+            this.clmnRoomType,
+            this.clmnReservation,
+            this.clmnArrival,
+            this.clmnDeparture,
+            this.clmnWifi,
+            this.clmnSatelliteTV,
+            this.clmnHotWater,
+            this.clmnExtraBed,
+            this.clmnPets});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tblReservationDetails.DefaultCellStyle = dataGridViewCellStyle3;
+            this.tblReservationDetails.Location = new System.Drawing.Point(7, 88);
+            this.tblReservationDetails.Name = "tblReservationDetails";
+            this.tblReservationDetails.RowHeadersVisible = false;
+            this.tblReservationDetails.RowHeadersWidth = 51;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Azure;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.tblReservationDetails.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.tblReservationDetails.RowTemplate.Height = 30;
+            this.tblReservationDetails.Size = new System.Drawing.Size(988, 305);
+            this.tblReservationDetails.TabIndex = 1;
+            this.tblReservationDetails.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblReservationDetails_CellClick);
             // 
             // btnNext
             // 
@@ -225,67 +132,125 @@ namespace Hotel_Management_System
             this.btnNext.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNext.IconSize = 40;
             this.btnNext.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNext.Location = new System.Drawing.Point(789, 501);
+            this.btnNext.Location = new System.Drawing.Point(789, 506);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(190, 55);
-            this.btnNext.TabIndex = 249;
+            this.btnNext.TabIndex = 2;
             this.btnNext.Text = "Next";
             this.btnNext.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNext.UseVisualStyleBackColor = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // checkBox1
+            // btnPrevious
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(286, 49);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(18, 17);
-            this.checkBox1.TabIndex = 230;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.btnPrevious.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnPrevious.FlatAppearance.BorderSize = 2;
+            this.btnPrevious.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrevious.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrevious.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnPrevious.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleLeft;
+            this.btnPrevious.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnPrevious.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPrevious.IconSize = 40;
+            this.btnPrevious.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrevious.Location = new System.Drawing.Point(573, 506);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(190, 55);
+            this.btnPrevious.TabIndex = 3;
+            this.btnPrevious.Text = "Previous";
+            this.btnPrevious.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPrevious.UseVisualStyleBackColor = false;
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
             // 
-            // checkBox2
+            // label16
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(286, 229);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(18, 17);
-            this.checkBox2.TabIndex = 231;
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label16.Location = new System.Drawing.Point(37, 24);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(311, 35);
+            this.label16.TabIndex = 262;
+            this.label16.Text = "Reservation Details";
             // 
-            // checkBox3
+            // clmnPets
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(286, 193);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(18, 17);
-            this.checkBox3.TabIndex = 232;
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.clmnPets.FillWeight = 80F;
+            this.clmnPets.HeaderText = "Pets Allowed";
+            this.clmnPets.MinimumWidth = 6;
+            this.clmnPets.Name = "clmnPets";
             // 
-            // checkBox4
+            // clmnExtraBed
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(286, 157);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(18, 17);
-            this.checkBox4.TabIndex = 233;
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.clmnExtraBed.FillWeight = 70F;
+            this.clmnExtraBed.HeaderText = "Extra Bed";
+            this.clmnExtraBed.MinimumWidth = 6;
+            this.clmnExtraBed.Name = "clmnExtraBed";
             // 
-            // checkBox5
+            // clmnHotWater
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(286, 121);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(18, 17);
-            this.checkBox5.TabIndex = 234;
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.clmnHotWater.FillWeight = 70F;
+            this.clmnHotWater.HeaderText = "Hot Water";
+            this.clmnHotWater.MinimumWidth = 6;
+            this.clmnHotWater.Name = "clmnHotWater";
+            this.clmnHotWater.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.clmnHotWater.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // checkBox6
+            // clmnSatelliteTV
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(286, 85);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(18, 17);
-            this.checkBox6.TabIndex = 235;
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.clmnSatelliteTV.FillWeight = 70F;
+            this.clmnSatelliteTV.HeaderText = "Satellite TV";
+            this.clmnSatelliteTV.MinimumWidth = 6;
+            this.clmnSatelliteTV.Name = "clmnSatelliteTV";
+            this.clmnSatelliteTV.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.clmnSatelliteTV.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // clmnWifi
+            // 
+            this.clmnWifi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clmnWifi.FillWeight = 70F;
+            this.clmnWifi.HeaderText = "Wi-Fi";
+            this.clmnWifi.MinimumWidth = 6;
+            this.clmnWifi.Name = "clmnWifi";
+            this.clmnWifi.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.clmnWifi.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // clmnDeparture
+            // 
+            this.clmnDeparture.FillWeight = 120F;
+            this.clmnDeparture.HeaderText = "Departure Date";
+            this.clmnDeparture.MinimumWidth = 6;
+            this.clmnDeparture.Name = "clmnDeparture";
+            // 
+            // clmnArrival
+            // 
+            this.clmnArrival.FillWeight = 120F;
+            this.clmnArrival.HeaderText = "Arrival Date";
+            this.clmnArrival.MinimumWidth = 6;
+            this.clmnArrival.Name = "clmnArrival";
+            // 
+            // clmnReservation
+            // 
+            this.clmnReservation.HeaderText = "Make a reservation";
+            this.clmnReservation.MinimumWidth = 6;
+            this.clmnReservation.Name = "clmnReservation";
+            // 
+            // clmnRoomType
+            // 
+            this.clmnRoomType.FillWeight = 130F;
+            this.clmnRoomType.HeaderText = "Room Type";
+            this.clmnRoomType.MinimumWidth = 6;
+            this.clmnRoomType.Name = "clmnRoomType";
+            // 
+            // clmnRoomID
+            // 
+            this.clmnRoomID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.clmnRoomID.FillWeight = 51.3369F;
+            this.clmnRoomID.Frozen = true;
+            this.clmnRoomID.HeaderText = "Room ID";
+            this.clmnRoomID.MinimumWidth = 6;
+            this.clmnRoomID.Name = "clmnRoomID";
+            this.clmnRoomID.Width = 84;
             // 
             // FormNewGuestNext
             // 
@@ -294,47 +259,35 @@ namespace Hotel_Management_System
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(1003, 584);
-            this.Controls.Add(this.btnNext);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.btnPrevious);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.OthersDetails);
-            this.Controls.Add(this.label16);
+            this.Controls.Add(this.panelGuestNext);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.Location = new System.Drawing.Point(307, 84);
             this.Name = "FormNewGuestNext";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "New Guest";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.OthersDetails)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.Load += new System.EventHandler(this.FormNewGuestNext_Load);
+            this.panelGuestNext.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tblReservationDetails)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private FontAwesome.Sharp.IconButton btnPrevious;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView OthersDetails;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OrderIDCashier;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+
+        private System.Windows.Forms.Panel panelGuestNext;
+        private System.Windows.Forms.DataGridView tblReservationDetails;
         private FontAwesome.Sharp.IconButton btnNext;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private FontAwesome.Sharp.IconButton btnPrevious;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmnRoomID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmnRoomType;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn clmnReservation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmnArrival;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmnDeparture;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn clmnWifi;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn clmnSatelliteTV;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn clmnHotWater;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn clmnExtraBed;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn clmnPets;
     }
 }
