@@ -120,7 +120,7 @@ namespace Hotel_Management_System
 
         private void FormNewGuestNext_Load(object sender, EventArgs e)
         {
-            tblReservationDetails.Rows.Add(1, "Single Normal");
+           
             tblReservationDetails.Rows.Add(6, "Single Luxury");
             tblReservationDetails.Rows.Add(8, "Single Luxury");
             tblReservationDetails.Rows.Add(9, "Single Luxury");
@@ -130,12 +130,7 @@ namespace Hotel_Management_System
             tblReservationDetails.Rows.Add(13, "Double Normal");
             tblReservationDetails.Rows.Add(14, "Double Normal");
             tblReservationDetails.Rows.Add(15, "Double Normal");
-            tblReservationDetails.Rows.Add(21, "Family Normal");
-            tblReservationDetails.Rows.Add(22, "Family Normal");
-            tblReservationDetails.Rows.Add(24, "Family Normal");
-            tblReservationDetails.Rows.Add(25, "Family Normal");
-            tblReservationDetails.Rows.Add(28, "Family Luxury");
-            tblReservationDetails.Rows.Add(29, "Family Luxury");
+           
 
 
         }

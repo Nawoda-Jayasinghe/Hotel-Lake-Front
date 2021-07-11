@@ -131,5 +131,21 @@ namespace Hotel_Management_System
 
 
         }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            if(txtGuestDetailsSearch.Text == "Guest NIC")
+            {
+                txtGuestDetailsSearch.Text = "";
+            }
+        }
+
+        private void txtGuestDetailsSearch_Leave(object sender, EventArgs e)
+        {
+            if (txtGuestDetailsSearch.Text == "")
+            {
+                txtGuestDetailsSearch.Text = "Guest NIC";
+            }
+        }
     }
 }

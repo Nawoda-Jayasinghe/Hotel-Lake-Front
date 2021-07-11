@@ -70,17 +70,16 @@ namespace Hotel_Management_System
 
         }
 
-        private void label11_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void tbleFoodOrderDetailsCashier_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void FormOrdersCashier_Load(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow row in tbleRoomFoodOrderDetailsListCashier.Rows)
-            {
-                row.Cells[FoodSelectOrders.Name].Value = true;
-            }
+            tbleRoomFoodOrderDetailsCashier.Rows.Add("2", "ODR254888");
+            tbleRoomFoodOrderDetailsCashier.Rows.Add("4", "ODR254889");
+            tbleRoomFoodOrderDetailsCashier.Rows.Add("15", "ODR154890");
+
+            tbleRoomFoodOrderDetailsListCashier.Rows.Add("F0005", "Sea Food Special Buriyani(L)", "1", "800");
+            tbleRoomFoodOrderDetailsListCashier.Rows.Add("F0009", "Broccoli cheddar baked potato", "2", "2500");
+            tbleRoomFoodOrderDetailsListCashier.Rows.Add("F0002", "Chicken Cheese Masala Kottu(S)", "1", "750");
         }
     }
 }
