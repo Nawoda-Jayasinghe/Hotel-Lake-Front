@@ -53,10 +53,9 @@ namespace Hotel_Management_System
         }
 
 
-
-
+        
         //method to highlight
-        private void ActivateButton(object senderBtn, Color color)
+        public void ActivateButton(object senderBtn, Color color)
         {
             if(senderBtn != null)
             {
@@ -94,7 +93,7 @@ namespace Hotel_Management_System
             }
         }
 
-        private void OpenForm(Form childForm)
+        public void OpenForm(Form childForm)
         {
             //open only form
             if (currentForm != null)
@@ -168,7 +167,15 @@ namespace Hotel_Management_System
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            Reset();
+             OpenForm(new FormMain());
+            if (currentForm != null)
+            {
+                currentForm.Close();
+                Reset();
+                
+            }
+            
+
         }
 
 
@@ -374,6 +381,21 @@ namespace Hotel_Management_System
             Application.Exit();
         }
 
-        
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogoutReciptionist_Click(object sender, EventArgs e)
+        {
+            DialogResult reslult = MessageBox.Show("Are you sure you want to log out?", "Confirm log out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (reslult == DialogResult.Yes)
+            {
+                this.Close();
+                MainLogin newMainLogin = new MainLogin();
+                newMainLogin.Show();
+            }
+        }
     }
 }

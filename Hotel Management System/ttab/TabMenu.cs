@@ -373,7 +373,7 @@ namespace Hotel_Management_System
         private void btnTabFood_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
-            OpenForm(new FormNewGuest());
+            OpenForm(new TabFood());
         }
 
         private void btnTabCleaning_Click(object sender, EventArgs e)

@@ -46,13 +46,25 @@ namespace Hotel_Management_System
             this.iconCurrent = new FontAwesome.Sharp.IconPictureBox();
             this.panelS = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnLogoutReciptionist = new FontAwesome.Sharp.IconButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.label3 = new System.Windows.Forms.Label();
+            this.ADM005 = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrent)).BeginInit();
+            this.panelDesktop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -89,7 +101,7 @@ namespace Hotel_Management_System
             this.btnNotifications.Name = "btnNotifications";
             this.btnNotifications.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnNotifications.Size = new System.Drawing.Size(307, 84);
-            this.btnNotifications.TabIndex = 7;
+            this.btnNotifications.TabIndex = 1006;
             this.btnNotifications.Text = "Notifications";
             this.btnNotifications.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNotifications.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -112,7 +124,7 @@ namespace Hotel_Management_System
             this.btnPayments.Name = "btnPayments";
             this.btnPayments.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnPayments.Size = new System.Drawing.Size(307, 84);
-            this.btnPayments.TabIndex = 6;
+            this.btnPayments.TabIndex = 1005;
             this.btnPayments.Text = "Payments";
             this.btnPayments.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPayments.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -135,7 +147,7 @@ namespace Hotel_Management_System
             this.btnStaffDetails.Name = "btnStaffDetails";
             this.btnStaffDetails.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnStaffDetails.Size = new System.Drawing.Size(307, 84);
-            this.btnStaffDetails.TabIndex = 5;
+            this.btnStaffDetails.TabIndex = 1004;
             this.btnStaffDetails.Text = "Staff Details";
             this.btnStaffDetails.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStaffDetails.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -158,7 +170,7 @@ namespace Hotel_Management_System
             this.btnFoodDetails.Name = "btnFoodDetails";
             this.btnFoodDetails.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnFoodDetails.Size = new System.Drawing.Size(307, 84);
-            this.btnFoodDetails.TabIndex = 4;
+            this.btnFoodDetails.TabIndex = 1003;
             this.btnFoodDetails.Text = "Food Details";
             this.btnFoodDetails.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFoodDetails.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -181,7 +193,7 @@ namespace Hotel_Management_System
             this.btnRoomDetails.Name = "btnRoomDetails";
             this.btnRoomDetails.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnRoomDetails.Size = new System.Drawing.Size(307, 84);
-            this.btnRoomDetails.TabIndex = 3;
+            this.btnRoomDetails.TabIndex = 1002;
             this.btnRoomDetails.Text = "Room Details";
             this.btnRoomDetails.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRoomDetails.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -204,7 +216,7 @@ namespace Hotel_Management_System
             this.btnGuestDetails.Name = "btnGuestDetails";
             this.btnGuestDetails.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnGuestDetails.Size = new System.Drawing.Size(307, 84);
-            this.btnGuestDetails.TabIndex = 2;
+            this.btnGuestDetails.TabIndex = 1001;
             this.btnGuestDetails.Text = "Guest Details";
             this.btnGuestDetails.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuestDetails.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -227,7 +239,7 @@ namespace Hotel_Management_System
             this.btnNewGuest.Name = "btnNewGuest";
             this.btnNewGuest.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnNewGuest.Size = new System.Drawing.Size(307, 84);
-            this.btnNewGuest.TabIndex = 1;
+            this.btnNewGuest.TabIndex = 1000;
             this.btnNewGuest.Text = "New Guest";
             this.btnNewGuest.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNewGuest.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -333,6 +345,13 @@ namespace Hotel_Management_System
             // 
             this.panelDesktop.AutoSize = true;
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.panelDesktop.Controls.Add(this.label3);
+            this.panelDesktop.Controls.Add(this.ADM005);
+            this.panelDesktop.Controls.Add(this.pictureBox2);
+            this.panelDesktop.Controls.Add(this.btnLogoutReciptionist);
+            this.panelDesktop.Controls.Add(this.panel3);
+            this.panelDesktop.Controls.Add(this.label1);
+            this.panelDesktop.Controls.Add(this.pictureBox1);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelDesktop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -340,14 +359,90 @@ namespace Hotel_Management_System
             this.panelDesktop.Margin = new System.Windows.Forms.Padding(0);
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(1257, 801);
-            this.panelDesktop.TabIndex = 3;
+            this.panelDesktop.TabIndex = 1010;
             this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelD_Paint);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(31, 245);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(743, 504);
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnLogoutReciptionist
+            // 
+            this.btnLogoutReciptionist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnLogoutReciptionist.IconChar = FontAwesome.Sharp.IconChar.SignInAlt;
+            this.btnLogoutReciptionist.IconColor = System.Drawing.Color.Black;
+            this.btnLogoutReciptionist.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnLogoutReciptionist.IconSize = 30;
+            this.btnLogoutReciptionist.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLogoutReciptionist.Location = new System.Drawing.Point(897, 716);
+            this.btnLogoutReciptionist.Name = "btnLogoutReciptionist";
+            this.btnLogoutReciptionist.Size = new System.Drawing.Size(264, 44);
+            this.btnLogoutReciptionist.TabIndex = 7;
+            this.btnLogoutReciptionist.Text = "Log Out";
+            this.btnLogoutReciptionist.UseVisualStyleBackColor = true;
+            this.btnLogoutReciptionist.Click += new System.EventHandler(this.btnLogoutReciptionist_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.panel3.Location = new System.Drawing.Point(789, -3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1, 805);
+            this.panel3.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(123, 84);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(558, 135);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Welcome";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Hotel_Management_System.Properties.Resources.photography_8;
+            this.pictureBox1.Location = new System.Drawing.Point(886, 75);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(275, 254);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // directorySearcher1
             // 
             this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(886, 442);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(305, 29);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Mr. Dhananjaya Jayasekara";
+            // 
+            // ADM005
+            // 
+            this.ADM005.AutoSize = true;
+            this.ADM005.Location = new System.Drawing.Point(1005, 397);
+            this.ADM005.Name = "ADM005";
+            this.ADM005.Size = new System.Drawing.Size(78, 29);
+            this.ADM005.TabIndex = 14;
+            this.ADM005.Text = "89005";
             // 
             // FormMain
             // 
@@ -369,6 +464,11 @@ namespace Hotel_Management_System
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrent)).EndInit();
+            this.panelDesktop.ResumeLayout(false);
+            this.panelDesktop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -387,12 +487,20 @@ namespace Hotel_Management_System
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconPictureBox iconCurrent;
         private System.Windows.Forms.Panel panelS;
-        private System.Windows.Forms.Panel panelDesktop;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private FontAwesome.Sharp.IconButton btnNotifications;
-        private FontAwesome.Sharp.IconButton btnPayments;
         private System.DirectoryServices.DirectorySearcher directorySearcher1;
         private System.Windows.Forms.Label titleCurrent;
         private System.Windows.Forms.Panel panel2;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private FontAwesome.Sharp.IconButton btnLogoutReciptionist;
+        public FontAwesome.Sharp.IconButton btnPayments;
+        public System.Windows.Forms.Panel panelDesktop;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label ADM005;
     }
 }
