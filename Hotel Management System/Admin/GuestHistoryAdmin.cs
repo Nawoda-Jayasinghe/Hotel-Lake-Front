@@ -131,5 +131,23 @@ namespace Hotel_Management_System
 
 
         }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            if (txtGuestHistory.Text == "Search")
+            {
+                txtGuestHistory.Text = "";
+                txtGuestHistory.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (txtGuestHistory.Text == "")
+            {
+                txtGuestHistory.Text = "Search";
+                txtGuestHistory.ForeColor = Color.Black;
+            }
+        }
     }
 }

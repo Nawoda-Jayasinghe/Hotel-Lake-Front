@@ -89,59 +89,27 @@ namespace Hotel_Management_System
             mtbTP2.SelectionStart = 1;
         }
 
-
-        private void txtAddressLine1_Enter(object sender, EventArgs e)
+        private void btnPhotoUpload_Click(object sender, EventArgs e)
         {
-            if(txtAddressLine1.Text == "Address Line 1")
-            {
-                txtAddressLine1.Text = "";
-                txtAddressLine1.ForeColor = Color.FromArgb(26, 25, 62);
-            }
+            //OpenFileDialog op = new OpenFileDialog();
+            //op.Filter = "Image Files(*.jpg,*.jpeg,*.png)|*.jpg;*.jpeg;*.png";
+            //if (op.ShowDialog() == DialogResult.OK)
+            
         }
 
-        private void txtAddressLine1_Leave(object sender, EventArgs e)
+        private void mtbNIC_MouseClick(object sender, MouseEventArgs e)
         {
-            if (txtAddressLine1.Text == "")
-            {
-                txtAddressLine1.Text = "Address Line 1";
-                txtAddressLine1.ForeColor = Color.Gray;
-            }
+            mtbNIC.SelectionStart = 0;
         }
 
-        private void txtAddressLine2_Enter(object sender, EventArgs e)
+        private void mtbTP1_MouseClick(object sender, MouseEventArgs e)
         {
-            if (txtAddressLine2.Text == "Address Line 2")
-            {
-                txtAddressLine2.Text = "";
-                txtAddressLine2.ForeColor = Color.FromArgb(26, 25, 62);
-            }
+            mtbTP1.SelectionStart = 2;
         }
 
-        private void txtAddressLine2_Leave(object sender, EventArgs e)
+        private void mtbTP2_MouseClick_1(object sender, MouseEventArgs e)
         {
-            if (txtAddressLine2.Text == "")
-            {
-                txtAddressLine2.Text = "Address Line 2";
-                txtAddressLine2.ForeColor = Color.Gray;
-            }
-        }
-
-        private void txtAddressLine3_Enter(object sender, EventArgs e)
-        {
-            if (txtAddressLine3.Text == "Address Line 3")
-            {
-                txtAddressLine3.Text = "";
-                txtAddressLine3.ForeColor = Color.FromArgb(26, 25, 62);
-            }
-        }
-
-        private void txtAddressLine3_Leave(object sender, EventArgs e)
-        {
-            if (txtAddressLine3.Text == "")
-            {
-                txtAddressLine3.Text = "Address Line 3";
-                txtAddressLine3.ForeColor = Color.Gray;
-            }
+            mtbTP2.SelectionStart = 2;
         }
     }
 }

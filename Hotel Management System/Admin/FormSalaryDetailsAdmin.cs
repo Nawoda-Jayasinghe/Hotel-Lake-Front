@@ -26,5 +26,23 @@ namespace Hotel_Management_System
         {
 
         }
+
+        private void txtSearchFoodCashier_Enter(object sender, EventArgs e)
+        {
+            if (txtSearchSalary.Text == "Search")
+            {
+                txtSearchSalary.Text = "";
+                txtSearchSalary.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtSearchFoodCashier_Leave(object sender, EventArgs e)
+        {
+            if (txtSearchSalary.Text == "")
+            {
+                txtSearchSalary.Text = "Search";
+                txtSearchSalary.ForeColor = Color.Gray;
+            }
+        }
     }
 }

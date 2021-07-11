@@ -94,7 +94,7 @@ namespace Hotel_Management_System
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(437, 474);
-            this.dataGridView1.TabIndex = 37;
+            this.dataGridView1.TabIndex = 0;
             // 
             // RoomID
             // 
@@ -155,7 +155,7 @@ namespace Hotel_Management_System
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(437, 474);
-            this.dataGridView2.TabIndex = 38;
+            this.dataGridView2.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
             // 

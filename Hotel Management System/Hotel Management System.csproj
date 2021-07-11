@@ -258,6 +258,7 @@
     <Content Include="Content\v4-shims.css" />
     <Content Include="Content\v4-shims.min.css" />
     <None Include="Resources\photography-8.jpg" />
+    <None Include="Resources\photography-81.jpg" />
     <Content Include="Scripts\fontawesome\all.js" />
     <Content Include="Scripts\fontawesome\all.min.js" />
     <Content Include="Scripts\fontawesome\brands.js" />
@@ -395,9 +396,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\blue-hotel-neon-window-wallpaper-preview.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\wp7692446.jpg" />

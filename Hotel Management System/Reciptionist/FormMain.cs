@@ -385,5 +385,17 @@ namespace Hotel_Management_System
         {
 
         }
+
+        private void btnLogoutReciptionist_Click(object sender, EventArgs e)
+        {
+            DialogResult reslult = MessageBox.Show("Are you sure you want to log out?", "Confirm log out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (reslult == DialogResult.Yes)
+            {
+                this.Close();
+                MainLogin newMainLogin = new MainLogin();
+                newMainLogin.Show();
+            }
+        }
     }
 }
