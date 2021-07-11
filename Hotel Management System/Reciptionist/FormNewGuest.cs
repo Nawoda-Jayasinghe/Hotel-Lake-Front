@@ -20,30 +20,6 @@ namespace Hotel_Management_System
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void panelDesktop_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void OpenForm(Form childForm)
         {
@@ -64,17 +40,12 @@ namespace Hotel_Management_System
             childForm.Show();
             //titleCurrent.Text = childForm.Text;
 
-
         }
-
 
 
         private void btnGuestFurther_Click(object sender, EventArgs e)
         {
-
-            OpenForm(new FormNewEmployeeAdmin());
-                
-                
+            OpenForm(new FormNewGuestNext());        
         }
 
 
@@ -86,15 +57,27 @@ namespace Hotel_Management_System
 
                 mtbTP1.Mask = "(+0) 000-000-0000";
                 mtbTP2.Mask = "(+0) 000-000-0000";
+
+                mtbNIC.Mask = null;
             }
 
             else
             {
                 lblNIC.Text = "National ID";
-               mtbTP1.Mask = "(\\000) 000-0000";
+                mtbTP1.Mask = "(\\000) 000-0000";
                 mtbTP2.Mask = "(\\000) 000-0000";
+                mtbNIC.Mask = "000000000AAA";
             }
         }
+
+        private void mtbNIC_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (cbForeign.Checked == false)
+            {
+                mtbNIC.SelectionStart = 0;
+            }
+        }
+
 
         private void mtbTP1_Click(object sender, EventArgs e)
         {
@@ -104,62 +87,85 @@ namespace Hotel_Management_System
 
         private void mtbTP2_MouseClick(object sender, MouseEventArgs e)
         {
-            mtbTP2.SelectionStart = 1;
+            mtbTP2.SelectionStart = 2;
         }
 
 
-        private void txtAddressLine1_Enter(object sender, EventArgs e)
+        private void mtbEmail_Enter(object sender, EventArgs e)
         {
-            if(txtAddressLine1.Text == "Address Line 1")
+            if (mtbEmail.Text == "example@gmail.com")
             {
-                txtAddressLine1.Text = "";
-                txtAddressLine1.ForeColor = Color.FromArgb(26, 25, 62);
+                mtbEmail.Text = "";
+                mtbEmail.ForeColor = Color.FromArgb(26, 25, 62);
             }
         }
 
-        private void txtAddressLine1_Leave(object sender, EventArgs e)
+
+        private void mtbEmail_Leave(object sender, EventArgs e)
         {
-            if (txtAddressLine1.Text == "")
+            if (mtbEmail.Text == "")
             {
-                txtAddressLine1.Text = "Address Line 1";
-                txtAddressLine1.ForeColor = Color.Gray;
+                mtbEmail.Text = "example@gmail.com";
+                mtbEmail.ForeColor = Color.Gray;
             }
         }
 
-        private void txtAddressLine2_Enter(object sender, EventArgs e)
+        private void mtbNIC_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
-            if (txtAddressLine2.Text == "Address Line 2")
+
+        }
+
+
+        private void panelGuest_Enter(object sender, EventArgs e)
+        {
+            if (lblSingleNormalCount.Text == "0")
             {
-                txtAddressLine2.Text = "";
-                txtAddressLine2.ForeColor = Color.FromArgb(26, 25, 62);
+                cbSingleNormalCount.Enabled = false;
+            }
+
+            if (lblSingleLuxuryCount.Text == "0")
+            {
+                cbSingleLuxuryCount.Enabled = false;
+            }
+
+            if (lblDoubleNormalCount.Text == "0")
+            {
+                cbDoubleNormalCount.Enabled = false;
+            }
+
+            if (lblDoubleLuxuryCount.Text == "0")
+            {
+                cbDoubleLuxuryCount.Enabled = false;
+            }
+
+            if (lblSingleNormalCount.Text == "0")
+            {
+                cbSingleNormalCount.Enabled = false;
+            }
+
+            if (lblFamilyLuxuryCount.Text == "0")
+            {
+                cbFamilyLuxuryCount.Enabled = false;
             }
         }
 
-        private void txtAddressLine2_Leave(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            if (txtAddressLine2.Text == "")
+            if (cbForeign.Checked)
             {
-                txtAddressLine2.Text = "Address Line 2";
-                txtAddressLine2.ForeColor = Color.Gray;
+                cbForeign.Checked = false;
             }
+
+            mtbNIC.Text = "";
+            txtFName.Text = "";
+            txtFullName.Text = "";
+            radioMale.Checked = true;
+            rchtxtAddress.Text = "";
+            mtbTP1.Text = "";
+            mtbTP2.Text = "";
+            mtbEmail.Text = "";     
+
         }
 
-        private void txtAddressLine3_Enter(object sender, EventArgs e)
-        {
-            if (txtAddressLine3.Text == "Address Line 3")
-            {
-                txtAddressLine3.Text = "";
-                txtAddressLine3.ForeColor = Color.FromArgb(26, 25, 62);
-            }
-        }
-
-        private void txtAddressLine3_Leave(object sender, EventArgs e)
-        {
-            if (txtAddressLine3.Text == "")
-            {
-                txtAddressLine3.Text = "Address Line 3";
-                txtAddressLine3.ForeColor = Color.Gray;
-            }
-        }
     }
 }
