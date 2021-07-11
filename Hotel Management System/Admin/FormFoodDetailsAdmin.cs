@@ -17,52 +17,24 @@ namespace Hotel_Management_System
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+            
+
+        private void txtSearchFoodDetails_Enter(object sender, EventArgs e)
         {
-            this.Close();
+            if (txtSearchFoodDetails.Text == "Search")
+            {
+                txtSearchFoodDetails.Text = "";
+                txtSearchFoodDetails.ForeColor = Color.Black;
+            }
         }
 
-        
-
-        private void label1_Click(object sender, EventArgs e)
+        private void txtSearchFoodDetails_Leave(object sender, EventArgs e)
         {
-
+            if (txtSearchFoodDetails.Text == "")
+            {
+                txtSearchFoodDetails.Text = "Search";
+                txtSearchFoodDetails.ForeColor = Color.Gray;
+            }
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }

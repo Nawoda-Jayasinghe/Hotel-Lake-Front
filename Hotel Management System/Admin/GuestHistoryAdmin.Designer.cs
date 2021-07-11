@@ -30,6 +30,8 @@ namespace Hotel_Management_System
         private void InitializeComponent()
         {
             this.panelGuestDetails = new System.Windows.Forms.Panel();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
@@ -76,13 +78,10 @@ namespace Hotel_Management_System
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtGuestHistory = new System.Windows.Forms.TextBox();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.panelGuestDetails.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OthersDetails)).BeginInit();
@@ -124,7 +123,7 @@ namespace Hotel_Management_System
             this.panelGuestDetails.Controls.Add(this.label39);
             this.panelGuestDetails.Controls.Add(this.OthersDetails);
             this.panelGuestDetails.Controls.Add(this.dateTimePicker1);
-            this.panelGuestDetails.Controls.Add(this.textBox1);
+            this.panelGuestDetails.Controls.Add(this.txtGuestHistory);
             this.panelGuestDetails.Controls.Add(this.iconButton1);
             this.panelGuestDetails.Controls.Add(this.panel3);
             this.panelGuestDetails.Location = new System.Drawing.Point(0, 0);
@@ -132,136 +131,166 @@ namespace Hotel_Management_System
             this.panelGuestDetails.Size = new System.Drawing.Size(1006, 582);
             this.panelGuestDetails.TabIndex = 0;
             // 
+            // iconButton2
+            // 
+            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.iconButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton2.IconColor = System.Drawing.Color.Black;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.Location = new System.Drawing.Point(795, 513);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(90, 52);
+            this.iconButton2.TabIndex = 384;
+            this.iconButton2.Text = "&Cancel";
+            this.iconButton2.UseVisualStyleBackColor = false;
+            // 
+            // iconButton3
+            // 
+            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.iconButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton3.IconColor = System.Drawing.Color.Black;
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.Location = new System.Drawing.Point(891, 512);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Size = new System.Drawing.Size(90, 52);
+            this.iconButton3.TabIndex = 383;
+            this.iconButton3.Text = "&Update";
+            this.iconButton3.UseVisualStyleBackColor = false;
+            // 
             // textBox12
             // 
             this.textBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox12.Location = new System.Drawing.Point(592, 410);
             this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(149, 21);
-            this.textBox12.TabIndex = 343;
+            this.textBox12.Size = new System.Drawing.Size(149, 28);
+            this.textBox12.TabIndex = 14;
             this.textBox12.Text = "05";
             // 
             // textBox11
             // 
             this.textBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox11.Location = new System.Drawing.Point(592, 294);
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(367, 21);
-            this.textBox11.TabIndex = 342;
+            this.textBox11.Size = new System.Drawing.Size(379, 28);
+            this.textBox11.TabIndex = 11;
             this.textBox11.Text = "126, Galle road, KKandy, Sri LAnka";
             // 
             // textBox10
             // 
             this.textBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox10.Location = new System.Drawing.Point(592, 369);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(149, 21);
-            this.textBox10.TabIndex = 341;
+            this.textBox10.Size = new System.Drawing.Size(149, 28);
+            this.textBox10.TabIndex = 13;
             this.textBox10.Text = "10/04/2021";
             // 
             // textBox9
             // 
             this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox9.Location = new System.Drawing.Point(592, 333);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(149, 21);
-            this.textBox9.TabIndex = 340;
+            this.textBox9.Size = new System.Drawing.Size(149, 28);
+            this.textBox9.TabIndex = 12;
             this.textBox9.Text = "05/04/2021";
             // 
             // textBox8
             // 
             this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox8.Location = new System.Drawing.Point(592, 261);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(340, 21);
-            this.textBox8.TabIndex = 339;
+            this.textBox8.Size = new System.Drawing.Size(379, 28);
+            this.textBox8.TabIndex = 10;
             this.textBox8.Text = "chamudithacbs@gmail.com";
             // 
             // textBox7
             // 
             this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox7.Location = new System.Drawing.Point(593, 223);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(149, 21);
-            this.textBox7.TabIndex = 338;
+            this.textBox7.Size = new System.Drawing.Size(149, 28);
+            this.textBox7.TabIndex = 9;
             this.textBox7.Text = "0713389039";
             // 
             // textBox6
             // 
             this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox6.Location = new System.Drawing.Point(593, 190);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(149, 21);
-            this.textBox6.TabIndex = 337;
+            this.textBox6.Size = new System.Drawing.Size(149, 28);
+            this.textBox6.TabIndex = 8;
             this.textBox6.Text = "Male";
             // 
             // textBox5
             // 
             this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox5.Location = new System.Drawing.Point(593, 151);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(149, 21);
-            this.textBox5.TabIndex = 336;
+            this.textBox5.Size = new System.Drawing.Size(149, 28);
+            this.textBox5.TabIndex = 7;
             this.textBox5.Text = "Senannayaka";
             // 
             // textBox4
             // 
             this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox4.Location = new System.Drawing.Point(593, 112);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(149, 21);
-            this.textBox4.TabIndex = 335;
+            this.textBox4.Size = new System.Drawing.Size(149, 28);
+            this.textBox4.TabIndex = 6;
             this.textBox4.Text = "Chamuditha";
             // 
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox3.Location = new System.Drawing.Point(593, 70);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(149, 21);
-            this.textBox3.TabIndex = 334;
+            this.textBox3.Size = new System.Drawing.Size(149, 28);
+            this.textBox3.TabIndex = 5;
             this.textBox3.Text = "986351612V";
             // 
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox2.Location = new System.Drawing.Point(593, 30);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(149, 21);
-            this.textBox2.TabIndex = 333;
+            this.textBox2.Size = new System.Drawing.Size(149, 28);
+            this.textBox2.TabIndex = 4;
             this.textBox2.Text = "family Luxary";
             // 
             // label32
@@ -575,15 +604,14 @@ namespace Hotel_Management_System
             this.OthersDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column3,
             this.Column1,
-            this.Column2,
-            this.Column4});
+            this.Column2});
             this.OthersDetails.Location = new System.Drawing.Point(13, 307);
             this.OthersDetails.Name = "OthersDetails";
             this.OthersDetails.RowHeadersVisible = false;
             this.OthersDetails.RowHeadersWidth = 51;
             this.OthersDetails.RowTemplate.Height = 24;
-            this.OthersDetails.Size = new System.Drawing.Size(375, 241);
-            this.OthersDetails.TabIndex = 302;
+            this.OthersDetails.Size = new System.Drawing.Size(389, 241);
+            this.OthersDetails.TabIndex = 3;
             // 
             // Column3
             // 
@@ -603,27 +631,23 @@ namespace Hotel_Management_System
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(13, 83);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(375, 22);
-            this.dateTimePicker1.TabIndex = 301;
+            this.dateTimePicker1.TabIndex = 2;
             // 
-            // textBox1
+            // txtGuestHistory
             // 
-            this.textBox1.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox1.Location = new System.Drawing.Point(13, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(315, 22);
-            this.textBox1.TabIndex = 300;
-            this.textBox1.Text = "Guest NIC";
+            this.txtGuestHistory.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtGuestHistory.Location = new System.Drawing.Point(13, 36);
+            this.txtGuestHistory.Name = "txtGuestHistory";
+            this.txtGuestHistory.Size = new System.Drawing.Size(315, 22);
+            this.txtGuestHistory.TabIndex = 0;
+            this.txtGuestHistory.Text = "Search";
+            this.txtGuestHistory.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.txtGuestHistory.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // iconButton1
             // 
@@ -644,36 +668,6 @@ namespace Hotel_Management_System
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1, 597);
             this.panel3.TabIndex = 297;
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.iconButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton2.IconColor = System.Drawing.Color.Black;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.Location = new System.Drawing.Point(795, 513);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(90, 52);
-            this.iconButton2.TabIndex = 384;
-            this.iconButton2.Text = "Cancel";
-            this.iconButton2.UseVisualStyleBackColor = false;
-            // 
-            // iconButton3
-            // 
-            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.iconButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton3.IconColor = System.Drawing.Color.Black;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.Location = new System.Drawing.Point(891, 512);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(90, 52);
-            this.iconButton3.TabIndex = 383;
-            this.iconButton3.Text = "Update";
-            this.iconButton3.UseVisualStyleBackColor = false;
             // 
             // GuestHistoryAdmin
             // 
@@ -728,12 +722,8 @@ namespace Hotel_Management_System
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.DataGridView OthersDetails;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column4;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtGuestHistory;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textBox12;
@@ -751,5 +741,8 @@ namespace Hotel_Management_System
         private System.Windows.Forms.Label label25;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }

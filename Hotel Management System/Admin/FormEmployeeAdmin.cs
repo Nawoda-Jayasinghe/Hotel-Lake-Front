@@ -79,31 +79,32 @@ namespace Hotel_Management_System
 
         
 
-        
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FormNewEmployeeAdmin());
+        }
 
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        private void panelGuest_Paint(object sender, PaintEventArgs e)
+        private void txtSearchFoodCashier_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
+        private void txtSearchFoodCashier_Enter(object sender, EventArgs e)
         {
-            OpenForm(new FormNewEmployeeAdmin());
+            if (txtSearchFoodCashier.Text == "Search")
+            {
+                txtSearchFoodCashier.Text = "";
+                txtSearchFoodCashier.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtSearchFoodCashier_Leave(object sender, EventArgs e)
+        {
+            if (txtSearchFoodCashier.Text == "")
+            {
+                txtSearchFoodCashier.Text = "Search";
+                txtSearchFoodCashier.ForeColor = Color.Gray;
+            }
         }
     }
 }
