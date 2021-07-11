@@ -1,7 +1,7 @@
 ﻿
 namespace Hotel_Management_System
 {
-    partial class FormNotifications
+    partial class FormNotificationsAdmin
     {
         /// <summary>
         /// Required designer variable.

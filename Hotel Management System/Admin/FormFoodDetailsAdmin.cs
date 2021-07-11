@@ -22,12 +22,7 @@ namespace Hotel_Management_System
             this.Close();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-            //column headers align center
-            tbleFoodDetailsAdmin.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            tbleCategoryDetailsAdmin.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-        }
+        
 
         private void label1_Click(object sender, EventArgs e)
         {

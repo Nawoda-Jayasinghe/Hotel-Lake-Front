@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace Hotel_Management_System
 {
-    public partial class FormNewGuest : Form
+    public partial class FormNewEmployeeAdmin : Form
     {
 
         Form currentForm;
 
-        public FormNewGuest()
+        public FormNewEmployeeAdmin()
         {
             InitializeComponent();
         }
@@ -71,31 +71,13 @@ namespace Hotel_Management_System
 
         private void btnGuestFurther_Click(object sender, EventArgs e)
         {
+          
+            OpenForm(new FormNewGuestNext());
 
-            OpenForm(new FormNewEmployeeAdmin());
-                
-                
         }
 
 
-        private void cbForeign_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cbForeign.Checked)
-            {
-                lblNIC.Text = "Passport No";
-
-                mtbTP1.Mask = "(+0) 000-000-0000";
-                mtbTP2.Mask = "(+0) 000-000-0000";
-            }
-
-            else
-            {
-                lblNIC.Text = "National ID";
-               mtbTP1.Mask = "(\\000) 000-0000";
-                mtbTP2.Mask = "(\\000) 000-0000";
-            }
-        }
-
+        
         private void mtbTP1_Click(object sender, EventArgs e)
         {
             mtbTP1.SelectionStart = 2;
