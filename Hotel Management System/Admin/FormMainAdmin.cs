@@ -121,20 +121,20 @@ namespace Hotel_Management_System
         private void btnNewGuest_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
-            OpenForm(new FormNewGuest());
+            OpenForm(new FormEmployeeAdmin());
 
         }
 
         private void btnGuestDetails_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
-            OpenForm(new FormGuestDetails());
+            OpenForm(new FormCurrentGuestsAdmin());
         }
 
         private void btnRoomDetails_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
-            OpenForm(new FormRoomDetails());
+            OpenForm(new GuestHistoryAdmin());
         }
 
         private void btnFoodDetails_Click(object sender, EventArgs e)
@@ -146,13 +146,13 @@ namespace Hotel_Management_System
         private void btnStaffDetails_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color5);
-            OpenForm(new FormStaffDetails());
+            OpenForm(new FormFacilityPricesAdmin());
         }
 
         private void btnPayments_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color7);
-            OpenForm(new FormPayments());
+            OpenForm(new FormSalaryDetailsAdmin());
 
         }
         private void btnNotifications_Click(object sender, EventArgs e)

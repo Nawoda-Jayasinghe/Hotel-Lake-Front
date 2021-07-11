@@ -73,11 +73,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\FormEmployeeAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FormEmployeeAdmin.Designer.cs">
+      <DependentUpon>FormEmployeeAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FormNewEmployeeAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FormNewEmployeeAdmin.Designer.cs">
+      <DependentUpon>FormNewEmployeeAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FormSalaryDetailsAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FormSalaryDetailsAdmin.Designer.cs">
+      <DependentUpon>FormSalaryDetailsAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FormFacilityPricesAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FormFacilityPricesAdmin.Designer.cs">
+      <DependentUpon>FormFacilityPricesAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\FormFoodDetailsAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin\FormFoodDetailsAdmin.Designer.cs">
       <DependentUpon>FormFoodDetailsAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FormNotificationsAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FormNotificationsAdmin.Designer.cs">
+      <DependentUpon>FormNotificationsAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FormCurrentGuestsAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FormCurrentGuestsAdmin.Designer.cs">
+      <DependentUpon>FormCurrentGuestsAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\GuestHistoryAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\GuestHistoryAdmin.Designer.cs">
+      <DependentUpon>GuestHistoryAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\FormMainAdmin.cs">
       <SubType>Form</SubType>
@@ -209,6 +251,7 @@
     <Content Include="Content\svg-with-js.min.css" />
     <Content Include="Content\v4-shims.css" />
     <Content Include="Content\v4-shims.min.css" />
+    <None Include="Resources\photography-8.jpg" />
     <Content Include="Scripts\fontawesome\all.js" />
     <Content Include="Scripts\fontawesome\all.min.js" />
     <Content Include="Scripts\fontawesome\brands.js" />
@@ -226,8 +269,29 @@
     <Content Include="webfonts\fa-brands-400.svg" />
     <Content Include="webfonts\fa-regular-400.svg" />
     <Content Include="webfonts\fa-solid-900.svg" />
+    <EmbeddedResource Include="Admin\FormEmployeeAdmin.resx">
+      <DependentUpon>FormEmployeeAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FormNewEmployeeAdmin.resx">
+      <DependentUpon>FormNewEmployeeAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FormSalaryDetailsAdmin.resx">
+      <DependentUpon>FormSalaryDetailsAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FormFacilityPricesAdmin.resx">
+      <DependentUpon>FormFacilityPricesAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\FormFoodDetailsAdmin.resx">
       <DependentUpon>FormFoodDetailsAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FormNotificationsAdmin.resx">
+      <DependentUpon>FormNotificationsAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FormCurrentGuestsAdmin.resx">
+      <DependentUpon>FormCurrentGuestsAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\GuestHistoryAdmin.resx">
+      <DependentUpon>GuestHistoryAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\FormMainAdmin.resx">
       <DependentUpon>FormMainAdmin.cs</DependentUpon>
