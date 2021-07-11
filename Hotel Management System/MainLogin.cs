@@ -34,9 +34,9 @@ namespace Hotel_Management_System
                     // Application.Run(new FormMainAdmin());
 
                     //this.Hide();
-                    FormMainAdmin f2 = new FormMainAdmin();
+                    FormMainAdmin newFormAdmin = new FormMainAdmin();
                     //f2.Size = new Size();
-                    f2.Show();
+                    newFormAdmin.Show();
 
                 }
 
