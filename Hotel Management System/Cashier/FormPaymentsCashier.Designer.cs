@@ -29,6 +29,12 @@ namespace Hotel_Management_System
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
@@ -199,6 +205,8 @@ namespace Hotel_Management_System
             this.tbleFoodOrderDetailsCashier.AllowUserToOrderColumns = true;
             this.tbleFoodOrderDetailsCashier.AllowUserToResizeColumns = false;
             this.tbleFoodOrderDetailsCashier.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.tbleFoodOrderDetailsCashier.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.tbleFoodOrderDetailsCashier.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.tbleFoodOrderDetailsCashier.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbleFoodOrderDetailsCashier.ColumnHeadersHeight = 55;
@@ -209,10 +217,20 @@ namespace Hotel_Management_System
             this.QuantityPayments,
             this.FoodPricePayments,
             this.FoodSelectPayments});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tbleFoodOrderDetailsCashier.DefaultCellStyle = dataGridViewCellStyle2;
             this.tbleFoodOrderDetailsCashier.Location = new System.Drawing.Point(402, 144);
             this.tbleFoodOrderDetailsCashier.Name = "tbleFoodOrderDetailsCashier";
             this.tbleFoodOrderDetailsCashier.RowHeadersVisible = false;
             this.tbleFoodOrderDetailsCashier.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.tbleFoodOrderDetailsCashier.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.tbleFoodOrderDetailsCashier.RowTemplate.Height = 24;
             this.tbleFoodOrderDetailsCashier.Size = new System.Drawing.Size(589, 309);
             this.tbleFoodOrderDetailsCashier.TabIndex = 5;
@@ -258,6 +276,8 @@ namespace Hotel_Management_System
             this.tbleFoodDetailsCashier.AllowUserToOrderColumns = true;
             this.tbleFoodDetailsCashier.AllowUserToResizeColumns = false;
             this.tbleFoodDetailsCashier.AllowUserToResizeRows = false;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.tbleFoodDetailsCashier.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.tbleFoodDetailsCashier.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tbleFoodDetailsCashier.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.tbleFoodDetailsCashier.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -267,10 +287,20 @@ namespace Hotel_Management_System
             this.FoodIDSearch,
             this.FoodNameSearch,
             this.FoodPriceSearch});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tbleFoodDetailsCashier.DefaultCellStyle = dataGridViewCellStyle5;
             this.tbleFoodDetailsCashier.Location = new System.Drawing.Point(24, 103);
             this.tbleFoodDetailsCashier.Name = "tbleFoodDetailsCashier";
             this.tbleFoodDetailsCashier.RowHeadersVisible = false;
             this.tbleFoodDetailsCashier.RowHeadersWidth = 51;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            this.tbleFoodDetailsCashier.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.tbleFoodDetailsCashier.RowTemplate.Height = 24;
             this.tbleFoodDetailsCashier.Size = new System.Drawing.Size(329, 439);
             this.tbleFoodDetailsCashier.TabIndex = 1;
@@ -349,6 +379,7 @@ namespace Hotel_Management_System
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.Name = "FormPaymentsCashier";
             this.Text = "Payments";
+            this.Load += new System.EventHandler(this.FormPaymentsCashier_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbleFoodOrderDetailsCashier)).EndInit();

@@ -24,7 +24,11 @@ namespace Hotel_Management_System
 
         private void FormRestaurant_Load(object sender, EventArgs e)
         {
-
+            tbleFoodDetailsAdmin.Rows.Add("FA1", "Wi-Fi", "500");
+            tbleFoodDetailsAdmin.Rows.Add("FA2", "Satellite TV", "450");
+            tbleFoodDetailsAdmin.Rows.Add("FA3", "Hot Water", "500");
+            tbleFoodDetailsAdmin.Rows.Add("FA4", "Extra Bed", "400");
+            tbleFoodDetailsAdmin.Rows.Add("FA5", "Pets Allowed", "600");
         }
 
         private void txtSearchFoodCashier_Leave(object sender, EventArgs e)

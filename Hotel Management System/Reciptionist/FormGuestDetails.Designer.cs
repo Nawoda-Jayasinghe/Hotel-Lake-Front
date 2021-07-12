@@ -74,14 +74,13 @@ namespace Hotel_Management_System
             this.label19 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.OthersDetails = new System.Windows.Forms.DataGridView();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtGuestDetailsSearch = new System.Windows.Forms.TextBox();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panelGuestDetails.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OthersDetails)).BeginInit();
@@ -122,7 +121,7 @@ namespace Hotel_Management_System
             this.panelGuestDetails.Controls.Add(this.label39);
             this.panelGuestDetails.Controls.Add(this.OthersDetails);
             this.panelGuestDetails.Controls.Add(this.dateTimePicker1);
-            this.panelGuestDetails.Controls.Add(this.textBox1);
+            this.panelGuestDetails.Controls.Add(this.txtGuestDetailsSearch);
             this.panelGuestDetails.Controls.Add(this.iconButton1);
             this.panelGuestDetails.Controls.Add(this.panel3);
             this.panelGuestDetails.Location = new System.Drawing.Point(0, 0);
@@ -556,8 +555,7 @@ namespace Hotel_Management_System
             this.OthersDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column3,
             this.Column1,
-            this.Column2,
-            this.Column4});
+            this.Column2});
             this.OthersDetails.Location = new System.Drawing.Point(13, 307);
             this.OthersDetails.Name = "OthersDetails";
             this.OthersDetails.RowHeadersVisible = false;
@@ -566,30 +564,6 @@ namespace Hotel_Management_System
             this.OthersDetails.Size = new System.Drawing.Size(375, 241);
             this.OthersDetails.TabIndex = 302;
             // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Date";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Guest Name";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Room ID";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(13, 83);
@@ -597,14 +571,16 @@ namespace Hotel_Management_System
             this.dateTimePicker1.Size = new System.Drawing.Size(375, 22);
             this.dateTimePicker1.TabIndex = 301;
             // 
-            // textBox1
+            // txtGuestDetailsSearch
             // 
-            this.textBox1.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox1.Location = new System.Drawing.Point(13, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(315, 22);
-            this.textBox1.TabIndex = 300;
-            this.textBox1.Text = "Guest NIC";
+            this.txtGuestDetailsSearch.ForeColor = System.Drawing.Color.Gray;
+            this.txtGuestDetailsSearch.Location = new System.Drawing.Point(13, 36);
+            this.txtGuestDetailsSearch.Name = "txtGuestDetailsSearch";
+            this.txtGuestDetailsSearch.Size = new System.Drawing.Size(315, 22);
+            this.txtGuestDetailsSearch.TabIndex = 300;
+            this.txtGuestDetailsSearch.Text = "Guest NIC";
+            this.txtGuestDetailsSearch.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.txtGuestDetailsSearch.Leave += new System.EventHandler(this.txtGuestDetailsSearch_Leave);
             // 
             // iconButton1
             // 
@@ -625,6 +601,24 @@ namespace Hotel_Management_System
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1, 597);
             this.panel3.TabIndex = 297;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Date";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Guest Name";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Room ID";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
             // 
             // FormGuestDetails
             // 
@@ -693,13 +687,12 @@ namespace Hotel_Management_System
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.DataGridView OthersDetails;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox txtGuestDetailsSearch;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox1;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private System.Windows.Forms.Panel panel3;
     }
 }

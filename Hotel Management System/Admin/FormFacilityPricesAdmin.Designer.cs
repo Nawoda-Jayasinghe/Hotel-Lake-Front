@@ -29,6 +29,9 @@ namespace Hotel_Management_System
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.label7 = new System.Windows.Forms.Label();
@@ -169,6 +172,8 @@ namespace Hotel_Management_System
             this.tbleFoodDetailsAdmin.AllowUserToOrderColumns = true;
             this.tbleFoodDetailsAdmin.AllowUserToResizeColumns = false;
             this.tbleFoodDetailsAdmin.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.tbleFoodDetailsAdmin.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.tbleFoodDetailsAdmin.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.tbleFoodDetailsAdmin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbleFoodDetailsAdmin.ColumnHeadersHeight = 75;
@@ -177,10 +182,20 @@ namespace Hotel_Management_System
             this.FoodIDSearch,
             this.FoodNameSearch,
             this.FoodPriceSearch});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tbleFoodDetailsAdmin.DefaultCellStyle = dataGridViewCellStyle2;
             this.tbleFoodDetailsAdmin.Location = new System.Drawing.Point(36, 70);
             this.tbleFoodDetailsAdmin.Name = "tbleFoodDetailsAdmin";
             this.tbleFoodDetailsAdmin.RowHeadersVisible = false;
             this.tbleFoodDetailsAdmin.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.tbleFoodDetailsAdmin.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.tbleFoodDetailsAdmin.RowTemplate.Height = 24;
             this.tbleFoodDetailsAdmin.Size = new System.Drawing.Size(532, 324);
             this.tbleFoodDetailsAdmin.TabIndex = 1;
