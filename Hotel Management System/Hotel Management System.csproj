@@ -55,9 +55,6 @@
     <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
-    <Reference Include="FontAwesome.Sharp.Pro, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FontAwesome.Sharp.Pro.5.15.3\lib\net472\FontAwesome.Sharp.Pro.dll</HintPath>
-    </Reference>
     <Reference Include="MySql.Data, Version=8.0.25.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -76,17 +73,65 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\Form1.cs">
+    <Compile Include="Admin\FormEmployeeAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Admin\FormEmployeeAdmin.Designer.cs">
+      <DependentUpon>FormEmployeeAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FormNewEmployeeAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FormNewEmployeeAdmin.Designer.cs">
+      <DependentUpon>FormNewEmployeeAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FormSalaryDetailsAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FormSalaryDetailsAdmin.Designer.cs">
+      <DependentUpon>FormSalaryDetailsAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FormFacilityPricesAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FormFacilityPricesAdmin.Designer.cs">
+      <DependentUpon>FormFacilityPricesAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FormFoodDetailsAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FormFoodDetailsAdmin.Designer.cs">
+      <DependentUpon>FormFoodDetailsAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FormNotificationsAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FormNotificationsAdmin.Designer.cs">
+      <DependentUpon>FormNotificationsAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FormCurrentGuestsAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FormCurrentGuestsAdmin.Designer.cs">
+      <DependentUpon>FormCurrentGuestsAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\GuestHistoryAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\GuestHistoryAdmin.Designer.cs">
+      <DependentUpon>GuestHistoryAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\FormMainAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\FormMainAdmin.Designer.cs">
+    <Compile Include="Admin\FormMainAdmin.designer.cs">
       <DependentUpon>FormMainAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BillPrintout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BillPrintout.Designer.cs">
+      <DependentUpon>BillPrintout.cs</DependentUpon>
     </Compile>
     <Compile Include="Cashier\FormMainCashier.cs">
       <SubType>Form</SubType>
@@ -107,10 +152,28 @@
       <DependentUpon>FormPaymentsCashier.cs</DependentUpon>
     </Compile>
     <Compile Include="DatabaseConnection.cs" />
+    <Compile Include="MainLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainLogin.Designer.cs">
+      <DependentUpon>MainLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reciptionist\FormNewGuestNext2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reciptionist\FormNewGuestNext2.Designer.cs">
+      <DependentUpon>FormNewGuestNext2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reciptionist\FormNewGuestNext.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reciptionist\FormNewGuestNext.Designer.cs">
+      <DependentUpon>FormNewGuestNext.cs</DependentUpon>
     </Compile>
     <Compile Include="Reciptionist\FormNewGuest.cs">
       <SubType>Form</SubType>
@@ -168,6 +231,81 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ttab\TabFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ttab\TabFood.designer.cs">
+      <DependentUpon>TabFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ttab\TabMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ttab\TabMenu.designer.cs">
+      <DependentUpon>TabMenu.cs</DependentUpon>
+    </Compile>
+    <Content Include="Content\all.css" />
+    <Content Include="Content\all.min.css" />
+    <Content Include="Content\brands.css" />
+    <Content Include="Content\brands.min.css" />
+    <Content Include="Content\fontawesome.css" />
+    <Content Include="Content\fontawesome.min.css" />
+    <Content Include="Content\regular.css" />
+    <Content Include="Content\regular.min.css" />
+    <Content Include="Content\solid.css" />
+    <Content Include="Content\solid.min.css" />
+    <Content Include="Content\svg-with-js.css" />
+    <Content Include="Content\svg-with-js.min.css" />
+    <Content Include="Content\v4-shims.css" />
+    <Content Include="Content\v4-shims.min.css" />
+    <None Include="Resources\photography-8.jpg" />
+    <None Include="Resources\photography-81.jpg" />
+    <Content Include="Scripts\fontawesome\all.js" />
+    <Content Include="Scripts\fontawesome\all.min.js" />
+    <Content Include="Scripts\fontawesome\brands.js" />
+    <Content Include="Scripts\fontawesome\brands.min.js" />
+    <Content Include="Scripts\fontawesome\conflict-detection.js" />
+    <Content Include="Scripts\fontawesome\conflict-detection.min.js" />
+    <Content Include="Scripts\fontawesome\fontawesome.js" />
+    <Content Include="Scripts\fontawesome\fontawesome.min.js" />
+    <Content Include="Scripts\fontawesome\regular.js" />
+    <Content Include="Scripts\fontawesome\regular.min.js" />
+    <Content Include="Scripts\fontawesome\solid.js" />
+    <Content Include="Scripts\fontawesome\solid.min.js" />
+    <Content Include="Scripts\fontawesome\v4-shims.js" />
+    <Content Include="Scripts\fontawesome\v4-shims.min.js" />
+    <Content Include="webfonts\fa-brands-400.svg" />
+    <Content Include="webfonts\fa-regular-400.svg" />
+    <Content Include="webfonts\fa-solid-900.svg" />
+    <EmbeddedResource Include="Admin\FormEmployeeAdmin.resx">
+      <DependentUpon>FormEmployeeAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FormNewEmployeeAdmin.resx">
+      <DependentUpon>FormNewEmployeeAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FormSalaryDetailsAdmin.resx">
+      <DependentUpon>FormSalaryDetailsAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FormFacilityPricesAdmin.resx">
+      <DependentUpon>FormFacilityPricesAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FormFoodDetailsAdmin.resx">
+      <DependentUpon>FormFoodDetailsAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FormNotificationsAdmin.resx">
+      <DependentUpon>FormNotificationsAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FormCurrentGuestsAdmin.resx">
+      <DependentUpon>FormCurrentGuestsAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\GuestHistoryAdmin.resx">
+      <DependentUpon>GuestHistoryAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FormMainAdmin.resx">
+      <DependentUpon>FormMainAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BillPrintout.resx">
+      <DependentUpon>BillPrintout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cashier\FormMainCashier.resx">
       <DependentUpon>FormMainCashier.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,13 +315,30 @@
     <EmbeddedResource Include="Cashier\FormPaymentsCashier.resx">
       <DependentUpon>FormPaymentsCashier.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainLogin.resx">
+      <DependentUpon>MainLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reciptionist\FormNewGuestNext2.resx">
+      <DependentUpon>FormNewGuestNext2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reciptionist\FormNewGuestNext.resx">
+      <DependentUpon>FormNewGuestNext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ttab\TabFood.resx">
+      <DependentUpon>TabFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ttab\TabMenu.resx">
+      <DependentUpon>TabMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="Resources\looog-01.png" />
     <None Include="Resources\Asset 1-8.jpg" />
     <None Include="Resources\Asset 1-8.png" />
     <None Include="Resources\logo-01.png" />
-    <EmbeddedResource Include="Admin\FormMainAdmin.resx">
-      <DependentUpon>FormMainAdmin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reciptionist\FormNewGuest.resx">
       <DependentUpon>FormNewGuest.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,11 +371,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Content Include="fonts\fontawesome-webfont.eot" />
-    <Content Include="fonts\fontawesome-webfont.ttf" />
-    <Content Include="fonts\fontawesome-webfont.woff" />
-    <Content Include="fonts\fontawesome-webfont.woff2" />
-    <Content Include="fonts\FontAwesome.otf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -231,12 +381,21 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="webfonts\fa-brands-400.eot" />
+    <None Include="webfonts\fa-brands-400.ttf" />
+    <None Include="webfonts\fa-brands-400.woff" />
+    <None Include="webfonts\fa-brands-400.woff2" />
+    <None Include="webfonts\fa-regular-400.eot" />
+    <None Include="webfonts\fa-regular-400.ttf" />
+    <None Include="webfonts\fa-regular-400.woff" />
+    <None Include="webfonts\fa-regular-400.woff2" />
+    <None Include="webfonts\fa-solid-900.eot" />
+    <None Include="webfonts\fa-solid-900.ttf" />
+    <None Include="webfonts\fa-solid-900.woff" />
+    <None Include="webfonts\fa-solid-900.woff2" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\blue-hotel-neon-window-wallpaper-preview.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\wp7692446.jpg" />
@@ -269,13 +428,12 @@
     <None Include="Resources\61-612472_minimalist-x-mark-clip-art-medium-size-yellow-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
   </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

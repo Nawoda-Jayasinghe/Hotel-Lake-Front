@@ -121,38 +121,38 @@ namespace Hotel_Management_System
         private void btnNewGuest_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
-            OpenForm(new FormNewGuest());
+            OpenForm(new FormEmployeeAdmin());
 
         }
 
         private void btnGuestDetails_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
-            OpenForm(new FormGuestDetails());
+            OpenForm(new FormCurrentGuestsAdmin());
         }
 
         private void btnRoomDetails_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
-            OpenForm(new FormRoomDetails());
+            OpenForm(new GuestHistoryAdmin());
         }
 
         private void btnFoodDetails_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
-            OpenForm(new FormFoodDetails());
+            OpenForm(new FormFoodDetailsAdmin());
         }
 
         private void btnStaffDetails_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color5);
-            OpenForm(new FormStaffDetails());
+            OpenForm(new FormFacilityPricesAdmin());
         }
 
         private void btnPayments_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color7);
-            OpenForm(new FormPayments());
+            OpenForm(new FormSalaryDetailsAdmin());
 
         }
         private void btnNotifications_Click(object sender, EventArgs e)
@@ -166,9 +166,19 @@ namespace Hotel_Management_System
 
         }
 
+
+
         private void btnHome_Click(object sender, EventArgs e)
         {
-            Reset();
+         
+
+            if (currentForm != null)
+            {
+                currentForm.Close();
+                Reset();
+            }
+
+
         }
 
 
@@ -194,186 +204,24 @@ namespace Hotel_Management_System
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void New_Load(object sender, EventArgs e)
-        {
 
-        }
 
-        private void panelD_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void panelMenu_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void titleCurrent_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void iconCurrent_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelS_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label39_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label19_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label18_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void maskedTextBox2_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton4_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void iconPictureBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        
+        private void btnLogoutAdmin_Click(object sender, EventArgs e)
+        {
+            DialogResult reslult = MessageBox.Show("Are you sure you want to log out?", "Confirm log out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (reslult == DialogResult.Yes)
+            {    
+                this.Close();
+                MainLogin newMainLogin = new MainLogin();
+                newMainLogin.Show();
+            }
+        }
     }
 }

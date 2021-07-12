@@ -87,5 +87,51 @@ namespace Hotel_Management_System
         {
 
         }
+
+        private void txtSearchFoodCashier_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSearchFoodCashier_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSearchPayments1_Enter(object sender, EventArgs e)
+        {
+            if (txtSearchPayments1.Text == "Search")
+            {
+                txtSearchPayments1.Text = "";
+                txtSearchPayments1.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtSearchPayments1_Leave(object sender, EventArgs e)
+        {
+            if (txtSearchPayments1.Text == "")
+            {
+                txtSearchPayments1.Text = "Search";
+                txtSearchPayments1.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtSearchPayments2_Enter(object sender, EventArgs e)
+        {
+            if (txtSearchPayments2.Text == "Search")
+            {
+                txtSearchPayments2.Text = "";
+                txtSearchPayments2.ForeColor = Color.Black;
+            }
+        }
+        
+        private void txtSearchPayments2_Leave(object sender, EventArgs e)
+        {
+            if (txtSearchPayments2.Text == "")
+            {
+                txtSearchPayments2.Text = "Search";
+                txtSearchPayments2.ForeColor = Color.Gray;
+            }
+        }
     }
 }

@@ -30,21 +30,21 @@ namespace Hotel_Management_System
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bttnOrderComplete = new System.Windows.Forms.Button();
+            this.bttnOrderPlaced = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lblFoodTotalCashier = new System.Windows.Forms.Label();
             this.tbleRoomFoodOrderDetailsListCashier = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.bttnOrderPlaced = new System.Windows.Forms.Button();
-            this.bttnOrderComplete = new System.Windows.Forms.Button();
             this.FoodIDOrders = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FoodNameOrders = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.QuantityOrders = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FoodPriceOrders = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FoodSelectOrders = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tbleRoomFoodOrderDetailsCashier = new System.Windows.Forms.DataGridView();
-            this.OrderSelectOrders = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.OrderIDCashier = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoomIDCashier = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrderIDCashier = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrderSelectOrders = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbleRoomFoodOrderDetailsListCashier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbleRoomFoodOrderDetailsCashier)).BeginInit();
@@ -66,22 +66,45 @@ namespace Hotel_Management_System
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // bttnOrderComplete
+            // 
+            this.bttnOrderComplete.Enabled = false;
+            this.bttnOrderComplete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bttnOrderComplete.ForeColor = System.Drawing.Color.Black;
+            this.bttnOrderComplete.Location = new System.Drawing.Point(788, 521);
+            this.bttnOrderComplete.Name = "bttnOrderComplete";
+            this.bttnOrderComplete.Size = new System.Drawing.Size(190, 39);
+            this.bttnOrderComplete.TabIndex = 3;
+            this.bttnOrderComplete.Text = "Order Completed";
+            this.bttnOrderComplete.UseVisualStyleBackColor = true;
+            // 
+            // bttnOrderPlaced
+            // 
+            this.bttnOrderPlaced.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bttnOrderPlaced.ForeColor = System.Drawing.Color.Black;
+            this.bttnOrderPlaced.Location = new System.Drawing.Point(788, 476);
+            this.bttnOrderPlaced.Name = "bttnOrderPlaced";
+            this.bttnOrderPlaced.Size = new System.Drawing.Size(190, 39);
+            this.bttnOrderPlaced.TabIndex = 2;
+            this.bttnOrderPlaced.Text = "Order Placed";
+            this.bttnOrderPlaced.UseVisualStyleBackColor = true;
+            // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(416, 490);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(463, 490);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 42);
+            this.label2.Size = new System.Drawing.Size(114, 42);
             this.label2.TabIndex = 47;
             this.label2.Text = "LKR";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblFoodTotalCashier
             // 
-            this.lblFoodTotalCashier.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFoodTotalCashier.Location = new System.Drawing.Point(598, 490);
+            this.lblFoodTotalCashier.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFoodTotalCashier.Location = new System.Drawing.Point(523, 490);
             this.lblFoodTotalCashier.Name = "lblFoodTotalCashier";
-            this.lblFoodTotalCashier.Size = new System.Drawing.Size(127, 42);
+            this.lblFoodTotalCashier.Size = new System.Drawing.Size(174, 42);
             this.lblFoodTotalCashier.TabIndex = 46;
             this.lblFoodTotalCashier.Text = "0.00";
             this.lblFoodTotalCashier.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -101,43 +124,14 @@ namespace Hotel_Management_System
             this.QuantityOrders,
             this.FoodPriceOrders,
             this.FoodSelectOrders});
-            this.tbleRoomFoodOrderDetailsListCashier.Location = new System.Drawing.Point(464, 53);
+            this.tbleRoomFoodOrderDetailsListCashier.Location = new System.Drawing.Point(389, 12);
             this.tbleRoomFoodOrderDetailsListCashier.Name = "tbleRoomFoodOrderDetailsListCashier";
             this.tbleRoomFoodOrderDetailsListCashier.RowHeadersVisible = false;
             this.tbleRoomFoodOrderDetailsListCashier.RowHeadersWidth = 51;
             this.tbleRoomFoodOrderDetailsListCashier.RowTemplate.Height = 24;
-            this.tbleRoomFoodOrderDetailsListCashier.Size = new System.Drawing.Size(482, 337);
-            this.tbleRoomFoodOrderDetailsListCashier.TabIndex = 29;
+            this.tbleRoomFoodOrderDetailsListCashier.Size = new System.Drawing.Size(602, 437);
+            this.tbleRoomFoodOrderDetailsListCashier.TabIndex = 1;
             this.tbleRoomFoodOrderDetailsListCashier.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tbleFoodOrderDetailsCashier_CellContentClick);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.panel3.Location = new System.Drawing.Point(382, -12);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1, 608);
-            this.panel3.TabIndex = 19;
-            // 
-            // bttnOrderPlaced
-            // 
-            this.bttnOrderPlaced.ForeColor = System.Drawing.Color.Black;
-            this.bttnOrderPlaced.Location = new System.Drawing.Point(788, 455);
-            this.bttnOrderPlaced.Name = "bttnOrderPlaced";
-            this.bttnOrderPlaced.Size = new System.Drawing.Size(190, 39);
-            this.bttnOrderPlaced.TabIndex = 48;
-            this.bttnOrderPlaced.Text = "Order Placed";
-            this.bttnOrderPlaced.UseVisualStyleBackColor = true;
-            // 
-            // bttnOrderComplete
-            // 
-            this.bttnOrderComplete.Enabled = false;
-            this.bttnOrderComplete.ForeColor = System.Drawing.Color.Black;
-            this.bttnOrderComplete.Location = new System.Drawing.Point(788, 521);
-            this.bttnOrderComplete.Name = "bttnOrderComplete";
-            this.bttnOrderComplete.Size = new System.Drawing.Size(190, 39);
-            this.bttnOrderComplete.TabIndex = 49;
-            this.bttnOrderComplete.Text = "Order Completed";
-            this.bttnOrderComplete.UseVisualStyleBackColor = true;
             // 
             // FoodIDOrders
             // 
@@ -188,20 +182,20 @@ namespace Hotel_Management_System
             this.RoomIDCashier,
             this.OrderIDCashier,
             this.OrderSelectOrders});
-            this.tbleRoomFoodOrderDetailsCashier.Location = new System.Drawing.Point(38, 53);
+            this.tbleRoomFoodOrderDetailsCashier.Location = new System.Drawing.Point(12, 12);
             this.tbleRoomFoodOrderDetailsCashier.Name = "tbleRoomFoodOrderDetailsCashier";
             this.tbleRoomFoodOrderDetailsCashier.RowHeadersVisible = false;
             this.tbleRoomFoodOrderDetailsCashier.RowHeadersWidth = 51;
             this.tbleRoomFoodOrderDetailsCashier.RowTemplate.Height = 24;
-            this.tbleRoomFoodOrderDetailsCashier.Size = new System.Drawing.Size(307, 357);
-            this.tbleRoomFoodOrderDetailsCashier.TabIndex = 23;
+            this.tbleRoomFoodOrderDetailsCashier.Size = new System.Drawing.Size(364, 560);
+            this.tbleRoomFoodOrderDetailsCashier.TabIndex = 0;
             // 
-            // OrderSelectOrders
+            // RoomIDCashier
             // 
-            this.OrderSelectOrders.FillWeight = 48.12834F;
-            this.OrderSelectOrders.HeaderText = "";
-            this.OrderSelectOrders.MinimumWidth = 6;
-            this.OrderSelectOrders.Name = "OrderSelectOrders";
+            this.RoomIDCashier.FillWeight = 100.4184F;
+            this.RoomIDCashier.HeaderText = "Room ID";
+            this.RoomIDCashier.MinimumWidth = 6;
+            this.RoomIDCashier.Name = "RoomIDCashier";
             // 
             // OrderIDCashier
             // 
@@ -210,12 +204,20 @@ namespace Hotel_Management_System
             this.OrderIDCashier.MinimumWidth = 6;
             this.OrderIDCashier.Name = "OrderIDCashier";
             // 
-            // RoomIDCashier
+            // OrderSelectOrders
             // 
-            this.RoomIDCashier.FillWeight = 100.4184F;
-            this.RoomIDCashier.HeaderText = "Room ID";
-            this.RoomIDCashier.MinimumWidth = 6;
-            this.RoomIDCashier.Name = "RoomIDCashier";
+            this.OrderSelectOrders.FillWeight = 48.12834F;
+            this.OrderSelectOrders.HeaderText = "";
+            this.OrderSelectOrders.MinimumWidth = 6;
+            this.OrderSelectOrders.Name = "OrderSelectOrders";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.panel3.Location = new System.Drawing.Point(382, -12);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1, 608);
+            this.panel3.TabIndex = 19;
             // 
             // FormOrdersCashier
             // 

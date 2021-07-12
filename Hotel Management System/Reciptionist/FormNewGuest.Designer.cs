@@ -29,312 +29,495 @@ namespace Hotel_Management_System
         /// </summary>
         private void InitializeComponent()
         {
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.panelGuest = new System.Windows.Forms.Panel();
+            this.mtbNIC = new System.Windows.Forms.MaskedTextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.rchtxtAddress = new System.Windows.Forms.RichTextBox();
+            this.btnGuestFurther = new FontAwesome.Sharp.IconButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblFamilyLuxuryCount = new System.Windows.Forms.Label();
+            this.lblFamilyNormalCount = new System.Windows.Forms.Label();
+            this.lblDoubleLuxuryCount = new System.Windows.Forms.Label();
+            this.lblDoubleNormalCount = new System.Windows.Forms.Label();
+            this.lblSingleLuxuryCount = new System.Windows.Forms.Label();
+            this.lblSingleNormalCount = new System.Windows.Forms.Label();
+            this.cbSingleLuxuryCount = new System.Windows.Forms.CheckBox();
+            this.cbDoubleNormalCount = new System.Windows.Forms.CheckBox();
+            this.cbDoubleLuxuryCount = new System.Windows.Forms.CheckBox();
+            this.cbFamilyNormalCount = new System.Windows.Forms.CheckBox();
+            this.cbFamilyLuxuryCount = new System.Windows.Forms.CheckBox();
+            this.cbSingleNormalCount = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radioMale = new System.Windows.Forms.RadioButton();
+            this.radioFemale = new System.Windows.Forms.RadioButton();
+            this.mtbTP2 = new System.Windows.Forms.MaskedTextBox();
+            this.cbForeign = new System.Windows.Forms.CheckBox();
+            this.mtbEmail = new System.Windows.Forms.MaskedTextBox();
+            this.mtbTP1 = new System.Windows.Forms.MaskedTextBox();
+            this.txtFullName = new System.Windows.Forms.TextBox();
+            this.txtFName = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblNIC = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
+            this.panelGuest.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panelGuest
+            // 
+            this.panelGuest.Controls.Add(this.mtbNIC);
+            this.panelGuest.Controls.Add(this.button1);
+            this.panelGuest.Controls.Add(this.rchtxtAddress);
+            this.panelGuest.Controls.Add(this.btnGuestFurther);
+            this.panelGuest.Controls.Add(this.groupBox1);
+            this.panelGuest.Controls.Add(this.panel2);
+            this.panelGuest.Controls.Add(this.groupBox2);
+            this.panelGuest.Controls.Add(this.mtbTP2);
+            this.panelGuest.Controls.Add(this.cbForeign);
+            this.panelGuest.Controls.Add(this.mtbEmail);
+            this.panelGuest.Controls.Add(this.mtbTP1);
+            this.panelGuest.Controls.Add(this.txtFullName);
+            this.panelGuest.Controls.Add(this.txtFName);
+            this.panelGuest.Controls.Add(this.label7);
+            this.panelGuest.Controls.Add(this.lblNIC);
+            this.panelGuest.Controls.Add(this.label17);
+            this.panelGuest.Controls.Add(this.label18);
+            this.panelGuest.Controls.Add(this.label19);
+            this.panelGuest.Controls.Add(this.label39);
+            this.panelGuest.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelGuest.Location = new System.Drawing.Point(0, 0);
+            this.panelGuest.Name = "panelGuest";
+            this.panelGuest.Size = new System.Drawing.Size(1003, 584);
+            this.panelGuest.TabIndex = 1000;
+            this.panelGuest.Enter += new System.EventHandler(this.panelGuest_Enter);
+            // 
+            // mtbNIC
+            // 
+            this.mtbNIC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.mtbNIC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbNIC.Location = new System.Drawing.Point(189, 71);
+            this.mtbNIC.Mask = "000000000AAA";
+            this.mtbNIC.Name = "mtbNIC";
+            this.mtbNIC.Size = new System.Drawing.Size(289, 30);
+            this.mtbNIC.TabIndex = 2;
+            this.mtbNIC.MouseClick += new System.Windows.Forms.MouseEventHandler(this.mtbNIC_MouseClick);
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button1.Location = new System.Drawing.Point(20, 431);
+            this.button1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(505, 543);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(270, 45);
-            this.button1.TabIndex = 208;
-            this.button1.Text = "Cancel";
-            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Size = new System.Drawing.Size(55, 25);
+            this.button1.TabIndex = 270;
+            this.button1.Text = "Reset";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // radioButton3
+            // rchtxtAddress
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.radioButton3.Location = new System.Drawing.Point(612, 205);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(75, 21);
-            this.radioButton3.TabIndex = 207;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Female";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rchtxtAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.rchtxtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rchtxtAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.rchtxtAddress.Location = new System.Drawing.Point(190, 322);
+            this.rchtxtAddress.Name = "rchtxtAddress";
+            this.rchtxtAddress.Size = new System.Drawing.Size(289, 83);
+            this.rchtxtAddress.TabIndex = 6;
+            this.rchtxtAddress.Text = "";
             // 
-            // radioButton4
+            // btnGuestFurther
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.radioButton4.Location = new System.Drawing.Point(487, 205);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(59, 21);
-            this.radioButton4.TabIndex = 206;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Male";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.btnGuestFurther.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnGuestFurther.FlatAppearance.BorderSize = 2;
+            this.btnGuestFurther.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnGuestFurther.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuestFurther.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuestFurther.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnGuestFurther.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleRight;
+            this.btnGuestFurther.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnGuestFurther.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGuestFurther.IconSize = 40;
+            this.btnGuestFurther.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuestFurther.Location = new System.Drawing.Point(757, 495);
+            this.btnGuestFurther.Name = "btnGuestFurther";
+            this.btnGuestFurther.Size = new System.Drawing.Size(190, 55);
+            this.btnGuestFurther.TabIndex = 268;
+            this.btnGuestFurther.Text = "Other Details";
+            this.btnGuestFurther.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuestFurther.UseVisualStyleBackColor = false;
+            this.btnGuestFurther.Click += new System.EventHandler(this.btnGuestFurther_Click);
             // 
-            // label2
+            // groupBox1
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(322, 219);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(153, 49);
-            this.label2.TabIndex = 205;
-            this.label2.Text = "Gender";
+            this.groupBox1.Controls.Add(this.lblFamilyLuxuryCount);
+            this.groupBox1.Controls.Add(this.lblFamilyNormalCount);
+            this.groupBox1.Controls.Add(this.lblDoubleLuxuryCount);
+            this.groupBox1.Controls.Add(this.lblDoubleNormalCount);
+            this.groupBox1.Controls.Add(this.lblSingleLuxuryCount);
+            this.groupBox1.Controls.Add(this.lblSingleNormalCount);
+            this.groupBox1.Controls.Add(this.cbSingleLuxuryCount);
+            this.groupBox1.Controls.Add(this.cbDoubleNormalCount);
+            this.groupBox1.Controls.Add(this.cbDoubleLuxuryCount);
+            this.groupBox1.Controls.Add(this.cbFamilyNormalCount);
+            this.groupBox1.Controls.Add(this.cbFamilyLuxuryCount);
+            this.groupBox1.Controls.Add(this.cbSingleNormalCount);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.groupBox1.Location = new System.Drawing.Point(599, 17);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(361, 299);
+            this.groupBox1.TabIndex = 265;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Available Rooms";
             // 
-            // maskedTextBox1
+            // lblFamilyLuxuryCount
             // 
-            this.maskedTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.maskedTextBox1.BeepOnError = true;
-            this.maskedTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.maskedTextBox1.Location = new System.Drawing.Point(490, 383);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(326, 22);
-            this.maskedTextBox1.TabIndex = 188;
+            this.lblFamilyLuxuryCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFamilyLuxuryCount.Location = new System.Drawing.Point(240, 241);
+            this.lblFamilyLuxuryCount.Name = "lblFamilyLuxuryCount";
+            this.lblFamilyLuxuryCount.Size = new System.Drawing.Size(37, 35);
+            this.lblFamilyLuxuryCount.TabIndex = 242;
+            this.lblFamilyLuxuryCount.Text = "2";
             // 
-            // maskedTextBox2
+            // lblFamilyNormalCount
             // 
-            this.maskedTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.maskedTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.maskedTextBox2.Location = new System.Drawing.Point(490, 325);
-            this.maskedTextBox2.Mask = "(+\\94) 00-0000000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(211, 22);
-            this.maskedTextBox2.TabIndex = 187;
+            this.lblFamilyNormalCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFamilyNormalCount.Location = new System.Drawing.Point(240, 205);
+            this.lblFamilyNormalCount.Name = "lblFamilyNormalCount";
+            this.lblFamilyNormalCount.Size = new System.Drawing.Size(37, 35);
+            this.lblFamilyNormalCount.TabIndex = 241;
+            this.lblFamilyNormalCount.Text = "4";
             // 
-            // button3
+            // lblDoubleLuxuryCount
             // 
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button3.Location = new System.Drawing.Point(878, 516);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(113, 56);
-            this.button3.TabIndex = 204;
-            this.button3.Text = "Back";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.UseWaitCursor = true;
+            this.lblDoubleLuxuryCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoubleLuxuryCount.Location = new System.Drawing.Point(240, 169);
+            this.lblDoubleLuxuryCount.Name = "lblDoubleLuxuryCount";
+            this.lblDoubleLuxuryCount.Size = new System.Drawing.Size(37, 35);
+            this.lblDoubleLuxuryCount.TabIndex = 240;
+            this.lblDoubleLuxuryCount.Text = "0";
             // 
-            // textBox1
+            // lblDoubleNormalCount
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.textBox1.Location = new System.Drawing.Point(644, 264);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(140, 22);
-            this.textBox1.TabIndex = 186;
+            this.lblDoubleNormalCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoubleNormalCount.Location = new System.Drawing.Point(240, 133);
+            this.lblDoubleNormalCount.Name = "lblDoubleNormalCount";
+            this.lblDoubleNormalCount.Size = new System.Drawing.Size(37, 35);
+            this.lblDoubleNormalCount.TabIndex = 239;
+            this.lblDoubleNormalCount.Text = "5";
             // 
-            // textBox3
+            // lblSingleLuxuryCount
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.textBox3.Location = new System.Drawing.Point(490, 41);
-            this.textBox3.MaxLength = 10;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(241, 22);
-            this.textBox3.TabIndex = 182;
+            this.lblSingleLuxuryCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSingleLuxuryCount.Location = new System.Drawing.Point(240, 96);
+            this.lblSingleLuxuryCount.Name = "lblSingleLuxuryCount";
+            this.lblSingleLuxuryCount.Size = new System.Drawing.Size(37, 35);
+            this.lblSingleLuxuryCount.TabIndex = 238;
+            this.lblSingleLuxuryCount.Text = "4";
             // 
-            // textBox4
+            // lblSingleNormalCount
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.textBox4.Location = new System.Drawing.Point(490, 264);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(136, 22);
-            this.textBox4.TabIndex = 185;
+            this.lblSingleNormalCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSingleNormalCount.Location = new System.Drawing.Point(240, 61);
+            this.lblSingleNormalCount.Name = "lblSingleNormalCount";
+            this.lblSingleNormalCount.Size = new System.Drawing.Size(37, 35);
+            this.lblSingleNormalCount.TabIndex = 236;
+            this.lblSingleNormalCount.Text = "1";
             // 
-            // textBox5
+            // cbSingleLuxuryCount
             // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.textBox5.Location = new System.Drawing.Point(490, 149);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(241, 22);
-            this.textBox5.TabIndex = 184;
+            this.cbSingleLuxuryCount.AutoSize = true;
+            this.cbSingleLuxuryCount.Location = new System.Drawing.Point(315, 104);
+            this.cbSingleLuxuryCount.Name = "cbSingleLuxuryCount";
+            this.cbSingleLuxuryCount.Size = new System.Drawing.Size(18, 17);
+            this.cbSingleLuxuryCount.TabIndex = 12;
+            this.cbSingleLuxuryCount.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // cbDoubleNormalCount
             // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.textBox6.Location = new System.Drawing.Point(490, 89);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(241, 22);
-            this.textBox6.TabIndex = 183;
+            this.cbDoubleNormalCount.AutoSize = true;
+            this.cbDoubleNormalCount.Location = new System.Drawing.Point(315, 140);
+            this.cbDoubleNormalCount.Name = "cbDoubleNormalCount";
+            this.cbDoubleNormalCount.Size = new System.Drawing.Size(18, 17);
+            this.cbDoubleNormalCount.TabIndex = 13;
+            this.cbDoubleNormalCount.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // cbDoubleLuxuryCount
             // 
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(322, 390);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(153, 49);
-            this.label7.TabIndex = 203;
-            this.label7.Text = "Email";
+            this.cbDoubleLuxuryCount.AutoSize = true;
+            this.cbDoubleLuxuryCount.Location = new System.Drawing.Point(315, 176);
+            this.cbDoubleLuxuryCount.Name = "cbDoubleLuxuryCount";
+            this.cbDoubleLuxuryCount.Size = new System.Drawing.Size(18, 17);
+            this.cbDoubleLuxuryCount.TabIndex = 14;
+            this.cbDoubleLuxuryCount.UseVisualStyleBackColor = true;
             // 
-            // label8
+            // cbFamilyNormalCount
             // 
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label8.Location = new System.Drawing.Point(239, 205);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 48);
-            this.label8.TabIndex = 202;
-            this.label8.Text = "10";
-            this.label8.UseWaitCursor = true;
+            this.cbFamilyNormalCount.AutoSize = true;
+            this.cbFamilyNormalCount.Location = new System.Drawing.Point(315, 212);
+            this.cbFamilyNormalCount.Name = "cbFamilyNormalCount";
+            this.cbFamilyNormalCount.Size = new System.Drawing.Size(18, 17);
+            this.cbFamilyNormalCount.TabIndex = 15;
+            this.cbFamilyNormalCount.UseVisualStyleBackColor = true;
+            // 
+            // cbFamilyLuxuryCount
+            // 
+            this.cbFamilyLuxuryCount.AutoSize = true;
+            this.cbFamilyLuxuryCount.Location = new System.Drawing.Point(315, 248);
+            this.cbFamilyLuxuryCount.Name = "cbFamilyLuxuryCount";
+            this.cbFamilyLuxuryCount.Size = new System.Drawing.Size(18, 17);
+            this.cbFamilyLuxuryCount.TabIndex = 16;
+            this.cbFamilyLuxuryCount.UseVisualStyleBackColor = true;
+            // 
+            // cbSingleNormalCount
+            // 
+            this.cbSingleNormalCount.AutoSize = true;
+            this.cbSingleNormalCount.Location = new System.Drawing.Point(315, 68);
+            this.cbSingleNormalCount.Name = "cbSingleNormalCount";
+            this.cbSingleNormalCount.Size = new System.Drawing.Size(18, 17);
+            this.cbSingleNormalCount.TabIndex = 11;
+            this.cbSingleNormalCount.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label9.Location = new System.Drawing.Point(239, 163);
+            this.label9.Location = new System.Drawing.Point(30, 133);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 48);
-            this.label9.TabIndex = 201;
-            this.label9.Text = "10";
-            this.label9.UseWaitCursor = true;
+            this.label9.Size = new System.Drawing.Size(179, 35);
+            this.label9.TabIndex = 226;
+            this.label9.Text = "Double Normal";
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(30, 61);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(169, 35);
+            this.label6.TabIndex = 224;
+            this.label6.Text = "Single Normal";
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(30, 97);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(189, 35);
+            this.label8.TabIndex = 225;
+            this.label8.Text = "Single Luxury";
             // 
             // label10
             // 
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label10.Location = new System.Drawing.Point(239, 122);
+            this.label10.Location = new System.Drawing.Point(30, 169);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(61, 48);
-            this.label10.TabIndex = 200;
-            this.label10.Text = "10";
-            this.label10.UseWaitCursor = true;
+            this.label10.Size = new System.Drawing.Size(169, 35);
+            this.label10.TabIndex = 227;
+            this.label10.Text = "Double Luxary";
             // 
             // label11
             // 
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label11.Location = new System.Drawing.Point(89, 205);
+            this.label11.Location = new System.Drawing.Point(30, 205);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(153, 48);
-            this.label11.TabIndex = 199;
-            this.label11.Text = "Family Rooms";
-            this.label11.UseWaitCursor = true;
+            this.label11.Size = new System.Drawing.Size(169, 35);
+            this.label11.TabIndex = 228;
+            this.label11.Text = "Family Normal";
             // 
             // label12
             // 
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label12.Location = new System.Drawing.Point(89, 163);
+            this.label12.Location = new System.Drawing.Point(30, 241);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(153, 48);
-            this.label12.TabIndex = 198;
-            this.label12.Text = "Double Rooms";
-            this.label12.UseWaitCursor = true;
+            this.label12.Size = new System.Drawing.Size(169, 35);
+            this.label12.TabIndex = 229;
+            this.label12.Text = "Family Luxary";
             // 
-            // label13
+            // panel2
             // 
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label13.Location = new System.Drawing.Point(89, 122);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(153, 48);
-            this.label13.TabIndex = 197;
-            this.label13.Text = "Single Rooms";
-            this.label13.UseWaitCursor = true;
+            this.panel2.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.panel2.Location = new System.Drawing.Point(569, -18);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1, 597);
+            this.panel2.TabIndex = 261;
             // 
-            // label14
+            // groupBox2
             // 
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label14.Location = new System.Drawing.Point(89, 69);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(153, 48);
-            this.label14.TabIndex = 196;
-            this.label14.Text = "Available Rooms";
-            this.label14.UseWaitCursor = true;
+            this.groupBox2.Controls.Add(this.radioMale);
+            this.groupBox2.Controls.Add(this.radioFemale);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.groupBox2.Location = new System.Drawing.Point(26, 214);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(452, 79);
+            this.groupBox2.TabIndex = 5;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Gender";
             // 
-            // label15
+            // radioMale
             // 
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(322, 449);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(153, 49);
-            this.label15.TabIndex = 195;
-            this.label15.Text = "Room Type";
+            this.radioMale.AutoSize = true;
+            this.radioMale.Checked = true;
+            this.radioMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioMale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.radioMale.Location = new System.Drawing.Point(187, 25);
+            this.radioMale.Name = "radioMale";
+            this.radioMale.Size = new System.Drawing.Size(72, 28);
+            this.radioMale.TabIndex = 500;
+            this.radioMale.TabStop = true;
+            this.radioMale.Text = "Male";
+            this.radioMale.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // radioFemale
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.comboBox1.DisplayMember = "Single Room";
-            this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Single rooms",
-            "Double rooms",
-            "Family"});
-            this.comboBox1.Location = new System.Drawing.Point(490, 442);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(211, 24);
-            this.comboBox1.TabIndex = 189;
-            this.comboBox1.Tag = "";
-            this.comboBox1.Text = "Select Option";
+            this.radioFemale.AutoSize = true;
+            this.radioFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioFemale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.radioFemale.Location = new System.Drawing.Point(322, 25);
+            this.radioFemale.Name = "radioFemale";
+            this.radioFemale.Size = new System.Drawing.Size(95, 28);
+            this.radioFemale.TabIndex = 600;
+            this.radioFemale.TabStop = true;
+            this.radioFemale.Text = "Female";
+            this.radioFemale.UseVisualStyleBackColor = true;
             // 
-            // label16
+            // mtbTP2
             // 
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(322, 48);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(153, 49);
-            this.label16.TabIndex = 194;
-            this.label16.Text = "National ID";
+            this.mtbTP2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.mtbTP2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbTP2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.mtbTP2.Location = new System.Drawing.Point(342, 450);
+            this.mtbTP2.Mask = "(\\000) 000-0000";
+            this.mtbTP2.Name = "mtbTP2";
+            this.mtbTP2.Size = new System.Drawing.Size(136, 34);
+            this.mtbTP2.TabIndex = 8;
+            this.mtbTP2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.mtbTP2_MouseClick);
+            // 
+            // cbForeign
+            // 
+            this.cbForeign.AutoSize = true;
+            this.cbForeign.Location = new System.Drawing.Point(468, 29);
+            this.cbForeign.Name = "cbForeign";
+            this.cbForeign.Size = new System.Drawing.Size(78, 21);
+            this.cbForeign.TabIndex = 1;
+            this.cbForeign.Text = "Foriegn";
+            this.cbForeign.UseVisualStyleBackColor = true;
+            this.cbForeign.CheckedChanged += new System.EventHandler(this.cbForeign_CheckedChanged);
+            // 
+            // mtbEmail
+            // 
+            this.mtbEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.mtbEmail.BeepOnError = true;
+            this.mtbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbEmail.ForeColor = System.Drawing.Color.Gray;
+            this.mtbEmail.Location = new System.Drawing.Point(187, 522);
+            this.mtbEmail.Name = "mtbEmail";
+            this.mtbEmail.Size = new System.Drawing.Size(292, 34);
+            this.mtbEmail.TabIndex = 9;
+            this.mtbEmail.Text = "example@gmail.com";
+            this.mtbEmail.Enter += new System.EventHandler(this.mtbEmail_Enter);
+            this.mtbEmail.Leave += new System.EventHandler(this.mtbEmail_Leave);
+            // 
+            // mtbTP1
+            // 
+            this.mtbTP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.mtbTP1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbTP1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.mtbTP1.Location = new System.Drawing.Point(188, 450);
+            this.mtbTP1.Mask = "(\\000) 000-0000";
+            this.mtbTP1.Name = "mtbTP1";
+            this.mtbTP1.Size = new System.Drawing.Size(136, 34);
+            this.mtbTP1.TabIndex = 7;
+            this.mtbTP1.Click += new System.EventHandler(this.mtbTP1_Click);
+            // 
+            // txtFullName
+            // 
+            this.txtFullName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFullName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.txtFullName.Location = new System.Drawing.Point(189, 168);
+            this.txtFullName.Name = "txtFullName";
+            this.txtFullName.Size = new System.Drawing.Size(289, 34);
+            this.txtFullName.TabIndex = 4;
+            // 
+            // txtFName
+            // 
+            this.txtFName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtFName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.txtFName.Location = new System.Drawing.Point(189, 120);
+            this.txtFName.Name = "txtFName";
+            this.txtFName.Size = new System.Drawing.Size(289, 34);
+            this.txtFName.TabIndex = 3;
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(21, 516);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(114, 34);
+            this.label7.TabIndex = 256;
+            this.label7.Text = "Email";
+            // 
+            // lblNIC
+            // 
+            this.lblNIC.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNIC.Location = new System.Drawing.Point(21, 65);
+            this.lblNIC.Name = "lblNIC";
+            this.lblNIC.Size = new System.Drawing.Size(154, 35);
+            this.lblNIC.TabIndex = 255;
+            this.lblNIC.Text = "National ID";
             // 
             // label17
             // 
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(322, 332);
+            this.label17.Location = new System.Drawing.Point(20, 443);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(153, 49);
-            this.label17.TabIndex = 193;
+            this.label17.Size = new System.Drawing.Size(143, 37);
+            this.label17.TabIndex = 254;
             this.label17.Text = "Telephone";
             // 
             // label18
             // 
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(322, 268);
+            this.label18.Location = new System.Drawing.Point(21, 322);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(128, 49);
-            this.label18.TabIndex = 192;
+            this.label18.Size = new System.Drawing.Size(111, 33);
+            this.label18.TabIndex = 253;
             this.label18.Text = "Address";
             // 
             // label19
             // 
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(322, 156);
+            this.label19.Location = new System.Drawing.Point(21, 165);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(153, 49);
-            this.label19.TabIndex = 191;
-            this.label19.Text = "Last Name";
+            this.label19.Size = new System.Drawing.Size(143, 29);
+            this.label19.TabIndex = 252;
+            this.label19.Text = "Full Name";
             // 
             // label39
             // 
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(322, 96);
+            this.label39.Location = new System.Drawing.Point(21, 116);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(153, 49);
-            this.label39.TabIndex = 190;
+            this.label39.Size = new System.Drawing.Size(143, 31);
+            this.label39.TabIndex = 251;
             this.label39.Text = "First Name";
             // 
             // FormNewGuest
@@ -344,71 +527,62 @@ namespace Hotel_Management_System
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(1003, 584);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.label39);
+            this.Controls.Add(this.panelGuest);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.Location = new System.Drawing.Point(307, 84);
             this.Name = "FormNewGuest";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "New Guest";
+            this.panelGuest.ResumeLayout(false);
+            this.panelGuest.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Panel panelGuest;
+        private FontAwesome.Sharp.IconButton btnGuestFurther;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton radioMale;
+        private System.Windows.Forms.RadioButton radioFemale;
+        private System.Windows.Forms.MaskedTextBox mtbTP2;
+        private System.Windows.Forms.CheckBox cbForeign;
+        private System.Windows.Forms.MaskedTextBox mtbEmail;
+        private System.Windows.Forms.MaskedTextBox mtbTP1;
+        private System.Windows.Forms.TextBox txtFullName;
+        private System.Windows.Forms.TextBox txtFName;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lblNIC;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblFamilyLuxuryCount;
+        private System.Windows.Forms.Label lblFamilyNormalCount;
+        private System.Windows.Forms.Label lblDoubleLuxuryCount;
+        private System.Windows.Forms.Label lblDoubleNormalCount;
+        private System.Windows.Forms.Label lblSingleLuxuryCount;
+        private System.Windows.Forms.Label lblSingleNormalCount;
+        private System.Windows.Forms.CheckBox cbSingleLuxuryCount;
+        private System.Windows.Forms.CheckBox cbDoubleNormalCount;
+        private System.Windows.Forms.CheckBox cbDoubleLuxuryCount;
+        private System.Windows.Forms.CheckBox cbFamilyNormalCount;
+        private System.Windows.Forms.CheckBox cbFamilyLuxuryCount;
+        private System.Windows.Forms.CheckBox cbSingleNormalCount;
+        private System.Windows.Forms.RichTextBox rchtxtAddress;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.MaskedTextBox mtbNIC;
     }
 }
