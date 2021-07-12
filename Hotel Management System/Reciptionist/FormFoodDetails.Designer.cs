@@ -29,7 +29,10 @@ namespace Hotel_Management_System
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.tblFoodDetails = new System.Windows.Forms.DataGridView();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,29 +45,41 @@ namespace Hotel_Management_System
             this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.iconBttnFoodSearchCashier = new FontAwesome.Sharp.IconButton();
             this.txtSearchFoodCashier = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblFoodDetails)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView2
+            // tblFoodDetails
             // 
-            this.dataGridView2.AllowUserToOrderColumns = true;
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tblFoodDetails.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.tblFoodDetails.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.tblFoodDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tblFoodDetails.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.tblFoodDetails.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tblFoodDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tblFoodDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column3,
             this.Column1,
             this.Column2});
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView2.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 98);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(1003, 486);
-            this.dataGridView2.TabIndex = 29;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tblFoodDetails.DefaultCellStyle = dataGridViewCellStyle2;
+            this.tblFoodDetails.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tblFoodDetails.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.tblFoodDetails.Location = new System.Drawing.Point(0, 98);
+            this.tblFoodDetails.Name = "tblFoodDetails";
+            this.tblFoodDetails.RowHeadersVisible = false;
+            this.tblFoodDetails.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.tblFoodDetails.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.tblFoodDetails.RowTemplate.Height = 24;
+            this.tblFoodDetails.Size = new System.Drawing.Size(1003, 486);
+            this.tblFoodDetails.TabIndex = 29;
             // 
             // Column3
             // 
@@ -176,11 +191,14 @@ namespace Hotel_Management_System
             // 
             // txtSearchFoodCashier
             // 
+            this.txtSearchFoodCashier.ForeColor = System.Drawing.Color.Gray;
             this.txtSearchFoodCashier.Location = new System.Drawing.Point(12, 38);
             this.txtSearchFoodCashier.Name = "txtSearchFoodCashier";
             this.txtSearchFoodCashier.Size = new System.Drawing.Size(293, 22);
             this.txtSearchFoodCashier.TabIndex = 37;
             this.txtSearchFoodCashier.Text = "Search";
+            this.txtSearchFoodCashier.Enter += new System.EventHandler(this.txtSearchFoodCashier_Enter);
+            this.txtSearchFoodCashier.Leave += new System.EventHandler(this.txtSearchFoodCashier_Leave);
             // 
             // FormFoodDetails
             // 
@@ -197,12 +215,12 @@ namespace Hotel_Management_System
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.tblFoodDetails);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.Name = "FormFoodDetails";
             this.Text = "Restaurant";
-            this.Load += new System.EventHandler(this.FormRestaurant_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.Load += new System.EventHandler(this.FormFoodDetails_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tblFoodDetails)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,7 +228,7 @@ namespace Hotel_Management_System
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView tblFoodDetails;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

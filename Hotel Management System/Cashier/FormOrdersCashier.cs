@@ -29,10 +29,10 @@ namespace Hotel_Management_System
             tbleRoomFoodOrderDetailsListCashier.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             //Checkbox default value checked
-            foreach (DataGridViewRow row in tbleRoomFoodOrderDetailsListCashier.Rows)
+            /*foreach (DataGridViewRow row in tbleRoomFoodOrderDetailsListCashier.Rows)
             {
                 row.Cells[FoodSelectOrders.Name].Value = true;
-            }
+            }*/
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -73,7 +73,7 @@ namespace Hotel_Management_System
 
         private void FormOrdersCashier_Load(object sender, EventArgs e)
         {
-            tbleRoomFoodOrderDetailsCashier.Rows.Add("2", "ODR254888");
+            tbleRoomFoodOrderDetailsCashier.Rows.Add("2", "ODR254888",true);
             tbleRoomFoodOrderDetailsCashier.Rows.Add("4", "ODR254889");
             tbleRoomFoodOrderDetailsCashier.Rows.Add("15", "ODR154890");
 
