@@ -74,13 +74,13 @@ namespace Hotel_Management_System
             this.label19 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.OthersDetails = new System.Windows.Forms.DataGridView();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtGuestDetailsSearch = new System.Windows.Forms.TextBox();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelGuestDetails.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OthersDetails)).BeginInit();
@@ -450,7 +450,7 @@ namespace Hotel_Management_System
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(137, 35);
             this.label5.TabIndex = 313;
-            this.label5.Text = "family luxary";
+            this.label5.Text = "Family luxary";
             // 
             // label4
             // 
@@ -531,7 +531,7 @@ namespace Hotel_Management_System
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(143, 29);
             this.label19.TabIndex = 304;
-            this.label19.Text = "Last Name";
+            this.label19.Text = "Full Name";
             // 
             // label39
             // 
@@ -563,6 +563,24 @@ namespace Hotel_Management_System
             this.OthersDetails.RowTemplate.Height = 24;
             this.OthersDetails.Size = new System.Drawing.Size(375, 241);
             this.OthersDetails.TabIndex = 302;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Date";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Guest Name";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Room ID";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
             // 
             // dateTimePicker1
             // 
@@ -601,24 +619,6 @@ namespace Hotel_Management_System
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1, 597);
             this.panel3.TabIndex = 297;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Date";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Guest Name";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Room ID";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
             // 
             // FormGuestDetails
             // 

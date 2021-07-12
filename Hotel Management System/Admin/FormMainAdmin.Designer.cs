@@ -146,7 +146,7 @@ namespace Hotel_Management_System
             this.btnStaffDetails.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnStaffDetails.Size = new System.Drawing.Size(307, 84);
             this.btnStaffDetails.TabIndex = 5;
-            this.btnStaffDetails.Text = "Room & Facility Prices";
+            this.btnStaffDetails.Text = "Facility Prices";
             this.btnStaffDetails.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStaffDetails.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnStaffDetails.UseVisualStyleBackColor = true;
@@ -291,9 +291,9 @@ namespace Hotel_Management_System
             // 
             this.iconPictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.Red;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.DotCircle;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.Red;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox1.IconSize = 35;
             this.iconPictureBox1.Location = new System.Drawing.Point(1206, 13);
