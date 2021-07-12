@@ -29,104 +29,44 @@ namespace Hotel_Management_System
         /// </summary>
         private void InitializeComponent()
         {
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.txtUserNameLogin = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.btnLogin = new FontAwesome.Sharp.IconButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.LoginClose = new FontAwesome.Sharp.IconButton();
+            this.lnklblChangePw = new System.Windows.Forms.LinkLabel();
+            this.txtUserNameLogin = new System.Windows.Forms.TextBox();
+            this.txtPwLogin = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.icnUser = new FontAwesome.Sharp.IconButton();
+            this.icnKey = new FontAwesome.Sharp.IconButton();
+            this.lnklblClearFields = new System.Windows.Forms.LinkLabel();
+            this.txtNewPwLogin = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.txtConfirmPwLogin = new System.Windows.Forms.TextBox();
+            this.lblUserName = new System.Windows.Forms.Label();
+            this.lblCrntPw = new System.Windows.Forms.Label();
+            this.lblNewPw = new System.Windows.Forms.Label();
+            this.lblConfrimPw = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // iconButton2
+            // btnLogin
             // 
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.iconButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton2.IconColor = System.Drawing.Color.Black;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.Location = new System.Drawing.Point(54, 558);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(370, 52);
-            this.iconButton2.TabIndex = 1;
-            this.iconButton2.Text = "Login";
-            this.iconButton2.UseVisualStyleBackColor = false;
-            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
-            // 
-            // txtUserNameLogin
-            // 
-            this.txtUserNameLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txtUserNameLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUserNameLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtUserNameLogin.Location = new System.Drawing.Point(126, 335);
-            this.txtUserNameLogin.Name = "txtUserNameLogin";
-            this.txtUserNameLogin.Size = new System.Drawing.Size(289, 15);
-            this.txtUserNameLogin.TabIndex = 2;
-            this.txtUserNameLogin.TextChanged += new System.EventHandler(this.txtUserNameLogin_TextChanged);
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox1.Location = new System.Drawing.Point(126, 439);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(289, 15);
-            this.textBox1.TabIndex = 3;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel1.Location = new System.Drawing.Point(126, 363);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(289, 1);
-            this.panel1.TabIndex = 4;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel2.Location = new System.Drawing.Point(126, 467);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(289, 1);
-            this.panel2.TabIndex = 5;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
-            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 40;
-            this.iconButton1.Location = new System.Drawing.Point(54, 312);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(57, 52);
-            this.iconButton1.TabIndex = 6;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            // 
-            // iconButton3
-            // 
-            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Key;
-            this.iconButton3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 40;
-            this.iconButton3.Location = new System.Drawing.Point(54, 416);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(57, 52);
-            this.iconButton3.TabIndex = 7;
-            this.iconButton3.UseVisualStyleBackColor = false;
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnLogin.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnLogin.IconColor = System.Drawing.Color.Black;
+            this.btnLogin.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLogin.Location = new System.Drawing.Point(54, 500);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(370, 52);
+            this.btnLogin.TabIndex = 1;
+            this.btnLogin.Text = "Log In";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.iconButton2_Click);
             // 
             // pictureBox1
             // 
@@ -149,16 +89,6 @@ namespace Hotel_Management_System
             this.label1.TabIndex = 9;
             this.label1.Text = "LOG IN";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label2.Location = new System.Drawing.Point(333, 516);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 17);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Clear Fields";
-            // 
             // LoginClose
             // 
             this.LoginClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
@@ -175,23 +105,218 @@ namespace Hotel_Management_System
             this.LoginClose.UseVisualStyleBackColor = false;
             this.LoginClose.Click += new System.EventHandler(this.LoginClose_Click);
             // 
+            // lnklblChangePw
+            // 
+            this.lnklblChangePw.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(90)))));
+            this.lnklblChangePw.AutoSize = true;
+            this.lnklblChangePw.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lnklblChangePw.Location = new System.Drawing.Point(279, 573);
+            this.lnklblChangePw.Name = "lnklblChangePw";
+            this.lnklblChangePw.Size = new System.Drawing.Size(122, 17);
+            this.lnklblChangePw.TabIndex = 13;
+            this.lnklblChangePw.TabStop = true;
+            this.lnklblChangePw.Text = "Change Password";
+            this.lnklblChangePw.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lnklblChangePw.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklblChangePw_LinkClicked);
+            // 
+            // txtUserNameLogin
+            // 
+            this.txtUserNameLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtUserNameLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUserNameLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserNameLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtUserNameLogin.Location = new System.Drawing.Point(114, 299);
+            this.txtUserNameLogin.Name = "txtUserNameLogin";
+            this.txtUserNameLogin.Size = new System.Drawing.Size(289, 23);
+            this.txtUserNameLogin.TabIndex = 2;
+            this.txtUserNameLogin.TextChanged += new System.EventHandler(this.txtUserNameLogin_TextChanged);
+            // 
+            // txtPwLogin
+            // 
+            this.txtPwLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtPwLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPwLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPwLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtPwLogin.Location = new System.Drawing.Point(114, 357);
+            this.txtPwLogin.Name = "txtPwLogin";
+            this.txtPwLogin.PasswordChar = '*';
+            this.txtPwLogin.Size = new System.Drawing.Size(289, 23);
+            this.txtPwLogin.TabIndex = 3;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel1.Location = new System.Drawing.Point(114, 328);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(289, 1);
+            this.panel1.TabIndex = 4;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel2.Location = new System.Drawing.Point(114, 386);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(289, 1);
+            this.panel2.TabIndex = 5;
+            // 
+            // icnUser
+            // 
+            this.icnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.icnUser.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.icnUser.FlatAppearance.BorderSize = 0;
+            this.icnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.icnUser.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
+            this.icnUser.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.icnUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icnUser.IconSize = 40;
+            this.icnUser.Location = new System.Drawing.Point(47, 291);
+            this.icnUser.Name = "icnUser";
+            this.icnUser.Size = new System.Drawing.Size(57, 52);
+            this.icnUser.TabIndex = 6;
+            this.icnUser.UseVisualStyleBackColor = false;
+            // 
+            // icnKey
+            // 
+            this.icnKey.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.icnKey.FlatAppearance.BorderSize = 0;
+            this.icnKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.icnKey.IconChar = FontAwesome.Sharp.IconChar.Key;
+            this.icnKey.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.icnKey.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icnKey.IconSize = 40;
+            this.icnKey.Location = new System.Drawing.Point(43, 347);
+            this.icnKey.Name = "icnKey";
+            this.icnKey.Size = new System.Drawing.Size(57, 52);
+            this.icnKey.TabIndex = 7;
+            this.icnKey.UseVisualStyleBackColor = false;
+            // 
+            // lnklblClearFields
+            // 
+            this.lnklblClearFields.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(90)))));
+            this.lnklblClearFields.AutoSize = true;
+            this.lnklblClearFields.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lnklblClearFields.Location = new System.Drawing.Point(321, 399);
+            this.lnklblClearFields.Name = "lnklblClearFields";
+            this.lnklblClearFields.Size = new System.Drawing.Size(82, 17);
+            this.lnklblClearFields.TabIndex = 12;
+            this.lnklblClearFields.TabStop = true;
+            this.lnklblClearFields.Text = "Clear Fields";
+            this.lnklblClearFields.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklblClearFields_LinkClicked);
+            // 
+            // txtNewPwLogin
+            // 
+            this.txtNewPwLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtNewPwLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNewPwLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewPwLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtNewPwLogin.Location = new System.Drawing.Point(114, 412);
+            this.txtNewPwLogin.Name = "txtNewPwLogin";
+            this.txtNewPwLogin.PasswordChar = '*';
+            this.txtNewPwLogin.Size = new System.Drawing.Size(289, 23);
+            this.txtNewPwLogin.TabIndex = 14;
+            this.txtNewPwLogin.Visible = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel3.Location = new System.Drawing.Point(114, 439);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(289, 1);
+            this.panel3.TabIndex = 15;
+            this.panel3.Visible = false;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel4.Location = new System.Drawing.Point(114, 495);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(289, 1);
+            this.panel4.TabIndex = 16;
+            this.panel4.Visible = false;
+            // 
+            // txtConfirmPwLogin
+            // 
+            this.txtConfirmPwLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtConfirmPwLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtConfirmPwLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmPwLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtConfirmPwLogin.Location = new System.Drawing.Point(114, 471);
+            this.txtConfirmPwLogin.Name = "txtConfirmPwLogin";
+            this.txtConfirmPwLogin.PasswordChar = '*';
+            this.txtConfirmPwLogin.Size = new System.Drawing.Size(289, 23);
+            this.txtConfirmPwLogin.TabIndex = 17;
+            this.txtConfirmPwLogin.Visible = false;
+            // 
+            // lblUserName
+            // 
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblUserName.Location = new System.Drawing.Point(12, 306);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(79, 17);
+            this.lblUserName.TabIndex = 18;
+            this.lblUserName.Text = "User Name";
+            this.lblUserName.Visible = false;
+            // 
+            // lblCrntPw
+            // 
+            this.lblCrntPw.AutoSize = true;
+            this.lblCrntPw.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblCrntPw.Location = new System.Drawing.Point(12, 364);
+            this.lblCrntPw.Name = "lblCrntPw";
+            this.lblCrntPw.Size = new System.Drawing.Size(69, 34);
+            this.lblCrntPw.TabIndex = 19;
+            this.lblCrntPw.Text = "Current \r\nPassword";
+            this.lblCrntPw.Visible = false;
+            // 
+            // lblNewPw
+            // 
+            this.lblNewPw.AutoSize = true;
+            this.lblNewPw.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblNewPw.Location = new System.Drawing.Point(12, 414);
+            this.lblNewPw.Name = "lblNewPw";
+            this.lblNewPw.Size = new System.Drawing.Size(69, 34);
+            this.lblNewPw.TabIndex = 20;
+            this.lblNewPw.Text = "New \r\nPassword";
+            this.lblNewPw.Visible = false;
+            // 
+            // lblConfrimPw
+            // 
+            this.lblConfrimPw.AutoSize = true;
+            this.lblConfrimPw.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblConfrimPw.Location = new System.Drawing.Point(12, 476);
+            this.lblConfrimPw.Name = "lblConfrimPw";
+            this.lblConfrimPw.Size = new System.Drawing.Size(69, 34);
+            this.lblConfrimPw.TabIndex = 21;
+            this.lblConfrimPw.Text = "Confirm \r\nPassword";
+            this.lblConfrimPw.Visible = false;
+            // 
             // MainLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(469, 673);
+            this.Controls.Add(this.lblConfrimPw);
+            this.Controls.Add(this.lblNewPw);
+            this.Controls.Add(this.lblCrntPw);
+            this.Controls.Add(this.lblUserName);
+            this.Controls.Add(this.txtConfirmPwLogin);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.txtNewPwLogin);
+            this.Controls.Add(this.lnklblChangePw);
+            this.Controls.Add(this.lnklblClearFields);
             this.Controls.Add(this.LoginClose);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.iconButton3);
-            this.Controls.Add(this.iconButton1);
+            this.Controls.Add(this.icnKey);
+            this.Controls.Add(this.icnUser);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPwLogin);
             this.Controls.Add(this.txtUserNameLogin);
-            this.Controls.Add(this.iconButton2);
+            this.Controls.Add(this.btnLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -204,16 +329,25 @@ namespace Hotel_Management_System
 
         #endregion
 
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private System.Windows.Forms.TextBox txtUserNameLogin;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton btnLogin;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton LoginClose;
+        private System.Windows.Forms.LinkLabel lnklblChangePw;
+        private System.Windows.Forms.TextBox txtUserNameLogin;
+        private System.Windows.Forms.TextBox txtPwLogin;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private FontAwesome.Sharp.IconButton icnUser;
+        private FontAwesome.Sharp.IconButton icnKey;
+        private System.Windows.Forms.LinkLabel lnklblClearFields;
+        private System.Windows.Forms.TextBox txtNewPwLogin;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TextBox txtConfirmPwLogin;
+        private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.Label lblCrntPw;
+        private System.Windows.Forms.Label lblNewPw;
+        private System.Windows.Forms.Label lblConfrimPw;
     }
 }
