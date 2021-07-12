@@ -135,12 +135,12 @@ namespace Hotel_Management_System
             // 
             this.txtPwLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.txtPwLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPwLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPwLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPwLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtPwLogin.Location = new System.Drawing.Point(114, 357);
+            this.txtPwLogin.Location = new System.Drawing.Point(114, 353);
             this.txtPwLogin.Name = "txtPwLogin";
             this.txtPwLogin.PasswordChar = '*';
-            this.txtPwLogin.Size = new System.Drawing.Size(289, 23);
+            this.txtPwLogin.Size = new System.Drawing.Size(289, 42);
             this.txtPwLogin.TabIndex = 3;
             // 
             // panel1
@@ -207,12 +207,12 @@ namespace Hotel_Management_System
             // 
             this.txtNewPwLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.txtNewPwLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNewPwLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewPwLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNewPwLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtNewPwLogin.Location = new System.Drawing.Point(114, 412);
+            this.txtNewPwLogin.Location = new System.Drawing.Point(114, 405);
             this.txtNewPwLogin.Name = "txtNewPwLogin";
             this.txtNewPwLogin.PasswordChar = '*';
-            this.txtNewPwLogin.Size = new System.Drawing.Size(289, 23);
+            this.txtNewPwLogin.Size = new System.Drawing.Size(289, 42);
             this.txtNewPwLogin.TabIndex = 14;
             this.txtNewPwLogin.Visible = false;
             // 
@@ -238,12 +238,12 @@ namespace Hotel_Management_System
             // 
             this.txtConfirmPwLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.txtConfirmPwLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtConfirmPwLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmPwLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmPwLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtConfirmPwLogin.Location = new System.Drawing.Point(114, 471);
+            this.txtConfirmPwLogin.Location = new System.Drawing.Point(114, 464);
             this.txtConfirmPwLogin.Name = "txtConfirmPwLogin";
             this.txtConfirmPwLogin.PasswordChar = '*';
-            this.txtConfirmPwLogin.Size = new System.Drawing.Size(289, 23);
+            this.txtConfirmPwLogin.Size = new System.Drawing.Size(289, 42);
             this.txtConfirmPwLogin.TabIndex = 17;
             this.txtConfirmPwLogin.Visible = false;
             // 
