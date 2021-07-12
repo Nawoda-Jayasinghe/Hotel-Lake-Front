@@ -46,6 +46,8 @@ namespace Hotel_Management_System
             this.iconCurrent = new FontAwesome.Sharp.IconPictureBox();
             this.panelS = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.ADM005 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnLogoutReciptionist = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -53,8 +55,6 @@ namespace Hotel_Management_System
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-            this.label3 = new System.Windows.Forms.Label();
-            this.ADM005 = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -294,9 +294,9 @@ namespace Hotel_Management_System
             // 
             this.iconPictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.Red;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.DotCircle;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.Red;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox1.IconSize = 35;
             this.iconPictureBox1.Location = new System.Drawing.Point(1206, 13);
@@ -362,6 +362,24 @@ namespace Hotel_Management_System
             this.panelDesktop.TabIndex = 1010;
             this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelD_Paint);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(886, 442);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(305, 29);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Mr. Dhananjaya Jayasekara";
+            // 
+            // ADM005
+            // 
+            this.ADM005.AutoSize = true;
+            this.ADM005.Location = new System.Drawing.Point(1005, 397);
+            this.ADM005.Name = "ADM005";
+            this.ADM005.Size = new System.Drawing.Size(78, 29);
+            this.ADM005.TabIndex = 14;
+            this.ADM005.Text = "89005";
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Location = new System.Drawing.Point(31, 245);
@@ -425,24 +443,6 @@ namespace Hotel_Management_System
             // 
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(886, 442);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(305, 29);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Mr. Dhananjaya Jayasekara";
-            // 
-            // ADM005
-            // 
-            this.ADM005.AutoSize = true;
-            this.ADM005.Location = new System.Drawing.Point(1005, 397);
-            this.ADM005.Name = "ADM005";
-            this.ADM005.Size = new System.Drawing.Size(78, 29);
-            this.ADM005.TabIndex = 14;
-            this.ADM005.Text = "89005";
             // 
             // FormMain
             // 
