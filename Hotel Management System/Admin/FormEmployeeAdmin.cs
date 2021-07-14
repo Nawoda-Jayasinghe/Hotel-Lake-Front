@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace Hotel_Management_System
 {
@@ -20,6 +21,7 @@ namespace Hotel_Management_System
             InitializeComponent();
         }
 
+       
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -106,5 +108,19 @@ namespace Hotel_Management_System
                 txtSearchFoodCashier.ForeColor = Color.Gray;
             }
         }
+
+
+        public void FormEmployeeAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+    
     }
 }
