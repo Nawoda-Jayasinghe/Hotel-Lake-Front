@@ -152,6 +152,7 @@
       <DependentUpon>FormPaymentsCashier.cs</DependentUpon>
     </Compile>
     <Compile Include="DatabaseConnection.cs" />
+    <Compile Include="DBConnection.cs" />
     <Compile Include="MainLogin.cs">
       <SubType>Form</SubType>
     </Compile>

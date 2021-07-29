@@ -84,6 +84,7 @@ namespace Hotel_Management_System
             // 
             // tblLuxuryRooms
             // 
+            this.tblLuxuryRooms.AllowUserToAddRows = false;
             this.tblLuxuryRooms.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.tblLuxuryRooms.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -99,13 +100,14 @@ namespace Hotel_Management_System
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.tblLuxuryRooms.DefaultCellStyle = dataGridViewCellStyle2;
             this.tblLuxuryRooms.Location = new System.Drawing.Point(27, 89);
             this.tblLuxuryRooms.Name = "tblLuxuryRooms";
+            this.tblLuxuryRooms.ReadOnly = true;
             this.tblLuxuryRooms.RowHeadersVisible = false;
             this.tblLuxuryRooms.RowHeadersWidth = 51;
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
@@ -153,10 +155,12 @@ namespace Hotel_Management_System
             this.select.HeaderText = "Availability";
             this.select.MinimumWidth = 6;
             this.select.Name = "select";
+            this.select.ReadOnly = true;
             this.select.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // tblNormalRooms
             // 
+            this.tblNormalRooms.AllowUserToAddRows = false;
             this.tblNormalRooms.AllowUserToOrderColumns = true;
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
             this.tblNormalRooms.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
@@ -172,13 +176,14 @@ namespace Hotel_Management_System
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.tblNormalRooms.DefaultCellStyle = dataGridViewCellStyle5;
             this.tblNormalRooms.Location = new System.Drawing.Point(524, 89);
             this.tblNormalRooms.Name = "tblNormalRooms";
+            this.tblNormalRooms.ReadOnly = true;
             this.tblNormalRooms.RowHeadersVisible = false;
             this.tblNormalRooms.RowHeadersWidth = 51;
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
@@ -226,6 +231,7 @@ namespace Hotel_Management_System
             this.dataGridViewCheckBoxColumn1.HeaderText = "Availability";
             this.dataGridViewCheckBoxColumn1.MinimumWidth = 6;
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
             this.dataGridViewCheckBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // FormCurrentGuestsAdmin

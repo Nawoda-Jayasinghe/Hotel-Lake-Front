@@ -39,11 +39,11 @@ namespace Hotel_Management_System
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tblLuxuryRooms = new System.Windows.Forms.DataGridView();
-            this.tblNormalRooms = new System.Windows.Forms.DataGridView();
             this.RoomID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GuestID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.tblNormalRooms = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -103,13 +103,14 @@ namespace Hotel_Management_System
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.tblLuxuryRooms.DefaultCellStyle = dataGridViewCellStyle2;
             this.tblLuxuryRooms.Location = new System.Drawing.Point(27, 89);
             this.tblLuxuryRooms.Name = "tblLuxuryRooms";
+            this.tblLuxuryRooms.ReadOnly = true;
             this.tblLuxuryRooms.RowHeadersVisible = false;
             this.tblLuxuryRooms.RowHeadersWidth = 51;
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
@@ -117,40 +118,6 @@ namespace Hotel_Management_System
             this.tblLuxuryRooms.RowTemplate.Height = 24;
             this.tblLuxuryRooms.Size = new System.Drawing.Size(437, 474);
             this.tblLuxuryRooms.TabIndex = 37;
-            // 
-            // tblNormalRooms
-            // 
-            this.tblNormalRooms.AllowUserToAddRows = false;
-            this.tblNormalRooms.AllowUserToOrderColumns = true;
-            this.tblNormalRooms.AllowUserToResizeColumns = false;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.tblNormalRooms.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.tblNormalRooms.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.tblNormalRooms.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.tblNormalRooms.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tblNormalRooms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tblNormalRooms.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewCheckBoxColumn1});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tblNormalRooms.DefaultCellStyle = dataGridViewCellStyle5;
-            this.tblNormalRooms.Location = new System.Drawing.Point(524, 89);
-            this.tblNormalRooms.Name = "tblNormalRooms";
-            this.tblNormalRooms.RowHeadersVisible = false;
-            this.tblNormalRooms.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            this.tblNormalRooms.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.tblNormalRooms.RowTemplate.Height = 24;
-            this.tblNormalRooms.Size = new System.Drawing.Size(437, 474);
-            this.tblNormalRooms.TabIndex = 38;
             // 
             // RoomID
             // 
@@ -191,7 +158,43 @@ namespace Hotel_Management_System
             this.select.HeaderText = "Availability";
             this.select.MinimumWidth = 6;
             this.select.Name = "select";
+            this.select.ReadOnly = true;
             this.select.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // tblNormalRooms
+            // 
+            this.tblNormalRooms.AllowUserToAddRows = false;
+            this.tblNormalRooms.AllowUserToOrderColumns = true;
+            this.tblNormalRooms.AllowUserToResizeColumns = false;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.tblNormalRooms.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.tblNormalRooms.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tblNormalRooms.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.tblNormalRooms.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tblNormalRooms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tblNormalRooms.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewCheckBoxColumn1});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tblNormalRooms.DefaultCellStyle = dataGridViewCellStyle5;
+            this.tblNormalRooms.Location = new System.Drawing.Point(524, 89);
+            this.tblNormalRooms.Name = "tblNormalRooms";
+            this.tblNormalRooms.ReadOnly = true;
+            this.tblNormalRooms.RowHeadersVisible = false;
+            this.tblNormalRooms.RowHeadersWidth = 51;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            this.tblNormalRooms.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.tblNormalRooms.RowTemplate.Height = 24;
+            this.tblNormalRooms.Size = new System.Drawing.Size(437, 474);
+            this.tblNormalRooms.TabIndex = 38;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -232,6 +235,7 @@ namespace Hotel_Management_System
             this.dataGridViewCheckBoxColumn1.HeaderText = "Availability";
             this.dataGridViewCheckBoxColumn1.MinimumWidth = 6;
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
             this.dataGridViewCheckBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // FormRoomDetails
