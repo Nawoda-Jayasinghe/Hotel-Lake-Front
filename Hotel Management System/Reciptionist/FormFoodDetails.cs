@@ -48,13 +48,14 @@ namespace Hotel_Management_System
             return conn;
         }
 
-        private void DataAdapter(String sql, MySqlConnection dbQuery)
+        private void DataAdapter(String sql, MySqlConnection conn)
         {
-            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, dbQuery);
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
 
             DataSet ds = new DataSet();
             adapter.Fill(ds, "food");
             tblFoodDetails.DataSource = ds.Tables["food"];
+            conn.Close();
         }
 
 
@@ -231,6 +232,49 @@ namespace Hotel_Management_System
                 }
 
             }
+        }
+
+
+        private void radioAny_MouseDown(object sender, MouseEventArgs e)
+        {
+            txtSearchFoodCashier.Text = "Search";
+            txtSearchFoodCashier.ForeColor = Color.Gray;
+        }
+
+        private void radioBreak_MouseDown(object sender, MouseEventArgs e)
+        {
+            txtSearchFoodCashier.Text = "Search";
+            txtSearchFoodCashier.ForeColor = Color.Gray;
+        }
+
+        private void radioLunch_MouseDown(object sender, MouseEventArgs e)
+        {
+            txtSearchFoodCashier.Text = "Search";
+            txtSearchFoodCashier.ForeColor = Color.Gray;
+        }
+
+        private void radioDinner_MouseDown(object sender, MouseEventArgs e)
+        {
+            txtSearchFoodCashier.Text = "Search";
+            txtSearchFoodCashier.ForeColor = Color.Gray;
+        }
+
+        private void radioBeve_MouseDown(object sender, MouseEventArgs e)
+        {
+            txtSearchFoodCashier.Text = "Search";
+            txtSearchFoodCashier.ForeColor = Color.Gray;
+        }
+
+        private void radioDess_MouseDown(object sender, MouseEventArgs e)
+        {
+            txtSearchFoodCashier.Text = "Search";
+            txtSearchFoodCashier.ForeColor = Color.Gray;
+        }
+
+        private void radioSnacks_MouseDown(object sender, MouseEventArgs e)
+        {
+            txtSearchFoodCashier.Text = "Search";
+            txtSearchFoodCashier.ForeColor = Color.Gray;
         }
     }
 }

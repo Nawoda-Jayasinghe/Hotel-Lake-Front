@@ -29,9 +29,9 @@ namespace Hotel_Management_System
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tblFoodDetails = new System.Windows.Forms.DataGridView();
             this.iconBttnFoodSearchCashier = new FontAwesome.Sharp.IconButton();
             this.txtSearchFoodCashier = new System.Windows.Forms.TextBox();
@@ -53,32 +53,32 @@ namespace Hotel_Management_System
             this.tblFoodDetails.AllowUserToDeleteRows = false;
             this.tblFoodDetails.AllowUserToResizeColumns = false;
             this.tblFoodDetails.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.tblFoodDetails.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
+            this.tblFoodDetails.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
             this.tblFoodDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tblFoodDetails.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.tblFoodDetails.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tblFoodDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tblFoodDetails.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tblFoodDetails.DefaultCellStyle = dataGridViewCellStyle20;
             this.tblFoodDetails.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tblFoodDetails.Location = new System.Drawing.Point(32, 114);
             this.tblFoodDetails.Name = "tblFoodDetails";
             this.tblFoodDetails.ReadOnly = true;
             this.tblFoodDetails.RowHeadersVisible = false;
             this.tblFoodDetails.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Azure;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.tblFoodDetails.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.Azure;
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle21.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.tblFoodDetails.RowsDefaultCellStyle = dataGridViewCellStyle21;
             this.tblFoodDetails.RowTemplate.Height = 35;
             this.tblFoodDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tblFoodDetails.Size = new System.Drawing.Size(940, 434);
@@ -86,6 +86,7 @@ namespace Hotel_Management_System
             // 
             // iconBttnFoodSearchCashier
             // 
+            this.iconBttnFoodSearchCashier.Enabled = false;
             this.iconBttnFoodSearchCashier.IconChar = FontAwesome.Sharp.IconChar.Search;
             this.iconBttnFoodSearchCashier.IconColor = System.Drawing.Color.Black;
             this.iconBttnFoodSearchCashier.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -121,6 +122,7 @@ namespace Hotel_Management_System
             this.radioAny.Text = "Anytime";
             this.radioAny.UseVisualStyleBackColor = true;
             this.radioAny.CheckedChanged += new System.EventHandler(this.radioAnytime_CheckedChanged);
+            this.radioAny.MouseDown += new System.Windows.Forms.MouseEventHandler(this.radioAny_MouseDown);
             // 
             // radioSnacks
             // 
@@ -134,6 +136,7 @@ namespace Hotel_Management_System
             this.radioSnacks.Text = "Snacks";
             this.radioSnacks.UseVisualStyleBackColor = true;
             this.radioSnacks.CheckedChanged += new System.EventHandler(this.radioSnacks_CheckedChanged);
+            this.radioSnacks.MouseDown += new System.Windows.Forms.MouseEventHandler(this.radioSnacks_MouseDown);
             // 
             // radioBeve
             // 
@@ -147,6 +150,7 @@ namespace Hotel_Management_System
             this.radioBeve.Text = "Beverages";
             this.radioBeve.UseVisualStyleBackColor = true;
             this.radioBeve.CheckedChanged += new System.EventHandler(this.radioBeve_CheckedChanged);
+            this.radioBeve.MouseDown += new System.Windows.Forms.MouseEventHandler(this.radioBeve_MouseDown);
             // 
             // radioDinner
             // 
@@ -160,6 +164,7 @@ namespace Hotel_Management_System
             this.radioDinner.Text = "Dinner";
             this.radioDinner.UseVisualStyleBackColor = true;
             this.radioDinner.CheckedChanged += new System.EventHandler(this.radioDinner_CheckedChanged);
+            this.radioDinner.MouseDown += new System.Windows.Forms.MouseEventHandler(this.radioDinner_MouseDown);
             // 
             // radioLunch
             // 
@@ -173,6 +178,7 @@ namespace Hotel_Management_System
             this.radioLunch.Text = "Lunch";
             this.radioLunch.UseVisualStyleBackColor = true;
             this.radioLunch.CheckedChanged += new System.EventHandler(this.radioLunch_CheckedChanged);
+            this.radioLunch.MouseDown += new System.Windows.Forms.MouseEventHandler(this.radioLunch_MouseDown);
             // 
             // radioBreak
             // 
@@ -186,6 +192,7 @@ namespace Hotel_Management_System
             this.radioBreak.Text = "Breakfast";
             this.radioBreak.UseVisualStyleBackColor = true;
             this.radioBreak.CheckedChanged += new System.EventHandler(this.radioBreak_CheckedChanged);
+            this.radioBreak.MouseDown += new System.Windows.Forms.MouseEventHandler(this.radioBreak_MouseDown);
             // 
             // radioDess
             // 
@@ -199,6 +206,7 @@ namespace Hotel_Management_System
             this.radioDess.Text = "Desserts";
             this.radioDess.UseVisualStyleBackColor = true;
             this.radioDess.CheckedChanged += new System.EventHandler(this.radioDess_CheckedChanged);
+            this.radioDess.MouseDown += new System.Windows.Forms.MouseEventHandler(this.radioDess_MouseDown);
             // 
             // grpFood
             // 

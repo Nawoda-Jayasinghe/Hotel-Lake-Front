@@ -30,6 +30,7 @@ namespace Hotel_Management_System
         private void InitializeComponent()
         {
             this.panelGuest = new System.Windows.Forms.Panel();
+            this.btnGuestSave = new FontAwesome.Sharp.IconButton();
             this.mtbNIC = new System.Windows.Forms.MaskedTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.rchtxtAddress = new System.Windows.Forms.RichTextBox();
@@ -76,6 +77,7 @@ namespace Hotel_Management_System
             // 
             // panelGuest
             // 
+            this.panelGuest.Controls.Add(this.btnGuestSave);
             this.panelGuest.Controls.Add(this.mtbNIC);
             this.panelGuest.Controls.Add(this.button1);
             this.panelGuest.Controls.Add(this.rchtxtAddress);
@@ -102,6 +104,28 @@ namespace Hotel_Management_System
             this.panelGuest.TabIndex = 1000;
             this.panelGuest.Enter += new System.EventHandler(this.panelGuest_Enter);
             // 
+            // btnGuestSave
+            // 
+            this.btnGuestSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnGuestSave.FlatAppearance.BorderSize = 2;
+            this.btnGuestSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnGuestSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuestSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuestSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnGuestSave.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleDown;
+            this.btnGuestSave.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnGuestSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGuestSave.IconSize = 40;
+            this.btnGuestSave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuestSave.Location = new System.Drawing.Point(599, 495);
+            this.btnGuestSave.Name = "btnGuestSave";
+            this.btnGuestSave.Size = new System.Drawing.Size(131, 55);
+            this.btnGuestSave.TabIndex = 271;
+            this.btnGuestSave.Text = "Save";
+            this.btnGuestSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuestSave.UseVisualStyleBackColor = false;
+            this.btnGuestSave.Click += new System.EventHandler(this.btnGuestSave_Click);
+            // 
             // mtbNIC
             // 
             this.mtbNIC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -112,6 +136,7 @@ namespace Hotel_Management_System
             this.mtbNIC.Size = new System.Drawing.Size(289, 30);
             this.mtbNIC.TabIndex = 2;
             this.mtbNIC.MouseClick += new System.Windows.Forms.MouseEventHandler(this.mtbNIC_MouseClick);
+            this.mtbNIC.TextChanged += new System.EventHandler(this.mtbNIC_TextChanged);
             // 
             // button1
             // 
@@ -149,7 +174,7 @@ namespace Hotel_Management_System
             this.btnGuestFurther.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuestFurther.IconSize = 40;
             this.btnGuestFurther.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuestFurther.Location = new System.Drawing.Point(757, 495);
+            this.btnGuestFurther.Location = new System.Drawing.Point(784, 495);
             this.btnGuestFurther.Name = "btnGuestFurther";
             this.btnGuestFurther.Size = new System.Drawing.Size(190, 55);
             this.btnGuestFurther.TabIndex = 268;
@@ -445,6 +470,7 @@ namespace Hotel_Management_System
             this.mtbTP1.Size = new System.Drawing.Size(136, 34);
             this.mtbTP1.TabIndex = 7;
             this.mtbTP1.Click += new System.EventHandler(this.mtbTP1_Click);
+            this.mtbTP1.Enter += new System.EventHandler(this.mtbTP1_Enter);
             // 
             // txtFullName
             // 
@@ -584,5 +610,6 @@ namespace Hotel_Management_System
         private System.Windows.Forms.RichTextBox rchtxtAddress;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.MaskedTextBox mtbNIC;
+        private FontAwesome.Sharp.IconButton btnGuestSave;
     }
 }
