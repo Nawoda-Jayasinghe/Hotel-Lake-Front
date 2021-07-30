@@ -35,19 +35,19 @@ namespace Hotel_Management_System
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelGuestNext = new System.Windows.Forms.Panel();
             this.tblReservationDetails = new System.Windows.Forms.DataGridView();
+            this.clmnRoomID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmnRoomType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmnReservation = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.clmnArrival = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmnDeparture = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmnWifi = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.clmnSatelliteTV = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.clmnHotWater = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.clmnExtraBed = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.clmnPets = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnNext = new FontAwesome.Sharp.IconButton();
             this.btnPrevious = new FontAwesome.Sharp.IconButton();
             this.label16 = new System.Windows.Forms.Label();
-            this.clmnPets = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.clmnExtraBed = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.clmnHotWater = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.clmnSatelliteTV = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.clmnWifi = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.clmnDeparture = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmnArrival = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmnReservation = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.clmnRoomType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmnRoomID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelGuestNext.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblReservationDetails)).BeginInit();
             this.SuspendLayout();
@@ -115,9 +115,89 @@ namespace Hotel_Management_System
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
             this.tblReservationDetails.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.tblReservationDetails.RowTemplate.Height = 30;
+            this.tblReservationDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tblReservationDetails.Size = new System.Drawing.Size(988, 305);
             this.tblReservationDetails.TabIndex = 1;
             this.tblReservationDetails.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblReservationDetails_CellClick);
+            // 
+            // clmnRoomID
+            // 
+            this.clmnRoomID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.clmnRoomID.FillWeight = 51.3369F;
+            this.clmnRoomID.Frozen = true;
+            this.clmnRoomID.HeaderText = "Room ID";
+            this.clmnRoomID.MinimumWidth = 6;
+            this.clmnRoomID.Name = "clmnRoomID";
+            this.clmnRoomID.Width = 84;
+            // 
+            // clmnRoomType
+            // 
+            this.clmnRoomType.FillWeight = 130F;
+            this.clmnRoomType.HeaderText = "Room Type";
+            this.clmnRoomType.MinimumWidth = 6;
+            this.clmnRoomType.Name = "clmnRoomType";
+            // 
+            // clmnReservation
+            // 
+            this.clmnReservation.HeaderText = "Make a reservation";
+            this.clmnReservation.MinimumWidth = 6;
+            this.clmnReservation.Name = "clmnReservation";
+            // 
+            // clmnArrival
+            // 
+            this.clmnArrival.FillWeight = 120F;
+            this.clmnArrival.HeaderText = "Arrival Date";
+            this.clmnArrival.MinimumWidth = 6;
+            this.clmnArrival.Name = "clmnArrival";
+            // 
+            // clmnDeparture
+            // 
+            this.clmnDeparture.FillWeight = 120F;
+            this.clmnDeparture.HeaderText = "Departure Date";
+            this.clmnDeparture.MinimumWidth = 6;
+            this.clmnDeparture.Name = "clmnDeparture";
+            // 
+            // clmnWifi
+            // 
+            this.clmnWifi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clmnWifi.FillWeight = 70F;
+            this.clmnWifi.HeaderText = "Wi-Fi";
+            this.clmnWifi.MinimumWidth = 6;
+            this.clmnWifi.Name = "clmnWifi";
+            this.clmnWifi.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.clmnWifi.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // clmnSatelliteTV
+            // 
+            this.clmnSatelliteTV.FillWeight = 70F;
+            this.clmnSatelliteTV.HeaderText = "Satellite TV";
+            this.clmnSatelliteTV.MinimumWidth = 6;
+            this.clmnSatelliteTV.Name = "clmnSatelliteTV";
+            this.clmnSatelliteTV.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.clmnSatelliteTV.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // clmnHotWater
+            // 
+            this.clmnHotWater.FillWeight = 70F;
+            this.clmnHotWater.HeaderText = "Hot Water";
+            this.clmnHotWater.MinimumWidth = 6;
+            this.clmnHotWater.Name = "clmnHotWater";
+            this.clmnHotWater.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.clmnHotWater.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // clmnExtraBed
+            // 
+            this.clmnExtraBed.FillWeight = 70F;
+            this.clmnExtraBed.HeaderText = "Extra Bed";
+            this.clmnExtraBed.MinimumWidth = 6;
+            this.clmnExtraBed.Name = "clmnExtraBed";
+            // 
+            // clmnPets
+            // 
+            this.clmnPets.FillWeight = 80F;
+            this.clmnPets.HeaderText = "Pets Allowed";
+            this.clmnPets.MinimumWidth = 6;
+            this.clmnPets.Name = "clmnPets";
             // 
             // btnNext
             // 
@@ -172,85 +252,6 @@ namespace Hotel_Management_System
             this.label16.Size = new System.Drawing.Size(311, 35);
             this.label16.TabIndex = 262;
             this.label16.Text = "Reservation Details";
-            // 
-            // clmnPets
-            // 
-            this.clmnPets.FillWeight = 80F;
-            this.clmnPets.HeaderText = "Pets Allowed";
-            this.clmnPets.MinimumWidth = 6;
-            this.clmnPets.Name = "clmnPets";
-            // 
-            // clmnExtraBed
-            // 
-            this.clmnExtraBed.FillWeight = 70F;
-            this.clmnExtraBed.HeaderText = "Extra Bed";
-            this.clmnExtraBed.MinimumWidth = 6;
-            this.clmnExtraBed.Name = "clmnExtraBed";
-            // 
-            // clmnHotWater
-            // 
-            this.clmnHotWater.FillWeight = 70F;
-            this.clmnHotWater.HeaderText = "Hot Water";
-            this.clmnHotWater.MinimumWidth = 6;
-            this.clmnHotWater.Name = "clmnHotWater";
-            this.clmnHotWater.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.clmnHotWater.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // clmnSatelliteTV
-            // 
-            this.clmnSatelliteTV.FillWeight = 70F;
-            this.clmnSatelliteTV.HeaderText = "Satellite TV";
-            this.clmnSatelliteTV.MinimumWidth = 6;
-            this.clmnSatelliteTV.Name = "clmnSatelliteTV";
-            this.clmnSatelliteTV.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.clmnSatelliteTV.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // clmnWifi
-            // 
-            this.clmnWifi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.clmnWifi.FillWeight = 70F;
-            this.clmnWifi.HeaderText = "Wi-Fi";
-            this.clmnWifi.MinimumWidth = 6;
-            this.clmnWifi.Name = "clmnWifi";
-            this.clmnWifi.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.clmnWifi.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // clmnDeparture
-            // 
-            this.clmnDeparture.FillWeight = 120F;
-            this.clmnDeparture.HeaderText = "Departure Date";
-            this.clmnDeparture.MinimumWidth = 6;
-            this.clmnDeparture.Name = "clmnDeparture";
-            // 
-            // clmnArrival
-            // 
-            this.clmnArrival.FillWeight = 120F;
-            this.clmnArrival.HeaderText = "Arrival Date";
-            this.clmnArrival.MinimumWidth = 6;
-            this.clmnArrival.Name = "clmnArrival";
-            // 
-            // clmnReservation
-            // 
-            this.clmnReservation.HeaderText = "Make a reservation";
-            this.clmnReservation.MinimumWidth = 6;
-            this.clmnReservation.Name = "clmnReservation";
-            // 
-            // clmnRoomType
-            // 
-            this.clmnRoomType.FillWeight = 130F;
-            this.clmnRoomType.HeaderText = "Room Type";
-            this.clmnRoomType.MinimumWidth = 6;
-            this.clmnRoomType.Name = "clmnRoomType";
-            // 
-            // clmnRoomID
-            // 
-            this.clmnRoomID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.clmnRoomID.FillWeight = 51.3369F;
-            this.clmnRoomID.Frozen = true;
-            this.clmnRoomID.HeaderText = "Room ID";
-            this.clmnRoomID.MinimumWidth = 6;
-            this.clmnRoomID.Name = "clmnRoomID";
-            this.clmnRoomID.Width = 84;
             // 
             // FormNewGuestNext
             // 

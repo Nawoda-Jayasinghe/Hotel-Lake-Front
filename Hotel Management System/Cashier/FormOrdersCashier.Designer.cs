@@ -29,22 +29,27 @@ namespace Hotel_Management_System
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bttnOrderComplete = new System.Windows.Forms.Button();
             this.bttnOrderPlaced = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lblFoodTotalCashier = new System.Windows.Forms.Label();
             this.tbleRoomFoodOrderDetailsListCashier = new System.Windows.Forms.DataGridView();
-            this.FoodIDOrders = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FoodNameOrders = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QuantityOrders = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FoodPriceOrders = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FoodSelectOrders = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tbleRoomFoodOrderDetailsCashier = new System.Windows.Forms.DataGridView();
             this.RoomIDCashier = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OrderIDCashier = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OrderSelectOrders = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.FoodIDOrders = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FoodNameOrders = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QuantityOrders = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FoodPriceOrders = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbleRoomFoodOrderDetailsListCashier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbleRoomFoodOrderDetailsCashier)).BeginInit();
@@ -114,6 +119,8 @@ namespace Hotel_Management_System
             this.tbleRoomFoodOrderDetailsListCashier.AllowUserToOrderColumns = true;
             this.tbleRoomFoodOrderDetailsListCashier.AllowUserToResizeColumns = false;
             this.tbleRoomFoodOrderDetailsListCashier.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.tbleRoomFoodOrderDetailsListCashier.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.tbleRoomFoodOrderDetailsListCashier.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.tbleRoomFoodOrderDetailsListCashier.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbleRoomFoodOrderDetailsListCashier.ColumnHeadersHeight = 55;
@@ -122,57 +129,32 @@ namespace Hotel_Management_System
             this.FoodIDOrders,
             this.FoodNameOrders,
             this.QuantityOrders,
-            this.FoodPriceOrders,
-            this.FoodSelectOrders});
+            this.FoodPriceOrders});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tbleRoomFoodOrderDetailsListCashier.DefaultCellStyle = dataGridViewCellStyle2;
             this.tbleRoomFoodOrderDetailsListCashier.Location = new System.Drawing.Point(389, 12);
             this.tbleRoomFoodOrderDetailsListCashier.Name = "tbleRoomFoodOrderDetailsListCashier";
             this.tbleRoomFoodOrderDetailsListCashier.RowHeadersVisible = false;
             this.tbleRoomFoodOrderDetailsListCashier.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.tbleRoomFoodOrderDetailsListCashier.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.tbleRoomFoodOrderDetailsListCashier.RowTemplate.Height = 24;
             this.tbleRoomFoodOrderDetailsListCashier.Size = new System.Drawing.Size(602, 437);
             this.tbleRoomFoodOrderDetailsListCashier.TabIndex = 1;
-            this.tbleRoomFoodOrderDetailsListCashier.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tbleFoodOrderDetailsCashier_CellContentClick);
-            // 
-            // FoodIDOrders
-            // 
-            this.FoodIDOrders.HeaderText = "Food ID";
-            this.FoodIDOrders.MinimumWidth = 6;
-            this.FoodIDOrders.Name = "FoodIDOrders";
-            this.FoodIDOrders.Width = 125;
-            // 
-            // FoodNameOrders
-            // 
-            this.FoodNameOrders.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FoodNameOrders.HeaderText = "Name";
-            this.FoodNameOrders.MinimumWidth = 6;
-            this.FoodNameOrders.Name = "FoodNameOrders";
-            // 
-            // QuantityOrders
-            // 
-            this.QuantityOrders.HeaderText = "Quantity";
-            this.QuantityOrders.MinimumWidth = 6;
-            this.QuantityOrders.Name = "QuantityOrders";
-            this.QuantityOrders.Width = 115;
-            // 
-            // FoodPriceOrders
-            // 
-            this.FoodPriceOrders.HeaderText = "Price";
-            this.FoodPriceOrders.MinimumWidth = 6;
-            this.FoodPriceOrders.Name = "FoodPriceOrders";
-            this.FoodPriceOrders.Width = 96;
-            // 
-            // FoodSelectOrders
-            // 
-            this.FoodSelectOrders.HeaderText = "";
-            this.FoodSelectOrders.MinimumWidth = 6;
-            this.FoodSelectOrders.Name = "FoodSelectOrders";
-            this.FoodSelectOrders.Width = 30;
             // 
             // tbleRoomFoodOrderDetailsCashier
             // 
             this.tbleRoomFoodOrderDetailsCashier.AllowUserToOrderColumns = true;
             this.tbleRoomFoodOrderDetailsCashier.AllowUserToResizeColumns = false;
             this.tbleRoomFoodOrderDetailsCashier.AllowUserToResizeRows = false;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.tbleRoomFoodOrderDetailsCashier.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.tbleRoomFoodOrderDetailsCashier.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tbleRoomFoodOrderDetailsCashier.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.tbleRoomFoodOrderDetailsCashier.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -182,10 +164,20 @@ namespace Hotel_Management_System
             this.RoomIDCashier,
             this.OrderIDCashier,
             this.OrderSelectOrders});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tbleRoomFoodOrderDetailsCashier.DefaultCellStyle = dataGridViewCellStyle5;
             this.tbleRoomFoodOrderDetailsCashier.Location = new System.Drawing.Point(12, 12);
             this.tbleRoomFoodOrderDetailsCashier.Name = "tbleRoomFoodOrderDetailsCashier";
             this.tbleRoomFoodOrderDetailsCashier.RowHeadersVisible = false;
             this.tbleRoomFoodOrderDetailsCashier.RowHeadersWidth = 51;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            this.tbleRoomFoodOrderDetailsCashier.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.tbleRoomFoodOrderDetailsCashier.RowTemplate.Height = 24;
             this.tbleRoomFoodOrderDetailsCashier.Size = new System.Drawing.Size(364, 560);
             this.tbleRoomFoodOrderDetailsCashier.TabIndex = 0;
@@ -219,6 +211,34 @@ namespace Hotel_Management_System
             this.panel3.Size = new System.Drawing.Size(1, 608);
             this.panel3.TabIndex = 19;
             // 
+            // FoodIDOrders
+            // 
+            this.FoodIDOrders.HeaderText = "Food ID";
+            this.FoodIDOrders.MinimumWidth = 6;
+            this.FoodIDOrders.Name = "FoodIDOrders";
+            this.FoodIDOrders.Width = 125;
+            // 
+            // FoodNameOrders
+            // 
+            this.FoodNameOrders.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FoodNameOrders.HeaderText = "Name";
+            this.FoodNameOrders.MinimumWidth = 6;
+            this.FoodNameOrders.Name = "FoodNameOrders";
+            // 
+            // QuantityOrders
+            // 
+            this.QuantityOrders.HeaderText = "Quantity";
+            this.QuantityOrders.MinimumWidth = 6;
+            this.QuantityOrders.Name = "QuantityOrders";
+            this.QuantityOrders.Width = 115;
+            // 
+            // FoodPriceOrders
+            // 
+            this.FoodPriceOrders.HeaderText = "Price";
+            this.FoodPriceOrders.MinimumWidth = 6;
+            this.FoodPriceOrders.Name = "FoodPriceOrders";
+            this.FoodPriceOrders.Width = 96;
+            // 
             // FormOrdersCashier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -229,6 +249,7 @@ namespace Hotel_Management_System
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.Name = "FormOrdersCashier";
             this.Text = "Orders";
+            this.Load += new System.EventHandler(this.FormOrdersCashier_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tbleRoomFoodOrderDetailsListCashier)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbleRoomFoodOrderDetailsCashier)).EndInit();
@@ -244,14 +265,13 @@ namespace Hotel_Management_System
         private System.Windows.Forms.Label lblFoodTotalCashier;
         private System.Windows.Forms.Button bttnOrderComplete;
         private System.Windows.Forms.Button bttnOrderPlaced;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FoodIDOrders;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FoodNameOrders;
-        private System.Windows.Forms.DataGridViewTextBoxColumn QuantityOrders;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FoodPriceOrders;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn FoodSelectOrders;
         private System.Windows.Forms.DataGridView tbleRoomFoodOrderDetailsCashier;
         private System.Windows.Forms.DataGridViewTextBoxColumn RoomIDCashier;
         private System.Windows.Forms.DataGridViewTextBoxColumn OrderIDCashier;
         private System.Windows.Forms.DataGridViewCheckBoxColumn OrderSelectOrders;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FoodIDOrders;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FoodNameOrders;
+        private System.Windows.Forms.DataGridViewTextBoxColumn QuantityOrders;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FoodPriceOrders;
     }
 }

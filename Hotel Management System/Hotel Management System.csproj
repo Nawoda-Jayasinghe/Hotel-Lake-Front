@@ -152,6 +152,7 @@
       <DependentUpon>FormPaymentsCashier.cs</DependentUpon>
     </Compile>
     <Compile Include="DatabaseConnection.cs" />
+    <Compile Include="DBConnection.cs" />
     <Compile Include="MainLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,12 +223,6 @@
     </Compile>
     <Compile Include="Reciptionist\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -362,9 +357,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reciptionist\FormFoodDetails.resx">
       <DependentUpon>FormFoodDetails.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

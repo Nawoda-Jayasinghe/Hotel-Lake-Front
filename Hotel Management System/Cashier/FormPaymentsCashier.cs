@@ -133,5 +133,13 @@ namespace Hotel_Management_System
                 txtSearchPayments2.ForeColor = Color.Gray;
             }
         }
+
+        private void FormPaymentsCashier_Load(object sender, EventArgs e)
+        {
+
+            tbleFoodOrderDetailsCashier.Rows.Add("F0005", "Sea Food Special Buriyani(L)", "1", "800");
+            tbleFoodOrderDetailsCashier.Rows.Add("F0009", "Broccoli cheddar baked potato", "2", "2500");
+            tbleFoodOrderDetailsCashier.Rows.Add("F0002", "Chicken Cheese Masala Kottu(S)", "1", "750");
+        }
     }
 }
