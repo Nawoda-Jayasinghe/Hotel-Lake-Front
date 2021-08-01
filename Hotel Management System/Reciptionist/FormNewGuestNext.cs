@@ -13,15 +13,26 @@ namespace Hotel_Management_System
 {
     public partial class FormNewGuestNext : Form
     {
-
-        DateTimePicker DateTimePicker1;
+        DateTimePicker Datetp = new DateTimePicker();
+        Rectangle rectangle1;
         Form currentForm;
 
         public FormNewGuestNext()
         {
             InitializeComponent();
- 
+
+            tblReservationDetails.Controls.Add(Datetp);
+            Datetp.Visible = false;
+            Datetp.Format = DateTimePickerFormat.Custom;
+            Datetp.Value = DateTime.Now;
+            Datetp.MinDate = DateTime.Today;
+            Datetp.CustomFormat = "yyyy-MM-dd (HH:MM)";
+            Datetp.TextChanged += new EventHandler(Datetp_TextChange);
+
+
+
         }
+
 
         private void OpenForm(Form childForm)
         {
@@ -86,9 +97,25 @@ namespace Hotel_Management_System
             }
         }
 
+        private string DataReader1(string sql, MySqlConnection conn)
+        {
+            string output = "";
+            MySqlCommand command = new MySqlCommand(sql, conn);
+            MySqlDataReader dataReader = command.ExecuteReader();
+            while (dataReader.Read())
+            {
+                output += dataReader.GetValue(0).ToString();//+" - "+ dataReader.GetValue(1).ToString() + " - " + dataReader.GetValue(2).ToString()+" - " + dataReader.GetValue(3).ToString() + " - " + dataReader.GetValue(4).ToString() + " - " + dataReader.GetValue(5).ToString() + " - " + dataReader.GetValue(6).ToString();
+            }
+            return output;
+        }
+
+
+
         private void FormNewGuestNext_Load(object sender, EventArgs e)
         {
-            //tblReservationDetails.Rows.
+            tblReservationDetails.EnableHeadersVisualStyles = false;
+            tblReservationDetails.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 255, 220);
+            tblReservationDetails.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif",12);
 
             try
             {
@@ -130,17 +157,31 @@ namespace Hotel_Management_System
 
         private void DPTextchange(Object sender, EventHandler e)
         {
-            tblReservationDetails.CurrentCell.Value = DateTimePicker1.Text.ToString();
+            //tblReservationDetails.CurrentCell.Value = DateTimePicker1.Text.ToString();
         }
 
         private void DPClose(object sender, EventArgs e)
         {
-            DateTimePicker1.Visible = false;
+           // DateTimePicker1.Visible = false;
         }
 
         private void btnPrevious_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
+            if (comboID.Text != "")
+            {
+                DialogResult reslult = MessageBox.Show("Unsaved details will be not stored. Do you really want to close this form?", "Confirm Close", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (reslult == DialogResult.Yes)
+                {
+                    this.Close();
+                }
+            }
+
+            else
+            {
+                this.Close();
+            }
+               
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -152,56 +193,61 @@ namespace Hotel_Management_System
         {
             try
             {
-                
                 //reservation check box value
                 bool cbResrvation = Convert.ToBoolean(tblReservationDetails.Rows[e.RowIndex].Cells[0].Value);
 
-                if (cbResrvation == true)
-                {   
-                    //datepicker
-                    if ((e.ColumnIndex == 1 && e.RowIndex >= 0) || (e.ColumnIndex == 2 && e.RowIndex >= 0))
+                int column = tblReservationDetails.CurrentCell.ColumnIndex;
+                string headertext = tblReservationDetails.Columns[column].HeaderText;
+
+                for (int i = 0; i < tblReservationDetails.Rows.Count - 1; i++)
+                {
+                    
+
+                    if (cbResrvation == true)
                     {
-                        DateTimePicker DateTimePicker1 = new DateTimePicker();
-                        tblReservationDetails.Controls.Add(DateTimePicker1);
-                        DateTimePicker1.Format = DateTimePickerFormat.Custom;
-                        DateTimePicker1.CustomFormat = "yyyy-MM-dd ";
-
-                        Rectangle displayCalendar = tblReservationDetails.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, true);
-                        DateTimePicker1.Size = new Size(displayCalendar.Width, displayCalendar.Height);
-                        DateTimePicker1.Location = new Point(displayCalendar.X, displayCalendar.Y);
-                        DateTimePicker1.BringToFront();
-
-                    }
-
-                    //if reservation check box checked, other check boxes will be clickable
-                    for (int i = 3; i < 8; i++)
-                    {
-                        if (Convert.ToBoolean(tblReservationDetails.Rows[e.RowIndex].Cells[i].ReadOnly) == true)
+                        //datepicker
+                        if ((e.ColumnIndex == 1 && e.RowIndex >= 0) || (e.ColumnIndex == 2 && e.RowIndex >= 0))
                         {
-                            tblReservationDetails.Rows[e.RowIndex].Cells[i].ReadOnly = false;
-                        }
-                    }
 
+                            rectangle1 = tblReservationDetails.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, true);
+                            Datetp.Size = new Size(rectangle1.Width, rectangle1.Height);
+                            Datetp.Location = new Point(rectangle1.X, rectangle1.Y);
+                            Datetp.Visible = true;
+
+
+
+                            /* DateTimePicker DateTimePicker1 = new DateTimePicker();
+                            tblReservationDetails.Controls.Add(DateTimePicker1);
+                            DateTimePicker1.Format = DateTimePickerFormat.Custom;
+                            DateTimePicker1.CustomFormat = "yyyy-MM-dd ";
+
+                            Rectangle displayCalendar = tblReservationDetails.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, true);
+                            DateTimePicker1.Size = new Size(displayCalendar.Width, displayCalendar.Height);
+                            DateTimePicker1.Location = new Point(displayCalendar.X, displayCalendar.Y);
+                            DateTimePicker1.BringToFront();*/
+
+                        }
+
+                        //if reservation check box checked, other check boxes will be clickable
+                        for (int n = 3; n < 8; n++)
+                        {
+                            if (Convert.ToBoolean(tblReservationDetails.Rows[e.RowIndex].Cells[n].ReadOnly) == true)
+                            {
+                                tblReservationDetails.Rows[e.RowIndex].Cells[n].ReadOnly = false;
+                            }
+                        }
+
+                    }
                 }
 
 
                 if (cbResrvation == false)
                 {
-                    if ((e.ColumnIndex == 1 && e.RowIndex >= 0) || (e.ColumnIndex == 2 && e.RowIndex >= 0))
-                    {
-                        
-                        tblReservationDetails.Rows[e.RowIndex].Cells[1].ReadOnly = true;
 
-                        TextBox tb = new TextBox();
-                        tblReservationDetails.Controls.Add(tb);
-                        tb.Enabled = false;
-                        tb.BringToFront();
-                        
-                        Rectangle displaytb = tblReservationDetails.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, true);
-                        tb.Size = new Size(displaytb.Width, displaytb.Height);
-                        tb.Location = new Point(displaytb.X, displaytb.Y);
-
-                    }
+                    tblReservationDetails.Rows[e.RowIndex].Cells[1].Value = "";
+                    tblReservationDetails.Rows[e.RowIndex].Cells[2].Value = "";
+                    tblReservationDetails.Rows[e.RowIndex].Cells[1].ReadOnly = true;
+                    tblReservationDetails.Rows[e.RowIndex].Cells[2].ReadOnly = true;
 
                     //if reservation check box unchecked, other check boxes will be disabled
                     for (int i = 3; i < 8; i++)
@@ -218,6 +264,7 @@ namespace Hotel_Management_System
                         if (Convert.ToBoolean(tblReservationDetails.Rows[e.RowIndex].Cells[i].ReadOnly) == false)
                         {
                             tblReservationDetails.Rows[e.RowIndex].Cells[i].ReadOnly = true;
+                           
                         }
                     }
 
@@ -233,35 +280,92 @@ namespace Hotel_Management_System
 
         }
 
+
+        private void Datetp_TextChange(object sender, EventArgs e)
+        {
+            for (int i = 0; i < tblReservationDetails.Rows.Count-1 ; i++)
+            {
+                tblReservationDetails.CurrentCell.Value = Datetp.Text.ToString();
+                Datetp.Visible = false;
+            }
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             try
             {
                 string IDNo = comboID.Text;
-                int i = 0;
+                bool controler = false;
 
-                string sql = "CALL addReservation('" + IDNo + "','2021-05-01','2021-05-10')";
-
-                DataAdder(sql, dbQuery());
-
-                foreach (DataGridViewRow row in tblReservationDetails.Rows)
+                //data in the each row will be added to the db, if reservation cb checked
+                for (int i=0; i<tblReservationDetails.Rows.Count-1;i++)
                 {
-                    i++;
-                    bool cbResrvation = Convert.ToBoolean(tblReservationDetails.Rows[1].Cells[2].Value);
-                    if (cbResrvation == true)
+                    bool cbResrvation = Convert.ToBoolean(tblReservationDetails.Rows[i].Cells[0].Value);
+
+                    if (IDNo == "")
                     {
-
-                       // string sql = "CALL addReservatio('" + IDNo + "','2021-05-01',2021-05-10)";
-
-                       //DataAdder(sql, dbQuery());
+                        DialogResult reslult = MessageBox.Show("Please Select ID number", "Empty ID number", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        icnId.Visible = true;
+                        break;
                     }
+                    else 
+                    {
+                        if (cbResrvation == true)
+                        {
+                            string startDate = tblReservationDetails.Rows[i].Cells[1].Value.ToString();
+                            string endDate = tblReservationDetails.Rows[i].Cells[2].Value.ToString();
+                            string strRoom = tblReservationDetails.Rows[i].Cells[8].Value.ToString();
+                            int room = int.Parse(strRoom);
+
+                            //MessageBox.Show(endDate);
+                            string lastGID1 = "SELECT MAX(GuestID) FROM reservation";
+                            string lastGID2 = DataReader1(lastGID1, dbQuery());
+                            int GID = (int.Parse(lastGID2))+1;
+                            //MessageBox.Show(GID.ToString());
+
+                            string sqlResrv = "CALL addReservation('"+ GID + "','" + IDNo + "','"+ startDate +"','"+ endDate +"')";
+                            DataAdder(sqlResrv, dbQuery());
+                            
+                            string sqlRoom = "CALL addRoomBooking('" + GID + "','" + room + "','" + startDate + "','" + endDate + "')";
+                            DataAdder(sqlRoom, dbQuery());
+
+                            for(int j = 3; j < 8; j++)
+                            {
+
+                                if (Convert.ToBoolean(tblReservationDetails.Rows[i].Cells[j].Value)) {
+
+
+                                    int sID = j;
+                                    string sqlService = "CALL addServiceBooking('" + GID + "','" + room + "','" + sID + "','" + startDate + "','" + endDate + "')";
+                                    DataAdder(sqlService, dbQuery());
+                                }
+                            }
+                           
+                            
+                            
+                            controler = true;
+
+                        }
+                    }
+
                     
                 }
-
-                for (int j = 0; j < 8; j++)
+                if(controler==false && IDNo!= "")
                 {
-                    string s = (string)tblReservationDetails.Rows[2].Cells[j].Value;
-                    MessageBox.Show(s);
+                    DialogResult reslult = MessageBox.Show("Empty Selection", "Nothing to save", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
+                else if(controler == true && IDNo != "")
+                {
+                    MessageBox.Show("done");
+                    string lastGID1 = "SELECT MAX(GuestID) FROM reservation";
+                    string lastGID2 = DataReader1(lastGID1, dbQuery());
+                    int GID = (int.Parse(lastGID2)) + 1;
+                    
+                    string today= DateTime.Now.ToString("yyyy-MM-dd (HH:MM)");
+
+                    string sql = "INSERT INTO reservation(GuestID,IDNumber,StartDate) VALUES ('"+GID+"','"+IDNo+"','"+today+"')";
+                    DataAdder(sql, dbQuery());
                 }
             }
             catch(Exception er)
@@ -273,6 +377,10 @@ namespace Hotel_Management_System
 
         }
 
+        private void comboID_Enter(object sender, EventArgs e)
+        {
+            icnId.Visible = false;
+        }
     }
     
 }
