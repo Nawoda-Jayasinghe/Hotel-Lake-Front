@@ -66,6 +66,9 @@ namespace Hotel_Management_System
             {
                 string sql = "CALL getAllFood";
                 DataAdapter(sql, dbQuery());
+
+                tblFoodDetails.Columns[0].Width = 250;
+                tblFoodDetails.Columns[2].Width = 250;
             }
             catch (Exception ex)
             {

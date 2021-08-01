@@ -60,6 +60,11 @@ namespace Hotel_Management_System
                 mtbTP2.Mask = "(+0) 000-000-0000";
 
                 mtbNIC.Mask = null;
+
+                radioMale.Visible = true;
+                radioFemale.Visible = true;
+                lblGender.Visible = false;
+
             }
 
             else
@@ -68,6 +73,11 @@ namespace Hotel_Management_System
                 mtbTP1.Mask = "(\\000) 000-0000";
                 mtbTP2.Mask = "(\\000) 000-0000";
                 mtbNIC.Mask = "000000000AAA";
+
+                radioMale.Visible = false;
+                radioFemale.Visible = false;
+                lblGender.Visible = true;
+              
             }
         }
 
@@ -112,7 +122,7 @@ namespace Hotel_Management_System
         }
 
 
-        private void panelGuest_Enter(object sender, EventArgs e)
+        private void FormNewGuest_Load(object sender, EventArgs e)
         {
             if (lblSingleNormalCount.Text == "0")
             {
@@ -143,7 +153,13 @@ namespace Hotel_Management_System
             {
                 cbFamilyLuxuryCount.Enabled = false;
             }
+
+            radioMale.Visible = false;
+            radioFemale.Visible = false;
+            lblGender.Visible = true;
+
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -156,6 +172,7 @@ namespace Hotel_Management_System
             txtFName.Text = "";
             txtFullName.Text = "";
             radioMale.Checked = true;
+            lblGender.Text = "";
             rchtxtAddress.Text = "";
             mtbTP1.Text = "";
             mtbTP2.Text = "";
@@ -173,7 +190,7 @@ namespace Hotel_Management_System
         }
 
         //data adapter
-        private void DataAdapter(string sql, MySqlConnection conn)
+        private void DataAdder(string sql, MySqlConnection conn)
         {
             MySqlDataAdapter adapter = new MySqlDataAdapter();
             adapter.InsertCommand = new MySqlCommand(sql, conn);
@@ -197,7 +214,8 @@ namespace Hotel_Management_System
 
         private void btnGuestSave_Click(object sender, EventArgs e)
         {
-            if(mtbNIC.Text == "" || txtFName.Text == "" || txtFullName.Text == "" || rchtxtAddress.Text == "" || mtbTP1.Text == "" || mtbTP1.Text == "(0  )    -")
+
+            if (mtbNIC.Text=="" || txtFName.Text == "" || txtFullName.Text == "" || rchtxtAddress.Text == "" || mtbTP1.Text == "" || mtbTP1.Text == "(0  )    -" || icnId.Visible == true)
             {
 
                 DialogResult reslult = MessageBox.Show("Please fill all fields","", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -206,6 +224,8 @@ namespace Hotel_Management_System
             else { 
 
                 try {
+
+                    DataAdder("CALL delGuest('"+ mtbNIC.Text + "')", dbQuery());
 
                     string idType;
                     string gender;
@@ -221,7 +241,7 @@ namespace Hotel_Management_System
                     }
 
                     
-                    if (radioMale.Checked)
+                    if (radioMale.Checked || lblGender.Text == "Male")
                     {
                         gender = "M";
                     }
@@ -245,15 +265,37 @@ namespace Hotel_Management_System
                     
                     
                     string sql = "CALL addNewGuest('" + idType + "','" + mtbNIC.Text + "','" + txtFName.Text + "','" + txtFullName.Text + "','" + gender + "','" + email + "','" + rchtxtAddress.Text + "')";
-                    DataAdapter(sql,dbQuery());
+                    DataAdder(sql,dbQuery());
 
                     string tp1 = "CALL addNewTP('"+ mtbNIC.Text +"','"+mtbTP1.Text +"')";
-                    DataAdapter(tp1, dbQuery());
+                    DataAdder(tp1, dbQuery());
 
                     if(mtbTP2.Text != "(0  )    -")
                     {
                         string tp2 = "CALL addNewTP('" + mtbNIC.Text + "','" + mtbTP2.Text + "')";
-                        DataAdapter(tp2, dbQuery());
+                        DataAdder(tp2, dbQuery());
+                    }
+
+
+                    DialogResult reslult = MessageBox.Show("Successfully saved", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    if(reslult== DialogResult.OK)
+                    {
+                        if (cbForeign.Checked)
+                        {
+                            cbForeign.Checked = false;
+                        }
+
+                        mtbNIC.Text = "";
+                        txtFName.Text = "";
+                        txtFullName.Text = "";
+                        radioMale.Checked = true;
+                        lblGender.Text = "";
+                        rchtxtAddress.Text = "";
+                        mtbTP1.Text = "";
+                        mtbTP2.Text = "";
+                        mtbEmail.Text = "example@gmail.com";
+                        mtbEmail.ForeColor = Color.Gray;
                     }
 
 
@@ -281,7 +323,7 @@ namespace Hotel_Management_System
 
                 if (fName != "")
                 {
-                    DialogResult reslult = MessageBox.Show("This is registered customer. Do you want to fill in the data automatically??", "Confirm Autofill", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    DialogResult reslult = MessageBox.Show("This is a registered customer. Do you want to fill in the data automatically??", "Confirm Autofill", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                     if (reslult == DialogResult.Yes)
                     {
@@ -295,17 +337,20 @@ namespace Hotel_Management_System
                         if (Gen == "F")
                         {
                             radioFemale.Checked=true;
+                            lblGender.Text = "Female";
                         }
 
                         else
                         {
                             radioMale.Checked = true;
+                            lblGender.Text = "Male";
                         }
 
 
                         if (IDCategory == "PASS")
                         {
                             cbForeign.Checked = true;
+                            
                         }
 
                         else if (IDCategory == "NIC")
@@ -318,13 +363,6 @@ namespace Hotel_Management_System
                     
                 }
 
-               
-               // txtFName.Text= 
-                txtFullName.Text = 
-                rchtxtAddress.Text= DataReader(Addr, dbQuery());
-                mtbEmail.Text= DataReader(Email, dbQuery());
-
-
             }
             catch (Exception ex)
             {
@@ -333,14 +371,75 @@ namespace Hotel_Management_System
 
         }
 
-        private void mtbTP1_Enter(object sender, EventArgs e)
+        private void mtbNIC_Leave(object sender, EventArgs e)
         {
-            if (mtbTP1.Text == "(0  )    -")
+            if (cbForeign.Checked==false)
             {
-                mtbTP1.Text = "";
-                mtbTP1.ForeColor = Color.FromArgb(26, 25, 62);
-                MessageBox.Show("aa");
+                
+                if (mtbNIC.Text != "") {
+
+                    if (mtbNIC.Text.Length == 10) {
+
+                        icnId.Visible = false;
+                        string id = mtbNIC.Text.Substring(2, 3);
+                        int g = Convert.ToInt32(id);
+
+                        if (g > 500)
+                        {
+                            lblGender.Text = "Female";
+                            radioFemale.Checked = true;
+                        }
+
+                        else
+                        {
+                            lblGender.Text = "Male";
+                            radioMale.Checked = true;
+                        }
+                    }
+
+                    else if(mtbNIC.Text.Length == 12)
+                    {
+                        icnId.Visible = false;
+                        string id = mtbNIC.Text.Substring(4, 3);
+                        int g = Convert.ToInt32(id);
+
+                        if (g > 500)
+                        {
+                            lblGender.Text = "Female";
+                            radioFemale.Checked = true;
+                        }
+
+                        else
+                        {
+                            lblGender.Text = "Male";
+                            radioMale.Checked = true;
+                        }
+                    }
+
+                    else
+                    {
+                        icnId.Visible = true;
+
+                        ToolTip tt = new ToolTip();
+                        tt.IsBalloon = true;
+                        tt.InitialDelay = 0;
+                        tt.AutoPopDelay = 1000000;
+                        tt.UseAnimation = true;
+                        tt.ShowAlways = true;
+                        tt.SetToolTip(mtbNIC,"National Identity Card number should have at least 10 digits.");
+
+                    }
+                    
+                }
+
+                else
+                {
+                    lblGender.Text = "";
+                }
+                
             }
         }
+
+        
     }
 }
