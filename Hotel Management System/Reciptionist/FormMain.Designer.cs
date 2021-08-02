@@ -42,6 +42,8 @@ namespace Hotel_Management_System
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.titleCurrent = new System.Windows.Forms.Label();
             this.iconCurrent = new FontAwesome.Sharp.IconPictureBox();
@@ -57,8 +59,8 @@ namespace Hotel_Management_System
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lblTime = new System.Windows.Forms.Label();
-            this.lblDate = new System.Windows.Forms.Label();
+            this.lblDateM = new System.Windows.Forms.Label();
+            this.lblTimeM = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -294,6 +296,26 @@ namespace Hotel_Management_System
             this.panel1.TabIndex = 1;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown_1);
             // 
+            // lblDate
+            // 
+            this.lblDate.Font = new System.Drawing.Font("Lucida Fax", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.LightYellow;
+            this.lblDate.Location = new System.Drawing.Point(931, 52);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(217, 20);
+            this.lblDate.TabIndex = 5;
+            this.lblDate.Text = "Date";
+            // 
+            // lblTime
+            // 
+            this.lblTime.Font = new System.Drawing.Font("Lucida Fax", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.ForeColor = System.Drawing.Color.LightYellow;
+            this.lblTime.Location = new System.Drawing.Point(948, 16);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(180, 33);
+            this.lblTime.TabIndex = 4;
+            this.lblTime.Text = "Time";
+            // 
             // iconPictureBox1
             // 
             this.iconPictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -346,7 +368,9 @@ namespace Hotel_Management_System
             // 
             this.panelDesktop.AutoSize = true;
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.panelDesktop.Controls.Add(this.lblDateM);
             this.panelDesktop.Controls.Add(this.label3);
+            this.panelDesktop.Controls.Add(this.lblTimeM);
             this.panelDesktop.Controls.Add(this.ADM005);
             this.panelDesktop.Controls.Add(this.pictureBox2);
             this.panelDesktop.Controls.Add(this.btnLogoutReciptionist);
@@ -415,10 +439,10 @@ namespace Hotel_Management_System
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Lucida Sans Unicode", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(123, 84);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(558, 135);
+            this.label1.Size = new System.Drawing.Size(581, 146);
             this.label1.TabIndex = 1;
             this.label1.Text = "Welcome";
             // 
@@ -447,25 +471,27 @@ namespace Hotel_Management_System
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // lblTime
+            // lblDateM
             // 
-            this.lblTime.Font = new System.Drawing.Font("Candara", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.ForeColor = System.Drawing.Color.White;
-            this.lblTime.Location = new System.Drawing.Point(966, 10);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(134, 33);
-            this.lblTime.TabIndex = 4;
-            this.lblTime.Text = "Time";
+            this.lblDateM.AutoSize = true;
+            this.lblDateM.Font = new System.Drawing.Font("Lucida Fax", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateM.ForeColor = System.Drawing.Color.White;
+            this.lblDateM.Location = new System.Drawing.Point(162, 454);
+            this.lblDateM.Name = "lblDateM";
+            this.lblDateM.Size = new System.Drawing.Size(106, 43);
+            this.lblDateM.TabIndex = 7;
+            this.lblDateM.Text = "Date";
             // 
-            // lblDate
+            // lblTimeM
             // 
-            this.lblDate.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.ForeColor = System.Drawing.Color.White;
-            this.lblDate.Location = new System.Drawing.Point(938, 45);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(217, 27);
-            this.lblDate.TabIndex = 5;
-            this.lblDate.Text = "Date";
+            this.lblTimeM.AutoSize = true;
+            this.lblTimeM.Font = new System.Drawing.Font("Lucida Fax", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimeM.ForeColor = System.Drawing.Color.White;
+            this.lblTimeM.Location = new System.Drawing.Point(211, 372);
+            this.lblTimeM.Name = "lblTimeM";
+            this.lblTimeM.Size = new System.Drawing.Size(190, 68);
+            this.lblTimeM.TabIndex = 6;
+            this.lblTimeM.Text = "Time";
             // 
             // FormMain
             // 
@@ -528,5 +554,7 @@ namespace Hotel_Management_System
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Label lblDateM;
+        private System.Windows.Forms.Label lblTimeM;
     }
 }

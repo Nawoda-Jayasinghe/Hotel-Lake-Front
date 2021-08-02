@@ -192,8 +192,8 @@ namespace Hotel_Management_System
             // 
             // lblFamilyLuxuryCount
             // 
-            this.lblFamilyLuxuryCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFamilyLuxuryCount.Location = new System.Drawing.Point(271, 241);
+            this.lblFamilyLuxuryCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFamilyLuxuryCount.Location = new System.Drawing.Point(278, 241);
             this.lblFamilyLuxuryCount.Name = "lblFamilyLuxuryCount";
             this.lblFamilyLuxuryCount.Size = new System.Drawing.Size(37, 35);
             this.lblFamilyLuxuryCount.TabIndex = 242;
@@ -201,8 +201,8 @@ namespace Hotel_Management_System
             // 
             // lblFamilyNormalCount
             // 
-            this.lblFamilyNormalCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFamilyNormalCount.Location = new System.Drawing.Point(271, 205);
+            this.lblFamilyNormalCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFamilyNormalCount.Location = new System.Drawing.Point(278, 205);
             this.lblFamilyNormalCount.Name = "lblFamilyNormalCount";
             this.lblFamilyNormalCount.Size = new System.Drawing.Size(37, 35);
             this.lblFamilyNormalCount.TabIndex = 241;
@@ -210,8 +210,8 @@ namespace Hotel_Management_System
             // 
             // lblDoubleLuxuryCount
             // 
-            this.lblDoubleLuxuryCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDoubleLuxuryCount.Location = new System.Drawing.Point(271, 169);
+            this.lblDoubleLuxuryCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoubleLuxuryCount.Location = new System.Drawing.Point(278, 169);
             this.lblDoubleLuxuryCount.Name = "lblDoubleLuxuryCount";
             this.lblDoubleLuxuryCount.Size = new System.Drawing.Size(37, 35);
             this.lblDoubleLuxuryCount.TabIndex = 240;
@@ -219,8 +219,8 @@ namespace Hotel_Management_System
             // 
             // lblDoubleNormalCount
             // 
-            this.lblDoubleNormalCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDoubleNormalCount.Location = new System.Drawing.Point(271, 133);
+            this.lblDoubleNormalCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoubleNormalCount.Location = new System.Drawing.Point(278, 133);
             this.lblDoubleNormalCount.Name = "lblDoubleNormalCount";
             this.lblDoubleNormalCount.Size = new System.Drawing.Size(37, 35);
             this.lblDoubleNormalCount.TabIndex = 239;
@@ -228,8 +228,8 @@ namespace Hotel_Management_System
             // 
             // lblSingleLuxuryCount
             // 
-            this.lblSingleLuxuryCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSingleLuxuryCount.Location = new System.Drawing.Point(271, 96);
+            this.lblSingleLuxuryCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSingleLuxuryCount.Location = new System.Drawing.Point(278, 96);
             this.lblSingleLuxuryCount.Name = "lblSingleLuxuryCount";
             this.lblSingleLuxuryCount.Size = new System.Drawing.Size(37, 35);
             this.lblSingleLuxuryCount.TabIndex = 238;
@@ -237,8 +237,8 @@ namespace Hotel_Management_System
             // 
             // lblSingleNormalCount
             // 
-            this.lblSingleNormalCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSingleNormalCount.Location = new System.Drawing.Point(271, 61);
+            this.lblSingleNormalCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSingleNormalCount.Location = new System.Drawing.Point(278, 61);
             this.lblSingleNormalCount.Name = "lblSingleNormalCount";
             this.lblSingleNormalCount.Size = new System.Drawing.Size(37, 35);
             this.lblSingleNormalCount.TabIndex = 236;
@@ -246,8 +246,8 @@ namespace Hotel_Management_System
             // 
             // label9
             // 
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(38, 133);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(47, 133);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(179, 35);
             this.label9.TabIndex = 226;
@@ -255,8 +255,8 @@ namespace Hotel_Management_System
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(38, 61);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(47, 61);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(169, 35);
             this.label6.TabIndex = 224;
@@ -264,8 +264,8 @@ namespace Hotel_Management_System
             // 
             // label8
             // 
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(38, 97);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(47, 97);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(189, 35);
             this.label8.TabIndex = 225;
@@ -273,8 +273,8 @@ namespace Hotel_Management_System
             // 
             // label10
             // 
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(38, 169);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(47, 169);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(169, 35);
             this.label10.TabIndex = 227;
@@ -282,8 +282,8 @@ namespace Hotel_Management_System
             // 
             // label11
             // 
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(38, 205);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(47, 205);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(169, 35);
             this.label11.TabIndex = 228;
@@ -291,8 +291,8 @@ namespace Hotel_Management_System
             // 
             // label12
             // 
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(38, 241);
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(47, 241);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(169, 35);
             this.label12.TabIndex = 229;

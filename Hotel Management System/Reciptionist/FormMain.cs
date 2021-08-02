@@ -121,6 +121,8 @@ namespace Hotel_Management_System
         {
             ActivateButton(sender, RGBColors.color1);
             OpenForm(new FormNewGuest());
+            lblTime.Visible = true;
+            lblDate.Visible = true;
 
         }
 
@@ -128,36 +130,48 @@ namespace Hotel_Management_System
         {
             ActivateButton(sender, RGBColors.color2);
             OpenForm(new FormGuestDetails());
+            lblTime.Visible = true;
+            lblDate.Visible = true;
         }
 
         private void btnRoomDetails_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
             OpenForm(new FormRoomDetails());
+            lblTime.Visible = true;
+            lblDate.Visible = true;
         }
 
         private void btnFoodDetails_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
             OpenForm(new FormFoodDetails());
+            lblTime.Visible = true;
+            lblDate.Visible = true;
         }
 
         private void btnStaffDetails_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color5);
             OpenForm(new FormStaffDetails());
+            lblTime.Visible = true;
+            lblDate.Visible = true;
         }
 
         private void btnPayments_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color7);
             OpenForm(new FormPayments());
+            lblTime.Visible = true;
+            lblDate.Visible = true;
 
         }
         private void btnNotifications_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color8);
             OpenForm(new FormNotifications());
+            lblTime.Visible = true;
+            lblDate.Visible = true;
         }
 
         private void panelLogo_Paint(object sender, PaintEventArgs e)
@@ -167,7 +181,9 @@ namespace Hotel_Management_System
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-             OpenForm(new FormMain());
+            lblTime.Visible = false;
+            lblDate.Visible = false;
+            OpenForm(new FormMain());
             if (currentForm != null)
             {
                 currentForm.Close();
@@ -202,13 +218,18 @@ namespace Hotel_Management_System
         private void New_Load(object sender, EventArgs e)
         {
             timer1.Start();
+            lblTimeM.Text = DateTime.Now.ToLongTimeString();
+            lblDateM.Text = DateTime.Now.ToLongDateString();
             lblTime.Text = DateTime.Now.ToLongTimeString();
             lblDate.Text = DateTime.Now.ToLongDateString();
+            lblTime.Visible = false;
+            lblDate.Visible = false;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblTime.Text = DateTime.Now.ToLongTimeString();
+            lblTimeM.Text = DateTime.Now.ToLongTimeString();
 
         }
 

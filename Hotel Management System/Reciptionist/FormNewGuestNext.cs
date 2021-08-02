@@ -20,13 +20,13 @@ namespace Hotel_Management_System
         public FormNewGuestNext()
         {
             InitializeComponent();
-
+            
             tblReservationDetails.Controls.Add(Datetp);
             Datetp.Visible = false;
             Datetp.Format = DateTimePickerFormat.Custom;
             Datetp.Value = DateTime.Now;
             Datetp.MinDate = DateTime.Today;
-            Datetp.CustomFormat = "yyyy-MM-dd (HH:MM)";
+            Datetp.CustomFormat = "yyyy-MM-dd (HH:mm)";
             Datetp.TextChanged += new EventHandler(Datetp_TextChange);
 
         }
@@ -391,7 +391,7 @@ namespace Hotel_Management_System
                     string lastGID2 = DataReader1(lastGID1, dbQuery());
                     int GID = (int.Parse(lastGID2)) + 1;
                     
-                    string today= DateTime.Now.ToString("yyyy-MM-dd (HH:MM)");
+                    string today= DateTime.Now.ToString("yyyy-MM-dd (HH:mm:ss)");
 
                     //string sql = "INSERT INTO reservation(GuestID,IDNumber,StartDate) VALUES ('"+GID+"','"+IDNo+"','"+today+"')";
                     //DataAdder(sql, dbQuery());
@@ -409,14 +409,13 @@ namespace Hotel_Management_System
                 MessageBox.Show(er.Message);
             }
 
-                
-
         }
 
         private void comboID_Enter(object sender, EventArgs e)
         {
             icnId.Visible = false;
         }
+
     }
     
 }
