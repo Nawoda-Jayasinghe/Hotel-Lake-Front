@@ -46,7 +46,7 @@ namespace Hotel_Management_System
 
         private void btnGuestFurther_Click(object sender, EventArgs e)
         {
-            OpenForm(new FormNewGuestNext());        
+            OpenForm(new FormNewGuestNext()); 
         }
 
 
@@ -83,9 +83,9 @@ namespace Hotel_Management_System
 
         private void mtbNIC_MouseClick(object sender, MouseEventArgs e)
         {
-            if (cbForeign.Checked == false)
+            //if (cbForeign.Checked == false)
             {
-                mtbNIC.SelectionStart = 0;
+               // mtbNIC.SelectionStart = 0;
             }
         }
 
@@ -120,46 +120,7 @@ namespace Hotel_Management_System
                 mtbEmail.ForeColor = Color.Gray;
             }
         }
-
-
-        private void FormNewGuest_Load(object sender, EventArgs e)
-        {
-            if (lblSingleNormalCount.Text == "0")
-            {
-                cbSingleNormalCount.Enabled = false;
-            }
-
-            if (lblSingleLuxuryCount.Text == "0")
-            {
-                cbSingleLuxuryCount.Enabled = false;
-            }
-
-            if (lblDoubleNormalCount.Text == "0")
-            {
-                cbDoubleNormalCount.Enabled = false;
-            }
-
-            if (lblDoubleLuxuryCount.Text == "0")
-            {
-                cbDoubleLuxuryCount.Enabled = false;
-            }
-
-            if (lblSingleNormalCount.Text == "0")
-            {
-                cbSingleNormalCount.Enabled = false;
-            }
-
-            if (lblFamilyLuxuryCount.Text == "0")
-            {
-                cbFamilyLuxuryCount.Enabled = false;
-            }
-
-            radioMale.Visible = false;
-            radioFemale.Visible = false;
-            lblGender.Visible = true;
-
-        }
-
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -211,6 +172,27 @@ namespace Hotel_Management_System
             }
             return output;
         }
+
+
+        private void FormNewGuest_Load(object sender, EventArgs e)
+        {
+
+            string today = DateTime.Now.ToString("yyyy-MM-dd (HH:MM)");
+
+            lblSingleNormalCount.Text = DataReader("CALL getroomcount('" + today + "','SN')",dbQuery());
+            lblSingleLuxuryCount.Text = DataReader("CALL getroomcount('" + today + "','SL')", dbQuery());
+            lblDoubleNormalCount.Text = DataReader("CALL getroomcount('" + today + "','DN')", dbQuery());
+            lblDoubleLuxuryCount.Text = DataReader("CALL getroomcount('" + today + "','DL')", dbQuery()); 
+            lblFamilyNormalCount.Text = DataReader("CALL getroomcount('" + today + "','FN')", dbQuery()); 
+            lblFamilyLuxuryCount.Text = DataReader("CALL getroomcount('" + today + "','FL')", dbQuery()); 
+
+            radioMale.Visible = false;
+            radioFemale.Visible = false;
+            lblGender.Visible = true;
+
+        }
+
+
 
         private void btnGuestSave_Click(object sender, EventArgs e)
         {
@@ -312,12 +294,7 @@ namespace Hotel_Management_System
             try
             {
                 string fName = DataReader("SELECT FName FROM guest_details WHERE IDNumber = '" + mtbNIC.Text + "';", dbQuery());
-                string fullName = DataReader("SELECT FullName FROM guest_details WHERE IDNumber = '" + mtbNIC.Text + "';", dbQuery());
-                string Gen = DataReader("SELECT Gender FROM guest_details WHERE IDNumber = '" + mtbNIC.Text + "';", dbQuery());
-                string Email = DataReader("SELECT Email FROM guest_details WHERE IDNumber = '" + mtbNIC.Text + "';", dbQuery());
-                string Addr = DataReader("SELECT GuestAddress FROM guest_details WHERE IDNumber = '" + mtbNIC.Text + "';", dbQuery());
-                string IDCategory = DataReader("SELECT IDCategory FROM guest_details WHERE IDNumber = '" + mtbNIC.Text + "';", dbQuery());
-                string TP = DataReader("CALL getTPbyID('"+ mtbNIC.Text + "');", dbQuery());
+
 
                 //string sql = "CALL getValuesById('" + mtbNIC.Text +"',"+@fName+","+@fullName+ "," + @Gen + "," + @Email +"," + @Addr + "," + @IDCategory + ");";
 
@@ -327,6 +304,13 @@ namespace Hotel_Management_System
 
                     if (reslult == DialogResult.Yes)
                     {
+                        string fullName = DataReader("SELECT FullName FROM guest_details WHERE IDNumber = '" + mtbNIC.Text + "';", dbQuery());
+                        string Gen = DataReader("SELECT Gender FROM guest_details WHERE IDNumber = '" + mtbNIC.Text + "';", dbQuery());
+                        string Email = DataReader("SELECT Email FROM guest_details WHERE IDNumber = '" + mtbNIC.Text + "';", dbQuery());
+                        string Addr = DataReader("SELECT GuestAddress FROM guest_details WHERE IDNumber = '" + mtbNIC.Text + "';", dbQuery());
+                        string IDCategory = DataReader("SELECT IDCategory FROM guest_details WHERE IDNumber = '" + mtbNIC.Text + "';", dbQuery());
+                        string TP = DataReader("CALL getTPbyID('" + mtbNIC.Text + "');", dbQuery());
+
                         txtFName.Text = fName;
                         txtFullName.Text = fullName;
                         mtbEmail.Text = Email;

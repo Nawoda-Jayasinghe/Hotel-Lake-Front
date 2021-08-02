@@ -29,8 +29,6 @@ namespace Hotel_Management_System
             Datetp.CustomFormat = "yyyy-MM-dd (HH:MM)";
             Datetp.TextChanged += new EventHandler(Datetp_TextChange);
 
-
-
         }
 
 
@@ -119,7 +117,9 @@ namespace Hotel_Management_System
 
             try
             {
-                string sql = "CALL getAllRooms";
+                string today = DateTime.Now.ToString("yyyy-MM-dd (HH:MM)");
+
+                string sql = "CALL getFreeRooms('"+today+"')";
                 string Idvalues = "CALL getID";
                 DataAdapter(sql, dbQuery());
                 DataReader(Idvalues, dbQuery());
@@ -169,7 +169,7 @@ namespace Hotel_Management_System
         {
             if (comboID.Text != "")
             {
-                DialogResult reslult = MessageBox.Show("Unsaved details will be not stored. Do you really want to close this form?", "Confirm Close", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult reslult = MessageBox.Show("Unsaved details will be not stored. Do you really want to load other guest details form without saving?", "Confirm Close", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (reslult == DialogResult.Yes)
                 {
@@ -186,7 +186,22 @@ namespace Hotel_Management_System
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            OpenForm(new FormNewGuestNext2());
+            if (comboID.Text != "")
+            {
+                DialogResult reslult = MessageBox.Show("Unsaved details will be not stored. Do you really want to load other guest details form without saving?", "Confirm Close", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (reslult == DialogResult.Yes)
+                {
+                    OpenForm(new FormNewGuestNext2());
+                    this.Close();
+                }
+            }
+
+            else
+            {
+                OpenForm(new FormNewGuestNext2());
+            }
+           
         }
 
         private void tblReservationDetails_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -273,11 +288,8 @@ namespace Hotel_Management_System
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+               // MessageBox.Show(ex.Message);
             }
-            
-
-
         }
 
 
@@ -317,34 +329,51 @@ namespace Hotel_Management_System
                             string strRoom = tblReservationDetails.Rows[i].Cells[8].Value.ToString();
                             int room = int.Parse(strRoom);
 
-                            //MessageBox.Show(endDate);
+                            MessageBox.Show(endDate);
                             string lastGID1 = "SELECT MAX(GuestID) FROM reservation";
                             string lastGID2 = DataReader1(lastGID1, dbQuery());
                             int GID = (int.Parse(lastGID2))+1;
                             //MessageBox.Show(GID.ToString());
 
-                            string sqlResrv = "CALL addReservation('"+ GID + "','" + IDNo + "','"+ startDate +"','"+ endDate +"')";
-                            DataAdder(sqlResrv, dbQuery());
-                            
-                            string sqlRoom = "CALL addRoomBooking('" + GID + "','" + room + "','" + startDate + "','" + endDate + "')";
-                            DataAdder(sqlRoom, dbQuery());
-
-                            for(int j = 3; j < 8; j++)
+                            if (endDate == "") 
                             {
+                                string sqlRoom = "CALL addRoomBooking2('" + GID + "','" + room + "','" + startDate + "')";
+                                DataAdder(sqlRoom, dbQuery());
 
-                                if (Convert.ToBoolean(tblReservationDetails.Rows[i].Cells[j].Value)) {
+                                for (int j = 3; j < 8; j++)
+                                {
+                                    if (Convert.ToBoolean(tblReservationDetails.Rows[i].Cells[j].Value))
+                                    {
 
-
-                                    int sID = j;
-                                    string sqlService = "CALL addServiceBooking('" + GID + "','" + room + "','" + sID + "','" + startDate + "','" + endDate + "')";
-                                    DataAdder(sqlService, dbQuery());
+                                        int sID = j;
+                                        string sqlService = "CALL addServiceBooking2('" + GID + "','" + room + "','" + sID + "','" + startDate + "')";
+                                        DataAdder(sqlService, dbQuery());
+                                    }
                                 }
-                            }
-                           
-                            
-                            
-                            controler = true;
 
+                                controler = true;
+
+                            }
+
+                            else 
+                            {
+                                string sqlRoom = "CALL addRoomBooking('" + GID + "','" + room + "','" + startDate + "','" + endDate + "')";
+                                DataAdder(sqlRoom, dbQuery());
+
+                                for (int j = 3; j < 8; j++)
+                                {
+                                    if (Convert.ToBoolean(tblReservationDetails.Rows[i].Cells[j].Value))
+                                    {
+
+                                        int sID = j;
+                                        string sqlService = "CALL addServiceBooking('" + GID + "','" + room + "','" + sID + "','" + startDate + "','" + endDate + "')";
+                                        DataAdder(sqlService, dbQuery());
+                                    }
+                                }
+
+                                controler = true;
+                            }
+                            
                         }
                     }
 
@@ -357,15 +386,22 @@ namespace Hotel_Management_System
 
                 else if(controler == true && IDNo != "")
                 {
-                    MessageBox.Show("done");
+                    
                     string lastGID1 = "SELECT MAX(GuestID) FROM reservation";
                     string lastGID2 = DataReader1(lastGID1, dbQuery());
                     int GID = (int.Parse(lastGID2)) + 1;
                     
                     string today= DateTime.Now.ToString("yyyy-MM-dd (HH:MM)");
 
-                    string sql = "INSERT INTO reservation(GuestID,IDNumber,StartDate) VALUES ('"+GID+"','"+IDNo+"','"+today+"')";
-                    DataAdder(sql, dbQuery());
+                    //string sql = "INSERT INTO reservation(GuestID,IDNumber,StartDate) VALUES ('"+GID+"','"+IDNo+"','"+today+"')";
+                    //DataAdder(sql, dbQuery());
+                    string sqlResrv = "CALL addReservation('" + GID + "','" + IDNo + "','" + today + "')";
+                    DataAdder(sqlResrv, dbQuery());
+                    
+                    MessageBox.Show("Successfully saved!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //this.Close() ;
+                    OpenForm(new FormNewGuestNext());
+                    
                 }
             }
             catch(Exception er)

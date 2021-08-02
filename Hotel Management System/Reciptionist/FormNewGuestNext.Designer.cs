@@ -29,19 +29,16 @@ namespace Hotel_Management_System
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelGuestNext = new System.Windows.Forms.Panel();
-            this.btnSave = new FontAwesome.Sharp.IconButton();
             this.comboID = new System.Windows.Forms.ComboBox();
-            this.tblReservationDetails = new System.Windows.Forms.DataGridView();
-            this.btnNext = new FontAwesome.Sharp.IconButton();
-            this.btnPrevious = new FontAwesome.Sharp.IconButton();
-            this.label16 = new System.Windows.Forms.Label();
             this.icnId = new FontAwesome.Sharp.IconButton();
+            this.btnSave = new FontAwesome.Sharp.IconButton();
+            this.tblReservationDetails = new System.Windows.Forms.DataGridView();
             this.clmnReservation = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.clmnArrival = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmnDeparture = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,12 +47,17 @@ namespace Hotel_Management_System
             this.clmnHotWater = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.clmnExtraBed = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.clmnPets = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.btnNext = new FontAwesome.Sharp.IconButton();
+            this.btnPrevious = new FontAwesome.Sharp.IconButton();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelGuestNext.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblReservationDetails)).BeginInit();
             this.SuspendLayout();
             // 
             // panelGuestNext
             // 
+            this.panelGuestNext.Controls.Add(this.label1);
             this.panelGuestNext.Controls.Add(this.comboID);
             this.panelGuestNext.Controls.Add(this.icnId);
             this.panelGuestNext.Controls.Add(this.btnSave);
@@ -68,6 +70,38 @@ namespace Hotel_Management_System
             this.panelGuestNext.Name = "panelGuestNext";
             this.panelGuestNext.Size = new System.Drawing.Size(1003, 584);
             this.panelGuestNext.TabIndex = 262;
+            // 
+            // comboID
+            // 
+            this.comboID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboID.FormattingEnabled = true;
+            this.comboID.Location = new System.Drawing.Point(712, 37);
+            this.comboID.Name = "comboID";
+            this.comboID.Size = new System.Drawing.Size(267, 39);
+            this.comboID.TabIndex = 1;
+            this.comboID.Enter += new System.EventHandler(this.comboID_Enter);
+            // 
+            // icnId
+            // 
+            this.icnId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.icnId.FlatAppearance.BorderSize = 0;
+            this.icnId.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.icnId.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.icnId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.icnId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.icnId.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
+            this.icnId.IconColor = System.Drawing.Color.Maroon;
+            this.icnId.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icnId.IconSize = 40;
+            this.icnId.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.icnId.Location = new System.Drawing.Point(669, 34);
+            this.icnId.Name = "icnId";
+            this.icnId.Size = new System.Drawing.Size(43, 36);
+            this.icnId.TabIndex = 273;
+            this.icnId.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.icnId.UseVisualStyleBackColor = false;
+            this.icnId.Visible = false;
             // 
             // btnSave
             // 
@@ -91,17 +125,6 @@ namespace Hotel_Management_System
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // comboID
-            // 
-            this.comboID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboID.FormattingEnabled = true;
-            this.comboID.Location = new System.Drawing.Point(712, 37);
-            this.comboID.Name = "comboID";
-            this.comboID.Size = new System.Drawing.Size(267, 39);
-            this.comboID.TabIndex = 1;
-            this.comboID.Enter += new System.EventHandler(this.comboID_Enter);
-            // 
             // tblReservationDetails
             // 
             this.tblReservationDetails.AllowUserToAddRows = false;
@@ -109,22 +132,22 @@ namespace Hotel_Management_System
             this.tblReservationDetails.AllowUserToOrderColumns = true;
             this.tblReservationDetails.AllowUserToResizeColumns = false;
             this.tblReservationDetails.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.tblReservationDetails.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            this.tblReservationDetails.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.tblReservationDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tblReservationDetails.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.tblReservationDetails.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tblReservationDetails.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(220)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tblReservationDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(220)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblReservationDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.tblReservationDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tblReservationDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmnReservation,
@@ -135,110 +158,35 @@ namespace Hotel_Management_System
             this.clmnHotWater,
             this.clmnExtraBed,
             this.clmnPets});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tblReservationDetails.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tblReservationDetails.DefaultCellStyle = dataGridViewCellStyle8;
             this.tblReservationDetails.Location = new System.Drawing.Point(7, 104);
             this.tblReservationDetails.Name = "tblReservationDetails";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tblReservationDetails.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblReservationDetails.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.tblReservationDetails.RowHeadersVisible = false;
             this.tblReservationDetails.RowHeadersWidth = 51;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Azure;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            this.tblReservationDetails.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Azure;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            this.tblReservationDetails.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.tblReservationDetails.RowTemplate.Height = 40;
             this.tblReservationDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tblReservationDetails.Size = new System.Drawing.Size(988, 345);
             this.tblReservationDetails.TabIndex = 2;
             this.tblReservationDetails.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblReservationDetails_CellClick);
-            // 
-            // btnNext
-            // 
-            this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.btnNext.FlatAppearance.BorderSize = 2;
-            this.btnNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnNext.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleRight;
-            this.btnNext.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnNext.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnNext.IconSize = 40;
-            this.btnNext.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNext.Location = new System.Drawing.Point(789, 506);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(190, 55);
-            this.btnNext.TabIndex = 2;
-            this.btnNext.Text = "Next";
-            this.btnNext.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNext.UseVisualStyleBackColor = false;
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
-            // 
-            // btnPrevious
-            // 
-            this.btnPrevious.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.btnPrevious.FlatAppearance.BorderSize = 2;
-            this.btnPrevious.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrevious.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrevious.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnPrevious.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleLeft;
-            this.btnPrevious.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnPrevious.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnPrevious.IconSize = 40;
-            this.btnPrevious.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrevious.Location = new System.Drawing.Point(573, 506);
-            this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(190, 55);
-            this.btnPrevious.TabIndex = 3;
-            this.btnPrevious.Text = "Previous";
-            this.btnPrevious.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPrevious.UseVisualStyleBackColor = false;
-            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
-            // 
-            // label16
-            // 
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label16.Location = new System.Drawing.Point(37, 24);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(311, 35);
-            this.label16.TabIndex = 262;
-            this.label16.Text = "Reservation Details";
-            // 
-            // icnId
-            // 
-            this.icnId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.icnId.FlatAppearance.BorderSize = 0;
-            this.icnId.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.icnId.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.icnId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.icnId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.icnId.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
-            this.icnId.IconColor = System.Drawing.Color.Maroon;
-            this.icnId.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icnId.IconSize = 40;
-            this.icnId.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.icnId.Location = new System.Drawing.Point(669, 34);
-            this.icnId.Name = "icnId";
-            this.icnId.Size = new System.Drawing.Size(43, 36);
-            this.icnId.TabIndex = 273;
-            this.icnId.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.icnId.UseVisualStyleBackColor = false;
-            this.icnId.Visible = false;
             // 
             // clmnReservation
             // 
@@ -303,6 +251,70 @@ namespace Hotel_Management_System
             this.clmnPets.MinimumWidth = 6;
             this.clmnPets.Name = "clmnPets";
             // 
+            // btnNext
+            // 
+            this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnNext.FlatAppearance.BorderSize = 2;
+            this.btnNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnNext.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleRight;
+            this.btnNext.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnNext.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnNext.IconSize = 40;
+            this.btnNext.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNext.Location = new System.Drawing.Point(789, 506);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(190, 55);
+            this.btnNext.TabIndex = 2;
+            this.btnNext.Text = "Next";
+            this.btnNext.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNext.UseVisualStyleBackColor = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // btnPrevious
+            // 
+            this.btnPrevious.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnPrevious.FlatAppearance.BorderSize = 2;
+            this.btnPrevious.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrevious.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrevious.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnPrevious.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleLeft;
+            this.btnPrevious.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnPrevious.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPrevious.IconSize = 40;
+            this.btnPrevious.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrevious.Location = new System.Drawing.Point(573, 506);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(190, 55);
+            this.btnPrevious.TabIndex = 3;
+            this.btnPrevious.Text = "Previous";
+            this.btnPrevious.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPrevious.UseVisualStyleBackColor = false;
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
+            // 
+            // label16
+            // 
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label16.Location = new System.Drawing.Point(37, 24);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(311, 35);
+            this.label16.TabIndex = 262;
+            this.label16.Text = "Reservation Details";
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label1.Location = new System.Drawing.Point(709, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(185, 20);
+            this.label1.TabIndex = 274;
+            this.label1.Text = "NIC or Passport No";
+            // 
             // FormNewGuestNext
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -341,5 +353,6 @@ namespace Hotel_Management_System
         private System.Windows.Forms.DataGridViewCheckBoxColumn clmnHotWater;
         private System.Windows.Forms.DataGridViewCheckBoxColumn clmnExtraBed;
         private System.Windows.Forms.DataGridViewCheckBoxColumn clmnPets;
+        private System.Windows.Forms.Label label1;
     }
 }
