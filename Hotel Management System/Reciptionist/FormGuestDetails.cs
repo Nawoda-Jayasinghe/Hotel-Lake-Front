@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
+using MySql.Data.MySqlClient;
+using System.Globalization;
 
 
 
@@ -22,10 +24,83 @@ namespace Hotel_Management_System
             
         }
 
+        private MySqlConnection dbQuery()
+        {
+            DBConnection dBclass = new DBConnection();
+            MySqlConnection conn = dBclass.getConnection();
+            return conn;
+        }
+
+        //data adapter
+        private void DataAdapter(string sql, MySqlConnection conn)
+        {
+            /*MySqlDataAdapter adapter = new MySqlDataAdapter();
+            adapter.InsertCommand = new MySqlCommand(sql, conn);
+            adapter.InsertCommand.ExecuteNonQuery();
+            conn.Close();*/
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+
+            DataSet ds = new DataSet();
+            adapter.Fill(ds, "room");
+            tblGuestDetails.DataSource = ds.Tables["room"];
+            conn.Close();
+        }
+
+        private void DataAdder(string sql, MySqlConnection conn)
+        {
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            adapter.InsertCommand = new MySqlCommand(sql, conn);
+            adapter.InsertCommand.ExecuteNonQuery();
+            conn.Close();
+        }
+
+        //data reader
+        private void DataReader(string sql, MySqlConnection conn)
+        {
+            MySqlCommand command = new MySqlCommand(sql, conn);
+            MySqlDataReader dataReader = command.ExecuteReader();
+            while (dataReader.Read())
+            {
+                comboID.Items.Add(dataReader.GetString("IDNumber"));
+            }
+        }
+
+        private string DataReader1(string sql, MySqlConnection conn)
+        {
+            string output = "";
+            MySqlCommand command = new MySqlCommand(sql, conn);
+            MySqlDataReader dataReader = command.ExecuteReader();
+            while (dataReader.Read())
+            {
+                output += dataReader.GetValue(0).ToString();//+" - "+ dataReader.GetValue(1).ToString() + " - " + dataReader.GetValue(2).ToString()+" - " + dataReader.GetValue(3).ToString() + " - " + dataReader.GetValue(4).ToString() + " - " + dataReader.GetValue(5).ToString() + " - " + dataReader.GetValue(6).ToString();
+            }
+            return output;
+        }
 
         private void FormGuestDetails_Load(object sender, EventArgs e)
         {
+            dateTimePicker1.Font= new Font("Microsoft Sans Serif", 18);
+            tblGuestDetails.EnableHeadersVisualStyles = false;
+            tblGuestDetails.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 255, 220);
+            tblGuestDetails.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 13);
+            tblGuestDetails.AlternatingRowsDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 13);
+            tblGuestDetails.RowsDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 13);
 
+       try
+            {
+                string Idvalues = "CALL getID";
+                DataReader(Idvalues, dbQuery());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            /*tblGuestDetails.Rows.Add("983256985V", "Nawoda Jayasinghe", "Nawoda Jayasinghe");
+            tblGuestDetails.Rows.Add("974569871V", "Sanju Hasintha", "Nawoda Jayasinghe");
+            tblGuestDetails.Rows.Add("974569871V", "Sanju Hasintha", "Nawoda Jayasinghe");
+            tblGuestDetails.Rows.Add("974569871V", "Sanju Hasintha", "Nawoda Jayasinghe");*/
         }
 
 
@@ -40,20 +115,63 @@ namespace Hotel_Management_System
 
         }
 
-        private void textBox1_Enter(object sender, EventArgs e)
+        private void comboID_TextChanged(object sender, EventArgs e)
         {
-            if(txtGuestDetailsSearch.Text == "Guest NIC")
-            {
-                txtGuestDetailsSearch.Text = "";
-            }
+            dateTimePicker1.Value = DateTime.Now;
+            string sql = "CALL getGuestDetailsByID('"+comboID.Text+"')";
+            DataAdapter(sql, dbQuery());
+            tblGuestDetails.Columns[1].Width = 160;
+            tblGuestDetails.Columns[2].Width = 100;
+
         }
 
-        private void txtGuestDetailsSearch_Leave(object sender, EventArgs e)
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            if (txtGuestDetailsSearch.Text == "")
+
+            string date = dateTimePicker1.Value.Date.ToString("yyyy-MM-dd HH:mm");
+
+            string sql = "CALL getGuestDetailsByDate('" + date + "')";
+            DataAdapter(sql, dbQuery());
+            tblGuestDetails.Columns[1].Width = 150;
+            tblGuestDetails.Columns[2].Width = 100;
+        }
+
+        private void dateTimePicker1_Enter(object sender, EventArgs e)
+        {
+            comboID.Text = null;
+        }
+
+        private void tblGuestDetails_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
             {
-                txtGuestDetailsSearch.Text = "Guest NIC";
+                //string date1 = dateTimePicker1.Value.Date.ToString("yyyy-MM-dd HH:mm");
+                string date = tblGuestDetails.Rows[e.RowIndex].Cells[0].Value.ToString();
+                string id = tblGuestDetails.Rows[e.RowIndex].Cells[1].Value.ToString();
+                string strRoomID = tblGuestDetails.Rows[e.RowIndex].Cells[2].Value.ToString();
+                int roomID = int.Parse(strRoomID);
+
+                lblRoomType.Text = DataReader1("Call getRoomCategorybyRoomID(" + roomID + ")", dbQuery());
+                lblID.Text = id;
+                lblFName.Text = DataReader1("SELECT FName FROM guest_details WHERE IDNumber = (" + id + ")", dbQuery());
+                lblFullName.Text = DataReader1("SELECT FullName FROM guest_details WHERE IDNumber = (" + id + ")", dbQuery());
+                lblGender.Text = DataReader1("SELECT Gender FROM guest_details WHERE IDNumber = (" + id + ")", dbQuery());
+                lblTP.Text = DataReader1("CALL getTPbyId (" + id + ")", dbQuery());
+                lblAddress.Text = DataReader1("SELECT GuestAddress FROM guest_details WHERE IDNumber = (" + id + ")", dbQuery());
+                lblEmail.Text = DataReader1("SELECT Email FROM guest_details WHERE IDNumber = (" + id + ")", dbQuery());
+                lblAdate.Text= date;
+
+                MessageBox.Show(date);
+                lblDdate.Text = DataReader1("CALL getDdate(" + 1 + ",'" + date + "')", dbQuery());
             }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+
+
+
         }
     }
 }
