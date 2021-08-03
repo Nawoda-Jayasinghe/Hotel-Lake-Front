@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
 using MySql.Data.MySqlClient;
-using System.Globalization;
 
 
 
@@ -34,24 +33,11 @@ namespace Hotel_Management_System
         //data adapter
         private void DataAdapter(string sql, MySqlConnection conn)
         {
-            /*MySqlDataAdapter adapter = new MySqlDataAdapter();
-            adapter.InsertCommand = new MySqlCommand(sql, conn);
-            adapter.InsertCommand.ExecuteNonQuery();
-            conn.Close();*/
-
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
 
             DataSet ds = new DataSet();
             adapter.Fill(ds, "room");
             tblGuestDetails.DataSource = ds.Tables["room"];
-            conn.Close();
-        }
-
-        private void DataAdder(string sql, MySqlConnection conn)
-        {
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
-            adapter.InsertCommand = new MySqlCommand(sql, conn);
-            adapter.InsertCommand.ExecuteNonQuery();
             conn.Close();
         }
 
@@ -120,7 +106,7 @@ namespace Hotel_Management_System
             dateTimePicker1.Value = DateTime.Now;
             string sql = "CALL getGuestDetailsByID('"+comboID.Text+"')";
             DataAdapter(sql, dbQuery());
-            tblGuestDetails.Columns[1].Width = 160;
+            tblGuestDetails.Columns[1].Width = 120;
             tblGuestDetails.Columns[2].Width = 100;
 
         }
@@ -132,7 +118,7 @@ namespace Hotel_Management_System
 
             string sql = "CALL getGuestDetailsByDate('" + date + "')";
             DataAdapter(sql, dbQuery());
-            tblGuestDetails.Columns[1].Width = 150;
+            tblGuestDetails.Columns[1].Width = 120;
             tblGuestDetails.Columns[2].Width = 100;
         }
 
@@ -167,9 +153,6 @@ namespace Hotel_Management_System
             {
                 MessageBox.Show(ex.Message);
             }
-            
-
-
 
         }
     }
