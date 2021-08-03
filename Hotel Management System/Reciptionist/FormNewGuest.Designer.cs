@@ -30,7 +30,7 @@ namespace Hotel_Management_System
         private void InitializeComponent()
         {
             this.panelGuest = new System.Windows.Forms.Panel();
-            this.mtbNIC = new System.Windows.Forms.MaskedTextBox();
+            this.btnGuestSave = new FontAwesome.Sharp.IconButton();
             this.button1 = new System.Windows.Forms.Button();
             this.rchtxtAddress = new System.Windows.Forms.RichTextBox();
             this.btnGuestFurther = new FontAwesome.Sharp.IconButton();
@@ -41,12 +41,6 @@ namespace Hotel_Management_System
             this.lblDoubleNormalCount = new System.Windows.Forms.Label();
             this.lblSingleLuxuryCount = new System.Windows.Forms.Label();
             this.lblSingleNormalCount = new System.Windows.Forms.Label();
-            this.cbSingleLuxuryCount = new System.Windows.Forms.CheckBox();
-            this.cbDoubleNormalCount = new System.Windows.Forms.CheckBox();
-            this.cbDoubleLuxuryCount = new System.Windows.Forms.CheckBox();
-            this.cbFamilyNormalCount = new System.Windows.Forms.CheckBox();
-            this.cbFamilyLuxuryCount = new System.Windows.Forms.CheckBox();
-            this.cbSingleNormalCount = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -55,6 +49,7 @@ namespace Hotel_Management_System
             this.label12 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblGender = new System.Windows.Forms.Label();
             this.radioMale = new System.Windows.Forms.RadioButton();
             this.radioFemale = new System.Windows.Forms.RadioButton();
             this.mtbTP2 = new System.Windows.Forms.MaskedTextBox();
@@ -69,6 +64,8 @@ namespace Hotel_Management_System
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
+            this.mtbNIC = new System.Windows.Forms.MaskedTextBox();
+            this.icnId = new FontAwesome.Sharp.IconButton();
             this.panelGuest.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -76,7 +73,7 @@ namespace Hotel_Management_System
             // 
             // panelGuest
             // 
-            this.panelGuest.Controls.Add(this.mtbNIC);
+            this.panelGuest.Controls.Add(this.btnGuestSave);
             this.panelGuest.Controls.Add(this.button1);
             this.panelGuest.Controls.Add(this.rchtxtAddress);
             this.panelGuest.Controls.Add(this.btnGuestFurther);
@@ -95,31 +92,43 @@ namespace Hotel_Management_System
             this.panelGuest.Controls.Add(this.label18);
             this.panelGuest.Controls.Add(this.label19);
             this.panelGuest.Controls.Add(this.label39);
+            this.panelGuest.Controls.Add(this.mtbNIC);
+            this.panelGuest.Controls.Add(this.icnId);
             this.panelGuest.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelGuest.Location = new System.Drawing.Point(0, 0);
             this.panelGuest.Name = "panelGuest";
             this.panelGuest.Size = new System.Drawing.Size(1003, 584);
             this.panelGuest.TabIndex = 1000;
-            this.panelGuest.Enter += new System.EventHandler(this.panelGuest_Enter);
             // 
-            // mtbNIC
+            // btnGuestSave
             // 
-            this.mtbNIC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.mtbNIC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbNIC.Location = new System.Drawing.Point(189, 71);
-            this.mtbNIC.Mask = "000000000AAA";
-            this.mtbNIC.Name = "mtbNIC";
-            this.mtbNIC.Size = new System.Drawing.Size(289, 30);
-            this.mtbNIC.TabIndex = 2;
-            this.mtbNIC.MouseClick += new System.Windows.Forms.MouseEventHandler(this.mtbNIC_MouseClick);
+            this.btnGuestSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnGuestSave.FlatAppearance.BorderSize = 2;
+            this.btnGuestSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnGuestSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuestSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuestSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnGuestSave.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleDown;
+            this.btnGuestSave.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnGuestSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGuestSave.IconSize = 40;
+            this.btnGuestSave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuestSave.Location = new System.Drawing.Point(636, 495);
+            this.btnGuestSave.Name = "btnGuestSave";
+            this.btnGuestSave.Size = new System.Drawing.Size(131, 55);
+            this.btnGuestSave.TabIndex = 271;
+            this.btnGuestSave.Text = "Save";
+            this.btnGuestSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuestSave.UseVisualStyleBackColor = false;
+            this.btnGuestSave.Click += new System.EventHandler(this.btnGuestSave_Click);
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(505, 543);
+            this.button1.Location = new System.Drawing.Point(555, 547);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(55, 25);
+            this.button1.Size = new System.Drawing.Size(44, 25);
             this.button1.TabIndex = 270;
             this.button1.Text = "Reset";
             this.button1.UseVisualStyleBackColor = true;
@@ -128,11 +137,11 @@ namespace Hotel_Management_System
             // rchtxtAddress
             // 
             this.rchtxtAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.rchtxtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rchtxtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rchtxtAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
             this.rchtxtAddress.Location = new System.Drawing.Point(190, 322);
             this.rchtxtAddress.Name = "rchtxtAddress";
-            this.rchtxtAddress.Size = new System.Drawing.Size(289, 83);
+            this.rchtxtAddress.Size = new System.Drawing.Size(357, 83);
             this.rchtxtAddress.TabIndex = 6;
             this.rchtxtAddress.Text = "";
             // 
@@ -149,7 +158,7 @@ namespace Hotel_Management_System
             this.btnGuestFurther.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuestFurther.IconSize = 40;
             this.btnGuestFurther.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuestFurther.Location = new System.Drawing.Point(757, 495);
+            this.btnGuestFurther.Location = new System.Drawing.Point(791, 495);
             this.btnGuestFurther.Name = "btnGuestFurther";
             this.btnGuestFurther.Size = new System.Drawing.Size(190, 55);
             this.btnGuestFurther.TabIndex = 268;
@@ -166,12 +175,6 @@ namespace Hotel_Management_System
             this.groupBox1.Controls.Add(this.lblDoubleNormalCount);
             this.groupBox1.Controls.Add(this.lblSingleLuxuryCount);
             this.groupBox1.Controls.Add(this.lblSingleNormalCount);
-            this.groupBox1.Controls.Add(this.cbSingleLuxuryCount);
-            this.groupBox1.Controls.Add(this.cbDoubleNormalCount);
-            this.groupBox1.Controls.Add(this.cbDoubleLuxuryCount);
-            this.groupBox1.Controls.Add(this.cbFamilyNormalCount);
-            this.groupBox1.Controls.Add(this.cbFamilyLuxuryCount);
-            this.groupBox1.Controls.Add(this.cbSingleNormalCount);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label8);
@@ -180,17 +183,17 @@ namespace Hotel_Management_System
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.groupBox1.Location = new System.Drawing.Point(599, 17);
+            this.groupBox1.Location = new System.Drawing.Point(636, 29);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(361, 299);
+            this.groupBox1.Size = new System.Drawing.Size(346, 299);
             this.groupBox1.TabIndex = 265;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Available Rooms";
             // 
             // lblFamilyLuxuryCount
             // 
-            this.lblFamilyLuxuryCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFamilyLuxuryCount.Location = new System.Drawing.Point(240, 241);
+            this.lblFamilyLuxuryCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFamilyLuxuryCount.Location = new System.Drawing.Point(274, 241);
             this.lblFamilyLuxuryCount.Name = "lblFamilyLuxuryCount";
             this.lblFamilyLuxuryCount.Size = new System.Drawing.Size(37, 35);
             this.lblFamilyLuxuryCount.TabIndex = 242;
@@ -198,8 +201,8 @@ namespace Hotel_Management_System
             // 
             // lblFamilyNormalCount
             // 
-            this.lblFamilyNormalCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFamilyNormalCount.Location = new System.Drawing.Point(240, 205);
+            this.lblFamilyNormalCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFamilyNormalCount.Location = new System.Drawing.Point(274, 205);
             this.lblFamilyNormalCount.Name = "lblFamilyNormalCount";
             this.lblFamilyNormalCount.Size = new System.Drawing.Size(37, 35);
             this.lblFamilyNormalCount.TabIndex = 241;
@@ -207,8 +210,8 @@ namespace Hotel_Management_System
             // 
             // lblDoubleLuxuryCount
             // 
-            this.lblDoubleLuxuryCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDoubleLuxuryCount.Location = new System.Drawing.Point(240, 169);
+            this.lblDoubleLuxuryCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoubleLuxuryCount.Location = new System.Drawing.Point(274, 169);
             this.lblDoubleLuxuryCount.Name = "lblDoubleLuxuryCount";
             this.lblDoubleLuxuryCount.Size = new System.Drawing.Size(37, 35);
             this.lblDoubleLuxuryCount.TabIndex = 240;
@@ -216,8 +219,8 @@ namespace Hotel_Management_System
             // 
             // lblDoubleNormalCount
             // 
-            this.lblDoubleNormalCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDoubleNormalCount.Location = new System.Drawing.Point(240, 133);
+            this.lblDoubleNormalCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoubleNormalCount.Location = new System.Drawing.Point(274, 133);
             this.lblDoubleNormalCount.Name = "lblDoubleNormalCount";
             this.lblDoubleNormalCount.Size = new System.Drawing.Size(37, 35);
             this.lblDoubleNormalCount.TabIndex = 239;
@@ -225,8 +228,8 @@ namespace Hotel_Management_System
             // 
             // lblSingleLuxuryCount
             // 
-            this.lblSingleLuxuryCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSingleLuxuryCount.Location = new System.Drawing.Point(240, 96);
+            this.lblSingleLuxuryCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSingleLuxuryCount.Location = new System.Drawing.Point(274, 96);
             this.lblSingleLuxuryCount.Name = "lblSingleLuxuryCount";
             this.lblSingleLuxuryCount.Size = new System.Drawing.Size(37, 35);
             this.lblSingleLuxuryCount.TabIndex = 238;
@@ -234,71 +237,17 @@ namespace Hotel_Management_System
             // 
             // lblSingleNormalCount
             // 
-            this.lblSingleNormalCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSingleNormalCount.Location = new System.Drawing.Point(240, 61);
+            this.lblSingleNormalCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSingleNormalCount.Location = new System.Drawing.Point(274, 61);
             this.lblSingleNormalCount.Name = "lblSingleNormalCount";
             this.lblSingleNormalCount.Size = new System.Drawing.Size(37, 35);
             this.lblSingleNormalCount.TabIndex = 236;
             this.lblSingleNormalCount.Text = "1";
             // 
-            // cbSingleLuxuryCount
-            // 
-            this.cbSingleLuxuryCount.AutoSize = true;
-            this.cbSingleLuxuryCount.Location = new System.Drawing.Point(315, 104);
-            this.cbSingleLuxuryCount.Name = "cbSingleLuxuryCount";
-            this.cbSingleLuxuryCount.Size = new System.Drawing.Size(18, 17);
-            this.cbSingleLuxuryCount.TabIndex = 12;
-            this.cbSingleLuxuryCount.UseVisualStyleBackColor = true;
-            // 
-            // cbDoubleNormalCount
-            // 
-            this.cbDoubleNormalCount.AutoSize = true;
-            this.cbDoubleNormalCount.Location = new System.Drawing.Point(315, 140);
-            this.cbDoubleNormalCount.Name = "cbDoubleNormalCount";
-            this.cbDoubleNormalCount.Size = new System.Drawing.Size(18, 17);
-            this.cbDoubleNormalCount.TabIndex = 13;
-            this.cbDoubleNormalCount.UseVisualStyleBackColor = true;
-            // 
-            // cbDoubleLuxuryCount
-            // 
-            this.cbDoubleLuxuryCount.AutoSize = true;
-            this.cbDoubleLuxuryCount.Location = new System.Drawing.Point(315, 176);
-            this.cbDoubleLuxuryCount.Name = "cbDoubleLuxuryCount";
-            this.cbDoubleLuxuryCount.Size = new System.Drawing.Size(18, 17);
-            this.cbDoubleLuxuryCount.TabIndex = 14;
-            this.cbDoubleLuxuryCount.UseVisualStyleBackColor = true;
-            // 
-            // cbFamilyNormalCount
-            // 
-            this.cbFamilyNormalCount.AutoSize = true;
-            this.cbFamilyNormalCount.Location = new System.Drawing.Point(315, 212);
-            this.cbFamilyNormalCount.Name = "cbFamilyNormalCount";
-            this.cbFamilyNormalCount.Size = new System.Drawing.Size(18, 17);
-            this.cbFamilyNormalCount.TabIndex = 15;
-            this.cbFamilyNormalCount.UseVisualStyleBackColor = true;
-            // 
-            // cbFamilyLuxuryCount
-            // 
-            this.cbFamilyLuxuryCount.AutoSize = true;
-            this.cbFamilyLuxuryCount.Location = new System.Drawing.Point(315, 248);
-            this.cbFamilyLuxuryCount.Name = "cbFamilyLuxuryCount";
-            this.cbFamilyLuxuryCount.Size = new System.Drawing.Size(18, 17);
-            this.cbFamilyLuxuryCount.TabIndex = 16;
-            this.cbFamilyLuxuryCount.UseVisualStyleBackColor = true;
-            // 
-            // cbSingleNormalCount
-            // 
-            this.cbSingleNormalCount.AutoSize = true;
-            this.cbSingleNormalCount.Location = new System.Drawing.Point(315, 68);
-            this.cbSingleNormalCount.Name = "cbSingleNormalCount";
-            this.cbSingleNormalCount.Size = new System.Drawing.Size(18, 17);
-            this.cbSingleNormalCount.TabIndex = 11;
-            this.cbSingleNormalCount.UseVisualStyleBackColor = true;
-            // 
             // label9
             // 
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(30, 133);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(49, 133);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(179, 35);
             this.label9.TabIndex = 226;
@@ -306,8 +255,8 @@ namespace Hotel_Management_System
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(30, 61);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(49, 61);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(169, 35);
             this.label6.TabIndex = 224;
@@ -315,8 +264,8 @@ namespace Hotel_Management_System
             // 
             // label8
             // 
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(30, 97);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(49, 97);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(189, 35);
             this.label8.TabIndex = 225;
@@ -324,8 +273,8 @@ namespace Hotel_Management_System
             // 
             // label10
             // 
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(30, 169);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(49, 169);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(169, 35);
             this.label10.TabIndex = 227;
@@ -333,8 +282,8 @@ namespace Hotel_Management_System
             // 
             // label11
             // 
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(30, 205);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(49, 205);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(169, 35);
             this.label11.TabIndex = 228;
@@ -342,8 +291,8 @@ namespace Hotel_Management_System
             // 
             // label12
             // 
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(30, 241);
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(49, 241);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(169, 35);
             this.label12.TabIndex = 229;
@@ -352,23 +301,32 @@ namespace Hotel_Management_System
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.panel2.Location = new System.Drawing.Point(569, -18);
+            this.panel2.Location = new System.Drawing.Point(613, -18);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1, 597);
             this.panel2.TabIndex = 261;
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lblGender);
             this.groupBox2.Controls.Add(this.radioMale);
             this.groupBox2.Controls.Add(this.radioFemale);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.groupBox2.Location = new System.Drawing.Point(26, 214);
+            this.groupBox2.Location = new System.Drawing.Point(26, 224);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(452, 79);
+            this.groupBox2.Size = new System.Drawing.Size(520, 68);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Gender";
+            // 
+            // lblGender
+            // 
+            this.lblGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGender.Location = new System.Drawing.Point(262, 30);
+            this.lblGender.Name = "lblGender";
+            this.lblGender.Size = new System.Drawing.Size(143, 29);
+            this.lblGender.TabIndex = 272;
             // 
             // radioMale
             // 
@@ -393,30 +351,29 @@ namespace Hotel_Management_System
             this.radioFemale.Name = "radioFemale";
             this.radioFemale.Size = new System.Drawing.Size(95, 28);
             this.radioFemale.TabIndex = 600;
-            this.radioFemale.TabStop = true;
             this.radioFemale.Text = "Female";
             this.radioFemale.UseVisualStyleBackColor = true;
             // 
             // mtbTP2
             // 
             this.mtbTP2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.mtbTP2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbTP2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbTP2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.mtbTP2.Location = new System.Drawing.Point(342, 450);
+            this.mtbTP2.Location = new System.Drawing.Point(381, 450);
             this.mtbTP2.Mask = "(\\000) 000-0000";
             this.mtbTP2.Name = "mtbTP2";
-            this.mtbTP2.Size = new System.Drawing.Size(136, 34);
+            this.mtbTP2.Size = new System.Drawing.Size(165, 38);
             this.mtbTP2.TabIndex = 8;
             this.mtbTP2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.mtbTP2_MouseClick);
             // 
             // cbForeign
             // 
             this.cbForeign.AutoSize = true;
-            this.cbForeign.Location = new System.Drawing.Point(468, 29);
+            this.cbForeign.Location = new System.Drawing.Point(514, 14);
             this.cbForeign.Name = "cbForeign";
             this.cbForeign.Size = new System.Drawing.Size(78, 21);
             this.cbForeign.TabIndex = 1;
-            this.cbForeign.Text = "Foriegn";
+            this.cbForeign.Text = "Foreign";
             this.cbForeign.UseVisualStyleBackColor = true;
             this.cbForeign.CheckedChanged += new System.EventHandler(this.cbForeign_CheckedChanged);
             // 
@@ -424,11 +381,11 @@ namespace Hotel_Management_System
             // 
             this.mtbEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.mtbEmail.BeepOnError = true;
-            this.mtbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbEmail.ForeColor = System.Drawing.Color.Gray;
-            this.mtbEmail.Location = new System.Drawing.Point(187, 522);
+            this.mtbEmail.Location = new System.Drawing.Point(187, 515);
             this.mtbEmail.Name = "mtbEmail";
-            this.mtbEmail.Size = new System.Drawing.Size(292, 34);
+            this.mtbEmail.Size = new System.Drawing.Size(359, 38);
             this.mtbEmail.TabIndex = 9;
             this.mtbEmail.Text = "example@gmail.com";
             this.mtbEmail.Enter += new System.EventHandler(this.mtbEmail_Enter);
@@ -437,33 +394,33 @@ namespace Hotel_Management_System
             // mtbTP1
             // 
             this.mtbTP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.mtbTP1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbTP1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbTP1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
             this.mtbTP1.Location = new System.Drawing.Point(188, 450);
             this.mtbTP1.Mask = "(\\000) 000-0000";
             this.mtbTP1.Name = "mtbTP1";
-            this.mtbTP1.Size = new System.Drawing.Size(136, 34);
+            this.mtbTP1.Size = new System.Drawing.Size(165, 38);
             this.mtbTP1.TabIndex = 7;
             this.mtbTP1.Click += new System.EventHandler(this.mtbTP1_Click);
             // 
             // txtFullName
             // 
             this.txtFullName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFullName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
             this.txtFullName.Location = new System.Drawing.Point(189, 168);
             this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Size = new System.Drawing.Size(289, 34);
+            this.txtFullName.Size = new System.Drawing.Size(357, 38);
             this.txtFullName.TabIndex = 4;
             // 
             // txtFName
             // 
             this.txtFName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtFName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
             this.txtFName.Location = new System.Drawing.Point(189, 120);
             this.txtFName.Name = "txtFName";
-            this.txtFName.Size = new System.Drawing.Size(289, 34);
+            this.txtFName.Size = new System.Drawing.Size(357, 38);
             this.txtFName.TabIndex = 3;
             // 
             // label7
@@ -520,6 +477,40 @@ namespace Hotel_Management_System
             this.label39.TabIndex = 251;
             this.label39.Text = "First Name";
             // 
+            // mtbNIC
+            // 
+            this.mtbNIC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.mtbNIC.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbNIC.Location = new System.Drawing.Point(189, 71);
+            this.mtbNIC.Mask = "000000000AAA";
+            this.mtbNIC.Name = "mtbNIC";
+            this.mtbNIC.Size = new System.Drawing.Size(357, 38);
+            this.mtbNIC.TabIndex = 2;
+            this.mtbNIC.MouseClick += new System.Windows.Forms.MouseEventHandler(this.mtbNIC_MouseClick);
+            this.mtbNIC.TextChanged += new System.EventHandler(this.mtbNIC_TextChanged);
+            this.mtbNIC.Leave += new System.EventHandler(this.mtbNIC_Leave);
+            // 
+            // icnId
+            // 
+            this.icnId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.icnId.FlatAppearance.BorderSize = 0;
+            this.icnId.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.icnId.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.icnId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.icnId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.icnId.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
+            this.icnId.IconColor = System.Drawing.Color.Maroon;
+            this.icnId.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icnId.IconSize = 40;
+            this.icnId.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.icnId.Location = new System.Drawing.Point(535, 66);
+            this.icnId.Name = "icnId";
+            this.icnId.Size = new System.Drawing.Size(43, 36);
+            this.icnId.TabIndex = 272;
+            this.icnId.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.icnId.UseVisualStyleBackColor = false;
+            this.icnId.Visible = false;
+            // 
             // FormNewGuest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -533,10 +524,10 @@ namespace Hotel_Management_System
             this.Name = "FormNewGuest";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "New Guest";
+            this.Load += new System.EventHandler(this.FormNewGuest_Load);
             this.panelGuest.ResumeLayout(false);
             this.panelGuest.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -575,14 +566,11 @@ namespace Hotel_Management_System
         private System.Windows.Forms.Label lblDoubleNormalCount;
         private System.Windows.Forms.Label lblSingleLuxuryCount;
         private System.Windows.Forms.Label lblSingleNormalCount;
-        private System.Windows.Forms.CheckBox cbSingleLuxuryCount;
-        private System.Windows.Forms.CheckBox cbDoubleNormalCount;
-        private System.Windows.Forms.CheckBox cbDoubleLuxuryCount;
-        private System.Windows.Forms.CheckBox cbFamilyNormalCount;
-        private System.Windows.Forms.CheckBox cbFamilyLuxuryCount;
-        private System.Windows.Forms.CheckBox cbSingleNormalCount;
         private System.Windows.Forms.RichTextBox rchtxtAddress;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.MaskedTextBox mtbNIC;
+        private FontAwesome.Sharp.IconButton btnGuestSave;
+        private System.Windows.Forms.Label lblGender;
+        private FontAwesome.Sharp.IconButton icnId;
     }
 }

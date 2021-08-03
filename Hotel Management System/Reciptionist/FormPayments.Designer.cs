@@ -30,6 +30,7 @@ namespace Hotel_Management_System
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label14 = new System.Windows.Forms.Label();
@@ -71,7 +72,6 @@ namespace Hotel_Management_System
             this.label4 = new System.Windows.Forms.Label();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -115,6 +115,22 @@ namespace Hotel_Management_System
             this.panel1.Size = new System.Drawing.Size(1003, 584);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // iconButton3
+            // 
+            this.iconButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Paypal;
+            this.iconButton3.IconColor = System.Drawing.Color.Black;
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.IconSize = 50;
+            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconButton3.Location = new System.Drawing.Point(887, 468);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Size = new System.Drawing.Size(100, 95);
+            this.iconButton3.TabIndex = 268;
+            this.iconButton3.Text = "Card";
+            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.iconButton3.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker2
             // 
@@ -524,27 +540,14 @@ namespace Hotel_Management_System
             // 
             // textBox1
             // 
+            this.textBox1.ForeColor = System.Drawing.Color.Gray;
             this.textBox1.Location = new System.Drawing.Point(25, 30);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(159, 22);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "Search";
-            // 
-            // iconButton3
-            // 
-            this.iconButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Paypal;
-            this.iconButton3.IconColor = System.Drawing.Color.Black;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 50;
-            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton3.Location = new System.Drawing.Point(887, 468);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(100, 95);
-            this.iconButton3.TabIndex = 268;
-            this.iconButton3.Text = "Card";
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.iconButton3.UseVisualStyleBackColor = true;
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // FormPayments
             // 

@@ -267,7 +267,6 @@ C:\Users\USER\Desktop\lakefront3\Hotel Management System\obj\Debug\Hotel_Managem
 C:\Users\USER\Desktop\lakefront3\Hotel Management System\obj\Debug\Hotel_Management_System.FormRoomDetails.resources
 C:\Users\USER\Desktop\lakefront3\Hotel Management System\obj\Debug\Hotel_Management_System.FormGuestDetails.resources
 C:\Users\USER\Desktop\lakefront3\Hotel Management System\obj\Debug\Hotel_Management_System.FormFoodDetails.resources
-C:\Users\USER\Desktop\lakefront3\Hotel Management System\obj\Debug\Hotel_Management_System.Login.resources
 C:\Users\USER\Desktop\lakefront3\Hotel Management System\obj\Debug\Hotel_Management_System.Properties.Resources.resources
 C:\Users\USER\Desktop\lakefront3\Hotel Management System\obj\Debug\Hotel Management System.csproj.GenerateResource.cache
 C:\Users\USER\Desktop\lakefront3\Hotel Management System\obj\Debug\Hotel Management System.csproj.CoreCompileInputs.cache

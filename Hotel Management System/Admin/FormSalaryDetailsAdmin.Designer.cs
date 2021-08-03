@@ -29,6 +29,8 @@ namespace Hotel_Management_System
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -119,11 +121,11 @@ namespace Hotel_Management_System
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton1.IconColor = System.Drawing.Color.Black;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(639, 331);
+            this.iconButton1.Location = new System.Drawing.Point(648, 363);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(295, 84);
             this.iconButton1.TabIndex = 432;
-            this.iconButton1.Text = "&Add New Salary Position";
+            this.iconButton1.Text = "&Add New Position";
             this.iconButton1.UseVisualStyleBackColor = false;
             // 
             // panel2
@@ -147,10 +149,20 @@ namespace Hotel_Management_System
             this.FoodIDSearch,
             this.FoodNameSearch,
             this.FoodPriceSearch});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tbleFoodDetailsAdmin.DefaultCellStyle = dataGridViewCellStyle1;
             this.tbleFoodDetailsAdmin.Location = new System.Drawing.Point(36, 88);
             this.tbleFoodDetailsAdmin.Name = "tbleFoodDetailsAdmin";
             this.tbleFoodDetailsAdmin.RowHeadersVisible = false;
             this.tbleFoodDetailsAdmin.RowHeadersWidth = 51;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.tbleFoodDetailsAdmin.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.tbleFoodDetailsAdmin.RowTemplate.Height = 24;
             this.tbleFoodDetailsAdmin.Size = new System.Drawing.Size(532, 311);
             this.tbleFoodDetailsAdmin.TabIndex = 1;
@@ -277,7 +289,7 @@ namespace Hotel_Management_System
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(124, 73);
             this.iconButton2.TabIndex = 454;
-            this.iconButton2.Text = "&Cancel";
+            this.iconButton2.Text = "&Update";
             this.iconButton2.UseVisualStyleBackColor = false;
             // 
             // iconButton3
@@ -292,7 +304,7 @@ namespace Hotel_Management_System
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(124, 71);
             this.iconButton3.TabIndex = 453;
-            this.iconButton3.Text = "&Update";
+            this.iconButton3.Text = "&Reset";
             this.iconButton3.UseVisualStyleBackColor = false;
             // 
             // FormSalaryDetailsAdmin

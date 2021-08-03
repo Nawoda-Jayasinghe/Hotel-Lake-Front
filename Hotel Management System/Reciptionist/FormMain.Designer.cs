@@ -29,6 +29,7 @@ namespace Hotel_Management_System
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnNotifications = new FontAwesome.Sharp.IconButton();
             this.btnPayments = new FontAwesome.Sharp.IconButton();
@@ -41,11 +42,17 @@ namespace Hotel_Management_System
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.titleCurrent = new System.Windows.Forms.Label();
             this.iconCurrent = new FontAwesome.Sharp.IconPictureBox();
             this.panelS = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.lblDateM = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblTimeM = new System.Windows.Forms.Label();
+            this.ADM005 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnLogoutReciptionist = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -53,8 +60,7 @@ namespace Hotel_Management_System
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-            this.label3 = new System.Windows.Forms.Label();
-            this.ADM005 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -83,7 +89,6 @@ namespace Hotel_Management_System
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(307, 885);
             this.panelMenu.TabIndex = 0;
-            this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             // 
             // btnNotifications
             // 
@@ -248,8 +253,8 @@ namespace Hotel_Management_System
             // 
             // panelLogo
             // 
-            this.panelLogo.Controls.Add(this.panel2);
             this.panelLogo.Controls.Add(this.btnHome);
+            this.panelLogo.Controls.Add(this.panel2);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
@@ -279,6 +284,8 @@ namespace Hotel_Management_System
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.panel1.Controls.Add(this.lblDate);
+            this.panel1.Controls.Add(this.lblTime);
             this.panel1.Controls.Add(this.iconPictureBox1);
             this.panel1.Controls.Add(this.titleCurrent);
             this.panel1.Controls.Add(this.iconCurrent);
@@ -287,16 +294,35 @@ namespace Hotel_Management_System
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1257, 75);
             this.panel1.TabIndex = 1;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown_1);
+            // 
+            // lblDate
+            // 
+            this.lblDate.Font = new System.Drawing.Font("Lucida Fax", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.LightYellow;
+            this.lblDate.Location = new System.Drawing.Point(896, 52);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(275, 23);
+            this.lblDate.TabIndex = 5;
+            this.lblDate.Text = "Date";
+            // 
+            // lblTime
+            // 
+            this.lblTime.Font = new System.Drawing.Font("Lucida Fax", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.ForeColor = System.Drawing.Color.LightYellow;
+            this.lblTime.Location = new System.Drawing.Point(919, 16);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(180, 33);
+            this.lblTime.TabIndex = 4;
+            this.lblTime.Text = "Time";
             // 
             // iconPictureBox1
             // 
             this.iconPictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.Red;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.DotCircle;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.Red;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox1.IconSize = 35;
             this.iconPictureBox1.Location = new System.Drawing.Point(1206, 13);
@@ -316,7 +342,6 @@ namespace Hotel_Management_System
             this.titleCurrent.Size = new System.Drawing.Size(86, 35);
             this.titleCurrent.TabIndex = 2;
             this.titleCurrent.Text = "Home";
-            this.titleCurrent.Click += new System.EventHandler(this.titleCurrent_Click);
             // 
             // iconCurrent
             // 
@@ -329,7 +354,6 @@ namespace Hotel_Management_System
             this.iconCurrent.Size = new System.Drawing.Size(32, 32);
             this.iconCurrent.TabIndex = 1;
             this.iconCurrent.TabStop = false;
-            this.iconCurrent.Click += new System.EventHandler(this.iconCurrent_Click);
             // 
             // panelS
             // 
@@ -339,13 +363,14 @@ namespace Hotel_Management_System
             this.panelS.Name = "panelS";
             this.panelS.Size = new System.Drawing.Size(1257, 9);
             this.panelS.TabIndex = 2;
-            this.panelS.Paint += new System.Windows.Forms.PaintEventHandler(this.panelS_Paint);
             // 
             // panelDesktop
             // 
             this.panelDesktop.AutoSize = true;
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.panelDesktop.Controls.Add(this.lblDateM);
             this.panelDesktop.Controls.Add(this.label3);
+            this.panelDesktop.Controls.Add(this.lblTimeM);
             this.panelDesktop.Controls.Add(this.ADM005);
             this.panelDesktop.Controls.Add(this.pictureBox2);
             this.panelDesktop.Controls.Add(this.btnLogoutReciptionist);
@@ -360,7 +385,46 @@ namespace Hotel_Management_System
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(1257, 801);
             this.panelDesktop.TabIndex = 1010;
-            this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelD_Paint);
+            // 
+            // lblDateM
+            // 
+            this.lblDateM.AutoSize = true;
+            this.lblDateM.Font = new System.Drawing.Font("Lucida Fax", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateM.ForeColor = System.Drawing.Color.White;
+            this.lblDateM.Location = new System.Drawing.Point(174, 454);
+            this.lblDateM.Name = "lblDateM";
+            this.lblDateM.Size = new System.Drawing.Size(106, 43);
+            this.lblDateM.TabIndex = 7;
+            this.lblDateM.Text = "Date";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(886, 442);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(305, 29);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Mr. Dhananjaya Jayasekara";
+            // 
+            // lblTimeM
+            // 
+            this.lblTimeM.AutoSize = true;
+            this.lblTimeM.Font = new System.Drawing.Font("Lucida Fax", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimeM.ForeColor = System.Drawing.Color.White;
+            this.lblTimeM.Location = new System.Drawing.Point(226, 372);
+            this.lblTimeM.Name = "lblTimeM";
+            this.lblTimeM.Size = new System.Drawing.Size(190, 68);
+            this.lblTimeM.TabIndex = 6;
+            this.lblTimeM.Text = "Time";
+            // 
+            // ADM005
+            // 
+            this.ADM005.AutoSize = true;
+            this.ADM005.Location = new System.Drawing.Point(1005, 397);
+            this.ADM005.Name = "ADM005";
+            this.ADM005.Size = new System.Drawing.Size(78, 29);
+            this.ADM005.TabIndex = 14;
+            this.ADM005.Text = "89005";
             // 
             // pictureBox2
             // 
@@ -397,13 +461,12 @@ namespace Hotel_Management_System
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Lucida Sans Unicode", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(123, 84);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(558, 135);
+            this.label1.Size = new System.Drawing.Size(581, 146);
             this.label1.TabIndex = 1;
             this.label1.Text = "Welcome";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
@@ -426,23 +489,9 @@ namespace Hotel_Management_System
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
             // 
-            // label3
+            // timer1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(886, 442);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(305, 29);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Mr. Dhananjaya Jayasekara";
-            // 
-            // ADM005
-            // 
-            this.ADM005.AutoSize = true;
-            this.ADM005.Location = new System.Drawing.Point(1005, 397);
-            this.ADM005.Name = "ADM005";
-            this.ADM005.Size = new System.Drawing.Size(78, 29);
-            this.ADM005.TabIndex = 14;
-            this.ADM005.Text = "89005";
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FormMain
             // 
@@ -502,5 +551,10 @@ namespace Hotel_Management_System
         public System.Windows.Forms.Panel panelDesktop;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label ADM005;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Label lblDateM;
+        private System.Windows.Forms.Label lblTimeM;
     }
 }

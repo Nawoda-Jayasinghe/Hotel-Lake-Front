@@ -29,6 +29,7 @@ namespace Hotel_Management_System
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnNotifications = new FontAwesome.Sharp.IconButton();
             this.btnPayments = new FontAwesome.Sharp.IconButton();
@@ -55,6 +56,11 @@ namespace Hotel_Management_System
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
+            this.lblDateM = new System.Windows.Forms.Label();
+            this.lblTimeM = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -146,7 +152,7 @@ namespace Hotel_Management_System
             this.btnStaffDetails.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnStaffDetails.Size = new System.Drawing.Size(307, 84);
             this.btnStaffDetails.TabIndex = 5;
-            this.btnStaffDetails.Text = "Room & Facility Prices";
+            this.btnStaffDetails.Text = "Facility Prices";
             this.btnStaffDetails.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStaffDetails.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnStaffDetails.UseVisualStyleBackColor = true;
@@ -182,7 +188,7 @@ namespace Hotel_Management_System
             this.btnRoomDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRoomDetails.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRoomDetails.ForeColor = System.Drawing.Color.White;
-            this.btnRoomDetails.IconChar = FontAwesome.Sharp.IconChar.HouseUser;
+            this.btnRoomDetails.IconChar = FontAwesome.Sharp.IconChar.UserTag;
             this.btnRoomDetails.IconColor = System.Drawing.Color.White;
             this.btnRoomDetails.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRoomDetails.IconSize = 32;
@@ -205,7 +211,7 @@ namespace Hotel_Management_System
             this.btnGuestDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuestDetails.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuestDetails.ForeColor = System.Drawing.Color.White;
-            this.btnGuestDetails.IconChar = FontAwesome.Sharp.IconChar.UserTag;
+            this.btnGuestDetails.IconChar = FontAwesome.Sharp.IconChar.HouseUser;
             this.btnGuestDetails.IconColor = System.Drawing.Color.White;
             this.btnGuestDetails.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuestDetails.IconSize = 32;
@@ -215,7 +221,7 @@ namespace Hotel_Management_System
             this.btnGuestDetails.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnGuestDetails.Size = new System.Drawing.Size(307, 84);
             this.btnGuestDetails.TabIndex = 2;
-            this.btnGuestDetails.Text = "Current Guests";
+            this.btnGuestDetails.Text = "Room Details";
             this.btnGuestDetails.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuestDetails.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGuestDetails.UseVisualStyleBackColor = true;
@@ -246,8 +252,8 @@ namespace Hotel_Management_System
             // 
             // panelLogo
             // 
-            this.panelLogo.Controls.Add(this.panel2);
             this.panelLogo.Controls.Add(this.btnHome);
+            this.panelLogo.Controls.Add(this.panel2);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
@@ -277,6 +283,8 @@ namespace Hotel_Management_System
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.panel1.Controls.Add(this.lblDate);
+            this.panel1.Controls.Add(this.lblTime);
             this.panel1.Controls.Add(this.iconPictureBox1);
             this.panel1.Controls.Add(this.titleCurrent);
             this.panel1.Controls.Add(this.iconCurrent);
@@ -291,9 +299,9 @@ namespace Hotel_Management_System
             // 
             this.iconPictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.Red;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.DotCircle;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.Red;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox1.IconSize = 35;
             this.iconPictureBox1.Location = new System.Drawing.Point(1206, 13);
@@ -339,6 +347,8 @@ namespace Hotel_Management_System
             // 
             this.panelDesktop.AutoSize = true;
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.panelDesktop.Controls.Add(this.lblDateM);
+            this.panelDesktop.Controls.Add(this.lblTimeM);
             this.panelDesktop.Controls.Add(this.pictureBox2);
             this.panelDesktop.Controls.Add(this.btnLogoutAdmin);
             this.panelDesktop.Controls.Add(this.label3);
@@ -444,6 +454,52 @@ namespace Hotel_Management_System
             this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
             // 
+            // lblDateM
+            // 
+            this.lblDateM.AutoSize = true;
+            this.lblDateM.Font = new System.Drawing.Font("Lucida Fax", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateM.ForeColor = System.Drawing.Color.White;
+            this.lblDateM.Location = new System.Drawing.Point(174, 454);
+            this.lblDateM.Name = "lblDateM";
+            this.lblDateM.Size = new System.Drawing.Size(106, 43);
+            this.lblDateM.TabIndex = 17;
+            this.lblDateM.Text = "Date";
+            // 
+            // lblTimeM
+            // 
+            this.lblTimeM.AutoSize = true;
+            this.lblTimeM.Font = new System.Drawing.Font("Lucida Fax", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimeM.ForeColor = System.Drawing.Color.White;
+            this.lblTimeM.Location = new System.Drawing.Point(226, 372);
+            this.lblTimeM.Name = "lblTimeM";
+            this.lblTimeM.Size = new System.Drawing.Size(190, 68);
+            this.lblTimeM.TabIndex = 16;
+            this.lblTimeM.Text = "Time";
+            // 
+            // lblDate
+            // 
+            this.lblDate.Font = new System.Drawing.Font("Lucida Fax", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.LightYellow;
+            this.lblDate.Location = new System.Drawing.Point(896, 52);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(275, 23);
+            this.lblDate.TabIndex = 7;
+            this.lblDate.Text = "Date";
+            // 
+            // lblTime
+            // 
+            this.lblTime.Font = new System.Drawing.Font("Lucida Fax", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.ForeColor = System.Drawing.Color.LightYellow;
+            this.lblTime.Location = new System.Drawing.Point(919, 16);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(180, 33);
+            this.lblTime.TabIndex = 6;
+            this.lblTime.Text = "Time";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FormMainAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -456,6 +512,7 @@ namespace Hotel_Management_System
             this.Name = "FormMainAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New";
+            this.Load += new System.EventHandler(this.FormMainAdmin_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
@@ -500,5 +557,10 @@ namespace Hotel_Management_System
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblDateM;
+        private System.Windows.Forms.Label lblTimeM;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Timer timer1;
     }
 }

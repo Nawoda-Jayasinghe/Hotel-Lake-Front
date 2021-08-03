@@ -30,19 +30,19 @@ namespace Hotel_Management_System
         private void InitializeComponent()
         {
             this.panelGuest = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.textPosition = new System.Windows.Forms.TextBox();
+            this.textBasic = new System.Windows.Forms.TextBox();
+            this.btnReset = new FontAwesome.Sharp.IconButton();
             this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textTP2 = new System.Windows.Forms.TextBox();
             this.btnHome = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textAdress = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textEmail = new System.Windows.Forms.TextBox();
+            this.textTP1 = new System.Windows.Forms.TextBox();
             this.textGender = new System.Windows.Forms.TextBox();
             this.textFullName = new System.Windows.Forms.TextBox();
             this.textNIC = new System.Windows.Forms.TextBox();
@@ -57,7 +57,7 @@ namespace Hotel_Management_System
             this.FoodIDSearch = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FoodNameSearch = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FoodPriceSearch = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.btnUpdate = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelGuest.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -66,19 +66,19 @@ namespace Hotel_Management_System
             // 
             // panelGuest
             // 
-            this.panelGuest.Controls.Add(this.textBox4);
-            this.panelGuest.Controls.Add(this.textBox3);
-            this.panelGuest.Controls.Add(this.iconButton2);
+            this.panelGuest.Controls.Add(this.textPosition);
+            this.panelGuest.Controls.Add(this.textBasic);
+            this.panelGuest.Controls.Add(this.btnReset);
             this.panelGuest.Controls.Add(this.label8);
             this.panelGuest.Controls.Add(this.label4);
-            this.panelGuest.Controls.Add(this.textBox2);
+            this.panelGuest.Controls.Add(this.textTP2);
             this.panelGuest.Controls.Add(this.btnHome);
             this.panelGuest.Controls.Add(this.label5);
             this.panelGuest.Controls.Add(this.iconButton1);
-            this.panelGuest.Controls.Add(this.textBox1);
+            this.panelGuest.Controls.Add(this.textAdress);
             this.panelGuest.Controls.Add(this.label3);
-            this.panelGuest.Controls.Add(this.textBox8);
-            this.panelGuest.Controls.Add(this.textBox7);
+            this.panelGuest.Controls.Add(this.textEmail);
+            this.panelGuest.Controls.Add(this.textTP1);
             this.panelGuest.Controls.Add(this.textGender);
             this.panelGuest.Controls.Add(this.textFullName);
             this.panelGuest.Controls.Add(this.textNIC);
@@ -90,7 +90,7 @@ namespace Hotel_Management_System
             this.panelGuest.Controls.Add(this.iconBttnFoodSearchCashier);
             this.panelGuest.Controls.Add(this.txtSearchFoodCashier);
             this.panelGuest.Controls.Add(this.tbleFoodDetailsAdmin);
-            this.panelGuest.Controls.Add(this.iconButton3);
+            this.panelGuest.Controls.Add(this.btnUpdate);
             this.panelGuest.Controls.Add(this.panel2);
             this.panelGuest.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelGuest.Location = new System.Drawing.Point(0, 0);
@@ -98,49 +98,50 @@ namespace Hotel_Management_System
             this.panelGuest.Size = new System.Drawing.Size(1003, 584);
             this.panelGuest.TabIndex = 0;
             // 
-            // textBox4
+            // textPosition
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox4.Location = new System.Drawing.Point(624, 511);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(162, 34);
-            this.textBox4.TabIndex = 11;
-            this.textBox4.Text = "Cashier";
+            this.textPosition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.textPosition.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textPosition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textPosition.Location = new System.Drawing.Point(624, 514);
+            this.textPosition.Name = "textPosition";
+            this.textPosition.Size = new System.Drawing.Size(162, 34);
+            this.textPosition.TabIndex = 11;
+            this.textPosition.Text = "Cashier";
             // 
-            // textBox3
+            // textBasic
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox3.Location = new System.Drawing.Point(624, 477);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(162, 34);
-            this.textBox3.TabIndex = 10;
-            this.textBox3.Text = "50000";
+            this.textBasic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.textBasic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBasic.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBasic.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textBasic.Location = new System.Drawing.Point(624, 476);
+            this.textBasic.Name = "textBasic";
+            this.textBasic.Size = new System.Drawing.Size(162, 34);
+            this.textBasic.TabIndex = 10;
+            this.textBasic.Text = "50000";
             // 
-            // iconButton2
+            // btnReset
             // 
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.iconButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton2.IconColor = System.Drawing.Color.Black;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.Location = new System.Drawing.Point(805, 511);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(90, 56);
-            this.iconButton2.TabIndex = 382;
-            this.iconButton2.Text = "&Reset";
-            this.iconButton2.UseVisualStyleBackColor = false;
+            this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnReset.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnReset.IconColor = System.Drawing.Color.Black;
+            this.btnReset.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnReset.Location = new System.Drawing.Point(805, 511);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(90, 56);
+            this.btnReset.TabIndex = 382;
+            this.btnReset.Text = "&Reset";
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(479, 512);
+            this.label8.Location = new System.Drawing.Point(479, 514);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(115, 35);
             this.label8.TabIndex = 381;
@@ -155,17 +156,17 @@ namespace Hotel_Management_System
             this.label4.TabIndex = 380;
             this.label4.Text = "CSH235";
             // 
-            // textBox2
+            // textTP2
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox2.Location = new System.Drawing.Point(829, 357);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(162, 34);
-            this.textBox2.TabIndex = 7;
-            this.textBox2.Text = "0713389039";
+            this.textTP2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.textTP2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textTP2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textTP2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textTP2.Location = new System.Drawing.Point(829, 357);
+            this.textTP2.Name = "textTP2";
+            this.textTP2.Size = new System.Drawing.Size(162, 34);
+            this.textTP2.TabIndex = 7;
+            this.textTP2.Text = "0713389039";
             // 
             // btnHome
             // 
@@ -202,17 +203,17 @@ namespace Hotel_Management_System
             this.iconButton1.UseVisualStyleBackColor = false;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
-            // textBox1
+            // textAdress
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox1.Location = new System.Drawing.Point(624, 436);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(367, 34);
-            this.textBox1.TabIndex = 9;
-            this.textBox1.Text = "126, Kandy road, Kandy";
+            this.textAdress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.textAdress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textAdress.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textAdress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textAdress.Location = new System.Drawing.Point(624, 436);
+            this.textAdress.Name = "textAdress";
+            this.textAdress.Size = new System.Drawing.Size(367, 34);
+            this.textAdress.TabIndex = 9;
+            this.textAdress.Text = "126, Kandy road, Kandy";
             // 
             // label3
             // 
@@ -223,29 +224,29 @@ namespace Hotel_Management_System
             this.label3.TabIndex = 370;
             this.label3.Text = "Address";
             // 
-            // textBox8
+            // textEmail
             // 
-            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox8.Location = new System.Drawing.Point(628, 396);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(363, 34);
-            this.textBox8.TabIndex = 8;
-            this.textBox8.Text = "gamlath@gmail.com";
+            this.textEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.textEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textEmail.Location = new System.Drawing.Point(628, 396);
+            this.textEmail.Name = "textEmail";
+            this.textEmail.Size = new System.Drawing.Size(363, 34);
+            this.textEmail.TabIndex = 8;
+            this.textEmail.Text = "gamlath@gmail.com";
             // 
-            // textBox7
+            // textTP1
             // 
-            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox7.Location = new System.Drawing.Point(628, 357);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(173, 34);
-            this.textBox7.TabIndex = 6;
-            this.textBox7.Text = "0713389039";
+            this.textTP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.textTP1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textTP1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textTP1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textTP1.Location = new System.Drawing.Point(628, 357);
+            this.textTP1.Name = "textTP1";
+            this.textTP1.Size = new System.Drawing.Size(173, 34);
+            this.textTP1.TabIndex = 6;
+            this.textTP1.Text = "0713389039";
             // 
             // textGender
             // 
@@ -406,20 +407,20 @@ namespace Hotel_Management_System
             this.FoodPriceSearch.ReadOnly = true;
             this.FoodPriceSearch.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // iconButton3
+            // btnUpdate
             // 
-            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.iconButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton3.IconColor = System.Drawing.Color.Black;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.Location = new System.Drawing.Point(901, 511);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(90, 56);
-            this.iconButton3.TabIndex = 345;
-            this.iconButton3.Text = "&Update";
-            this.iconButton3.UseVisualStyleBackColor = false;
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnUpdate.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnUpdate.IconColor = System.Drawing.Color.Black;
+            this.btnUpdate.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUpdate.Location = new System.Drawing.Point(901, 511);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(90, 56);
+            this.btnUpdate.TabIndex = 345;
+            this.btnUpdate.Text = "&Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -442,6 +443,7 @@ namespace Hotel_Management_System
             this.Name = "FormEmployeeAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Employee Details";
+            this.Load += new System.EventHandler(this.FormEmployeeAdmin_Load);
             this.panelGuest.ResumeLayout(false);
             this.panelGuest.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
@@ -453,16 +455,16 @@ namespace Hotel_Management_System
         #endregion
         private System.Windows.Forms.Panel panelGuest;
         private System.Windows.Forms.Panel panel2;
-        private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton btnUpdate;
         private System.Windows.Forms.DataGridView tbleFoodDetailsAdmin;
         private FontAwesome.Sharp.IconButton iconBttnFoodSearchCashier;
         private System.Windows.Forms.TextBox txtSearchFoodCashier;
         private System.Windows.Forms.Label label5;
         private FontAwesome.Sharp.IconButton iconButton1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textAdress;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textEmail;
+        private System.Windows.Forms.TextBox textTP1;
         private System.Windows.Forms.TextBox textGender;
         private System.Windows.Forms.TextBox textFullName;
         private System.Windows.Forms.TextBox textNIC;
@@ -472,14 +474,14 @@ namespace Hotel_Management_System
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textTP2;
         private System.Windows.Forms.PictureBox btnHome;
-        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton btnReset;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridViewTextBoxColumn FoodIDSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn FoodNameSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn FoodPriceSearch;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textPosition;
+        private System.Windows.Forms.TextBox textBasic;
     }
 }

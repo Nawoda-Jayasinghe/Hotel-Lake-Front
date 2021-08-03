@@ -27,25 +27,7 @@ namespace Hotel_Management_System
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
+        
 
         private void label1_Click_1(object sender, EventArgs e)
         {
@@ -72,9 +54,23 @@ namespace Hotel_Management_System
 
         }
 
-        private void iconButton3_Click(object sender, EventArgs e)
-        {
 
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "Search")
+            {
+                textBox1.Text = "";
+                textBox1.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "")
+            {
+                textBox1.Text = "Search";
+                textBox1.ForeColor = Color.Gray;
+            }
         }
     }
 }

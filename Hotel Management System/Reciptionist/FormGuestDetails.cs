@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
+using MySql.Data.MySqlClient;
 
 
 
@@ -16,105 +17,77 @@ namespace Hotel_Management_System
     public partial class FormGuestDetails : Form
     {
 
-        private IconButton currentBtn;
-        private Panel leftBoarderBtn;
-        private Form currentForm;
-        
-
-
-       /* private struct RGBColors
-        {
-
-            public static Color color7 = Color.FromArgb(253, 138, 114);
-
-        }*/
-
-
         public FormGuestDetails()
         {
             InitializeComponent();
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private MySqlConnection dbQuery()
         {
-            this.Close();
+            DBConnection dBclass = new DBConnection();
+            MySqlConnection conn = dBclass.getConnection();
+            return conn;
         }
 
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        //data adapter
+        private void DataAdapter(string sql, MySqlConnection conn)
         {
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
 
+            DataSet ds = new DataSet();
+            adapter.Fill(ds, "room");
+            tblGuestDetails.DataSource = ds.Tables["room"];
+            conn.Close();
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        //data reader
+        private void DataReader(string sql, MySqlConnection conn)
         {
+            MySqlCommand command = new MySqlCommand(sql, conn);
+            MySqlDataReader dataReader = command.ExecuteReader();
+            while (dataReader.Read())
+            {
+                comboID.Items.Add(dataReader.GetString("IDNumber"));
+            }
+        }
 
+        private string DataReader1(string sql, MySqlConnection conn)
+        {
+            string output = "";
+            MySqlCommand command = new MySqlCommand(sql, conn);
+            MySqlDataReader dataReader = command.ExecuteReader();
+            while (dataReader.Read())
+            {
+                output += dataReader.GetValue(0).ToString();//+" - "+ dataReader.GetValue(1).ToString() + " - " + dataReader.GetValue(2).ToString()+" - " + dataReader.GetValue(3).ToString() + " - " + dataReader.GetValue(4).ToString() + " - " + dataReader.GetValue(5).ToString() + " - " + dataReader.GetValue(6).ToString();
+            }
+            return output;
         }
 
         private void FormGuestDetails_Load(object sender, EventArgs e)
         {
+            dateTimePicker1.Font= new Font("Microsoft Sans Serif", 18);
+            tblGuestDetails.EnableHeadersVisualStyles = false;
+            tblGuestDetails.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 255, 220);
+            tblGuestDetails.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 13);
+            tblGuestDetails.AlternatingRowsDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 13);
+            tblGuestDetails.RowsDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 13);
 
+       try
+            {
+                string Idvalues = "CALL getID";
+                DataReader(Idvalues, dbQuery());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            /*tblGuestDetails.Rows.Add("983256985V", "Nawoda Jayasinghe", "Nawoda Jayasinghe");
+            tblGuestDetails.Rows.Add("974569871V", "Sanju Hasintha", "Nawoda Jayasinghe");
+            tblGuestDetails.Rows.Add("974569871V", "Sanju Hasintha", "Nawoda Jayasinghe");
+            tblGuestDetails.Rows.Add("974569871V", "Sanju Hasintha", "Nawoda Jayasinghe");*/
         }
-
-       /* private void DisableButton()
-        {
-            if (currentBtn != null)
-            {
-                currentBtn.BackColor = Color.FromArgb(31, 30, 68);
-                currentBtn.ForeColor = Color.White;
-                currentBtn.TextAlign = ContentAlignment.MiddleLeft;
-                currentBtn.IconColor = Color.White;
-                currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
-                currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
-            }
-        }*/
-
-       /* public void OpenForm(Form childForm)
-        {
-            //open only form
-            if (currentForm != null)
-            {
-                currentForm.Close();
-            }
-            currentForm = childForm;
-            //End
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            //panel1.Dock = DockStyle.Fill;
-            panelGuestDetails.Controls.Add(childForm);
-            panelGuestDetails.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
-           
-
-
-        }*/
-
-       /* public void ActivateButton(object senderBtn, Color color)
-        {
-            if (senderBtn != null)
-            {
-                DisableButton();
-                currentBtn = (IconButton)senderBtn;
-                currentBtn.BackColor = Color.FromArgb(37, 36, 81);
-                currentBtn.ForeColor = color;
-                currentBtn.TextAlign = ContentAlignment.MiddleCenter;
-                currentBtn.IconColor = color;
-                currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
-                currentBtn.ImageAlign = ContentAlignment.MiddleRight;
-
-                
-              leftBoarderBtn.BackColor = color;
-                leftBoarderBtn.Location = new Point(0, currentBtn.Location.Y);
-                leftBoarderBtn.Visible = true;
-                leftBoarderBtn.BringToFront();
-                
-               //iconCurrent.IconChar = currentBtn.IconChar;
-               // iconCurrent.IconColor = color;
-
-            }
-        }*/
 
 
         private void iconButton3_Click_1(object sender, EventArgs e)
@@ -126,9 +99,60 @@ namespace Hotel_Management_System
             newFormMain.OpenForm(new FormPayments());
             newFormMain.ActivateButton(newFormMain.btnPayments, Color.FromArgb(253,138,114));
 
-            //ActivateButton(sender, RGBColors.color7);
-           // OpenForm(new FormPayments());
+        }
 
+        private void comboID_TextChanged(object sender, EventArgs e)
+        {
+            dateTimePicker1.Value = DateTime.Now;
+            string sql = "CALL getGuestDetailsByID('"+comboID.Text+"')";
+            DataAdapter(sql, dbQuery());
+            tblGuestDetails.Columns[1].Width = 120;
+            tblGuestDetails.Columns[2].Width = 100;
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+            string date = dateTimePicker1.Value.Date.ToString("yyyy-MM-dd HH:mm");
+
+            string sql = "CALL getGuestDetailsByDate('" + date + "')";
+            DataAdapter(sql, dbQuery());
+            tblGuestDetails.Columns[1].Width = 120;
+            tblGuestDetails.Columns[2].Width = 100;
+        }
+
+        private void dateTimePicker1_Enter(object sender, EventArgs e)
+        {
+            comboID.Text = null;
+        }
+
+        private void tblGuestDetails_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                //string date1 = dateTimePicker1.Value.Date.ToString("yyyy-MM-dd HH:mm");
+                string date = tblGuestDetails.Rows[e.RowIndex].Cells[0].Value.ToString();
+                string id = tblGuestDetails.Rows[e.RowIndex].Cells[1].Value.ToString();
+                string strRoomID = tblGuestDetails.Rows[e.RowIndex].Cells[2].Value.ToString();
+                int roomID = int.Parse(strRoomID);
+
+                lblRoomType.Text = DataReader1("Call getRoomCategorybyRoomID(" + roomID + ")", dbQuery());
+                lblID.Text = id;
+                lblFName.Text = DataReader1("SELECT FName FROM guest_details WHERE IDNumber = (" + id + ")", dbQuery());
+                lblFullName.Text = DataReader1("SELECT FullName FROM guest_details WHERE IDNumber = (" + id + ")", dbQuery());
+                lblGender.Text = DataReader1("SELECT Gender FROM guest_details WHERE IDNumber = (" + id + ")", dbQuery());
+                lblTP.Text = DataReader1("CALL getTPbyId (" + id + ")", dbQuery());
+                lblAddress.Text = DataReader1("SELECT GuestAddress FROM guest_details WHERE IDNumber = (" + id + ")", dbQuery());
+                lblEmail.Text = DataReader1("SELECT Email FROM guest_details WHERE IDNumber = (" + id + ")", dbQuery());
+                lblAdate.Text= date;
+
+                lblDdate.Text = DataReader1("CALL getDdate(" + roomID + ",'" + date + "')", dbQuery());
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
     }
