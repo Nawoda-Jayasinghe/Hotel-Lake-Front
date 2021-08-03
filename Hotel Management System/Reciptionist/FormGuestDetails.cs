@@ -161,8 +161,7 @@ namespace Hotel_Management_System
                 lblEmail.Text = DataReader1("SELECT Email FROM guest_details WHERE IDNumber = (" + id + ")", dbQuery());
                 lblAdate.Text= date;
 
-                MessageBox.Show(date);
-                lblDdate.Text = DataReader1("CALL getDdate(" + 1 + ",'" + date + "')", dbQuery());
+                lblDdate.Text = DataReader1("CALL getDdate(" + roomID + ",'" + date + "')", dbQuery());
             }
             catch(Exception ex)
             {
