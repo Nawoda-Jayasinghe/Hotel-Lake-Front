@@ -66,6 +66,7 @@ namespace Hotel_Management_System
 
         private void FormGuestDetails_Load(object sender, EventArgs e)
         {
+            lblForeign.Visible = false;
             dateTimePicker1.Font= new Font("Microsoft Sans Serif", 18);
             tblGuestDetails.EnableHeadersVisualStyles = false;
             tblGuestDetails.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 255, 220);
@@ -106,8 +107,8 @@ namespace Hotel_Management_System
             dateTimePicker1.Value = DateTime.Now;
             string sql = "CALL getGuestDetailsByID('"+comboID.Text+"')";
             DataAdapter(sql, dbQuery());
-            tblGuestDetails.Columns[1].Width = 120;
-            tblGuestDetails.Columns[2].Width = 100;
+            tblGuestDetails.Columns[1].Width = 140;
+            tblGuestDetails.Columns[2].Width = 80;
 
         }
 
@@ -118,8 +119,8 @@ namespace Hotel_Management_System
 
             string sql = "CALL getGuestDetailsByDate('" + date + "')";
             DataAdapter(sql, dbQuery());
-            tblGuestDetails.Columns[1].Width = 120;
-            tblGuestDetails.Columns[2].Width = 100;
+            tblGuestDetails.Columns[1].Width = 140;
+            tblGuestDetails.Columns[2].Width = 80;
         }
 
         private void dateTimePicker1_Enter(object sender, EventArgs e)
@@ -145,9 +146,21 @@ namespace Hotel_Management_System
                 lblTP.Text = DataReader1("CALL getTPbyId (" + id + ")", dbQuery());
                 lblAddress.Text = DataReader1("SELECT GuestAddress FROM guest_details WHERE IDNumber = (" + id + ")", dbQuery());
                 lblEmail.Text = DataReader1("SELECT Email FROM guest_details WHERE IDNumber = (" + id + ")", dbQuery());
-                lblAdate.Text= date;
-
+                lblAdate.Text = date;
                 lblDdate.Text = DataReader1("CALL getDdate(" + roomID + ",'" + date + "')", dbQuery());
+                string foreign = DataReader1("SELECT IDCategory FROM guest_details WHERE IDNumber = (" + id + ")", dbQuery());
+
+                if (foreign == "NIC")
+                {
+                    lblForeign.Visible = false;
+                }
+
+                else
+                {
+                    lblForeign.Visible = true;
+                }
+
+                
             }
             catch(Exception ex)
             {

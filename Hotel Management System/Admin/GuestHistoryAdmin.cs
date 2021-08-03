@@ -16,7 +16,7 @@ namespace Hotel_Management_System
 {
     public partial class GuestHistoryAdmin : Form
     {
-
+        public static string strID;
         public GuestHistoryAdmin()
         {
             InitializeComponent();
@@ -38,6 +38,15 @@ namespace Hotel_Management_System
             DataSet ds = new DataSet();
             adapter.Fill(ds, "room");
             tblGuestDetails.DataSource = ds.Tables["room"];
+            conn.Close();
+        }
+
+        //data adder
+        private void DataAdder(string sql, MySqlConnection conn)
+        {
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            adapter.InsertCommand = new MySqlCommand(sql, conn);
+            adapter.InsertCommand.ExecuteNonQuery();
             conn.Close();
         }
 
@@ -67,6 +76,7 @@ namespace Hotel_Management_System
 
         private void FormGuestDetails_Load(object sender, EventArgs e)
         {
+            cbForeign.Visible = false;
             dateTimePicker1.Font = new Font("Microsoft Sans Serif", 18);
             tblGuestDetails.EnableHeadersVisualStyles = false;
             tblGuestDetails.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 255, 220);
@@ -91,13 +101,14 @@ namespace Hotel_Management_System
             dateTimePicker1.Value = DateTime.Now;
             string sql = "CALL getGuestDetailsByID('" + comboID.Text + "')";
             DataAdapter(sql, dbQuery());
-            tblGuestDetails.Columns[1].Width = 160;
-            tblGuestDetails.Columns[2].Width = 100;
+            tblGuestDetails.Columns[0].Width = 220;
+            tblGuestDetails.Columns[2].Width = 80;
         }
 
         private void dateTimePicker1_Enter(object sender, EventArgs e)
         {
             comboID.Text = null;
+ 
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -106,36 +117,163 @@ namespace Hotel_Management_System
 
             string sql = "CALL getGuestDetailsByDate('" + date + "')";
             DataAdapter(sql, dbQuery());
-            tblGuestDetails.Columns[1].Width = 150;
-            tblGuestDetails.Columns[2].Width = 100;
+            tblGuestDetails.Columns[0].Width = 220;
+            tblGuestDetails.Columns[2].Width = 80;
         }
 
         private void tblGuestDetails_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
+                cbForeign.Visible = true;
+                btnReset.Visible = false;
+                btnUpdate.Visible = false;
                 //string date1 = dateTimePicker1.Value.Date.ToString("yyyy-MM-dd HH:mm");
                 string date = tblGuestDetails.Rows[e.RowIndex].Cells[0].Value.ToString();
                 string id = tblGuestDetails.Rows[e.RowIndex].Cells[1].Value.ToString();
                 string strRoomID = tblGuestDetails.Rows[e.RowIndex].Cells[2].Value.ToString();
                 int roomID = int.Parse(strRoomID);
 
-                /*lblRoomType.Text = DataReader1("Call getRoomCategorybyRoomID(" + roomID + ")", dbQuery());
-                lblID.Text = id;
-                lblFName.Text = DataReader1("SELECT FName FROM guest_details WHERE IDNumber = (" + id + ")", dbQuery());
-                lblFullName.Text = DataReader1("SELECT FullName FROM guest_details WHERE IDNumber = (" + id + ")", dbQuery());
-                lblGender.Text = DataReader1("SELECT Gender FROM guest_details WHERE IDNumber = (" + id + ")", dbQuery());
-                lblTP.Text = DataReader1("CALL getTPbyId (" + id + ")", dbQuery());
-                lblAddress.Text = DataReader1("SELECT GuestAddress FROM guest_details WHERE IDNumber = (" + id + ")", dbQuery());
-                lblEmail.Text = DataReader1("SELECT Email FROM guest_details WHERE IDNumber = (" + id + ")", dbQuery());
+                lblRoomType.Text = DataReader1("Call getRoomCategorybyRoomID(" + roomID + ")", dbQuery());
+                txtID.Text = id;
+                strID = id;
+                txtFName.Text = DataReader1("SELECT FName FROM guest_details WHERE IDNumber = (" + id + ")", dbQuery());
+                txtFullName.Text = DataReader1("SELECT FullName FROM guest_details WHERE IDNumber = (" + id + ")", dbQuery());
+                txtTP.Text = DataReader1("CALL getTPbyId (" + id + ")", dbQuery());
+                txtAddress.Text = DataReader1("SELECT GuestAddress FROM guest_details WHERE IDNumber = (" + id + ")", dbQuery());
+                txtEmail.Text = DataReader1("SELECT Email FROM guest_details WHERE IDNumber = (" + id + ")", dbQuery());
                 lblAdate.Text = date;
+                lblDdate.Text = DataReader1("CALL getDdate(" + roomID + ",'" + date + "')", dbQuery());
 
-                lblDdate.Text = DataReader1("CALL getDdate(" + roomID + ",'" + date + "')", dbQuery());*/
+                string foreign = DataReader1("SELECT IDCategory FROM guest_details WHERE IDNumber = (" + id + ")", dbQuery());
+
+                if (foreign == "NIC")
+                {
+                    cbForeign.Checked = false;
+                }
+
+                else
+                {
+                    cbForeign.Checked = true;
+                }
+
+                string gender = DataReader1("SELECT Gender FROM guest_details WHERE IDNumber = (" + id + ")", dbQuery());
+                if (gender == "M")
+                {
+                    radioMale.Checked = true;
+                }
+
+                else
+                {
+                    radioFemale.Checked = true;
+                }
+
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void txtID_Enter(object sender, EventArgs e)
+        {
+            btnReset.Visible = true;
+            btnUpdate.Visible = true;
+            string ID = txtID.Text;
+        }
+
+        private void cbForeign_CheckedChanged(object sender, EventArgs e)
+        {
+            btnReset.Visible = true;
+            btnUpdate.Visible = true;
+        }
+
+        private void txtFName_Enter(object sender, EventArgs e)
+        {
+            btnReset.Visible = true;
+            btnUpdate.Visible = true;
+        }
+
+        private void txtFullName_Enter(object sender, EventArgs e)
+        {
+            btnReset.Visible = true;
+            btnUpdate.Visible = true;
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+            btnReset.Visible = true;
+            btnUpdate.Visible = true;
+        }
+
+        private void txtTP_Enter(object sender, EventArgs e)
+        {
+            btnReset.Visible = true;
+            btnUpdate.Visible = true;
+        }
+
+        private void txtEmail_Enter(object sender, EventArgs e)
+        {
+            btnReset.Visible = true;
+            btnUpdate.Visible = true;
+        }
+
+        private void txtAddress_Enter(object sender, EventArgs e)
+        {
+            btnReset.Visible = true;
+            btnUpdate.Visible = true;
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            tblGuestDetails_CellClick(this.tblGuestDetails, new DataGridViewCellEventArgs(this.tblGuestDetails.CurrentCell.ColumnIndex, this.tblGuestDetails.CurrentRow.Index));
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            string gender;
+            string IDtype;
+            
+            if (radioMale.Checked)
+            {
+                gender = "M";
+            }
+
+            else
+            {
+                gender = "F";
+            }
+
+            if (cbForeign.Checked)
+            {
+                IDtype = "PASS";
+            }
+
+            else
+            {
+                IDtype = "NIC";
+            }
+
+            try 
+            {
+                
+                DialogResult reslult = MessageBox.Show("Do you want to save changes?", "Confirm changes", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (reslult == DialogResult.Yes)
+                {
+                    string sql = "CALL updateGuestDetails('" + txtID.Text + "','" + IDtype + "','" + txtFName.Text + "','" + txtFullName.Text + "','" + gender + "','" + txtEmail.Text + "','" + strID + "','" + txtAddress.Text + "')";
+                    DataAdder(sql, dbQuery());
+                    MessageBox.Show("Successfully Updated ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+            }
+            catch(Exception ex)
+            {
+                //MessageBox.Show(ex.Message);
+            }
+            
+        }
+  
     }
 }

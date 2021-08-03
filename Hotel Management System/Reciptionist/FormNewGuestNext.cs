@@ -26,7 +26,7 @@ namespace Hotel_Management_System
             Datetp.Format = DateTimePickerFormat.Custom;
             Datetp.Value = DateTime.Now;
             Datetp.MinDate = DateTime.Today;
-            Datetp.CustomFormat = "yyyy-MM-dd (HH:mm)";
+            Datetp.CustomFormat = "yyyy-MM-dd HH:mm";
             Datetp.TextChanged += new EventHandler(Datetp_TextChange);
 
         }
@@ -117,7 +117,7 @@ namespace Hotel_Management_System
 
             try
             {
-                string today = DateTime.Now.ToString("yyyy-MM-dd (HH:MM)");
+                string today = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
 
                 string sql = "CALL getFreeRooms('"+today+"')";
                 string Idvalues = "CALL getID";
@@ -193,7 +193,7 @@ namespace Hotel_Management_System
                 if (reslult == DialogResult.Yes)
                 {
                     OpenForm(new FormNewGuestNext2());
-                    this.Close();
+                    //this.Close();
                 }
             }
 
@@ -391,7 +391,7 @@ namespace Hotel_Management_System
                     string lastGID2 = DataReader1(lastGID1, dbQuery());
                     int GID = (int.Parse(lastGID2)) + 1;
                     
-                    string today= DateTime.Now.ToString("yyyy-MM-dd (HH:mm:ss)");
+                    string today= DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
                     //string sql = "INSERT INTO reservation(GuestID,IDNumber,StartDate) VALUES ('"+GID+"','"+IDNo+"','"+today+"')";
                     //DataAdder(sql, dbQuery());
@@ -399,7 +399,6 @@ namespace Hotel_Management_System
                     DataAdder(sqlResrv, dbQuery());
                     
                     MessageBox.Show("Successfully saved!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //this.Close() ;
                     OpenForm(new FormNewGuestNext());
                     
                 }

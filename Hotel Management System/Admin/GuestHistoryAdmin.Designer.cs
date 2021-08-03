@@ -29,37 +29,20 @@ namespace Hotel_Management_System
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle59 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle60 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelGuestDetails = new System.Windows.Forms.Panel();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.comboID = new System.Windows.Forms.ComboBox();
-            this.tblGuestDetails = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radioMale = new System.Windows.Forms.RadioButton();
+            this.radioFemale = new System.Windows.Forms.RadioButton();
+            this.lblCount = new System.Windows.Forms.Label();
+            this.lblDdate = new System.Windows.Forms.Label();
+            this.lblAdate = new System.Windows.Forms.Label();
+            this.lblRoomType = new System.Windows.Forms.Label();
+            this.txtAddress = new System.Windows.Forms.RichTextBox();
+            this.label32 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbPets = new System.Windows.Forms.CheckBox();
             this.cbEBed = new System.Windows.Forms.CheckBox();
@@ -71,26 +54,53 @@ namespace Hotel_Management_System
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.comboID = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.tblGuestDetails = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblIDType = new System.Windows.Forms.Label();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.label17 = new System.Windows.Forms.Label();
+            this.btnReset = new FontAwesome.Sharp.IconButton();
             this.label18 = new System.Windows.Forms.Label();
+            this.btnUpdate = new FontAwesome.Sharp.IconButton();
             this.label19 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtTP = new System.Windows.Forms.TextBox();
+            this.txtFullName = new System.Windows.Forms.TextBox();
+            this.txtFName = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.cbForeign = new System.Windows.Forms.CheckBox();
             this.panelGuestDetails.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tblGuestDetails)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblGuestDetails)).BeginInit();
             this.SuspendLayout();
             // 
             // panelGuestDetails
             // 
-            this.panelGuestDetails.Controls.Add(this.richTextBox1);
+            this.panelGuestDetails.Controls.Add(this.cbForeign);
+            this.panelGuestDetails.Controls.Add(this.groupBox2);
+            this.panelGuestDetails.Controls.Add(this.lblCount);
+            this.panelGuestDetails.Controls.Add(this.lblDdate);
+            this.panelGuestDetails.Controls.Add(this.lblAdate);
+            this.panelGuestDetails.Controls.Add(this.lblRoomType);
+            this.panelGuestDetails.Controls.Add(this.txtAddress);
             this.panelGuestDetails.Controls.Add(this.label32);
             this.panelGuestDetails.Controls.Add(this.groupBox1);
             this.panelGuestDetails.Controls.Add(this.label29);
@@ -106,21 +116,16 @@ namespace Hotel_Management_System
             this.panelGuestDetails.Controls.Add(this.lblIDType);
             this.panelGuestDetails.Controls.Add(this.iconButton1);
             this.panelGuestDetails.Controls.Add(this.label17);
-            this.panelGuestDetails.Controls.Add(this.iconButton2);
+            this.panelGuestDetails.Controls.Add(this.btnReset);
             this.panelGuestDetails.Controls.Add(this.label18);
-            this.panelGuestDetails.Controls.Add(this.iconButton3);
+            this.panelGuestDetails.Controls.Add(this.btnUpdate);
             this.panelGuestDetails.Controls.Add(this.label19);
             this.panelGuestDetails.Controls.Add(this.label39);
-            this.panelGuestDetails.Controls.Add(this.textBox12);
-            this.panelGuestDetails.Controls.Add(this.textBox10);
-            this.panelGuestDetails.Controls.Add(this.textBox9);
-            this.panelGuestDetails.Controls.Add(this.textBox8);
-            this.panelGuestDetails.Controls.Add(this.textBox7);
-            this.panelGuestDetails.Controls.Add(this.textBox6);
-            this.panelGuestDetails.Controls.Add(this.textBox5);
-            this.panelGuestDetails.Controls.Add(this.textBox4);
-            this.panelGuestDetails.Controls.Add(this.textBox3);
-            this.panelGuestDetails.Controls.Add(this.textBox2);
+            this.panelGuestDetails.Controls.Add(this.txtEmail);
+            this.panelGuestDetails.Controls.Add(this.txtTP);
+            this.panelGuestDetails.Controls.Add(this.txtFullName);
+            this.panelGuestDetails.Controls.Add(this.txtFName);
+            this.panelGuestDetails.Controls.Add(this.txtID);
             this.panelGuestDetails.Controls.Add(this.panel2);
             this.panelGuestDetails.Controls.Add(this.label27);
             this.panelGuestDetails.Controls.Add(this.label26);
@@ -129,160 +134,509 @@ namespace Hotel_Management_System
             this.panelGuestDetails.Controls.Add(this.label23);
             this.panelGuestDetails.Controls.Add(this.label22);
             this.panelGuestDetails.Controls.Add(this.panel3);
-            this.panelGuestDetails.Location = new System.Drawing.Point(0, 0);
+            this.panelGuestDetails.Location = new System.Drawing.Point(1, 0);
             this.panelGuestDetails.Name = "panelGuestDetails";
             this.panelGuestDetails.Size = new System.Drawing.Size(1006, 582);
             this.panelGuestDetails.TabIndex = 0;
             // 
-            // iconButton2
+            // groupBox2
             // 
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.iconButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton2.IconColor = System.Drawing.Color.Black;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.Location = new System.Drawing.Point(795, 513);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(90, 52);
-            this.iconButton2.TabIndex = 20;
-            this.iconButton2.Text = "&Reset";
-            this.iconButton2.UseVisualStyleBackColor = false;
+            this.groupBox2.Controls.Add(this.radioMale);
+            this.groupBox2.Controls.Add(this.radioFemale);
+            this.groupBox2.Location = new System.Drawing.Point(565, 256);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(175, 35);
+            this.groupBox2.TabIndex = 12;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // iconButton3
+            // radioMale
             // 
-            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.iconButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton3.IconColor = System.Drawing.Color.Black;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.Location = new System.Drawing.Point(891, 512);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(90, 52);
-            this.iconButton3.TabIndex = 21;
-            this.iconButton3.Text = "&Update";
-            this.iconButton3.UseVisualStyleBackColor = false;
+            this.radioMale.AutoSize = true;
+            this.radioMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioMale.Location = new System.Drawing.Point(6, 10);
+            this.radioMale.Name = "radioMale";
+            this.radioMale.Size = new System.Drawing.Size(72, 28);
+            this.radioMale.TabIndex = 359;
+            this.radioMale.TabStop = true;
+            this.radioMale.Text = "Male";
+            this.radioMale.UseVisualStyleBackColor = true;
             // 
-            // textBox12
+            // radioFemale
             // 
-            this.textBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox12.Location = new System.Drawing.Point(569, 122);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(149, 28);
-            this.textBox12.TabIndex = 14;
-            this.textBox12.Text = "05";
+            this.radioFemale.AutoSize = true;
+            this.radioFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioFemale.Location = new System.Drawing.Point(94, 10);
+            this.radioFemale.Name = "radioFemale";
+            this.radioFemale.Size = new System.Drawing.Size(95, 28);
+            this.radioFemale.TabIndex = 358;
+            this.radioFemale.TabStop = true;
+            this.radioFemale.Text = "Female";
+            this.radioFemale.UseVisualStyleBackColor = true;
             // 
-            // textBox10
+            // lblCount
             // 
-            this.textBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox10.Location = new System.Drawing.Point(569, 86);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(149, 28);
-            this.textBox10.TabIndex = 13;
-            this.textBox10.Text = "10/04/2021";
+            this.lblCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCount.Location = new System.Drawing.Point(563, 124);
+            this.lblCount.Name = "lblCount";
+            this.lblCount.Size = new System.Drawing.Size(111, 33);
+            this.lblCount.TabIndex = 357;
             // 
-            // textBox9
+            // lblDdate
             // 
-            this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox9.Location = new System.Drawing.Point(569, 50);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(149, 28);
-            this.textBox9.TabIndex = 12;
-            this.textBox9.Text = "05/04/2021";
+            this.lblDdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDdate.Location = new System.Drawing.Point(563, 88);
+            this.lblDdate.Name = "lblDdate";
+            this.lblDdate.Size = new System.Drawing.Size(226, 33);
+            this.lblDdate.TabIndex = 356;
             // 
-            // textBox8
+            // lblAdate
             // 
-            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox8.Location = new System.Drawing.Point(572, 342);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(409, 28);
-            this.textBox8.TabIndex = 10;
-            this.textBox8.Text = "chamudithacbs@gmail.com";
+            this.lblAdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdate.Location = new System.Drawing.Point(563, 52);
+            this.lblAdate.Name = "lblAdate";
+            this.lblAdate.Size = new System.Drawing.Size(188, 33);
+            this.lblAdate.TabIndex = 355;
             // 
-            // textBox7
+            // lblRoomType
             // 
-            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox7.Location = new System.Drawing.Point(572, 299);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(409, 28);
-            this.textBox7.TabIndex = 9;
-            this.textBox7.Text = "0713389039";
+            this.lblRoomType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRoomType.Location = new System.Drawing.Point(563, 15);
+            this.lblRoomType.Name = "lblRoomType";
+            this.lblRoomType.Size = new System.Drawing.Size(202, 35);
+            this.lblRoomType.TabIndex = 354;
             // 
-            // textBox6
+            // txtAddress
             // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox6.Location = new System.Drawing.Point(572, 265);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(409, 28);
-            this.textBox6.TabIndex = 8;
-            this.textBox6.Text = "Male";
+            this.txtAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtAddress.Location = new System.Drawing.Point(567, 387);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(416, 43);
+            this.txtAddress.TabIndex = 15;
+            this.txtAddress.Text = "";
+            this.txtAddress.Enter += new System.EventHandler(this.txtAddress_Enter);
             // 
-            // textBox5
+            // label32
             // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox5.Location = new System.Drawing.Point(569, 230);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(412, 28);
-            this.textBox5.TabIndex = 7;
-            this.textBox5.Text = "Senannayaka";
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(423, 124);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(111, 33);
+            this.label32.TabIndex = 352;
+            this.label32.Text = "Days :";
             // 
-            // textBox4
+            // groupBox1
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox4.Location = new System.Drawing.Point(569, 196);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(412, 28);
-            this.textBox4.TabIndex = 6;
-            this.textBox4.Text = "Chamuditha";
+            this.groupBox1.Controls.Add(this.cbPets);
+            this.groupBox1.Controls.Add(this.cbEBed);
+            this.groupBox1.Controls.Add(this.cbHotW);
+            this.groupBox1.Controls.Add(this.cbSatTV);
+            this.groupBox1.Controls.Add(this.cbFullPckge);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Controls.Add(this.label20);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.groupBox1.Location = new System.Drawing.Point(795, 11);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(189, 169);
+            this.groupBox1.TabIndex = 342;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Other Facilities";
             // 
-            // textBox3
+            // cbPets
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox3.Location = new System.Drawing.Point(569, 158);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(149, 28);
-            this.textBox3.TabIndex = 5;
-            this.textBox3.Text = "986351612V";
+            this.cbPets.AutoSize = true;
+            this.cbPets.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbPets.Location = new System.Drawing.Point(155, 137);
+            this.cbPets.Name = "cbPets";
+            this.cbPets.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cbPets.Size = new System.Drawing.Size(18, 17);
+            this.cbPets.TabIndex = 8;
+            this.cbPets.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // cbEBed
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox2.Location = new System.Drawing.Point(569, 13);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(149, 28);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.Text = "Family Luxary";
+            this.cbEBed.AutoSize = true;
+            this.cbEBed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEBed.Location = new System.Drawing.Point(155, 113);
+            this.cbEBed.Name = "cbEBed";
+            this.cbEBed.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cbEBed.Size = new System.Drawing.Size(18, 17);
+            this.cbEBed.TabIndex = 7;
+            this.cbEBed.UseVisualStyleBackColor = true;
+            // 
+            // cbHotW
+            // 
+            this.cbHotW.AutoSize = true;
+            this.cbHotW.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbHotW.Location = new System.Drawing.Point(155, 89);
+            this.cbHotW.Name = "cbHotW";
+            this.cbHotW.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cbHotW.Size = new System.Drawing.Size(18, 17);
+            this.cbHotW.TabIndex = 6;
+            this.cbHotW.UseVisualStyleBackColor = true;
+            // 
+            // cbSatTV
+            // 
+            this.cbSatTV.AutoSize = true;
+            this.cbSatTV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSatTV.Location = new System.Drawing.Point(155, 65);
+            this.cbSatTV.Name = "cbSatTV";
+            this.cbSatTV.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cbSatTV.Size = new System.Drawing.Size(18, 17);
+            this.cbSatTV.TabIndex = 5;
+            this.cbSatTV.UseVisualStyleBackColor = true;
+            // 
+            // cbFullPckge
+            // 
+            this.cbFullPckge.AutoSize = true;
+            this.cbFullPckge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbFullPckge.Location = new System.Drawing.Point(155, 41);
+            this.cbFullPckge.Name = "cbFullPckge";
+            this.cbFullPckge.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cbFullPckge.Size = new System.Drawing.Size(18, 17);
+            this.cbFullPckge.TabIndex = 4;
+            this.cbFullPckge.UseVisualStyleBackColor = true;
+            // 
+            // label12
+            // 
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(18, 87);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(169, 17);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "Hot Water";
+            // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(18, 38);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(169, 25);
+            this.label13.TabIndex = 224;
+            this.label13.Text = "Full Package";
+            // 
+            // label14
+            // 
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(18, 63);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(159, 19);
+            this.label14.TabIndex = 225;
+            this.label14.Text = "Satellite TV";
+            // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(18, 111);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(169, 19);
+            this.label15.TabIndex = 227;
+            this.label15.Text = "Extra Bed";
+            // 
+            // label20
+            // 
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(18, 135);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(169, 19);
+            this.label20.TabIndex = 228;
+            this.label20.Text = "Pets Allowed";
+            // 
+            // label29
+            // 
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(423, 88);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(111, 33);
+            this.label29.TabIndex = 351;
+            this.label29.Text = "To :";
+            // 
+            // label35
+            // 
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label35.Location = new System.Drawing.Point(11, 81);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(185, 19);
+            this.label35.TabIndex = 341;
+            this.label35.Text = "Select Date";
+            // 
+            // label28
+            // 
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(423, 52);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(111, 33);
+            this.label28.TabIndex = 350;
+            this.label28.Text = "From :";
+            // 
+            // label34
+            // 
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label34.Location = new System.Drawing.Point(12, 11);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(185, 19);
+            this.label34.TabIndex = 340;
+            this.label34.Text = "NIC or Passport No";
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(424, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(122, 34);
+            this.label2.TabIndex = 349;
+            this.label2.Text = "Room Type :";
+            // 
+            // comboID
+            // 
+            this.comboID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboID.FormattingEnabled = true;
+            this.comboID.Location = new System.Drawing.Point(13, 33);
+            this.comboID.Name = "comboID";
+            this.comboID.Size = new System.Drawing.Size(282, 39);
+            this.comboID.TabIndex = 1;
+            this.comboID.TextChanged += new System.EventHandler(this.comboID_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(423, 264);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(123, 29);
+            this.label1.TabIndex = 348;
+            this.label1.Text = "Gender :";
+            // 
+            // tblGuestDetails
+            // 
+            this.tblGuestDetails.AllowUserToAddRows = false;
+            this.tblGuestDetails.AllowUserToDeleteRows = false;
+            this.tblGuestDetails.AllowUserToResizeColumns = false;
+            this.tblGuestDetails.AllowUserToResizeRows = false;
+            dataGridViewCellStyle57.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle57.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle57.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle57.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle57.SelectionForeColor = System.Drawing.Color.Black;
+            this.tblGuestDetails.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle57;
+            this.tblGuestDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tblGuestDetails.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.tblGuestDetails.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle58.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle58.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle58.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle58.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(220)))));
+            dataGridViewCellStyle58.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle58.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblGuestDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle58;
+            this.tblGuestDetails.ColumnHeadersHeight = 60;
+            this.tblGuestDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle59.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle59.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle59.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle59.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle59.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle59.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle59.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tblGuestDetails.DefaultCellStyle = dataGridViewCellStyle59;
+            this.tblGuestDetails.Location = new System.Drawing.Point(12, 176);
+            this.tblGuestDetails.Name = "tblGuestDetails";
+            this.tblGuestDetails.ReadOnly = true;
+            this.tblGuestDetails.RowHeadersVisible = false;
+            this.tblGuestDetails.RowHeadersWidth = 51;
+            dataGridViewCellStyle60.BackColor = System.Drawing.Color.Azure;
+            dataGridViewCellStyle60.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle60.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle60.SelectionForeColor = System.Drawing.Color.Black;
+            this.tblGuestDetails.RowsDefaultCellStyle = dataGridViewCellStyle60;
+            this.tblGuestDetails.RowTemplate.Height = 35;
+            this.tblGuestDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tblGuestDetails.Size = new System.Drawing.Size(373, 388);
+            this.tblGuestDetails.TabIndex = 3;
+            this.tblGuestDetails.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblGuestDetails_CellClick);
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(424, 336);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(114, 34);
+            this.label7.TabIndex = 347;
+            this.label7.Text = "Email :";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.White;
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(12, 100);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(339, 34);
+            this.dateTimePicker1.TabIndex = 2;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.dateTimePicker1.Enter += new System.EventHandler(this.dateTimePicker1_Enter);
+            // 
+            // lblIDType
+            // 
+            this.lblIDType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIDType.Location = new System.Drawing.Point(423, 160);
+            this.lblIDType.Name = "lblIDType";
+            this.lblIDType.Size = new System.Drawing.Size(123, 35);
+            this.lblIDType.TabIndex = 346;
+            this.lblIDType.Text = "ID :";
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.Enabled = false;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconButton1.IconSize = 25;
+            this.iconButton1.Location = new System.Drawing.Point(322, 31);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(30, 27);
+            this.iconButton1.TabIndex = 339;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            // 
+            // label17
+            // 
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(423, 296);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(123, 37);
+            this.label17.TabIndex = 345;
+            this.label17.Text = "Telephone :";
+            // 
+            // btnReset
+            // 
+            this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnReset.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnReset.IconColor = System.Drawing.Color.Black;
+            this.btnReset.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnReset.Location = new System.Drawing.Point(795, 513);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(90, 52);
+            this.btnReset.TabIndex = 16;
+            this.btnReset.Text = "&Reset";
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Visible = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // label18
+            // 
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(423, 373);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(111, 33);
+            this.label18.TabIndex = 344;
+            this.label18.Text = "Address :";
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnUpdate.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnUpdate.IconColor = System.Drawing.Color.Black;
+            this.btnUpdate.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUpdate.Location = new System.Drawing.Point(891, 512);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(90, 52);
+            this.btnUpdate.TabIndex = 17;
+            this.btnUpdate.Text = "&Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Visible = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // label19
+            // 
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(423, 232);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(123, 29);
+            this.label19.TabIndex = 343;
+            this.label19.Text = "Full Name :";
+            // 
+            // label39
+            // 
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(423, 198);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(135, 31);
+            this.label39.TabIndex = 342;
+            this.label39.Text = "First Name :";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtEmail.Location = new System.Drawing.Point(567, 342);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(409, 38);
+            this.txtEmail.TabIndex = 14;
+            this.txtEmail.Enter += new System.EventHandler(this.txtEmail_Enter);
+            // 
+            // txtTP
+            // 
+            this.txtTP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtTP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtTP.Location = new System.Drawing.Point(565, 299);
+            this.txtTP.Name = "txtTP";
+            this.txtTP.Size = new System.Drawing.Size(409, 38);
+            this.txtTP.TabIndex = 13;
+            this.txtTP.Enter += new System.EventHandler(this.txtTP_Enter);
+            // 
+            // txtFullName
+            // 
+            this.txtFullName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtFullName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFullName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtFullName.Location = new System.Drawing.Point(564, 230);
+            this.txtFullName.Name = "txtFullName";
+            this.txtFullName.Size = new System.Drawing.Size(412, 38);
+            this.txtFullName.TabIndex = 11;
+            this.txtFullName.Enter += new System.EventHandler(this.txtFullName_Enter);
+            // 
+            // txtFName
+            // 
+            this.txtFName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtFName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtFName.Location = new System.Drawing.Point(564, 192);
+            this.txtFName.Name = "txtFName";
+            this.txtFName.Size = new System.Drawing.Size(412, 38);
+            this.txtFName.TabIndex = 10;
+            this.txtFName.Enter += new System.EventHandler(this.txtFName_Enter);
+            // 
+            // txtID
+            // 
+            this.txtID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtID.Location = new System.Drawing.Point(564, 158);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(149, 38);
+            this.txtID.TabIndex = 9;
+            this.txtID.Enter += new System.EventHandler(this.txtID_Enter);
             // 
             // panel2
             // 
@@ -354,341 +708,17 @@ namespace Hotel_Management_System
             this.panel3.Size = new System.Drawing.Size(1, 597);
             this.panel3.TabIndex = 297;
             // 
-            // label35
+            // cbForeign
             // 
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label35.Location = new System.Drawing.Point(11, 81);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(185, 19);
-            this.label35.TabIndex = 341;
-            this.label35.Text = "Select Date";
-            // 
-            // label34
-            // 
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label34.Location = new System.Drawing.Point(12, 11);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(185, 19);
-            this.label34.TabIndex = 340;
-            this.label34.Text = "NIC or Passport No";
-            // 
-            // comboID
-            // 
-            this.comboID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboID.FormattingEnabled = true;
-            this.comboID.Location = new System.Drawing.Point(13, 33);
-            this.comboID.Name = "comboID";
-            this.comboID.Size = new System.Drawing.Size(282, 39);
-            this.comboID.TabIndex = 336;
-            this.comboID.TextChanged += new System.EventHandler(this.comboID_TextChanged);
-            // 
-            // tblGuestDetails
-            // 
-            this.tblGuestDetails.AllowUserToAddRows = false;
-            this.tblGuestDetails.AllowUserToDeleteRows = false;
-            this.tblGuestDetails.AllowUserToResizeColumns = false;
-            this.tblGuestDetails.AllowUserToResizeRows = false;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.Black;
-            this.tblGuestDetails.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
-            this.tblGuestDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.tblGuestDetails.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.tblGuestDetails.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(220)))));
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tblGuestDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
-            this.tblGuestDetails.ColumnHeadersHeight = 60;
-            this.tblGuestDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tblGuestDetails.DefaultCellStyle = dataGridViewCellStyle27;
-            this.tblGuestDetails.Location = new System.Drawing.Point(12, 176);
-            this.tblGuestDetails.Name = "tblGuestDetails";
-            this.tblGuestDetails.ReadOnly = true;
-            this.tblGuestDetails.RowHeadersVisible = false;
-            this.tblGuestDetails.RowHeadersWidth = 51;
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.Azure;
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.Black;
-            this.tblGuestDetails.RowsDefaultCellStyle = dataGridViewCellStyle28;
-            this.tblGuestDetails.RowTemplate.Height = 35;
-            this.tblGuestDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tblGuestDetails.Size = new System.Drawing.Size(373, 388);
-            this.tblGuestDetails.TabIndex = 338;
-            this.tblGuestDetails.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblGuestDetails_CellClick);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.White;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(12, 100);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(339, 34);
-            this.dateTimePicker1.TabIndex = 337;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            this.dateTimePicker1.Enter += new System.EventHandler(this.dateTimePicker1_Enter);
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.Enabled = false;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconButton1.IconSize = 25;
-            this.iconButton1.Location = new System.Drawing.Point(322, 31);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(30, 27);
-            this.iconButton1.TabIndex = 339;
-            this.iconButton1.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.cbPets);
-            this.groupBox1.Controls.Add(this.cbEBed);
-            this.groupBox1.Controls.Add(this.cbHotW);
-            this.groupBox1.Controls.Add(this.cbSatTV);
-            this.groupBox1.Controls.Add(this.cbFullPckge);
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Controls.Add(this.label20);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.groupBox1.Location = new System.Drawing.Point(795, 11);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(189, 169);
-            this.groupBox1.TabIndex = 342;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Other Facilities";
-            // 
-            // cbPets
-            // 
-            this.cbPets.AutoSize = true;
-            this.cbPets.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbPets.Location = new System.Drawing.Point(155, 137);
-            this.cbPets.Name = "cbPets";
-            this.cbPets.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cbPets.Size = new System.Drawing.Size(18, 17);
-            this.cbPets.TabIndex = 341;
-            this.cbPets.UseVisualStyleBackColor = true;
-            // 
-            // cbEBed
-            // 
-            this.cbEBed.AutoSize = true;
-            this.cbEBed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbEBed.Location = new System.Drawing.Point(155, 113);
-            this.cbEBed.Name = "cbEBed";
-            this.cbEBed.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cbEBed.Size = new System.Drawing.Size(18, 17);
-            this.cbEBed.TabIndex = 338;
-            this.cbEBed.UseVisualStyleBackColor = true;
-            // 
-            // cbHotW
-            // 
-            this.cbHotW.AutoSize = true;
-            this.cbHotW.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbHotW.Location = new System.Drawing.Point(155, 89);
-            this.cbHotW.Name = "cbHotW";
-            this.cbHotW.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cbHotW.Size = new System.Drawing.Size(18, 17);
-            this.cbHotW.TabIndex = 339;
-            this.cbHotW.UseVisualStyleBackColor = true;
-            // 
-            // cbSatTV
-            // 
-            this.cbSatTV.AutoSize = true;
-            this.cbSatTV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSatTV.Location = new System.Drawing.Point(155, 65);
-            this.cbSatTV.Name = "cbSatTV";
-            this.cbSatTV.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cbSatTV.Size = new System.Drawing.Size(18, 17);
-            this.cbSatTV.TabIndex = 340;
-            this.cbSatTV.UseVisualStyleBackColor = true;
-            // 
-            // cbFullPckge
-            // 
-            this.cbFullPckge.AutoSize = true;
-            this.cbFullPckge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbFullPckge.Location = new System.Drawing.Point(155, 41);
-            this.cbFullPckge.Name = "cbFullPckge";
-            this.cbFullPckge.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cbFullPckge.Size = new System.Drawing.Size(18, 17);
-            this.cbFullPckge.TabIndex = 336;
-            this.cbFullPckge.UseVisualStyleBackColor = true;
-            // 
-            // label12
-            // 
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(18, 87);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(169, 17);
-            this.label12.TabIndex = 226;
-            this.label12.Text = "Hot Water";
-            // 
-            // label13
-            // 
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(18, 38);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(169, 25);
-            this.label13.TabIndex = 224;
-            this.label13.Text = "Full Package";
-            // 
-            // label14
-            // 
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(18, 63);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(159, 19);
-            this.label14.TabIndex = 225;
-            this.label14.Text = "Satellite TV";
-            // 
-            // label15
-            // 
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(18, 111);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(169, 19);
-            this.label15.TabIndex = 227;
-            this.label15.Text = "Extra Bed";
-            // 
-            // label20
-            // 
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(18, 135);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(169, 19);
-            this.label20.TabIndex = 228;
-            this.label20.Text = "Pets Allowed";
-            // 
-            // label32
-            // 
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(423, 124);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(111, 33);
-            this.label32.TabIndex = 352;
-            this.label32.Text = "Days :";
-            // 
-            // label29
-            // 
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(423, 88);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(111, 33);
-            this.label29.TabIndex = 351;
-            this.label29.Text = "To :";
-            // 
-            // label28
-            // 
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(423, 52);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(111, 33);
-            this.label28.TabIndex = 350;
-            this.label28.Text = "From :";
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(424, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 34);
-            this.label2.TabIndex = 349;
-            this.label2.Text = "Room Type :";
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(423, 264);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 29);
-            this.label1.TabIndex = 348;
-            this.label1.Text = "Gender :";
-            // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(424, 336);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(114, 34);
-            this.label7.TabIndex = 347;
-            this.label7.Text = "Email :";
-            // 
-            // lblIDType
-            // 
-            this.lblIDType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIDType.Location = new System.Drawing.Point(423, 160);
-            this.lblIDType.Name = "lblIDType";
-            this.lblIDType.Size = new System.Drawing.Size(143, 35);
-            this.lblIDType.TabIndex = 346;
-            this.lblIDType.Text = "National ID :";
-            // 
-            // label17
-            // 
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(423, 296);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(143, 37);
-            this.label17.TabIndex = 345;
-            this.label17.Text = "Telephone :";
-            // 
-            // label18
-            // 
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(423, 373);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(111, 33);
-            this.label18.TabIndex = 344;
-            this.label18.Text = "Address :";
-            // 
-            // label19
-            // 
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(423, 232);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(143, 29);
-            this.label19.TabIndex = 343;
-            this.label19.Text = "Full Name :";
-            // 
-            // label39
-            // 
-            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(423, 198);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(143, 31);
-            this.label39.TabIndex = 342;
-            this.label39.Text = "First Name :";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.richTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.richTextBox1.Location = new System.Drawing.Point(567, 387);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(416, 43);
-            this.richTextBox1.TabIndex = 353;
-            this.richTextBox1.Text = "";
+            this.cbForeign.AutoSize = true;
+            this.cbForeign.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbForeign.Location = new System.Drawing.Point(719, 164);
+            this.cbForeign.Name = "cbForeign";
+            this.cbForeign.Size = new System.Drawing.Size(78, 21);
+            this.cbForeign.TabIndex = 358;
+            this.cbForeign.Text = "Foreign";
+            this.cbForeign.UseVisualStyleBackColor = true;
+            this.cbForeign.CheckedChanged += new System.EventHandler(this.cbForeign_CheckedChanged);
             // 
             // GuestHistoryAdmin
             // 
@@ -703,9 +733,11 @@ namespace Hotel_Management_System
             this.Load += new System.EventHandler(this.FormGuestDetails_Load);
             this.panelGuestDetails.ResumeLayout(false);
             this.panelGuestDetails.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tblGuestDetails)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblGuestDetails)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -719,20 +751,15 @@ namespace Hotel_Management_System
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtTP;
+        private System.Windows.Forms.TextBox txtFullName;
+        private System.Windows.Forms.TextBox txtFName;
+        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton btnReset;
+        private FontAwesome.Sharp.IconButton btnUpdate;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.ComboBox comboID;
@@ -761,6 +788,14 @@ namespace Hotel_Management_System
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox txtAddress;
+        private System.Windows.Forms.Label lblCount;
+        private System.Windows.Forms.Label lblDdate;
+        private System.Windows.Forms.Label lblAdate;
+        private System.Windows.Forms.Label lblRoomType;
+        private System.Windows.Forms.RadioButton radioFemale;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton radioMale;
+        private System.Windows.Forms.CheckBox cbForeign;
     }
 }
