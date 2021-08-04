@@ -31,8 +31,8 @@ namespace Hotel_Management_System
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
 
             DataSet ds = new DataSet();
-            adapter.Fill(ds, "food");
-            tblFoodDetails.DataSource = ds.Tables["food"];
+            adapter.Fill(ds, "services");
+            tblFacilityDetails.DataSource = ds.Tables["services"];
             conn.Close();
         }
 
@@ -66,12 +66,12 @@ namespace Hotel_Management_System
                 string sql = "CALL getAllFacilities";
                 DataAdapter(sql, dbQuery());
 
-                tblFoodDetails.EnableHeadersVisualStyles = false;
-                tblFoodDetails.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 255, 220);
-                tblFoodDetails.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 16);
+                tblFacilityDetails.EnableHeadersVisualStyles = false;
+                tblFacilityDetails.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 255, 220);
+                tblFacilityDetails.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 16);
 
-                tblFoodDetails.Columns[0].Width = 150;
-                tblFoodDetails.Columns[2].Width = 175;
+                tblFacilityDetails.Columns[0].Width = 150;
+                tblFacilityDetails.Columns[2].Width = 175;
             }
             catch (Exception ex)
             {
@@ -85,15 +85,6 @@ namespace Hotel_Management_System
             {
                 txtSearchFacility.Text = "";
                 txtSearchFacility.ForeColor = Color.Black;
-            }
-        }
-
-        private void txtSearchFoodCashier_Leave(object sender, EventArgs e)
-        {
-            if (txtSearchFacility.Text == "")
-            {
-                txtSearchFacility.Text = "Search";
-                txtSearchFacility.ForeColor = Color.Gray;
             }
         }
 
@@ -118,7 +109,7 @@ namespace Hotel_Management_System
                 btnReset.Visible = false;
                 btnUpdate.Visible = false;
 
-                string FID = tblFoodDetails.Rows[e.RowIndex].Cells[0].Value.ToString();
+                string FID = tblFacilityDetails.Rows[e.RowIndex].Cells[0].Value.ToString();
 
                 lblFID.Text = FID;
                 txtFname.Text = DataReader1("SELECT ServiceType FROM Services WHERE servicesID = (" + FID + ")", dbQuery());
@@ -145,7 +136,7 @@ namespace Hotel_Management_System
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            tblFoodDetails_CellClick(this.tblFoodDetails, new DataGridViewCellEventArgs(this.tblFoodDetails.CurrentCell.ColumnIndex, this.tblFoodDetails.CurrentRow.Index));
+            tblFoodDetails_CellClick(this.tblFacilityDetails, new DataGridViewCellEventArgs(this.tblFacilityDetails.CurrentCell.ColumnIndex, this.tblFacilityDetails.CurrentRow.Index));
 
         }
 

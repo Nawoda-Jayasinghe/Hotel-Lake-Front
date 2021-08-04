@@ -168,7 +168,7 @@ namespace Hotel_Management_System
             MySqlDataReader dataReader = command.ExecuteReader();
             while (dataReader.Read())
             {
-                output += dataReader.GetValue(0).ToString();//+" - "+ dataReader.GetValue(1).ToString() + " - " + dataReader.GetValue(2).ToString()+" - " + dataReader.GetValue(3).ToString() + " - " + dataReader.GetValue(4).ToString() + " - " + dataReader.GetValue(5).ToString() + " - " + dataReader.GetValue(6).ToString();
+                output += dataReader.GetValue(0).ToString();
             }
             return output;
         }

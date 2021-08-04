@@ -30,26 +30,26 @@ namespace Hotel_Management_System
         private void InitializeComponent()
         {
             this.panelGuest = new System.Windows.Forms.Panel();
+            this.lblPw = new System.Windows.Forms.Label();
+            this.comboPID = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.btnNICUpload = new System.Windows.Forms.Button();
+            this.btnPhotoUpload = new System.Windows.Forms.Button();
             this.mtbTP2 = new System.Windows.Forms.MaskedTextBox();
             this.mtbTP1 = new System.Windows.Forms.MaskedTextBox();
             this.mtbNIC = new System.Windows.Forms.MaskedTextBox();
             this.rchtxtAddress = new System.Windows.Forms.RichTextBox();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.btnSave = new FontAwesome.Sharp.IconButton();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioMale = new System.Windows.Forms.RadioButton();
-            this.radioFemale = new System.Windows.Forms.RadioButton();
+            this.lblGender = new System.Windows.Forms.Label();
             this.mtbEmail = new System.Windows.Forms.MaskedTextBox();
-            this.txtLName = new System.Windows.Forms.TextBox();
+            this.txtFullName = new System.Windows.Forms.TextBox();
             this.txtFName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.lblNIC = new System.Windows.Forms.Label();
@@ -57,34 +57,34 @@ namespace Hotel_Management_System
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
-            this.btnPhotoUpload = new System.Windows.Forms.Button();
-            this.btnNICUpload = new System.Windows.Forms.Button();
+            this.icnId = new FontAwesome.Sharp.IconButton();
+            this.lblStaffID = new System.Windows.Forms.TextBox();
             this.panelGuest.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelGuest
             // 
+            this.panelGuest.Controls.Add(this.lblStaffID);
+            this.panelGuest.Controls.Add(this.lblPw);
+            this.panelGuest.Controls.Add(this.comboPID);
+            this.panelGuest.Controls.Add(this.dateTimePicker1);
             this.panelGuest.Controls.Add(this.btnNICUpload);
             this.panelGuest.Controls.Add(this.btnPhotoUpload);
             this.panelGuest.Controls.Add(this.mtbTP2);
             this.panelGuest.Controls.Add(this.mtbTP1);
             this.panelGuest.Controls.Add(this.mtbNIC);
             this.panelGuest.Controls.Add(this.rchtxtAddress);
-            this.panelGuest.Controls.Add(this.iconButton1);
-            this.panelGuest.Controls.Add(this.textBox6);
+            this.panelGuest.Controls.Add(this.btnSave);
             this.panelGuest.Controls.Add(this.label6);
-            this.panelGuest.Controls.Add(this.textBox5);
             this.panelGuest.Controls.Add(this.label5);
-            this.panelGuest.Controls.Add(this.textBox4);
-            this.panelGuest.Controls.Add(this.textBox1);
             this.panelGuest.Controls.Add(this.label4);
             this.panelGuest.Controls.Add(this.label3);
             this.panelGuest.Controls.Add(this.label2);
             this.panelGuest.Controls.Add(this.label1);
             this.panelGuest.Controls.Add(this.groupBox2);
             this.panelGuest.Controls.Add(this.mtbEmail);
-            this.panelGuest.Controls.Add(this.txtLName);
+            this.panelGuest.Controls.Add(this.txtFullName);
             this.panelGuest.Controls.Add(this.txtFName);
             this.panelGuest.Controls.Add(this.label7);
             this.panelGuest.Controls.Add(this.lblNIC);
@@ -92,51 +92,107 @@ namespace Hotel_Management_System
             this.panelGuest.Controls.Add(this.label18);
             this.panelGuest.Controls.Add(this.label19);
             this.panelGuest.Controls.Add(this.label39);
+            this.panelGuest.Controls.Add(this.icnId);
             this.panelGuest.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelGuest.Location = new System.Drawing.Point(0, 0);
             this.panelGuest.Name = "panelGuest";
             this.panelGuest.Size = new System.Drawing.Size(1003, 584);
             this.panelGuest.TabIndex = 0;
             // 
+            // lblPw
+            // 
+            this.lblPw.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPw.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblPw.Location = new System.Drawing.Point(685, 225);
+            this.lblPw.Name = "lblPw";
+            this.lblPw.Size = new System.Drawing.Size(289, 35);
+            this.lblPw.TabIndex = 459;
+            // 
+            // comboPID
+            // 
+            this.comboPID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboPID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboPID.FormattingEnabled = true;
+            this.comboPID.Location = new System.Drawing.Point(685, 114);
+            this.comboPID.Name = "comboPID";
+            this.comboPID.Size = new System.Drawing.Size(289, 39);
+            this.comboPID.TabIndex = 457;
+            this.comboPID.TextChanged += new System.EventHandler(this.comboPID_TextChanged);
+            this.comboPID.Enter += new System.EventHandler(this.comboFID_Enter);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.CalendarForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(685, 56);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(289, 38);
+            this.dateTimePicker1.TabIndex = 380;
+            // 
+            // btnNICUpload
+            // 
+            this.btnNICUpload.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNICUpload.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnNICUpload.Location = new System.Drawing.Point(685, 393);
+            this.btnNICUpload.Name = "btnNICUpload";
+            this.btnNICUpload.Size = new System.Drawing.Size(114, 39);
+            this.btnNICUpload.TabIndex = 379;
+            this.btnNICUpload.Text = "Upload";
+            this.btnNICUpload.UseVisualStyleBackColor = true;
+            // 
+            // btnPhotoUpload
+            // 
+            this.btnPhotoUpload.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhotoUpload.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnPhotoUpload.Location = new System.Drawing.Point(685, 316);
+            this.btnPhotoUpload.Name = "btnPhotoUpload";
+            this.btnPhotoUpload.Size = new System.Drawing.Size(114, 39);
+            this.btnPhotoUpload.TabIndex = 378;
+            this.btnPhotoUpload.Text = "Upload";
+            this.btnPhotoUpload.UseVisualStyleBackColor = true;
+            this.btnPhotoUpload.Click += new System.EventHandler(this.btnPhotoUpload_Click);
+            // 
             // mtbTP2
             // 
             this.mtbTP2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.mtbTP2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbTP2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbTP2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
             this.mtbTP2.Location = new System.Drawing.Point(343, 454);
             this.mtbTP2.Mask = "(\\000) 000-0000";
             this.mtbTP2.Name = "mtbTP2";
-            this.mtbTP2.Size = new System.Drawing.Size(136, 34);
+            this.mtbTP2.Size = new System.Drawing.Size(136, 41);
             this.mtbTP2.TabIndex = 6;
             this.mtbTP2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.mtbTP2_MouseClick_1);
             // 
             // mtbTP1
             // 
             this.mtbTP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.mtbTP1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbTP1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbTP1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
             this.mtbTP1.Location = new System.Drawing.Point(189, 454);
             this.mtbTP1.Mask = "(\\000) 000-0000";
             this.mtbTP1.Name = "mtbTP1";
-            this.mtbTP1.Size = new System.Drawing.Size(136, 34);
+            this.mtbTP1.Size = new System.Drawing.Size(136, 41);
             this.mtbTP1.TabIndex = 5;
             this.mtbTP1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.mtbTP1_MouseClick);
             // 
             // mtbNIC
             // 
             this.mtbNIC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.mtbNIC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbNIC.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbNIC.Location = new System.Drawing.Point(190, 65);
             this.mtbNIC.Mask = "000000000AAA";
             this.mtbNIC.Name = "mtbNIC";
-            this.mtbNIC.Size = new System.Drawing.Size(289, 30);
+            this.mtbNIC.Size = new System.Drawing.Size(289, 41);
             this.mtbNIC.TabIndex = 377;
             this.mtbNIC.MouseClick += new System.Windows.Forms.MouseEventHandler(this.mtbNIC_MouseClick);
+            this.mtbNIC.Leave += new System.EventHandler(this.mtbNIC_Leave);
             // 
             // rchtxtAddress
             // 
             this.rchtxtAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.rchtxtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rchtxtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rchtxtAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
             this.rchtxtAddress.Location = new System.Drawing.Point(189, 332);
             this.rchtxtAddress.Name = "rchtxtAddress";
@@ -144,79 +200,40 @@ namespace Hotel_Management_System
             this.rchtxtAddress.TabIndex = 4;
             this.rchtxtAddress.Text = "";
             // 
-            // iconButton1
+            // btnSave
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.iconButton1.FlatAppearance.BorderSize = 2;
-            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(689, 495);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(289, 60);
-            this.iconButton1.TabIndex = 375;
-            this.iconButton1.Text = "&Submit";
-            this.iconButton1.UseVisualStyleBackColor = false;
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.textBox6.Location = new System.Drawing.Point(685, 224);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(289, 30);
-            this.textBox6.TabIndex = 13;
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnSave.FlatAppearance.BorderSize = 2;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnSave.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnSave.IconColor = System.Drawing.Color.Black;
+            this.btnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSave.Location = new System.Drawing.Point(625, 501);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(289, 60);
+            this.btnSave.TabIndex = 375;
+            this.btnSave.Text = "&Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(525, 219);
+            this.label6.Location = new System.Drawing.Point(523, 214);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(154, 35);
+            this.label6.Size = new System.Drawing.Size(154, 59);
             this.label6.TabIndex = 275;
-            this.label6.Text = "Level";
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.textBox5.Location = new System.Drawing.Point(685, 172);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(289, 30);
-            this.textBox5.TabIndex = 12;
+            this.label6.Text = "Temporary Password";
             // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(525, 171);
+            this.label5.Location = new System.Drawing.Point(525, 176);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(154, 35);
             this.label5.TabIndex = 273;
-            this.label5.Text = "Type";
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.textBox4.Location = new System.Drawing.Point(685, 118);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(289, 30);
-            this.textBox4.TabIndex = 11;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.textBox1.Location = new System.Drawing.Point(685, 63);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(289, 30);
-            this.textBox1.TabIndex = 10;
+            this.label5.Text = "Staff ID";
             // 
             // label4
             // 
@@ -256,8 +273,7 @@ namespace Hotel_Management_System
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radioMale);
-            this.groupBox2.Controls.Add(this.radioFemale);
+            this.groupBox2.Controls.Add(this.lblGender);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.groupBox2.Location = new System.Drawing.Point(26, 214);
@@ -267,62 +283,47 @@ namespace Hotel_Management_System
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Gender";
             // 
-            // radioMale
+            // lblGender
             // 
-            this.radioMale.AutoSize = true;
-            this.radioMale.Checked = true;
-            this.radioMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioMale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.radioMale.Location = new System.Drawing.Point(187, 25);
-            this.radioMale.Name = "radioMale";
-            this.radioMale.Size = new System.Drawing.Size(72, 28);
-            this.radioMale.TabIndex = 206;
-            this.radioMale.TabStop = true;
-            this.radioMale.Text = "Male";
-            this.radioMale.UseVisualStyleBackColor = true;
-            // 
-            // radioFemale
-            // 
-            this.radioFemale.AutoSize = true;
-            this.radioFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioFemale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.radioFemale.Location = new System.Drawing.Point(322, 25);
-            this.radioFemale.Name = "radioFemale";
-            this.radioFemale.Size = new System.Drawing.Size(95, 28);
-            this.radioFemale.TabIndex = 207;
-            this.radioFemale.TabStop = true;
-            this.radioFemale.Text = "Female";
-            this.radioFemale.UseVisualStyleBackColor = true;
+            this.lblGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGender.Location = new System.Drawing.Point(211, 30);
+            this.lblGender.Name = "lblGender";
+            this.lblGender.Size = new System.Drawing.Size(143, 29);
+            this.lblGender.TabIndex = 461;
+            this.lblGender.Text = "Full Name";
             // 
             // mtbEmail
             // 
             this.mtbEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.mtbEmail.BeepOnError = true;
-            this.mtbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.mtbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbEmail.ForeColor = System.Drawing.Color.Gray;
             this.mtbEmail.Location = new System.Drawing.Point(187, 522);
             this.mtbEmail.Name = "mtbEmail";
-            this.mtbEmail.Size = new System.Drawing.Size(292, 30);
+            this.mtbEmail.Size = new System.Drawing.Size(292, 41);
             this.mtbEmail.TabIndex = 7;
+            this.mtbEmail.Text = "example@gmail.com";
+            this.mtbEmail.Enter += new System.EventHandler(this.mtbEmail_Enter);
+            this.mtbEmail.Leave += new System.EventHandler(this.mtbEmail_Leave);
             // 
-            // txtLName
+            // txtFullName
             // 
-            this.txtLName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtLName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.txtLName.Location = new System.Drawing.Point(189, 168);
-            this.txtLName.Name = "txtLName";
-            this.txtLName.Size = new System.Drawing.Size(289, 30);
-            this.txtLName.TabIndex = 2;
+            this.txtFullName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFullName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.txtFullName.Location = new System.Drawing.Point(189, 168);
+            this.txtFullName.Name = "txtFullName";
+            this.txtFullName.Size = new System.Drawing.Size(289, 41);
+            this.txtFullName.TabIndex = 2;
             // 
             // txtFName
             // 
             this.txtFName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtFName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
             this.txtFName.Location = new System.Drawing.Point(189, 120);
             this.txtFName.Name = "txtFName";
-            this.txtFName.Size = new System.Drawing.Size(289, 30);
+            this.txtFName.Size = new System.Drawing.Size(289, 41);
             this.txtFName.TabIndex = 1;
             // 
             // label7
@@ -368,7 +369,7 @@ namespace Hotel_Management_System
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(143, 29);
             this.label19.TabIndex = 252;
-            this.label19.Text = "Last Name";
+            this.label19.Text = "Full Name";
             // 
             // label39
             // 
@@ -379,28 +380,39 @@ namespace Hotel_Management_System
             this.label39.TabIndex = 251;
             this.label39.Text = "First Name";
             // 
-            // btnPhotoUpload
+            // icnId
             // 
-            this.btnPhotoUpload.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPhotoUpload.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnPhotoUpload.Location = new System.Drawing.Point(685, 316);
-            this.btnPhotoUpload.Name = "btnPhotoUpload";
-            this.btnPhotoUpload.Size = new System.Drawing.Size(114, 39);
-            this.btnPhotoUpload.TabIndex = 378;
-            this.btnPhotoUpload.Text = "Upload";
-            this.btnPhotoUpload.UseVisualStyleBackColor = true;
-            this.btnPhotoUpload.Click += new System.EventHandler(this.btnPhotoUpload_Click);
+            this.icnId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.icnId.FlatAppearance.BorderSize = 0;
+            this.icnId.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.icnId.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.icnId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.icnId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.icnId.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
+            this.icnId.IconColor = System.Drawing.Color.Maroon;
+            this.icnId.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icnId.IconSize = 40;
+            this.icnId.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.icnId.Location = new System.Drawing.Point(467, 58);
+            this.icnId.Name = "icnId";
+            this.icnId.Size = new System.Drawing.Size(43, 36);
+            this.icnId.TabIndex = 460;
+            this.icnId.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.icnId.UseVisualStyleBackColor = false;
+            this.icnId.Visible = false;
             // 
-            // btnNICUpload
+            // lblStaffID
             // 
-            this.btnNICUpload.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNICUpload.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnNICUpload.Location = new System.Drawing.Point(685, 393);
-            this.btnNICUpload.Name = "btnNICUpload";
-            this.btnNICUpload.Size = new System.Drawing.Size(114, 39);
-            this.btnNICUpload.TabIndex = 379;
-            this.btnNICUpload.Text = "Upload";
-            this.btnNICUpload.UseVisualStyleBackColor = true;
+            this.lblStaffID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.lblStaffID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lblStaffID.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStaffID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblStaffID.Location = new System.Drawing.Point(685, 175);
+            this.lblStaffID.Name = "lblStaffID";
+            this.lblStaffID.ReadOnly = true;
+            this.lblStaffID.Size = new System.Drawing.Size(289, 34);
+            this.lblStaffID.TabIndex = 461;
+            this.lblStaffID.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lblStaffID_MouseDoubleClick);
             // 
             // FormNewEmployeeAdmin
             // 
@@ -415,10 +427,10 @@ namespace Hotel_Management_System
             this.Name = "FormNewEmployeeAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "New Guest";
+            this.Load += new System.EventHandler(this.FormNewEmployeeAdmin_Load);
             this.panelGuest.ResumeLayout(false);
             this.panelGuest.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -426,10 +438,8 @@ namespace Hotel_Management_System
         #endregion
         private System.Windows.Forms.Panel panelGuest;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioMale;
-        private System.Windows.Forms.RadioButton radioFemale;
         private System.Windows.Forms.MaskedTextBox mtbEmail;
-        private System.Windows.Forms.TextBox txtLName;
+        private System.Windows.Forms.TextBox txtFullName;
         private System.Windows.Forms.TextBox txtFName;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblNIC;
@@ -437,22 +447,24 @@ namespace Hotel_Management_System
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnSave;
         private System.Windows.Forms.RichTextBox rchtxtAddress;
         private System.Windows.Forms.MaskedTextBox mtbNIC;
         private System.Windows.Forms.MaskedTextBox mtbTP2;
         private System.Windows.Forms.MaskedTextBox mtbTP1;
         private System.Windows.Forms.Button btnNICUpload;
         private System.Windows.Forms.Button btnPhotoUpload;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox comboPID;
+        private System.Windows.Forms.Label lblPw;
+        private FontAwesome.Sharp.IconButton icnId;
+        private System.Windows.Forms.Label lblGender;
+        private System.Windows.Forms.TextBox lblStaffID;
     }
 }

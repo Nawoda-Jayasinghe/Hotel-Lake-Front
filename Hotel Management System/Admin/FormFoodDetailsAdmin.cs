@@ -28,15 +28,6 @@ namespace Hotel_Management_System
             }
         }
 
-        private void txtSearchFoodCashier_Leave(object sender, EventArgs e)
-        {
-            if (txtSearchFoodCashier.Text == "")
-            {
-                txtSearchFoodCashier.Text = "Search";
-                txtSearchFoodCashier.ForeColor = Color.Gray;
-            }
-        }
-
         private MySqlConnection dbQuery()
         {
             DBConnection dBclass = new DBConnection();

@@ -79,17 +79,17 @@
     <Compile Include="Admin\FormEmployeeAdmin.Designer.cs">
       <DependentUpon>FormEmployeeAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\FormNewEmployeeAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\FormNewEmployeeAdmin.Designer.cs">
-      <DependentUpon>FormNewEmployeeAdmin.cs</DependentUpon>
-    </Compile>
     <Compile Include="Admin\FormSalaryDetailsAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin\FormSalaryDetailsAdmin.Designer.cs">
       <DependentUpon>FormSalaryDetailsAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FormNewEmployeeAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FormNewEmployeeAdmin.Designer.cs">
+      <DependentUpon>FormNewEmployeeAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\FormFacilityPricesAdmin.cs">
       <SubType>Form</SubType>
@@ -274,11 +274,11 @@
     <EmbeddedResource Include="Admin\FormEmployeeAdmin.resx">
       <DependentUpon>FormEmployeeAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\FormNewEmployeeAdmin.resx">
-      <DependentUpon>FormNewEmployeeAdmin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Admin\FormSalaryDetailsAdmin.resx">
       <DependentUpon>FormSalaryDetailsAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FormNewEmployeeAdmin.resx">
+      <DependentUpon>FormNewEmployeeAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\FormFacilityPricesAdmin.resx">
       <DependentUpon>FormFacilityPricesAdmin.cs</DependentUpon>
