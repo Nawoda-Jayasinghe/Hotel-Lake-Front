@@ -98,7 +98,6 @@ namespace Hotel_Management_System
 
             try
             {             
-                //string sql = "select FoodID as 'Food ID', FoodName as 'Name', FoodPrice as 'Price' from food where FoodName like '%"+ txtSearchFoodCashier.Text + "%' ";
                 string sql = "CALL getSelectedFoodbyName('%" + txtSearchFoodCashier.Text+"%')";
                 DataAdapter(sql, dbQuery());
             }

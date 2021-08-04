@@ -59,6 +59,7 @@ namespace Hotel_Management_System
             {
                 comboID.Items.Add(dataReader.GetString("IDNumber"));
             }
+            conn.Close();
         }
 
         private string DataReader1(string sql, MySqlConnection conn)
@@ -68,8 +69,9 @@ namespace Hotel_Management_System
             MySqlDataReader dataReader = command.ExecuteReader();
             while (dataReader.Read())
             {
-                output += dataReader.GetValue(0).ToString();//+" - "+ dataReader.GetValue(1).ToString() + " - " + dataReader.GetValue(2).ToString()+" - " + dataReader.GetValue(3).ToString() + " - " + dataReader.GetValue(4).ToString() + " - " + dataReader.GetValue(5).ToString() + " - " + dataReader.GetValue(6).ToString();
+                output += dataReader.GetValue(0).ToString();
             }
+            conn.Close();
             return output;
         }
 
@@ -183,11 +185,13 @@ namespace Hotel_Management_System
             string ID = txtID.Text;
         }
 
-        private void cbForeign_CheckedChanged(object sender, EventArgs e)
+
+        private void cbForeign_Enter(object sender, EventArgs e)
         {
             btnReset.Visible = true;
             btnUpdate.Visible = true;
         }
+
 
         private void txtFName_Enter(object sender, EventArgs e)
         {
@@ -274,6 +278,7 @@ namespace Hotel_Management_System
             }
             
         }
-  
+
+        
     }
 }

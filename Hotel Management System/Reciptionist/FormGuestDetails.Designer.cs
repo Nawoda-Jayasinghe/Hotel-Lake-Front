@@ -29,11 +29,12 @@ namespace Hotel_Management_System
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelGuestDetails = new System.Windows.Forms.Panel();
+            this.lblForeign = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.comboID = new System.Windows.Forms.ComboBox();
@@ -80,9 +81,7 @@ namespace Hotel_Management_System
             this.label39 = new System.Windows.Forms.Label();
             this.tblGuestDetails = new System.Windows.Forms.DataGridView();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lblForeign = new System.Windows.Forms.Label();
             this.panelGuestDetails.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblGuestDetails)).BeginInit();
@@ -127,12 +126,20 @@ namespace Hotel_Management_System
             this.panelGuestDetails.Controls.Add(this.label39);
             this.panelGuestDetails.Controls.Add(this.tblGuestDetails);
             this.panelGuestDetails.Controls.Add(this.dateTimePicker1);
-            this.panelGuestDetails.Controls.Add(this.iconButton1);
             this.panelGuestDetails.Controls.Add(this.panel3);
             this.panelGuestDetails.Location = new System.Drawing.Point(0, 0);
             this.panelGuestDetails.Name = "panelGuestDetails";
             this.panelGuestDetails.Size = new System.Drawing.Size(1006, 582);
             this.panelGuestDetails.TabIndex = 0;
+            // 
+            // lblForeign
+            // 
+            this.lblForeign.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblForeign.Location = new System.Drawing.Point(731, 160);
+            this.lblForeign.Name = "lblForeign";
+            this.lblForeign.Size = new System.Drawing.Size(59, 26);
+            this.lblForeign.TabIndex = 360;
+            this.lblForeign.Text = "Foreign";
             // 
             // label35
             // 
@@ -152,7 +159,7 @@ namespace Hotel_Management_System
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(185, 19);
             this.label34.TabIndex = 334;
-            this.label34.Text = "NIC or Passport No";
+            this.label34.Text = "Select NIC or Passport No";
             // 
             // comboID
             // 
@@ -161,7 +168,7 @@ namespace Hotel_Management_System
             this.comboID.FormattingEnabled = true;
             this.comboID.Location = new System.Drawing.Point(13, 33);
             this.comboID.Name = "comboID";
-            this.comboID.Size = new System.Drawing.Size(282, 39);
+            this.comboID.Size = new System.Drawing.Size(339, 39);
             this.comboID.TabIndex = 1;
             this.comboID.TextChanged += new System.EventHandler(this.comboID_TextChanged);
             // 
@@ -557,43 +564,43 @@ namespace Hotel_Management_System
             this.tblGuestDetails.AllowUserToDeleteRows = false;
             this.tblGuestDetails.AllowUserToResizeColumns = false;
             this.tblGuestDetails.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.tblGuestDetails.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.tblGuestDetails.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.tblGuestDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tblGuestDetails.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.tblGuestDetails.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(220)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tblGuestDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(220)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblGuestDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.tblGuestDetails.ColumnHeadersHeight = 60;
             this.tblGuestDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tblGuestDetails.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tblGuestDetails.DefaultCellStyle = dataGridViewCellStyle7;
             this.tblGuestDetails.Location = new System.Drawing.Point(13, 176);
             this.tblGuestDetails.Name = "tblGuestDetails";
             this.tblGuestDetails.ReadOnly = true;
             this.tblGuestDetails.RowHeadersVisible = false;
             this.tblGuestDetails.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Azure;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.tblGuestDetails.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Azure;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            this.tblGuestDetails.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.tblGuestDetails.RowTemplate.Height = 35;
             this.tblGuestDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tblGuestDetails.Size = new System.Drawing.Size(373, 388);
@@ -612,20 +619,6 @@ namespace Hotel_Management_System
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             this.dateTimePicker1.Enter += new System.EventHandler(this.dateTimePicker1_Enter);
             // 
-            // iconButton1
-            // 
-            this.iconButton1.Enabled = false;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconButton1.IconSize = 25;
-            this.iconButton1.Location = new System.Drawing.Point(322, 31);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(30, 27);
-            this.iconButton1.TabIndex = 299;
-            this.iconButton1.UseVisualStyleBackColor = true;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.DarkGoldenrod;
@@ -633,15 +626,6 @@ namespace Hotel_Management_System
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1, 597);
             this.panel3.TabIndex = 297;
-            // 
-            // lblForeign
-            // 
-            this.lblForeign.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblForeign.Location = new System.Drawing.Point(731, 160);
-            this.lblForeign.Name = "lblForeign";
-            this.lblForeign.Size = new System.Drawing.Size(59, 26);
-            this.lblForeign.TabIndex = 360;
-            this.lblForeign.Text = "Foreign";
             // 
             // FormGuestDetails
             // 
@@ -702,7 +686,6 @@ namespace Hotel_Management_System
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.DataGridView tblGuestDetails;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.ComboBox comboID;
