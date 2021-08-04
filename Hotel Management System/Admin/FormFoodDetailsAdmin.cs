@@ -314,18 +314,26 @@ namespace Hotel_Management_System
 
         private void tblFoodDetails_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //btnUpdate.Visible = false;
-            btnReset.Visible = false;
-            btnUpdate.Visible = false;
+            try 
+            {
+                btnUpdate.Visible = false;
+                btnReset.Visible = false;
+                btnUpdate.Visible = false;
 
-            string FID = tblFoodDetails.Rows[e.RowIndex].Cells[0].Value.ToString();
+                string FID = tblFoodDetails.Rows[e.RowIndex].Cells[0].Value.ToString();
 
-            txtFID.Text = FID;
-            txtFname.Text = DataReader1("SELECT FoodName FROM food WHERE FoodID = (" + FID + ")", dbQuery());
-            txtFprice.Text = DataReader1("SELECT FoodPrice FROM food WHERE FoodID = (" + FID + ")", dbQuery());
-            txtFprice.Text = DataReader1("SELECT FoodPrice FROM food WHERE FoodID = (" + FID + ")", dbQuery());
-            comboFID.Items.Clear();
-            DataReader2("SELECT food_category.FoodCategoryName FROM food_category INNER JOIN food ON food.FoodcategoryID = food_category.FoodcategoryID WHERE food.FoodID = (" + FID + ")", dbQuery());
+                txtFID.Text = FID;
+                txtFname.Text = DataReader1("SELECT FoodName FROM food WHERE FoodID = (" + FID + ")", dbQuery());
+                txtFprice.Text = DataReader1("SELECT FoodPrice FROM food WHERE FoodID = (" + FID + ")", dbQuery());
+                txtFprice.Text = DataReader1("SELECT FoodPrice FROM food WHERE FoodID = (" + FID + ")", dbQuery());
+                comboFID.Items.Clear();
+                DataReader2("SELECT food_category.FoodCategoryName FROM food_category INNER JOIN food ON food.FoodcategoryID = food_category.FoodcategoryID WHERE food.FoodID = (" + FID + ")", dbQuery());
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void txtFID_Enter(object sender, EventArgs e)
@@ -350,12 +358,91 @@ namespace Hotel_Management_System
         {
             btnReset.Visible = true;
             btnUpdate.Visible = true;
+            comboFID.Items.Clear();
             DataReader("SELECT FoodCategoryName FROM food_category", dbQuery());
         }
 
         private void btnReset_Click(object sender, EventArgs e)
         {
             tblFoodDetails_CellClick(this.tblFoodDetails, new DataGridViewCellEventArgs(this.tblFoodDetails.CurrentCell.ColumnIndex, this.tblFoodDetails.CurrentRow.Index));
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            string FoodCat="";
+
+            if (comboFID.Text == "Breakfast")
+            {
+                FoodCat = "1";
+                MessageBox.Show(FoodCat);
+            }
+
+            else if (comboFID.Text == "Breakfast and Lunch")
+            {
+                FoodCat = "12";
+                MessageBox.Show(FoodCat);
+            }
+
+            else if (comboFID.Text == "Anytime")
+            {
+                FoodCat = "123";
+                MessageBox.Show(FoodCat);
+            }
+
+            else if (comboFID.Text == "Breakfast and Dinner")
+            {
+                FoodCat = "13";
+                MessageBox.Show(FoodCat);
+            }
+
+            else if (comboFID.Text == "Lunch and Dinner")
+            {
+                FoodCat = "23";
+                MessageBox.Show(FoodCat);
+            }
+
+            else if (comboFID.Text == "Dinner")
+            {
+                FoodCat = "3";
+                MessageBox.Show(FoodCat);
+            }
+
+            else if (comboFID.Text == "Beverage")
+            {
+                FoodCat = "4";
+                MessageBox.Show(FoodCat);
+            }
+
+            else if (comboFID.Text == "Desserts")
+            {
+                FoodCat = "5";
+                MessageBox.Show(FoodCat);
+            }
+
+            else if (comboFID.Text == "Snaks")
+            {
+                FoodCat = "6";
+                MessageBox.Show(FoodCat);
+            }
+
+
+
+            try
+            {
+                DialogResult reslult = MessageBox.Show("Do you want to save changes?", "Confirm changes", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (reslult == DialogResult.Yes)
+                {
+                    //string sql = "CALL updateFood('"+ txtFname.Text + "','" + txtFprice.Text + "','" + FoodCat + "')";
+                   // DataAdder(sql, dbQuery());
+                    MessageBox.Show("Successfully Updated ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message);
+            }
         }
     }
 }
