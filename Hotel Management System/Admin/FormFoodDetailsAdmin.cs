@@ -86,6 +86,7 @@ namespace Hotel_Management_System
             while (dataReader.Read())
             {
                 comboFID.Items.Add(dataReader.GetString("FoodCategoryName"));
+                comboFID2.Items.Add(dataReader.GetString("FoodCategoryName"));
             }
         }
 
@@ -320,11 +321,14 @@ namespace Hotel_Management_System
                 btnReset.Visible = false;
                 btnUpdate.Visible = false;
 
+                txtFnameNew.Text = "";
+                txtFpriceNew.Text = "";
+                comboFID2.Items.Clear();
+
                 string FID = tblFoodDetails.Rows[e.RowIndex].Cells[0].Value.ToString();
 
-                txtFID.Text = FID;
+                lblFID.Text = FID;
                 txtFname.Text = DataReader1("SELECT FoodName FROM food WHERE FoodID = (" + FID + ")", dbQuery());
-                txtFprice.Text = DataReader1("SELECT FoodPrice FROM food WHERE FoodID = (" + FID + ")", dbQuery());
                 txtFprice.Text = DataReader1("SELECT FoodPrice FROM food WHERE FoodID = (" + FID + ")", dbQuery());
                 comboFID.Items.Clear();
                 DataReader2("SELECT food_category.FoodCategoryName FROM food_category INNER JOIN food ON food.FoodcategoryID = food_category.FoodcategoryID WHERE food.FoodID = (" + FID + ")", dbQuery());
@@ -336,31 +340,93 @@ namespace Hotel_Management_System
             }
         }
 
-        private void txtFID_Enter(object sender, EventArgs e)
-        {
-            btnReset.Visible = true;
-            btnUpdate.Visible = true;
-        }
-
         private void txtFname_Enter(object sender, EventArgs e)
         {
+            txtFnameNew.Text = "";
+            txtFpriceNew.Text = "";
+            comboFID2.Items.Clear();
             btnReset.Visible = true;
             btnUpdate.Visible = true;
         }
 
         private void txtFprice_Enter(object sender, EventArgs e)
         {
+            txtFnameNew.Text = "";
+            txtFpriceNew.Text = "";
+            comboFID2.Items.Clear();
             btnReset.Visible = true;
             btnUpdate.Visible = true;
         }
 
         private void comboFID_Enter(object sender, EventArgs e)
         {
+            txtFnameNew.Text = "";
+            txtFpriceNew.Text = "";
+            comboFID2.Items.Clear();
             btnReset.Visible = true;
             btnUpdate.Visible = true;
             comboFID.Items.Clear();
             DataReader("SELECT FoodCategoryName FROM food_category", dbQuery());
         }
+
+
+        private string FoodCatSelection(string food)
+        {
+            string FoodCat = "";
+
+            if (food == "Breakfast")
+            {
+                FoodCat = "1";
+            }
+
+            if (food == "Lunch")
+            {
+                FoodCat = "2";
+            }
+
+            else if (food == "Breakfast and Lunch")
+            {
+                FoodCat = "12";
+            }
+
+            else if (food == "Anytime")
+            {
+                FoodCat = "123";
+            }
+
+            else if (food == "Breakfast and Dinner")
+            {
+                FoodCat = "13";
+            }
+
+            else if (food == "Lunch and Dinner")
+            {
+                FoodCat = "23";
+            }
+
+            else if (food == "Dinner")
+            {
+                FoodCat = "3";
+            }
+
+            else if (food == "Beverage")
+            {
+                FoodCat = "4";
+            }
+
+            else if (food == "Desserts")
+            {
+                FoodCat = "5";
+            }
+
+            else if (food == "Snaks")
+            {
+                FoodCat = "6";
+            }
+
+            return FoodCat;
+        }
+
 
         private void btnReset_Click(object sender, EventArgs e)
         {
@@ -369,80 +435,89 @@ namespace Hotel_Management_System
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string FoodCat="";
-
-            if (comboFID.Text == "Breakfast")
+            if(lblFID.Text == "" || txtFname.Text=="" || txtFprice.Text == "")
             {
-                FoodCat = "1";
-                MessageBox.Show(FoodCat);
+                MessageBox.Show("Fill all the fields before update ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            else if (comboFID.Text == "Breakfast and Lunch")
+           
+            
+            else
             {
-                FoodCat = "12";
-                MessageBox.Show(FoodCat);
-            }
+                int fid = int.Parse(lblFID.Text);
+                string FoodCat = FoodCatSelection(comboFID.Text);
 
-            else if (comboFID.Text == "Anytime")
-            {
-                FoodCat = "123";
-                MessageBox.Show(FoodCat);
-            }
-
-            else if (comboFID.Text == "Breakfast and Dinner")
-            {
-                FoodCat = "13";
-                MessageBox.Show(FoodCat);
-            }
-
-            else if (comboFID.Text == "Lunch and Dinner")
-            {
-                FoodCat = "23";
-                MessageBox.Show(FoodCat);
-            }
-
-            else if (comboFID.Text == "Dinner")
-            {
-                FoodCat = "3";
-                MessageBox.Show(FoodCat);
-            }
-
-            else if (comboFID.Text == "Beverage")
-            {
-                FoodCat = "4";
-                MessageBox.Show(FoodCat);
-            }
-
-            else if (comboFID.Text == "Desserts")
-            {
-                FoodCat = "5";
-                MessageBox.Show(FoodCat);
-            }
-
-            else if (comboFID.Text == "Snaks")
-            {
-                FoodCat = "6";
-                MessageBox.Show(FoodCat);
-            }
-
-
-
-            try
-            {
-                DialogResult reslult = MessageBox.Show("Do you want to save changes?", "Confirm changes", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (reslult == DialogResult.Yes)
+                try
                 {
-                    //string sql = "CALL updateFood('"+ txtFname.Text + "','" + txtFprice.Text + "','" + FoodCat + "')";
-                   // DataAdder(sql, dbQuery());
-                    MessageBox.Show("Successfully Updated ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DialogResult reslult = MessageBox.Show("Do you want to save changes?", "Confirm changes", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (reslult == DialogResult.Yes)
+                    {
+                        string sql = "CALL updateFood('" + txtFname.Text + "','" + txtFprice.Text + "','" + FoodCat + "','" + fid + "')";
+                        DataAdder(sql, dbQuery());
+                        MessageBox.Show("Successfully Updated ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                }
+                catch (Exception ex)
+                {
+
                 }
 
             }
-            catch (Exception ex)
+           
+        }
+
+        private void comboFID2_Enter(object sender, EventArgs e)
+        {
+            comboFID2.Items.Clear();
+            DataReader("SELECT FoodCategoryName FROM food_category", dbQuery());
+            lblFID.Text = "";
+            txtFname.Text = "";
+            txtFprice.Text = "";
+            comboFID.Items.Clear();
+        }
+
+        private void txtFnameNew_Enter(object sender, EventArgs e)
+        {
+            comboFID2.Items.Clear();
+            lblFID.Text = "";
+            txtFname.Text = "";
+            txtFprice.Text = "";
+            comboFID.Items.Clear();
+
+        }
+
+        private void txtFpriceNew_Enter(object sender, EventArgs e)
+        {
+            comboFID2.Items.Clear();
+            lblFID.Text = "";
+            txtFname.Text = "";
+            txtFprice.Text = "";
+            comboFID.Items.Clear();
+        }
+
+        private void btnAddnewFood_Click(object sender, EventArgs e)
+        {
+            string FoodCat = FoodCatSelection(comboFID2.Text);
+
+            if (txtFnameNew.Text == "" || txtFpriceNew.Text == "" || comboFID2.Text == "")
             {
-                //MessageBox.Show(ex.Message);
+                MessageBox.Show("Fill all the fields ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            else
+            {
+                DialogResult reslult = MessageBox.Show("Do you want to add this item?", "Confirm ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (reslult == DialogResult.Yes)
+                {
+                    string sql = "CALL addNewFood('" + txtFnameNew.Text + "','" + txtFpriceNew.Text + "','" + FoodCat + "')";
+                    DataAdder(sql, dbQuery());
+                    MessageBox.Show("Successfully Updated ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+
+            
         }
     }
 }
