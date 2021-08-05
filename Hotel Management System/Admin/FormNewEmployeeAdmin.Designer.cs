@@ -30,6 +30,7 @@ namespace Hotel_Management_System
         private void InitializeComponent()
         {
             this.panelGuest = new System.Windows.Forms.Panel();
+            this.lblStaffID = new System.Windows.Forms.TextBox();
             this.lblPw = new System.Windows.Forms.Label();
             this.comboPID = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -58,13 +59,14 @@ namespace Hotel_Management_System
             this.label19 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.icnId = new FontAwesome.Sharp.IconButton();
-            this.lblStaffID = new System.Windows.Forms.TextBox();
+            this.btnBcak = new FontAwesome.Sharp.IconButton();
             this.panelGuest.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelGuest
             // 
+            this.panelGuest.Controls.Add(this.btnBcak);
             this.panelGuest.Controls.Add(this.lblStaffID);
             this.panelGuest.Controls.Add(this.lblPw);
             this.panelGuest.Controls.Add(this.comboPID);
@@ -98,6 +100,19 @@ namespace Hotel_Management_System
             this.panelGuest.Name = "panelGuest";
             this.panelGuest.Size = new System.Drawing.Size(1003, 584);
             this.panelGuest.TabIndex = 0;
+            // 
+            // lblStaffID
+            // 
+            this.lblStaffID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.lblStaffID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lblStaffID.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStaffID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblStaffID.Location = new System.Drawing.Point(685, 175);
+            this.lblStaffID.Name = "lblStaffID";
+            this.lblStaffID.ReadOnly = true;
+            this.lblStaffID.Size = new System.Drawing.Size(289, 34);
+            this.lblStaffID.TabIndex = 461;
+            this.lblStaffID.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lblStaffID_MouseDoubleClick);
             // 
             // lblPw
             // 
@@ -209,9 +224,9 @@ namespace Hotel_Management_System
             this.btnSave.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnSave.IconColor = System.Drawing.Color.Black;
             this.btnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSave.Location = new System.Drawing.Point(625, 501);
+            this.btnSave.Location = new System.Drawing.Point(815, 501);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(289, 60);
+            this.btnSave.Size = new System.Drawing.Size(159, 60);
             this.btnSave.TabIndex = 375;
             this.btnSave.Text = "&Save";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -401,18 +416,22 @@ namespace Hotel_Management_System
             this.icnId.UseVisualStyleBackColor = false;
             this.icnId.Visible = false;
             // 
-            // lblStaffID
+            // btnBcak
             // 
-            this.lblStaffID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.lblStaffID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblStaffID.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStaffID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.lblStaffID.Location = new System.Drawing.Point(685, 175);
-            this.lblStaffID.Name = "lblStaffID";
-            this.lblStaffID.ReadOnly = true;
-            this.lblStaffID.Size = new System.Drawing.Size(289, 34);
-            this.lblStaffID.TabIndex = 461;
-            this.lblStaffID.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lblStaffID_MouseDoubleClick);
+            this.btnBcak.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnBcak.FlatAppearance.BorderSize = 2;
+            this.btnBcak.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBcak.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnBcak.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnBcak.IconColor = System.Drawing.Color.Black;
+            this.btnBcak.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBcak.Location = new System.Drawing.Point(640, 501);
+            this.btnBcak.Name = "btnBcak";
+            this.btnBcak.Size = new System.Drawing.Size(159, 60);
+            this.btnBcak.TabIndex = 462;
+            this.btnBcak.Text = "&Back";
+            this.btnBcak.UseVisualStyleBackColor = false;
+            this.btnBcak.Click += new System.EventHandler(this.btnBcak_Click);
             // 
             // FormNewEmployeeAdmin
             // 
@@ -466,5 +485,6 @@ namespace Hotel_Management_System
         private FontAwesome.Sharp.IconButton icnId;
         private System.Windows.Forms.Label lblGender;
         private System.Windows.Forms.TextBox lblStaffID;
+        private FontAwesome.Sharp.IconButton btnBcak;
     }
 }

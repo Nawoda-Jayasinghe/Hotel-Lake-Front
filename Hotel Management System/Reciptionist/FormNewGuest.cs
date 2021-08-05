@@ -83,9 +83,10 @@ namespace Hotel_Management_System
 
         private void mtbNIC_MouseClick(object sender, MouseEventArgs e)
         {
-            //if (cbForeign.Checked == false)
+            if (cbForeign.Checked == false)
             {
-               // mtbNIC.SelectionStart = 0;
+                mtbNIC.SelectionStart = mtbNIC.Text.Length;
+                // mtbNIC.SelectionStart = 0;
             }
         }
 

@@ -14,7 +14,6 @@ namespace Hotel_Management_System
     public partial class FormNewEmployeeAdmin : Form
     {
 
-        Form currentForm;
 
         public FormNewEmployeeAdmin()
         {
@@ -76,7 +75,7 @@ namespace Hotel_Management_System
             return conn;
         }
 
-        //data adapter
+        //data adder
         private void DataAdder(string sql, MySqlConnection conn)
         {
             MySqlDataAdapter adapter = new MySqlDataAdapter();
@@ -320,6 +319,24 @@ namespace Hotel_Management_System
         private void lblStaffID_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             lblStaffID.ReadOnly = false;
+        }
+
+        private void btnBcak_Click(object sender, EventArgs e)
+        {
+            if (mtbNIC.Text != "" || txtFName.Text != "" || txtFullName.Text != "" || rchtxtAddress.Text != "" || mtbTP1.Text != "(0  )    -")
+            {
+
+                DialogResult reslult = MessageBox.Show("Changes are not saved. Do you really want to close this form ?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                if (reslult == DialogResult.Yes)
+                {
+                    this.Close();
+                }
+
+            }
+            else
+            {
+                this.Close();
+            }
         }
     }
 }

@@ -67,6 +67,8 @@ namespace Hotel_Management_System
                 string sql = "CALL getAllFood";
                 DataAdapter(sql, dbQuery());
 
+                tblFoodDetails.EnableHeadersVisualStyles = false;
+                tblFoodDetails.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 255, 220);
                 tblFoodDetails.Columns[0].Width = 250;
                 tblFoodDetails.Columns[2].Width = 250;
             }
@@ -114,7 +116,6 @@ namespace Hotel_Management_System
 
                 try
                 {
-                    //string sql = "select FoodID as 'Food ID', FoodName as 'Name', FoodPrice as 'Price' from food where FoodCategoryID = '123'";
                     string sql = "CALL getSelectedFood('123')";
                     DataAdapter(sql, dbQuery());
 
