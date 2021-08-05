@@ -49,6 +49,7 @@ namespace Hotel_Management_System
             this.lblCrntPw = new System.Windows.Forms.Label();
             this.lblNewPw = new System.Windows.Forms.Label();
             this.lblConfrimPw = new System.Windows.Forms.Label();
+            this.btnUpdate = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +64,7 @@ namespace Hotel_Management_System
             this.btnLogin.Location = new System.Drawing.Point(54, 500);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(370, 52);
-            this.btnLogin.TabIndex = 1;
+            this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Log In";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.iconButton2_Click);
@@ -113,7 +114,7 @@ namespace Hotel_Management_System
             this.lnklblChangePw.Location = new System.Drawing.Point(279, 573);
             this.lnklblChangePw.Name = "lnklblChangePw";
             this.lnklblChangePw.Size = new System.Drawing.Size(122, 17);
-            this.lnklblChangePw.TabIndex = 13;
+            this.lnklblChangePw.TabIndex = 8;
             this.lnklblChangePw.TabStop = true;
             this.lnklblChangePw.Text = "Change Password";
             this.lnklblChangePw.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -128,7 +129,7 @@ namespace Hotel_Management_System
             this.txtUserNameLogin.Location = new System.Drawing.Point(114, 299);
             this.txtUserNameLogin.Name = "txtUserNameLogin";
             this.txtUserNameLogin.Size = new System.Drawing.Size(289, 23);
-            this.txtUserNameLogin.TabIndex = 2;
+            this.txtUserNameLogin.TabIndex = 1;
             this.txtUserNameLogin.TextChanged += new System.EventHandler(this.txtUserNameLogin_TextChanged);
             // 
             // txtPwLogin
@@ -141,7 +142,7 @@ namespace Hotel_Management_System
             this.txtPwLogin.Name = "txtPwLogin";
             this.txtPwLogin.PasswordChar = '*';
             this.txtPwLogin.Size = new System.Drawing.Size(289, 42);
-            this.txtPwLogin.TabIndex = 3;
+            this.txtPwLogin.TabIndex = 2;
             // 
             // panel1
             // 
@@ -172,7 +173,7 @@ namespace Hotel_Management_System
             this.icnUser.Location = new System.Drawing.Point(47, 291);
             this.icnUser.Name = "icnUser";
             this.icnUser.Size = new System.Drawing.Size(57, 52);
-            this.icnUser.TabIndex = 6;
+            this.icnUser.TabIndex = 60;
             this.icnUser.UseVisualStyleBackColor = false;
             // 
             // icnKey
@@ -187,7 +188,7 @@ namespace Hotel_Management_System
             this.icnKey.Location = new System.Drawing.Point(43, 347);
             this.icnKey.Name = "icnKey";
             this.icnKey.Size = new System.Drawing.Size(57, 52);
-            this.icnKey.TabIndex = 7;
+            this.icnKey.TabIndex = 70;
             this.icnKey.UseVisualStyleBackColor = false;
             // 
             // lnklblClearFields
@@ -198,7 +199,7 @@ namespace Hotel_Management_System
             this.lnklblClearFields.Location = new System.Drawing.Point(321, 399);
             this.lnklblClearFields.Name = "lnklblClearFields";
             this.lnklblClearFields.Size = new System.Drawing.Size(82, 17);
-            this.lnklblClearFields.TabIndex = 12;
+            this.lnklblClearFields.TabIndex = 7;
             this.lnklblClearFields.TabStop = true;
             this.lnklblClearFields.Text = "Clear Fields";
             this.lnklblClearFields.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklblClearFields_LinkClicked);
@@ -213,7 +214,7 @@ namespace Hotel_Management_System
             this.txtNewPwLogin.Name = "txtNewPwLogin";
             this.txtNewPwLogin.PasswordChar = '*';
             this.txtNewPwLogin.Size = new System.Drawing.Size(289, 42);
-            this.txtNewPwLogin.TabIndex = 14;
+            this.txtNewPwLogin.TabIndex = 3;
             this.txtNewPwLogin.Visible = false;
             // 
             // panel3
@@ -244,18 +245,18 @@ namespace Hotel_Management_System
             this.txtConfirmPwLogin.Name = "txtConfirmPwLogin";
             this.txtConfirmPwLogin.PasswordChar = '*';
             this.txtConfirmPwLogin.Size = new System.Drawing.Size(289, 42);
-            this.txtConfirmPwLogin.TabIndex = 17;
+            this.txtConfirmPwLogin.TabIndex = 4;
             this.txtConfirmPwLogin.Visible = false;
             // 
             // lblUserName
             // 
             this.lblUserName.AutoSize = true;
             this.lblUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblUserName.Location = new System.Drawing.Point(12, 306);
+            this.lblUserName.Location = new System.Drawing.Point(12, 313);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(79, 17);
+            this.lblUserName.Size = new System.Drawing.Size(55, 17);
             this.lblUserName.TabIndex = 18;
-            this.lblUserName.Text = "User Name";
+            this.lblUserName.Text = "Sraff ID";
             this.lblUserName.Visible = false;
             // 
             // lblCrntPw
@@ -273,7 +274,7 @@ namespace Hotel_Management_System
             // 
             this.lblNewPw.AutoSize = true;
             this.lblNewPw.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblNewPw.Location = new System.Drawing.Point(12, 414);
+            this.lblNewPw.Location = new System.Drawing.Point(12, 418);
             this.lblNewPw.Name = "lblNewPw";
             this.lblNewPw.Size = new System.Drawing.Size(69, 34);
             this.lblNewPw.TabIndex = 20;
@@ -284,12 +285,28 @@ namespace Hotel_Management_System
             // 
             this.lblConfrimPw.AutoSize = true;
             this.lblConfrimPw.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblConfrimPw.Location = new System.Drawing.Point(12, 476);
+            this.lblConfrimPw.Location = new System.Drawing.Point(12, 474);
             this.lblConfrimPw.Name = "lblConfrimPw";
             this.lblConfrimPw.Size = new System.Drawing.Size(69, 34);
             this.lblConfrimPw.TabIndex = 21;
             this.lblConfrimPw.Text = "Confirm \r\nPassword";
             this.lblConfrimPw.Visible = false;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnUpdate.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnUpdate.IconColor = System.Drawing.Color.Black;
+            this.btnUpdate.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUpdate.Location = new System.Drawing.Point(54, 555);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(370, 52);
+            this.btnUpdate.TabIndex = 6;
+            this.btnUpdate.Text = "Update Password";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // MainLogin
             // 
@@ -305,7 +322,6 @@ namespace Hotel_Management_System
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.txtNewPwLogin);
-            this.Controls.Add(this.lnklblChangePw);
             this.Controls.Add(this.lnklblClearFields);
             this.Controls.Add(this.LoginClose);
             this.Controls.Add(this.label1);
@@ -317,10 +333,13 @@ namespace Hotel_Management_System
             this.Controls.Add(this.txtPwLogin);
             this.Controls.Add(this.txtUserNameLogin);
             this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.lnklblChangePw);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainLogin";
+            this.Load += new System.EventHandler(this.MainLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -349,5 +368,6 @@ namespace Hotel_Management_System
         private System.Windows.Forms.Label lblCrntPw;
         private System.Windows.Forms.Label lblNewPw;
         private System.Windows.Forms.Label lblConfrimPw;
+        private FontAwesome.Sharp.IconButton btnUpdate;
     }
 }
