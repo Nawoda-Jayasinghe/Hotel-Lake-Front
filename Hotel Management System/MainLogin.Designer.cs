@@ -124,11 +124,11 @@ namespace Hotel_Management_System
             // 
             this.txtUserNameLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.txtUserNameLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUserNameLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserNameLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserNameLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtUserNameLogin.Location = new System.Drawing.Point(114, 299);
+            this.txtUserNameLogin.Location = new System.Drawing.Point(114, 295);
             this.txtUserNameLogin.Name = "txtUserNameLogin";
-            this.txtUserNameLogin.Size = new System.Drawing.Size(289, 23);
+            this.txtUserNameLogin.Size = new System.Drawing.Size(289, 38);
             this.txtUserNameLogin.TabIndex = 1;
             this.txtUserNameLogin.TextChanged += new System.EventHandler(this.txtUserNameLogin_TextChanged);
             // 
