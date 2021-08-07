@@ -60,14 +60,6 @@ namespace Hotel_Management_System
             conn.Close();
         }
 
-        //data adder
-        private void DataAdder(string sql, MySqlConnection conn)
-        {
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
-            adapter.InsertCommand = new MySqlCommand(sql, conn);
-            adapter.InsertCommand.ExecuteNonQuery();
-            conn.Close();
-        }
 
         //data reader
         private string DataReader(string sql, MySqlConnection conn)
@@ -97,6 +89,12 @@ namespace Hotel_Management_System
 
         private void FormPayments_Load(object sender, EventArgs e)
         {
+            lblFtotal.Text = "0";
+            lblStotal.Text = "0";
+            lblPaid.Text = "0";
+            lblRtotal.Text = "0";
+            lblTobePaid.Text = "0";
+            lblTotal.Text = "0";
             dateTimePicker1.Font = new Font("Microsoft Sans Serif", 15);
             dateTimePicker2.Font = new Font("Microsoft Sans Serif", 15);
             dateTimePicker1.CustomFormat = "ddd dd MMM yyyy";
@@ -144,7 +142,8 @@ namespace Hotel_Management_System
                 string sql = "CALL getRoomsForPayment('" + comboID.Text + "','" + date + "')";
                 DataAdapter(sql, dbQuery());
 
-                int P = 0;
+                lblRtotal.Text = "0";
+                int rAmount = 0;
 
                 for (int i = 0; i < tblGuestDetails.RowCount; i++)
                 {
@@ -159,15 +158,19 @@ namespace Hotel_Management_System
                     if (eDate == "''")
                     {
                         eDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
-                        MessageBox.Show(eDate);
+                        
                     }
+
 
                     int roomTotal = int.Parse(DataReader("CALL getReservationPayment(" + room + ",'" + aDate + "'," + eDate + ")", dbQuery()));
 
-                    P += roomTotal;
-                    lblRtotal.Text = P.ToString();
-                    MessageBox.Show(P.ToString());
+                    rAmount += roomTotal;
+                    lblRtotal.Text = rAmount.ToString();
+                    //MessageBox.Show(P.ToString());
                 }
+
+
+               
             }
 
             catch(Exception ex)
@@ -202,6 +205,35 @@ namespace Hotel_Management_System
                 tblServiceDetails.Columns[3].Width = 90;
                 tblGuestDetails.Columns[0].Width = 220;
                 tblGuestDetails.Columns[2].Width = 80;
+
+                lblFtotal.Text = "0";
+                lblStotal.Text = "0";
+                int fAmount = 0;
+
+                for (int i = 0; i < tblRoomDetails.RowCount; i++)
+                {
+
+                    int amount = int.Parse(tblRoomDetails.Rows[i].Cells["Amount"].Value.ToString());
+                    fAmount += amount;
+                    lblFtotal.Text = fAmount.ToString();
+
+                    //MessageBox.Show(fAmount.ToString());
+                }
+
+                int sAmount = 0;
+
+                for (int i = 0; i < tblServiceDetails.RowCount; i++)
+                {
+
+                    int amount = int.Parse(tblServiceDetails.Rows[i].Cells["Amount"].Value.ToString());
+                    sAmount += amount;
+                    lblStotal.Text = sAmount.ToString();
+
+                    //MessageBox.Show(sAmount.ToString());
+                }
+
+                lblTotal.Text = (int.Parse(lblRtotal.Text) + int.Parse(lblFtotal.Text) + int.Parse(lblStotal.Text)).ToString();
+                lblTobePaid.Text = (int.Parse(lblTotal.Text) - int.Parse(lblPaid.Text)).ToString();
             }
             catch (Exception ex)
             {

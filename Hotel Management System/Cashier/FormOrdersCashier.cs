@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Hotel_Management_System
 {
@@ -17,69 +18,101 @@ namespace Hotel_Management_System
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private MySqlConnection dbQuery()
         {
-            this.Close();
+            DBConnection dBclass = new DBConnection();
+            MySqlConnection conn = dBclass.getConnection();
+            return conn;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        //data adder
+        private void DataAdder(string sql, MySqlConnection conn)
         {
-            //column headers align center
-            tbleRoomFoodOrderDetailsCashier.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            tbleRoomFoodOrderDetailsListCashier.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
-            //Checkbox default value checked
-            /*foreach (DataGridViewRow row in tbleRoomFoodOrderDetailsListCashier.Rows)
-            {
-                row.Cells[FoodSelectOrders.Name].Value = true;
-            }*/
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            adapter.InsertCommand = new MySqlCommand(sql, conn);
+            adapter.InsertCommand.ExecuteNonQuery();
+            conn.Close();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void DataAdapter(String sql, MySqlConnection conn)
         {
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
 
+            DataSet ds = new DataSet();
+            adapter.Fill(ds, "food");
+            tblGuestDetails.DataSource = ds.Tables["food"];
+            conn.Close();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void DataAdapter1(String sql, MySqlConnection conn)
         {
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
 
+            DataSet ds = new DataSet();
+            adapter.Fill(ds, "food");
+            tblGuestFoodDetails.DataSource = ds.Tables["food"];
+            conn.Close();
         }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
 
         private void FormOrdersCashier_Load(object sender, EventArgs e)
         {
-            tbleRoomFoodOrderDetailsCashier.Rows.Add("2", "ODR254888",true);
-            tbleRoomFoodOrderDetailsCashier.Rows.Add("4", "ODR254889");
-            tbleRoomFoodOrderDetailsCashier.Rows.Add("15", "ODR154890");
+            tblGuestDetails.EnableHeadersVisualStyles = false;
+            tblGuestDetails.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 255, 220);
+            tblGuestDetails.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 13);
 
-            tbleRoomFoodOrderDetailsListCashier.Rows.Add("F0005", "Sea Food Special Buriyani(L)", "1", "800");
-            tbleRoomFoodOrderDetailsListCashier.Rows.Add("F0009", "Broccoli cheddar baked potato", "2", "2500");
-            tbleRoomFoodOrderDetailsListCashier.Rows.Add("F0002", "Chicken Cheese Masala Kottu(S)", "1", "750");
+            tblGuestFoodDetails.EnableHeadersVisualStyles = false;
+            tblGuestFoodDetails.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 255, 220);
+            tblGuestFoodDetails.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 13);
+
+            try
+            {
+                string sql = "SELECT DISTINCT RoomID AS 'Room No', OrderID FROM food_order WHERE status = 0";
+                DataAdapter(sql, dbQuery());
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+        }
+
+        private void tblGuestDetails_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                int Oid = int.Parse(tblGuestDetails.Rows[e.RowIndex].Cells[1].Value.ToString());
+                string sql = "CALL getOrderDetails("+ Oid+")";
+                DataAdapter1(sql, dbQuery());
+                tblGuestFoodDetails.Columns[0].Width = 80;
+                tblGuestFoodDetails.Columns[2].Width = 100;
+                tblGuestFoodDetails.Columns[3].Width = 150;
+
+                int P = 0;
+
+                for (int i = 0; i < tblGuestFoodDetails.RowCount; i++)
+                {
+                       P += Convert.ToInt32(tblGuestFoodDetails.Rows[i].Cells[3].Value.ToString());
+                       lblTotal.Text = P.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void bttnOrderPlaced_Click(object sender, EventArgs e)
+        {
+            DialogResult reslult = MessageBox.Show("Is this a completed order?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (reslult == DialogResult.Yes)
+            {
+                string OID = tblGuestDetails.CurrentRow.Cells[1].Value.ToString();
+                string sql = "UPDATE food_order SET Status = 1 WHERE OrderID = " + OID;
+
+                DataAdder(sql, dbQuery());
+                MessageBox.Show("Order Placed", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }                
         }
     }
 }
